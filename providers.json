@@ -129,6 +129,19 @@
       "pricing_source": "https://usejog.com/#pricing"
     },
     {
+      "provider": "boat",
+      "name": "boat",
+      "label": "boat",
+      "arch": "x64",
+      "vcpu": 4,
+      "memory_gb": 8,
+      "price_per_minute": 0.0006,
+      "billing": {"increment_seconds": 1},
+      "enabled": true,
+      "notes": "boat.dev. Ubuntu 24.04, one fresh VM per job, billed per second. Needs a plan from $20/month; the plan amount comes back as VM time. Starts above the plan's included count cost $0.03-0.07 each.",
+      "pricing_source": "https://docs.boat.dev/pricing"
+    },
+    {
       "provider": "github",
       "name": "GitHub",
       "label": "ubuntu-24.04-arm",
