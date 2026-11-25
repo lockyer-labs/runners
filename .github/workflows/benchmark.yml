@@ -10,7 +10,7 @@ on:
       repetitions:
         description: Number of times to run each runner
         required: false
-        default: "1"
+        default: "3"
       force:
         description: Re-run runners that already have results for the current benchmark version
         type: boolean
@@ -38,7 +38,7 @@ jobs:
       - id: matrix
         env:
           PROVIDERS: ${{ inputs.providers }}
-          REPETITIONS: ${{ inputs.repetitions || '1' }}
+          REPETITIONS: ${{ inputs.repetitions || '3' }}
           FORCE: ${{ inputs.force }}
         run: |
           version=$(cat bench/VERSION)
@@ -77,12 +77,42 @@ jobs:
     name: ${{ matrix.label }} (${{ matrix.rep }})
     runs-on: ${{ matrix.label }}
     timeout-minutes: 30
+    permissions:
+      contents: read
+      actions: write
     strategy:
       fail-fast: false
       matrix: ${{ fromJSON(needs.setup.outputs.github) }}
+    env:
+      CACHE_KEY: bench-${{ github.run_id }}-${{ github.run_attempt }}-${{ matrix.label }}-${{ matrix.rep }}
     steps:
       - uses: actions/checkout@v7
       - uses: jdx/mise-action@v5
+      # Cache steps can fail without stopping the job; run.py records the missing result as an error.
+      - name: Generate cache data
+        continue-on-error: true
+        run: |
+          echo "CACHE_DIR=$RUNNER_TEMP/cache-bench" >> "$GITHUB_ENV"
+          python bench/cache.py generate "$RUNNER_TEMP/cache-bench"
+      - name: Cache save
+        continue-on-error: true
+        uses: actions/cache/save@v6
+        with:
+          path: ${{ env.CACHE_DIR }}
+          key: ${{ env.CACHE_KEY }}
+      - name: Clear cache data
+        continue-on-error: true
+        run: python bench/cache.py saved "$CACHE_DIR"
+      - name: Cache restore
+        id: restore
+        continue-on-error: true
+        uses: actions/cache/restore@v6
+        with:
+          path: ${{ env.CACHE_DIR }}
+          key: ${{ env.CACHE_KEY }}
+      - name: Check restored data
+        continue-on-error: true
+        run: python bench/cache.py restored "$CACHE_DIR" "${{ steps.restore.outputs.cache-hit }}"
       - name: Benchmark
         env:
           RUNNER_SPEC: ${{ toJSON(matrix) }}
@@ -92,6 +122,11 @@ jobs:
           name: result-${{ matrix.label }}-${{ matrix.rep }}
           path: ${{ runner.temp }}/result.json
           if-no-files-found: error
+      - name: Delete the cache
+        if: always()
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python bench/cache.py delete "$CACHE_KEY"
 
   bench-buildkite:
     needs: setup
@@ -124,6 +159,8 @@ jobs:
       actions: read
     steps:
       - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
       - uses: jdx/mise-action@v5
       - uses: actions/download-artifact@v8
         with:
@@ -156,3 +193,13 @@ jobs:
             commit -q -m "Publish results from run ${GITHUB_RUN_ID}"
           git push -q
           echo "Published to https://${GITHUB_REPOSITORY_OWNER}.github.io/${GITHUB_REPOSITORY#*/}/" >> "$GITHUB_STEP_SUMMARY"
+      - name: Update the README's provider table
+        if: ${{ github.ref == 'refs/heads/main' }}
+        run: |
+          python scripts/readme.py pages/data.json README.md
+          if ! git diff --quiet README.md; then
+            git -c user.name="github-actions[bot]" -c user.email="41898282+github-actions[bot]@users.noreply.github.com" \
+              commit -q -m "Update README providers from run ${GITHUB_RUN_ID}" README.md
+            git pull -q --rebase origin main
+            git push -q origin HEAD:main
+          fi

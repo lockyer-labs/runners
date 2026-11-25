@@ -23,11 +23,15 @@ SCHEMA_VERSION = 1
 with open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "VERSION")) as f:
     BENCHMARK_VERSION = int(f.read())
 DURATION = 15  # seconds per sysbench/fio test
+WARMUP = 5  # seconds of all-thread CPU load before the CPU tests, so clocks and caches settle
 REDIS_VERSION = "8.10.3"
 # Cloudflare rejects requests above roughly 50 MB.
 CLOUDFLARE_URL = "https://speed.cloudflare.com/__down?bytes=50000000"
 REDIS_URL = f"https://github.com/redis/redis/archive/refs/tags/{REDIS_VERSION}.tar.gz"
 APT_PACKAGES = ["sysbench", "fio", "build-essential"]
+# macOS runners already have the Xcode command line tools, so only the benchmarks come from Homebrew.
+BREW_PACKAGES = ["sysbench", "fio"]
+MACOS = sys.platform == "darwin"
 CPU_FLAGS = ["avx2", "avx512f", "sha_ni", "aes", "vaes", "asimd", "sve", "sve2", "sha2"]
 # Buildkite hosted agents run jobs as root without sudo installed.
 SUDO = [] if os.geteuid() == 0 else ["sudo"]
@@ -59,6 +63,14 @@ def read(path):
             return f.read().strip()
     except OSError:
         return None
+
+
+def cpu_count():
+    return len(os.sched_getaffinity(0)) if hasattr(os, "sched_getaffinity") else os.cpu_count()
+
+
+def sysctl(name):
+    return try_sh(["sysctl", "-n", name])
 
 
 def flatten_lscpu(entries, out):
@@ -93,25 +105,38 @@ def system_info(workdir):
     os_release = read("/etc/os-release") or ""
     pretty_name = re.search(r'^PRETTY_NAME="?([^"\n]*)', os_release, re.M)
     lsblk = try_sh("lsblk -J -d -o NAME,SIZE,TYPE,ROTA,MODEL")
+    if MACOS:
+        model, vendor = sysctl("machdep.cpu.brand_string"), "Apple"
+        mem_bytes = int(sysctl("hw.memsize") or 0) or None
+        os_name = f"macOS {try_sh(['sw_vers', '-productVersion'])}"
+        # kern.hv_vmm_present is 1 inside a Virtualization.framework VM.
+        virtualization = "apple" if sysctl("kern.hv_vmm_present") == "1" else "none"
+        dmi = {"product_name": sysctl("hw.model")}
+    else:
+        model, vendor = lscpu.get("Model name") or cpuinfo_field("model name"), lscpu.get("Vendor ID")
+        mem_bytes = int(mem_kb.group(1)) * 1024 if mem_kb else None
+        os_name = pretty_name.group(1) if pretty_name else None
+        virtualization = try_sh("systemd-detect-virt")
+        dmi = {f: read(f"/sys/class/dmi/id/{f}") or try_sh(f"sudo -n cat /sys/class/dmi/id/{f}") for f in DMI_FIELDS}
 
     return {
         "cpu": {
-            "model": lscpu.get("Model name") or cpuinfo_field("model name"),
-            "vendor": lscpu.get("Vendor ID"),
+            "model": model,
+            "vendor": vendor,
             "arch": platform.machine(),
             "logical_cpus": os.cpu_count(),
-            "available_cpus": len(os.sched_getaffinity(0)),
+            "available_cpus": cpu_count(),
             "threads_per_core": lscpu.get("Thread(s) per core"),
             "sockets": lscpu.get("Socket(s)"),
             "max_mhz": lscpu.get("CPU max MHz"),
             "l3_cache": lscpu.get("L3") or lscpu.get("L3 cache"),
             "hypervisor": lscpu.get("Hypervisor vendor"),
-            "flags": {f: f in flags for f in CPU_FLAGS},
+            "flags": None if MACOS else {f: f in flags for f in CPU_FLAGS},
             "cgroup_cpu_max": read("/sys/fs/cgroup/cpu.max"),
             "lscpu": lscpu,
         },
         "memory": {
-            "total_bytes": int(mem_kb.group(1)) * 1024 if mem_kb else None,
+            "total_bytes": mem_bytes,
             "cgroup_max": read("/sys/fs/cgroup/memory.max"),
         },
         "disk": {
@@ -122,13 +147,13 @@ def system_info(workdir):
             "devices": json.loads(lsblk)["blockdevices"] if lsblk else None,
         },
         "os": {
-            "pretty_name": pretty_name.group(1) if pretty_name else None,
+            "pretty_name": os_name,
             "kernel": platform.release(),
             "image_os": os.environ.get("ImageOS"),
             "image_version": os.environ.get("ImageVersion"),
         },
-        "virtualization": try_sh("systemd-detect-virt"),
-        "dmi": {f: read(f"/sys/class/dmi/id/{f}") or try_sh(f"sudo -n cat /sys/class/dmi/id/{f}") for f in DMI_FIELDS},
+        "virtualization": virtualization,
+        "dmi": dmi,
         "network": ip_info(),
         "runner": {
             "name": os.environ.get("RUNNER_NAME") or os.environ.get("BUILDKITE_AGENT_NAME"),
@@ -142,16 +167,26 @@ def system_info(workdir):
     }
 
 
-def bench_apt_install():
+def bench_package_install():
+    if MACOS:
+        start = time.monotonic()
+        try:
+            sh(["env", "HOMEBREW_NO_AUTO_UPDATE=1", "HOMEBREW_NO_INSTALL_CLEANUP=1", "HOMEBREW_NO_INSTALLED_DEPENDENTS_CHECK=1",
+                "brew", "install", "--quiet", *BREW_PACKAGES])
+        except CommandError:
+            # brew exits 1 when a dependency's post-install step fails, even though the packages installed.
+            if not all(shutil.which(p) for p in BREW_PACKAGES):
+                raise
+        return {"manager": "brew", "seconds": time.monotonic() - start}
     start = time.monotonic()
     sh([*SUDO, "apt-get", "update", "-qq"])
     update = time.monotonic() - start
     sh([*SUDO, "env", "DEBIAN_FRONTEND=noninteractive", "apt-get", "install", "-y", "-qq", *APT_PACKAGES])
-    return {"update_seconds": update, "seconds": time.monotonic() - start}
+    return {"manager": "apt", "update_seconds": update, "seconds": time.monotonic() - start}
 
 
-def bench_sysbench_cpu(threads):
-    out = sh(["sysbench", "cpu", f"--threads={threads}", f"--time={DURATION}", "run"])
+def bench_sysbench_cpu(threads, duration=DURATION):
+    out = sh(["sysbench", "cpu", f"--threads={threads}", f"--time={duration}", "run"])
     eps = float(re.search(r"events per second:\s*([\d.]+)", out).group(1))
     return {"threads": threads, "events_per_second": eps}
 
@@ -178,7 +213,8 @@ def bench_fio(workdir):
         for name, args in FIO_TESTS.items():
             # Some filesystems (tmpfs, some overlays) reject O_DIRECT, so fall back to buffered IO.
             for direct in (1, 0):
-                cmd = ["fio", f"--name={name}", f"--filename={path}", "--size=2G", "--ioengine=libaio",
+                cmd = ["fio", f"--name={name}", f"--filename={path}", "--size=2G",
+                       f"--ioengine={'posixaio' if MACOS else 'libaio'}",
                        f"--direct={direct}", "--time_based", f"--runtime={DURATION}", "--ramp_time=2",
                        "--group_reporting", "--output-format=json", *args]
                 try:
@@ -215,7 +251,7 @@ def bench_compile_redis(workdir):
     download = curl(REDIS_URL, tarball)
     sh(["tar", "xzf", tarball, "-C", workdir])
     src = os.path.join(workdir, f"redis-{REDIS_VERSION}")
-    jobs = len(os.sched_getaffinity(0))
+    jobs = cpu_count()
     start = time.monotonic()
     # The top-level Makefile's module wrapper is broken in release tarballs; build the core directly.
     sh(["make", "-C", "src", f"-j{jobs}", "MALLOC=libc", "BUILD_TLS=no"], cwd=src)
@@ -247,14 +283,25 @@ def main():
     started_at = datetime.now(timezone.utc).isoformat()
 
     system = run("system info", system_info, args.workdir)
-    cpus = len(os.sched_getaffinity(0))
-    benchmarks = {"apt_install": run("apt install", bench_apt_install)}
-    benchmarks["cpu_single"] = run("sysbench cpu (1 thread)", bench_sysbench_cpu, 1)
-    benchmarks["cpu_multi"] = run(f"sysbench cpu ({cpus} threads)", bench_sysbench_cpu, cpus)
+    cpus = cpu_count()
+    # Stored as apt_install so older Linux results stay comparable.
+    benchmarks = {"apt_install": run("package install", bench_package_install)}
+    if MACOS:
+        # Homebrew's sysbench reports ~1,000x Linux's events/s on Apple Silicon, so its prime search isn't doing the work.
+        skipped = {"skipped": "sysbench's CPU test doesn't do real work on macOS"}
+        benchmarks["cpu_single"], benchmarks["cpu_multi"] = skipped, dict(skipped)
+    else:
+        run("sysbench cpu warm-up", bench_sysbench_cpu, cpus, WARMUP)
+        benchmarks["cpu_single"] = run("sysbench cpu (1 thread)", bench_sysbench_cpu, 1)
+        benchmarks["cpu_multi"] = run(f"sysbench cpu ({cpus} threads)", bench_sysbench_cpu, cpus)
     benchmarks["memory"] = run("sysbench memory", bench_sysbench_memory)
     benchmarks["disk"] = run("fio", bench_fio, args.workdir)
     benchmarks["download_cloudflare"] = run("download from Cloudflare", curl, CLOUDFLARE_URL)
     benchmarks["compile_redis"] = run("compile redis", bench_compile_redis, args.workdir)
+    if os.environ.get("GITHUB_ACTIONS") == "true":
+        # Timed by bench/cache.py around the workflow's actions/cache steps.
+        cache = os.path.join(os.environ.get("RUNNER_TEMP", "/tmp"), "cache.json")
+        benchmarks["cache"] = json.load(open(cache)) if os.path.exists(cache) else {"error": "cache steps didn't finish"}
 
     result = {
         "schema_version": SCHEMA_VERSION,

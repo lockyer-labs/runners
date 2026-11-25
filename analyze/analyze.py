@@ -112,10 +112,13 @@ def cost_per_build(r):
     return price * billed_seconds(seconds, get(r, "spec", "billing") or {}) / 60
 
 
+# Assigned to providers in alphabetical order; the site and README both read them from data.json.
+COLORS = ["#4269d0", "#efb118", "#ff725c", "#6cc5b0", "#3ca951", "#ff8ab7", "#a463f2", "#97bbf5", "#9c6b4e", "#9498a0"]
+
 # (key, column header, extractor, higher_is_better)
 METRICS = [
     ("queue", "Queue (s)", lambda r: get(r, "timing", "queue_seconds"), False),
-    ("apt_install", "apt install (s)", lambda r: get(r, "benchmarks", "apt_install", "seconds"), False),
+    ("apt_install", "Package install (s)", lambda r: get(r, "benchmarks", "apt_install", "seconds"), False),
     ("cpu_single", "CPU 1 thread (events/s)", lambda r: get(r, "benchmarks", "cpu_single", "events_per_second"), True),
     ("cpu_multi", "CPU all threads (events/s)", lambda r: get(r, "benchmarks", "cpu_multi", "events_per_second"), True),
     ("memory", "Memory (MiB/s)", lambda r: get(r, "benchmarks", "memory", "mib_per_second"), True),
@@ -124,6 +127,8 @@ METRICS = [
     ("rand_read", "4k rand read (IOPS)", lambda r: get(r, "benchmarks", "disk", "rand_read", "iops"), True),
     ("rand_write", "4k rand write (IOPS)", lambda r: get(r, "benchmarks", "disk", "rand_write", "iops"), True),
     ("download", "Download (MB/s)", lambda r: get(r, "benchmarks", "download_cloudflare", "mb_per_second"), True),
+    ("cache_save", "Cache save 1 GB (s)", lambda r: get(r, "benchmarks", "cache", "save_seconds"), False),
+    ("cache_restore", "Cache restore 1 GB (s)", lambda r: get(r, "benchmarks", "cache", "restore_seconds"), False),
     ("redis_build", "Redis build (s)", lambda r: get(r, "benchmarks", "compile_redis", "seconds"), False),
     ("redis_cost", "$ per Redis build", cost_per_build, False),
 ]
@@ -158,15 +163,17 @@ def summarise(results):
         mem = get(system, "memory", "total_bytes")
         disk = get(system, "disk", "total_bytes")
         net = system.get("network") or {}
-        medians = {}
+        medians, ranges = {}, {}
         for key, _, extract, _ in METRICS:
             values = [v for v in map(extract, samples) if v is not None]
             medians[key] = statistics.median(values) if values else None
+            ranges[key] = [min(values), max(values)] if len(values) > 1 else None
         runners.append({
             "provider": provider,
             "provider_name": spec.get("name") or provider,
             "label": label,
             "arch": spec.get("arch"),
+            "platform": "macos" if spec.get("os") == "macos" else spec.get("arch"),
             "price_per_minute": spec.get("price_per_minute"),
             "billing": billing_label(spec.get("billing")),
             "cpu_models": sorted({get(r, "system", "cpu", "model") or "?" for r in samples}),
@@ -177,11 +184,12 @@ def summarise(results):
             "location": ", ".join(filter(None, [net.get("city"), net.get("country")])) or None,
             "network": net.get("org"),
             "medians": medians,
+            "ranges": ranges,
             "sample_count": len(samples),
             "measured_at": samples[-1]["started_at"],
             "run_url": f"https://github.com/{samples[-1]['github']['repository']}/actions/runs/{samples[-1]['github']['run_id']}",
         })
-    runners.sort(key=lambda x: (x["arch"] or "", x["provider"] or "", x["label"] or ""))
+    runners.sort(key=lambda x: (x["platform"] or "", x["provider"] or "", x["label"] or ""))
 
     errors = [
         {"label": r["spec"].get("label"), "run_id": r["github"]["run_id"], "benchmark": name,
@@ -198,6 +206,7 @@ def summarise(results):
         ],
         "metrics": [{"key": k, "label": h, "higher_is_better": hib} for k, h, _, hib in METRICS],
         "runners": runners,
+        "colors": {p: COLORS[i % len(COLORS)] for i, p in enumerate(sorted({x["provider"] for x in runners}))},
         "errors": errors,
     }
 
@@ -219,6 +228,8 @@ def report(summary):
             best = (max if higher_is_better else min)(column) if len(column) > 1 else None
             value = x["medians"][key]
             text = fmt(value, header)
+            if x["ranges"][key] and x["ranges"][key][0] != x["ranges"][key][1]:
+                text += f" ({' to '.join(fmt(v, header) for v in x['ranges'][key])})"
             cells.append(f"**{text}**" if value is not None and value == best else text)
         bench_rows.append(cells)
 
@@ -226,7 +237,8 @@ def report(summary):
         "# Runner benchmark report",
         f"Benchmark version {', '.join(str(v) for v in summary['benchmark_versions'])}. "
         f"{summary['sample_count']} samples from {len(summary['runs'])} workflow run(s). "
-        "Benchmark values are medians across samples; the best value in each column is bold.",
+        "Benchmark values are medians across samples, with the lowest to highest sample in brackets; "
+        "the best median in each column is bold.",
         "## Runners",
         table(["Provider", "Label", "CPU", "vCPUs", "Memory (GiB)", "Disk (GB)", "Virtualization", "Location",
                "Network", "Samples"], info_rows),

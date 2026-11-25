@@ -1,9 +1,9 @@
-const COLORS = ["#4269d0", "#efb118", "#ff725c", "#6cc5b0", "#3ca951", "#ff8ab7", "#a463f2", "#97bbf5", "#9c6b4e", "#9498a0"];
-let color = () => COLORS[0];
+let color = () => null;
 
-const ARCHES = [
+const PLATFORMS = [
   ["x64", "Linux x64"],
   ["arm64", "Linux arm64"],
+  ["macos", "macOS"],
 ];
 
 const HEADLINES = [
@@ -24,6 +24,19 @@ function fmt(value, metric) {
   if (metric.label.startsWith("$")) return `$${value.toFixed(4)}`;
   if (Math.abs(value) >= 100) return Math.round(value).toLocaleString("en-US");
   return value.toFixed(1);
+}
+
+function spread(runner, metric) {
+  const range = runner.ranges?.[metric.key];
+  const median = runner.medians[metric.key];
+  if (!range || !median) return null;
+  return Math.round(((range[1] - range[0]) / 2 / Math.abs(median)) * 100);
+}
+
+function rangeText(runner, metric) {
+  const range = runner.ranges?.[metric.key];
+  const value = fmt(runner.medians[metric.key], metric);
+  return range ? `median ${value} · ${fmt(range[0], metric)} to ${fmt(range[1], metric)} across ${runner.sample_count} samples` : value;
 }
 
 function compact(value, metric) {
@@ -86,7 +99,7 @@ function renderTables(data) {
   const { runners, metrics } = data;
   const bests = Object.fromEntries(metrics.map((m) => [m.key, best(runners, m)]));
   document.getElementById("benchmarks-caption").textContent =
-    `${runners.length} runners · ${metrics.length} metrics · benchmark v${data.benchmark_versions.join(", ")}`;
+    `${runners.length} runners · ${metrics.length} metrics · median of ${Math.max(...runners.map((r) => r.sample_count))} runs · benchmark v${data.benchmark_versions.join(", ")}`;
   const benchmarks = document.getElementById("benchmarks");
   table(
     benchmarks,
@@ -106,7 +119,7 @@ function renderTables(data) {
         ...runners.map((r) => {
           const value = r.medians[m.key];
           const cell = textCell(compact(value, m), value !== null && value === bests[m.key] ? "num best" : "num");
-          cell.title = fmt(value, m);
+          cell.title = rangeText(r, m);
           cell.dataset.row = m.key;
           cell.dataset.col = r.label;
           return cell;
@@ -190,7 +203,7 @@ function renderBoards(data) {
   for (const metric of data.metrics) {
     const order = ranked(data.runners, metric);
     if (!order.length) continue;
-    const max = Math.max(...order.map((r) => r.medians[metric.key]));
+    const max = Math.max(...order.map((r) => r.ranges?.[metric.key]?.[1] ?? r.medians[metric.key]));
     const top = best(data.runners, metric);
     container.append(el("div", { className: "board" },
       el("h3", {}, metric.label, hint(metric)),
@@ -199,10 +212,19 @@ function renderBoards(data) {
         const fill = el("div", { className: "fill" });
         fill.style.width = `${max > 0 ? (value / max) * 100 : 0}%`;
         fill.style.background = color(r.provider);
-        return el("div", { className: value === top ? "row best" : "row", title: r.label },
+        const track = el("div", { className: "track" }, fill);
+        const range = r.ranges?.[metric.key];
+        if (range && max > 0) {
+          const whisker = el("div", { className: "range" });
+          whisker.style.left = `${(range[0] / max) * 100}%`;
+          whisker.style.width = `${((range[1] - range[0]) / max) * 100}%`;
+          track.append(whisker);
+        }
+        const pct = spread(r, metric);
+        return el("div", { className: value === top ? "row best" : "row", title: `${r.label} · ${rangeText(r, metric)}` },
           el("span", { className: "name" }, swatch(r), r.provider_name),
-          el("div", { className: "track" }, fill),
-          el("span", { className: "val", textContent: fmt(value, metric) }));
+          track,
+          el("span", { className: "val" }, fmt(value, metric), pct === null ? null : el("span", { className: "spread", textContent: `±${pct}%` })));
       })));
   }
 }
@@ -213,8 +235,8 @@ function renderErrors(data) {
     el("li", {}, el("code", { textContent: e.label }), ` ${e.benchmark} (run ${e.run_id}): ${e.error}`)));
 }
 
-function render(data, arch, resetHighlights) {
-  const runners = data.runners.filter((r) => r.arch === arch);
+function render(data, platform, resetHighlights) {
+  const runners = data.runners.filter((r) => r.platform === platform);
   const labels = new Set(runners.map((r) => r.label));
   const view = { ...data, runners, errors: data.errors.filter((e) => labels.has(e.label)) };
   for (const id of ["stats", "benchmarks", "runners", "boards", "errors"]) {
@@ -231,32 +253,31 @@ function render(data, arch, resetHighlights) {
 
 function renderTabs(data, onSelect) {
   const container = document.getElementById("tabs");
-  const arches = ARCHES.filter(([arch]) => data.runners.some((r) => r.arch === arch));
-  const select = (arch) => {
-    for (const tab of container.children) tab.setAttribute("aria-selected", tab.dataset.arch === arch);
-    onSelect(arch);
+  const platforms = PLATFORMS.filter(([platform]) => data.runners.some((r) => r.platform === platform));
+  const select = (platform) => {
+    for (const tab of container.children) tab.setAttribute("aria-selected", tab.dataset.platform === platform);
+    onSelect(platform);
   };
-  for (const [arch, label] of arches) {
-    const count = data.runners.filter((r) => r.arch === arch).length;
+  for (const [platform, label] of platforms) {
+    const count = data.runners.filter((r) => r.platform === platform).length;
     const tab = el("button", { type: "button", className: "tab", textContent: label }, el("span", { className: "count", textContent: count }));
     tab.setAttribute("role", "tab");
-    tab.dataset.arch = arch;
+    tab.dataset.platform = platform;
     tab.addEventListener("click", () => {
-      history.replaceState(null, "", arch === ARCHES[0][0] ? location.pathname : `#${arch}`);
-      select(arch);
+      history.replaceState(null, "", platform === PLATFORMS[0][0] ? location.pathname : `#${platform}`);
+      select(platform);
     });
     container.append(tab);
   }
   const fromHash = location.hash.slice(1);
-  select(arches.some(([arch]) => arch === fromHash) ? fromHash : arches[0][0]);
+  select(platforms.some(([platform]) => platform === fromHash) ? fromHash : platforms[0][0]);
 }
 
 async function main() {
   const data = await (await fetch("data.json", { cache: "no-cache" })).json();
-  const providers = [...new Set(data.runners.map((r) => r.provider))].sort();
-  color = (provider) => COLORS[providers.indexOf(provider) % COLORS.length];
+  color = (provider) => data.colors[provider];
   const resetHighlights = enableHighlighting(document.getElementById("benchmarks"));
-  renderTabs(data, (arch) => render(data, arch, resetHighlights));
+  renderTabs(data, (platform) => render(data, platform, resetHighlights));
 }
 
 main();

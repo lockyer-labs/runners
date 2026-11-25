@@ -28,5 +28,6 @@ python analyze/analyze.py --providers providers.json --json "$pages/results.json
   --summary "$pages/data.json" --markdown "$pages/report.md" "${files[@]}" >/dev/null
 cp -r site/. "$pages/"
 touch "$pages/.nojekyll"
+python scripts/seo.py "$pages"
 # GitHub Pages lets browsers cache assets for 10 minutes; a new URL per publish skips that.
 sed -i -E "s/(style\.css|app\.js)\"/\1?v=${GITHUB_RUN_ID:-$(date +%s)}\"/" "$pages/index.html"

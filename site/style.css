@@ -75,6 +75,7 @@ code { font-family: var(--mono); font-size: 0.85em; }
 .button:hover { background: var(--p2); }
 .actions { display: flex; gap: 10px; }
 h1 { font: 500 64px/1.05 var(--display); letter-spacing: -0.02em; margin: 0 0 40px; }
+.lede { color: var(--p3); max-width: 66ch; margin: -20px 0 40px; }
 .tabs { display: flex; flex-wrap: wrap; gap: 8px; margin: -16px 0 28px; }
 .tab {
   font: 500 14px var(--mono);
@@ -118,6 +119,12 @@ h2 { font: 500 40px/1.1 var(--display); letter-spacing: -0.015em; margin: 0 0 8p
 .note { color: var(--muted); margin: 0 0 24px; max-width: 70ch; }
 .caption { font: 12px var(--mono); color: var(--muted); margin: 0 0 6px; }
 
+/* Questions */
+
+.faq { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(460px, 100%), 1fr)); gap: 8px 48px; margin-top: 24px; }
+.faq h3 { font: 500 19px/1.3 var(--body); margin: 16px 0 6px; }
+.faq p { color: var(--muted); margin: 0; max-width: 62ch; }
+
 /* Tables */
 
 .scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
@@ -158,7 +165,21 @@ tbody tr:hover td:not(.best) { background: var(--tint); }
   height: 12px;
   background: radial-gradient(circle, var(--p4) 1px, transparent 1.5px) 0 50% / 8px 8px repeat-x;
 }
+.track { position: relative; }
 .fill { height: 100%; min-width: 2px; }
+.range {
+  position: absolute;
+  top: 50%;
+  height: 8px;
+  min-width: 1px;
+  transform: translateY(-50%);
+  color: var(--fg);
+  border: solid currentColor;
+  border-width: 0 1px;
+  background: linear-gradient(currentColor, currentColor) 0 50% / 100% 1px no-repeat;
+  opacity: 0.55;
+}
+.row .spread { display: inline-block; min-width: 5ch; margin-left: 6px; color: var(--muted); font-size: 11px; font-weight: 400; text-align: right; }
 .row.best .name, .row.best .val { font-weight: 600; }
 .row.best .val::before { content: "★ "; color: #d49a00; }
 

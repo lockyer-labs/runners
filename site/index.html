@@ -3,20 +3,34 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>CI runner benchmarks</title>
+  <title>GitHub Actions runner benchmarks: speed and cost compared · runners/bench</title>
+  <meta name="description" content="Independent benchmarks of GitHub Actions runner providers on 4 vCPU Linux x64 and arm64 runners and Apple Silicon Macs: CPU, memory, disk, network, queue time, a Redis build and what it costs.">
+  <link rel="canonical" href="https://runnersbench.com/">
+  <meta name="author" content="Daniel Lockyer">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="theme-color" content="#2b3445">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <meta name="description" content="GitHub Actions runner providers benchmarked side by side on 4 vCPU Linux x64 and arm64 machines: CPU, memory, disk, network, a Redis build and its cost.">
+  <link rel="alternate" type="application/json" href="/data.json" title="Benchmark summary">
   <meta property="og:type" content="website">
+  <meta property="og:site_name" content="runners/bench">
+  <meta property="og:locale" content="en_US">
   <meta property="og:url" content="https://runnersbench.com/">
-  <meta property="og:title" content="CI runner benchmarks">
-  <meta property="og:description" content="GitHub Actions runner providers benchmarked side by side: CPU, disk, network, a Redis build and its cost.">
+  <meta property="og:title" content="GitHub Actions runner benchmarks: speed and cost compared">
+  <meta property="og:description" content="GitHub Actions runner providers benchmarked side by side on Linux x64, arm64 and macOS: CPU, disk, network, a Redis build and its cost.">
   <meta property="og:image" content="https://runnersbench.com/og.png">
+  <meta property="og:image:type" content="image/png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="runners/bench: CI runner benchmarks, GitHub Actions runner providers side by side">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@daniellockyer">
   <meta name="twitter:creator" content="@daniellockyer">
-  <meta name="twitter:image:alt" content="CI runner benchmarks at runnersbench.com">
+  <meta name="twitter:title" content="GitHub Actions runner benchmarks: speed and cost compared">
+  <meta name="twitter:description" content="GitHub Actions runner providers benchmarked side by side on Linux x64, arm64 and macOS: CPU, disk, network, a Redis build and its cost.">
+  <meta name="twitter:image" content="https://runnersbench.com/og.png">
+  <meta name="twitter:image:alt" content="runners/bench: CI runner benchmarks, GitHub Actions runner providers side by side">
+  <!-- seo:jsonld -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@500&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap">
@@ -34,6 +48,7 @@
         </span>
       </nav>
       <h1>CI runner benchmarks</h1>
+      <p class="lede" id="lede">GitHub Actions runner providers, benchmarked side by side on Linux x64, arm64 and macOS. Refreshed weekly.</p>
       <div id="tabs" class="tabs" role="tablist"></div>
       <div id="stats" class="stats"></div>
       <p id="meta" class="meta"></p>
@@ -56,6 +71,12 @@
       <p class="note">What each provider's runner reported about itself. Measured links to the run its results came from.</p>
       <p class="caption" id="runners-caption"></p>
       <div class="scroll"><table id="runners"></table></div>
+    </section>
+    <section id="questions">
+      <h2>Questions</h2>
+      <div class="faq">
+        <!-- seo:faq -->
+      </div>
     </section>
     <section id="errors-section" hidden>
       <h2>Errors</h2>
