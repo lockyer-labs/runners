@@ -17,12 +17,12 @@
     },
     "github": {
       "repository": "lockyer-labs/runnersbench",
-      "run_id": "45891031803",
+      "run_id": "45907339602",
       "run_attempt": "1",
-      "sha": "ab4b5766057aab8fcb14710e258c0ed880fb9e57"
+      "sha": "be3f03faba810d349584202c169a89a1168b373e"
     },
-    "started_at": "2026-11-26T20:26:56.320793+00:00",
-    "finished_at": "2026-11-26T20:29:59.555642+00:00",
+    "started_at": "2026-11-26T22:51:37.194095+00:00",
+    "finished_at": "2026-11-26T22:54:40.530200+00:00",
     "system": {
       "cpu": {
         "model": "Ampere-1a",
@@ -91,7 +91,7 @@
       "disk": {
         "workdir": "/home/runner/_work/_temp",
         "total_bytes": 132587253760,
-        "free_bytes": 67059879936,
+        "free_bytes": 67059666944,
         "mount": "/dev/vda ext4   rw,relatime,journal_async_commit,nobarrier,noinit_itable,data=writeback",
         "devices": [
           {
@@ -103,14 +103,14 @@
           },
           {
             "name": "loop1",
-            "size": "43.4M",
+            "size": "69M",
             "type": "loop",
             "rota": true,
             "model": null
           },
           {
             "name": "loop2",
-            "size": "69M",
+            "size": "43.4M",
             "type": "loop",
             "rota": true,
             "model": null
@@ -326,14 +326,14 @@
         "chassis_vendor": null
       },
       "network": {
-        "ip": "192.240.255.204",
+        "ip": "192.240.240.195",
         "city": "Phoenix",
         "region": "Arizona",
         "country": "US",
         "org": "AS20454 SECURED SERVERS LLC"
       },
       "runner": {
-        "name": "blacksmith-4vcpu-ubuntu-2404-arm-p7yyuhruddcypj35",
+        "name": "blacksmith-4vcpu-ubuntu-2404-arm-jjdyzont5gccpldb",
         "environment": "self-hosted"
       },
       "tools": {
@@ -341,107 +341,107 @@
         "gcc": "gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
         "python": "3.12.16"
       },
-      "wall_seconds": 0.24990928300000093
+      "wall_seconds": 0.26215690499999766
     },
     "benchmarks": {
       "apt_install": {
         "manager": "apt",
-        "update_seconds": 7.0661831559999975,
-        "seconds": 11.790913171,
-        "wall_seconds": 11.790919370999998
+        "update_seconds": 7.328076134000003,
+        "seconds": 12.353901455000003,
+        "wall_seconds": 12.353908014999998
       },
       "cpu_single": {
         "threads": 1,
-        "events_per_second": 931.38,
-        "wall_seconds": 15.009711173999996
+        "events_per_second": 930.98,
+        "wall_seconds": 15.009837445999999
       },
       "cpu_multi": {
         "threads": 4,
-        "events_per_second": 3673.11,
-        "wall_seconds": 15.010205927000008,
+        "events_per_second": 3668.59,
+        "wall_seconds": 15.009999328999996,
         "cpu_accounting": {
-          "wall_seconds": 15.010452914999995,
-          "steal_pct": 0.016655562958027982,
-          "cpu_per_wall": 3.982963494742758,
+          "wall_seconds": 15.010276456,
+          "steal_pct": 0.016652789342214824,
+          "cpu_per_wall": 3.9740114164357,
           "nr_throttled": 0,
           "throttled_ms": 0.0
         }
       },
       "memory": {
-        "mib_per_second": 26293.68,
-        "wall_seconds": 15.010024879
+        "mib_per_second": 26330.76,
+        "wall_seconds": 15.009821834000007
       },
       "disk": {
         "seq_write": {
-          "mb_per_second": 1025.160924,
-          "iops": 976.60312,
-          "p99_latency_us": 23461.888,
+          "mb_per_second": 968.964743,
+          "iops": 923.010265,
+          "p99_latency_us": 25034.752,
           "direct": true
         },
         "seq_read": {
-          "mb_per_second": 1533.40522,
-          "iops": 1461.30258,
-          "p99_latency_us": 11993.088,
+          "mb_per_second": 1554.934545,
+          "iops": 1481.834544,
+          "p99_latency_us": 11206.656,
           "direct": true
         },
         "rand_read": {
-          "mb_per_second": 957.856467,
-          "iops": 233849.610026,
-          "p99_latency_us": 177.152,
+          "mb_per_second": 987.435261,
+          "iops": 241070.995267,
+          "p99_latency_us": 173.056,
           "direct": true
         },
         "rand_write": {
-          "mb_per_second": 397.920898,
-          "iops": 97146.523565,
-          "p99_latency_us": 6717.44,
+          "mb_per_second": 356.255639,
+          "iops": 86974.40853,
+          "p99_latency_us": 7176.192,
           "direct": true
         },
-        "wall_seconds": 69.321996315
+        "wall_seconds": 69.32371735300002
       },
       "download_cloudflare": {
-        "mb_per_second": 168.917777,
+        "mb_per_second": 142.566714,
         "bytes": 50000000,
-        "seconds": 0.296002,
-        "connect_seconds": 0.026547,
-        "ttfb_seconds": 0.094724,
-        "wall_seconds": 0.3047412159999965
+        "seconds": 0.350713,
+        "connect_seconds": 0.033815,
+        "ttfb_seconds": 0.107473,
+        "wall_seconds": 0.3598184800000013
       },
       "compile_redis": {
         "version": "8.10.3",
         "jobs": 4,
-        "seconds": 50.520485079999986,
+        "seconds": 49.985293055,
         "github_download": {
-          "mb_per_second": 5.71347,
+          "mb_per_second": 5.685625,
           "bytes": 4780701,
-          "seconds": 0.836742,
-          "connect_seconds": 0.124201,
-          "ttfb_seconds": 0.374087
+          "seconds": 0.84084,
+          "connect_seconds": 0.121289,
+          "ttfb_seconds": 0.367526
         },
         "cpu_accounting": {
-          "wall_seconds": 50.52048782,
-          "steal_pct": 0.019844222850622612,
-          "cpu_per_wall": 3.6500157254419796,
+          "wall_seconds": 49.98529543500001,
+          "steal_pct": 0.010025565191237656,
+          "cpu_per_wall": 3.6523891158631896,
           "nr_throttled": 0,
           "throttled_ms": 0.0
         },
-        "wall_seconds": 51.521006352
+        "wall_seconds": 50.98850213100002
       },
       "cache": {
         "size_mb": 1024,
-        "save_seconds": 3.796401262283325,
-        "restore_seconds": 4.629956245422363
+        "save_seconds": 4.800792217254639,
+        "restore_seconds": 10.03952693939209
       }
     },
     "cpu_accounting": {
-      "wall_seconds": 183.234854732,
-      "steal_pct": 0.01355803516954323,
-      "cpu_per_wall": 1.993487159057454,
+      "wall_seconds": 183.336106015,
+      "steal_pct": 0.009490367277213628,
+      "cpu_per_wall": 1.9992844397492042,
       "nr_throttled": 0,
       "throttled_ms": 0.0
     },
     "timing": {
-      "queue_seconds": 11.0,
-      "job_seconds": 207.0
+      "queue_seconds": 10.0,
+      "job_seconds": 212.0
     }
   },
   {
@@ -462,12 +462,12 @@
     },
     "github": {
       "repository": "lockyer-labs/runnersbench",
-      "run_id": "45891031803",
+      "run_id": "45907339602",
       "run_attempt": "1",
-      "sha": "ab4b5766057aab8fcb14710e258c0ed880fb9e57"
+      "sha": "be3f03faba810d349584202c169a89a1168b373e"
     },
-    "started_at": "2026-11-26T20:26:58.376546+00:00",
-    "finished_at": "2026-11-26T20:30:07.936594+00:00",
+    "started_at": "2026-11-26T22:51:32.851606+00:00",
+    "finished_at": "2026-11-26T22:54:36.434844+00:00",
     "system": {
       "cpu": {
         "model": "Ampere-1a",
@@ -536,7 +536,7 @@
       "disk": {
         "workdir": "/home/runner/_work/_temp",
         "total_bytes": 132587253760,
-        "free_bytes": 67059728384,
+        "free_bytes": 67058913280,
         "mount": "/dev/vda ext4   rw,relatime,journal_async_commit,nobarrier,noinit_itable,data=writeback",
         "devices": [
           {
@@ -548,14 +548,14 @@
           },
           {
             "name": "loop1",
-            "size": "69M",
+            "size": "43.4M",
             "type": "loop",
             "rota": true,
             "model": null
           },
           {
             "name": "loop2",
-            "size": "43.4M",
+            "size": "69M",
             "type": "loop",
             "rota": true,
             "model": null
@@ -771,14 +771,14 @@
         "chassis_vendor": null
       },
       "network": {
-        "ip": "192.240.240.199",
+        "ip": "192.240.255.240",
         "city": "Phoenix",
         "region": "Arizona",
         "country": "US",
         "org": "AS20454 SECURED SERVERS LLC"
       },
       "runner": {
-        "name": "blacksmith-4vcpu-ubuntu-2404-arm-g3lyzu7csu6vtwzh",
+        "name": "blacksmith-4vcpu-ubuntu-2404-arm-6lzpq4fgvx7kjt5t",
         "environment": "self-hosted"
       },
       "tools": {
@@ -786,107 +786,107 @@
         "gcc": "gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
         "python": "3.12.16"
       },
-      "wall_seconds": 0.2819607140000002
+      "wall_seconds": 0.3021879890000001
     },
     "benchmarks": {
       "apt_install": {
         "manager": "apt",
-        "update_seconds": 7.590303238000001,
-        "seconds": 12.926817312999997,
-        "wall_seconds": 12.926823672999998
+        "update_seconds": 6.349832392,
+        "seconds": 11.462447649999998,
+        "wall_seconds": 11.46245471
       },
       "cpu_single": {
         "threads": 1,
-        "events_per_second": 929.05,
-        "wall_seconds": 15.009623130000001
+        "events_per_second": 930.05,
+        "wall_seconds": 15.010107222999999
       },
       "cpu_multi": {
         "threads": 4,
-        "events_per_second": 3671.65,
-        "wall_seconds": 15.010845993000004,
+        "events_per_second": 3664.21,
+        "wall_seconds": 15.010791062000003,
         "cpu_accounting": {
-          "wall_seconds": 15.011128220000003,
+          "wall_seconds": 15.011069129,
           "steal_pct": 0.0,
-          "cpu_per_wall": 3.981093767514297,
+          "cpu_per_wall": 3.971065251097879,
           "nr_throttled": 0,
           "throttled_ms": 0.0
         }
       },
       "memory": {
-        "mib_per_second": 26289.5,
-        "wall_seconds": 15.010705861000005
+        "mib_per_second": 26372.83,
+        "wall_seconds": 15.009843068999999
       },
       "disk": {
         "seq_write": {
-          "mb_per_second": 817.850138,
-          "iops": 778.896147,
-          "p99_latency_us": 28442.624,
+          "mb_per_second": 847.765518,
+          "iops": 807.425677,
+          "p99_latency_us": 30801.92,
           "direct": true
         },
         "seq_read": {
-          "mb_per_second": 1374.381795,
-          "iops": 1309.646024,
-          "p99_latency_us": 13565.952,
+          "mb_per_second": 1613.720787,
+          "iops": 1537.897474,
+          "p99_latency_us": 10944.512,
           "direct": true
         },
         "rand_read": {
-          "mb_per_second": 778.170372,
-          "iops": 189980.934604,
-          "p99_latency_us": 254.976,
+          "mb_per_second": 962.324359,
+          "iops": 234940.337311,
+          "p99_latency_us": 164.864,
           "direct": true
         },
         "rand_write": {
-          "mb_per_second": 348.132422,
-          "iops": 84991.200587,
-          "p99_latency_us": 7176.192,
+          "mb_per_second": 380.415965,
+          "iops": 92872.859332,
+          "p99_latency_us": 6717.44,
           "direct": true
         },
-        "wall_seconds": 69.389008052
+        "wall_seconds": 69.362178278
       },
       "download_cloudflare": {
-        "mb_per_second": 108.698251,
+        "mb_per_second": 114.673112,
         "bytes": 50000000,
-        "seconds": 0.459989,
-        "connect_seconds": 0.042086,
-        "ttfb_seconds": 0.123985,
-        "wall_seconds": 0.46986731999999165
+        "seconds": 0.436022,
+        "connect_seconds": 0.039302,
+        "ttfb_seconds": 0.11289,
+        "wall_seconds": 0.4449332319999826
       },
       "compile_redis": {
         "version": "8.10.3",
         "jobs": 4,
-        "seconds": 55.29424701899998,
+        "seconds": 50.957902663,
         "github_download": {
-          "mb_per_second": 4.885534,
+          "mb_per_second": 5.683732,
           "bytes": 4780701,
-          "seconds": 0.978542,
-          "connect_seconds": 0.131667,
-          "ttfb_seconds": 0.454212
+          "seconds": 0.84112,
+          "connect_seconds": 0.130062,
+          "ttfb_seconds": 0.373938
         },
         "cpu_accounting": {
-          "wall_seconds": 55.29425035899999,
-          "steal_pct": 0.09519923840609275,
-          "cpu_per_wall": 3.6264333759497682,
+          "wall_seconds": 50.957904023,
+          "steal_pct": 0.01968019680196802,
+          "cpu_per_wall": 3.657416382665178,
           "nr_throttled": 0,
           "throttled_ms": 0.0
         },
-        "wall_seconds": 56.443756565
+        "wall_seconds": 51.960529162
       },
       "cache": {
         "size_mb": 1024,
-        "save_seconds": 6.2233357429504395,
-        "restore_seconds": 4.659809350967407
+        "save_seconds": 4.834570407867432,
+        "restore_seconds": 4.975995063781738
       }
     },
     "cpu_accounting": {
-      "wall_seconds": 189.560052665,
-      "steal_pct": 0.03947472301902681,
-      "cpu_per_wall": 2.0148070156688567,
+      "wall_seconds": 183.58324055,
+      "steal_pct": 0.009471362658476193,
+      "cpu_per_wall": 2.0005522829845264,
       "nr_throttled": 0,
       "throttled_ms": 0.0
     },
     "timing": {
       "queue_seconds": 10.0,
-      "job_seconds": 216.0
+      "job_seconds": 208.0
     }
   },
   {
@@ -907,12 +907,12 @@
     },
     "github": {
       "repository": "lockyer-labs/runnersbench",
-      "run_id": "45891031803",
+      "run_id": "45907339602",
       "run_attempt": "1",
-      "sha": "ab4b5766057aab8fcb14710e258c0ed880fb9e57"
+      "sha": "be3f03faba810d349584202c169a89a1168b373e"
     },
-    "started_at": "2026-11-26T20:26:59.007869+00:00",
-    "finished_at": "2026-11-26T20:30:06.735759+00:00",
+    "started_at": "2026-11-26T22:51:32.789873+00:00",
+    "finished_at": "2026-11-26T22:54:38.052581+00:00",
     "system": {
       "cpu": {
         "model": "Ampere-1a",
@@ -981,7 +981,7 @@
       "disk": {
         "workdir": "/home/runner/_work/_temp",
         "total_bytes": 132587253760,
-        "free_bytes": 67059568640,
+        "free_bytes": 67059699712,
         "mount": "/dev/vda ext4   rw,relatime,journal_async_commit,nobarrier,noinit_itable,data=writeback",
         "devices": [
           {
@@ -1216,14 +1216,14 @@
         "chassis_vendor": null
       },
       "network": {
-        "ip": "192.240.255.197",
+        "ip": "192.240.237.146",
         "city": "Phoenix",
         "region": "Arizona",
         "country": "US",
         "org": "AS20454 SECURED SERVERS LLC"
       },
       "runner": {
-        "name": "blacksmith-4vcpu-ubuntu-2404-arm-isujcg7e3lrrc3oa",
+        "name": "blacksmith-4vcpu-ubuntu-2404-arm-rxhs36hrb5f4v6kh",
         "environment": "self-hosted"
       },
       "tools": {
@@ -1231,107 +1231,107 @@
         "gcc": "gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
         "python": "3.12.16"
       },
-      "wall_seconds": 0.3284106869999981
+      "wall_seconds": 0.30761723199999835
     },
     "benchmarks": {
       "apt_install": {
         "manager": "apt",
-        "update_seconds": 6.833391525000003,
-        "seconds": 12.308239468000004,
-        "wall_seconds": 12.308245509000002
+        "update_seconds": 6.474616463,
+        "seconds": 11.705950736999998,
+        "wall_seconds": 11.705956136999998
       },
       "cpu_single": {
         "threads": 1,
-        "events_per_second": 930.47,
-        "wall_seconds": 15.010889986000002
+        "events_per_second": 926.65,
+        "wall_seconds": 15.010439177000002
       },
       "cpu_multi": {
         "threads": 4,
-        "events_per_second": 3644.04,
-        "wall_seconds": 15.011717857999997,
+        "events_per_second": 3646.84,
+        "wall_seconds": 15.010694082999997,
         "cpu_accounting": {
-          "wall_seconds": 15.012009681999999,
+          "wall_seconds": 15.011007350999996,
           "steal_pct": 0.016641704110500914,
-          "cpu_per_wall": 3.9643596867219233,
+          "cpu_per_wall": 3.967273388619901,
           "nr_throttled": 0,
           "throttled_ms": 0.0
         }
       },
       "memory": {
-        "mib_per_second": 26353.46,
-        "wall_seconds": 15.011271715000007
+        "mib_per_second": 26158.34,
+        "wall_seconds": 15.010440881000008
       },
       "disk": {
         "seq_write": {
-          "mb_per_second": 882.639965,
-          "iops": 840.684968,
+          "mb_per_second": 953.390681,
+          "iops": 908.157825,
           "p99_latency_us": 26345.472,
           "direct": true
         },
         "seq_read": {
-          "mb_per_second": 1800.634475,
-          "iops": 1716.152257,
-          "p99_latency_us": 9895.936,
+          "mb_per_second": 1729.685562,
+          "iops": 1648.490101,
+          "p99_latency_us": 10027.008,
           "direct": true
         },
         "rand_read": {
-          "mb_per_second": 857.614369,
-          "iops": 209376.441571,
-          "p99_latency_us": 222.208,
+          "mb_per_second": 930.536603,
+          "iops": 227179.65469,
+          "p99_latency_us": 185.344,
           "direct": true
         },
         "rand_write": {
-          "mb_per_second": 394.271059,
-          "iops": 96255.516299,
-          "p99_latency_us": 7241.728,
+          "mb_per_second": 390.779861,
+          "iops": 95403.173122,
+          "p99_latency_us": 7307.264,
           "direct": true
         },
-        "wall_seconds": 69.394416909
+        "wall_seconds": 69.365424535
       },
       "download_cloudflare": {
-        "mb_per_second": 169.158369,
+        "mb_per_second": 260.019865,
         "bytes": 50000000,
-        "seconds": 0.295581,
-        "connect_seconds": 0.028005,
-        "ttfb_seconds": 0.090063,
-        "wall_seconds": 0.3046543050000139
+        "seconds": 0.192293,
+        "connect_seconds": 0.01802,
+        "ttfb_seconds": 0.079013,
+        "wall_seconds": 0.2016066709999791
       },
       "compile_redis": {
         "version": "8.10.3",
         "jobs": 4,
-        "seconds": 54.287863689000005,
+        "seconds": 52.61879724099998,
         "github_download": {
-          "mb_per_second": 5.461242,
+          "mb_per_second": 5.654081,
           "bytes": 4780701,
-          "seconds": 0.875387,
-          "connect_seconds": 0.127818,
-          "ttfb_seconds": 0.38483
+          "seconds": 0.845531,
+          "connect_seconds": 0.129161,
+          "ttfb_seconds": 0.372975
         },
         "cpu_accounting": {
-          "wall_seconds": 54.28786610899999,
-          "steal_pct": 0.013852973771702994,
-          "cpu_per_wall": 3.63717753436003,
+          "wall_seconds": 52.61880190100001,
+          "steal_pct": 0.009532888465204956,
+          "cpu_per_wall": 3.642395685112655,
           "nr_throttled": 0,
           "throttled_ms": 0.0
         },
-        "wall_seconds": 55.33722835199998
+        "wall_seconds": 53.63229496700001
       },
       "cache": {
         "size_mb": 1024,
-        "save_seconds": 4.974704265594482,
-        "restore_seconds": 5.199663877487183
+        "save_seconds": 4.200754642486572,
+        "restore_seconds": 5.4941699504852295
       }
     },
     "cpu_accounting": {
-      "wall_seconds": 187.727895051,
-      "steal_pct": 0.014548340166644623,
-      "cpu_per_wall": 2.042388755788468,
+      "wall_seconds": 185.262826186,
+      "steal_pct": 0.0080490455173524,
+      "cpu_per_wall": 2.0295171607849154,
       "nr_throttled": 0,
       "throttled_ms": 0.0
     },
     "timing": {
-      "queue_seconds": 12.0,
-      "job_seconds": 213.0
+      "queue_seconds": 10.0,
+      "job_seconds": 210.0
     }
   }
 ]

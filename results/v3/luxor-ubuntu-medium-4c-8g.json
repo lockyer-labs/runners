@@ -18,12 +18,12 @@
     },
     "github": {
       "repository": "lockyer-labs/runnersbench",
-      "run_id": "45891031803",
+      "run_id": "45907339602",
       "run_attempt": "1",
-      "sha": "ab4b5766057aab8fcb14710e258c0ed880fb9e57"
+      "sha": "be3f03faba810d349584202c169a89a1168b373e"
     },
-    "started_at": "2026-11-26T20:26:53.981535+00:00",
-    "finished_at": "2026-11-26T20:29:25.125711+00:00",
+    "started_at": "2026-11-26T22:51:25.445663+00:00",
+    "finished_at": "2026-11-26T22:53:56.250864+00:00",
     "system": {
       "cpu": {
         "model": "AMD Ryzen 9 9950X 16-Core Processor",
@@ -102,7 +102,7 @@
       "disk": {
         "workdir": "/home/tenki/actions-runner/_work/_temp",
         "total_bytes": 155935379456,
-        "free_bytes": 86212669440,
+        "free_bytes": 86212612096,
         "mount": "/dev/vda ext4   rw,relatime,errors=remount-ro",
         "devices": [
           {
@@ -274,7 +274,7 @@
         "org": "AS19538 Luxor"
       },
       "runner": {
-        "name": "tenki-sandbox-9fb9873e-5a45-44f1-9f8d-74844fd16fdf",
+        "name": "tenki-sandbox-b819788a-0611-41b6-9700-6b7061e0a230",
         "environment": "self-hosted"
       },
       "tools": {
@@ -282,107 +282,107 @@
         "gcc": "gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
         "python": "3.12.16"
       },
-      "wall_seconds": 0.11252731199999744
+      "wall_seconds": 0.11247502299999823
     },
     "benchmarks": {
       "apt_install": {
         "manager": "apt",
-        "update_seconds": 3.12380808,
-        "seconds": 7.678538263,
-        "wall_seconds": 7.678541458999998
+        "update_seconds": 3.1504542200000003,
+        "seconds": 7.115778904999999,
+        "wall_seconds": 7.1157825720000005
       },
       "cpu_single": {
         "threads": 1,
-        "events_per_second": 6827.73,
-        "wall_seconds": 15.004037439000001
+        "events_per_second": 6834.04,
+        "wall_seconds": 15.004034274000006
       },
       "cpu_multi": {
         "threads": 4,
-        "events_per_second": 26678.57,
-        "wall_seconds": 15.003935858000006,
+        "events_per_second": 26687.56,
+        "wall_seconds": 15.003912984000003,
         "cpu_accounting": {
-          "wall_seconds": 15.004159619,
-          "steal_pct": 0.11656952539550376,
-          "cpu_per_wall": 3.9477641870053475,
+          "wall_seconds": 15.004143268000007,
+          "steal_pct": 0.36636136552872606,
+          "cpu_per_wall": 3.9465210337126444,
           "nr_throttled": 0,
           "throttled_ms": 0.0
         }
       },
       "memory": {
-        "mib_per_second": 42152.57,
-        "wall_seconds": 15.004238457
+        "mib_per_second": 42146.66,
+        "wall_seconds": 15.004137135999997
       },
       "disk": {
         "seq_write": {
-          "mb_per_second": 12149.73918,
-          "iops": 11585.827611,
-          "p99_latency_us": 4014.08,
+          "mb_per_second": 16875.076569,
+          "iops": 16092.260516,
+          "p99_latency_us": 3981.312,
           "direct": true
         },
         "seq_read": {
-          "mb_per_second": 17512.288676,
-          "iops": 16699.953336,
-          "p99_latency_us": 1646.592,
+          "mb_per_second": 18822.781499,
+          "iops": 17949.803346,
+          "p99_latency_us": 1204.224,
           "direct": true
         },
         "rand_read": {
-          "mb_per_second": 380.980698,
-          "iops": 93010.732618,
+          "mb_per_second": 391.682559,
+          "iops": 95623.491767,
           "p99_latency_us": 411.648,
           "direct": true
         },
         "rand_write": {
-          "mb_per_second": 520.082234,
-          "iops": 126971.068595,
-          "p99_latency_us": 370.688,
+          "mb_per_second": 459.161845,
+          "iops": 112097.926805,
+          "p99_latency_us": 536.576,
           "direct": true
         },
-        "wall_seconds": 69.24306413800001
+        "wall_seconds": 69.24373962899999
       },
       "download_cloudflare": {
-        "mb_per_second": 209.673496,
+        "mb_per_second": 401.126362,
         "bytes": 50000000,
-        "seconds": 0.238466,
-        "connect_seconds": 0.003753,
-        "ttfb_seconds": 0.052961,
-        "wall_seconds": 0.24299832699998092
+        "seconds": 0.124649,
+        "connect_seconds": 0.003436,
+        "ttfb_seconds": 0.043321,
+        "wall_seconds": 0.12963371099999677
       },
       "compile_redis": {
         "version": "8.10.3",
         "jobs": 4,
-        "seconds": 23.569114786,
+        "seconds": 23.830376581000024,
         "github_download": {
-          "mb_per_second": 25.342583,
+          "mb_per_second": 18.292472,
           "bytes": 4780701,
-          "seconds": 0.188643,
-          "connect_seconds": 0.015738,
-          "ttfb_seconds": 0.131482
+          "seconds": 0.261348,
+          "connect_seconds": 0.015538,
+          "ttfb_seconds": 0.203282
         },
         "cpu_accounting": {
-          "wall_seconds": 23.569116027999996,
-          "steal_pct": 0.13800424628450106,
-          "cpu_per_wall": 3.6590631951383434,
+          "wall_seconds": 23.830377172,
+          "steal_pct": 0.32573289902280134,
+          "cpu_per_wall": 3.636979069799844,
           "nr_throttled": 0,
           "throttled_ms": 0.0
         },
-        "wall_seconds": 23.849247071999997
+        "wall_seconds": 24.185970558000008
       },
       "cache": {
         "size_mb": 1024,
-        "save_seconds": 4.119876384735107,
-        "restore_seconds": 7.725714683532715
+        "save_seconds": 3.9367411136627197,
+        "restore_seconds": 4.855731248855591
       }
     },
     "cpu_accounting": {
-      "wall_seconds": 151.14417931000003,
-      "steal_pct": 1.2574978931539897,
-      "cpu_per_wall": 1.7453609209716114,
+      "wall_seconds": 150.805207769,
+      "steal_pct": 0.5039453617134143,
+      "cpu_per_wall": 1.7802556554362439,
       "nr_throttled": 0,
       "throttled_ms": 0.0
     },
     "timing": {
-      "queue_seconds": 9.0,
-      "job_seconds": 173.0
+      "queue_seconds": 7.0,
+      "job_seconds": 171.0
     }
   },
   {
@@ -404,12 +404,12 @@
     },
     "github": {
       "repository": "lockyer-labs/runnersbench",
-      "run_id": "45891031803",
+      "run_id": "45907339602",
       "run_attempt": "1",
-      "sha": "ab4b5766057aab8fcb14710e258c0ed880fb9e57"
+      "sha": "be3f03faba810d349584202c169a89a1168b373e"
     },
-    "started_at": "2026-11-26T20:26:56.555525+00:00",
-    "finished_at": "2026-11-26T20:29:25.321359+00:00",
+    "started_at": "2026-11-26T22:51:28.287592+00:00",
+    "finished_at": "2026-11-26T22:53:56.777965+00:00",
     "system": {
       "cpu": {
         "model": "AMD Ryzen 9 9950X 16-Core Processor",
@@ -488,7 +488,7 @@
       "disk": {
         "workdir": "/home/tenki/actions-runner/_work/_temp",
         "total_bytes": 155935379456,
-        "free_bytes": 86212726784,
+        "free_bytes": 86212612096,
         "mount": "/dev/vda ext4   rw,relatime,errors=remount-ro",
         "devices": [
           {
@@ -660,7 +660,7 @@
         "org": "AS19538 Luxor"
       },
       "runner": {
-        "name": "tenki-sandbox-d9df4d66-0a54-4238-a8dc-b08da24c4bf2",
+        "name": "tenki-sandbox-b007b223-e768-4db4-838e-a91ec1992f9d",
         "environment": "self-hosted"
       },
       "tools": {
@@ -668,107 +668,107 @@
         "gcc": "gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
         "python": "3.12.16"
       },
-      "wall_seconds": 0.10678745399999912
+      "wall_seconds": 0.11139510900000005
     },
     "benchmarks": {
       "apt_install": {
         "manager": "apt",
-        "update_seconds": 3.0889039609999998,
-        "seconds": 5.273680813000002,
-        "wall_seconds": 5.27368469
+        "update_seconds": 3.1195252169999996,
+        "seconds": 5.3138451459999985,
+        "wall_seconds": 5.313849084000001
       },
       "cpu_single": {
         "threads": 1,
-        "events_per_second": 6915.29,
-        "wall_seconds": 15.003686377999998
+        "events_per_second": 6876.16,
+        "wall_seconds": 15.003849294000005
       },
       "cpu_multi": {
         "threads": 4,
-        "events_per_second": 26911.16,
-        "wall_seconds": 15.004209082999992,
+        "events_per_second": 26824.12,
+        "wall_seconds": 15.003926519000004,
         "cpu_accounting": {
-          "wall_seconds": 15.004391564999999,
-          "steal_pct": 0.2165944685104965,
-          "cpu_per_wall": 3.9432892525955623,
+          "wall_seconds": 15.004090508000004,
+          "steal_pct": 0.1665556295802798,
+          "cpu_per_wall": 3.940679574578316,
           "nr_throttled": 0,
           "throttled_ms": 0.0
         }
       },
       "memory": {
-        "mib_per_second": 42657.76,
-        "wall_seconds": 15.003989168999993
+        "mib_per_second": 42461.06,
+        "wall_seconds": 15.004264507000002
       },
       "disk": {
         "seq_write": {
-          "mb_per_second": 15845.365897,
-          "iops": 15110.318624,
-          "p99_latency_us": 3522.56,
+          "mb_per_second": 13636.660285,
+          "iops": 13003.932809,
+          "p99_latency_us": 4292.608,
           "direct": true
         },
         "seq_read": {
-          "mb_per_second": 19410.224517,
-          "iops": 18510.032664,
-          "p99_latency_us": 1515.52,
+          "mb_per_second": 17266.309145,
+          "iops": 16465.435638,
+          "p99_latency_us": 1302.528,
           "direct": true
         },
         "rand_read": {
-          "mb_per_second": 402.814472,
-          "iops": 98341.243917,
-          "p99_latency_us": 407.552,
+          "mb_per_second": 435.672578,
+          "iops": 106363.309113,
+          "p99_latency_us": 346.112,
           "direct": true
         },
         "rand_write": {
-          "mb_per_second": 512.931914,
-          "iops": 125225.384974,
-          "p99_latency_us": 366.592,
+          "mb_per_second": 517.067506,
+          "iops": 126235.050997,
+          "p99_latency_us": 370.688,
           "direct": true
         },
-        "wall_seconds": 69.253522168
+        "wall_seconds": 69.21864853699999
       },
       "download_cloudflare": {
-        "mb_per_second": 165.87544,
+        "mb_per_second": 471.929625,
         "bytes": 50000000,
-        "seconds": 0.301431,
-        "connect_seconds": 0.003533,
-        "ttfb_seconds": 0.067923,
-        "wall_seconds": 0.306548542999991
+        "seconds": 0.105948,
+        "connect_seconds": 0.003555,
+        "ttfb_seconds": 0.044484,
+        "wall_seconds": 0.11035676600002375
       },
       "compile_redis": {
         "version": "8.10.3",
         "jobs": 4,
-        "seconds": 23.555903900999994,
+        "seconds": 23.479713126999997,
         "github_download": {
-          "mb_per_second": 30.015011,
+          "mb_per_second": 32.732644,
           "bytes": 4780701,
-          "seconds": 0.159277,
-          "connect_seconds": 0.015121,
-          "ttfb_seconds": 0.090849
+          "seconds": 0.146053,
+          "connect_seconds": 0.015902,
+          "ttfb_seconds": 0.089154
         },
         "cpu_accounting": {
-          "wall_seconds": 23.555905182999993,
-          "steal_pct": 0.03182348573247056,
-          "cpu_per_wall": 3.662033589023554,
+          "wall_seconds": 23.479714289000015,
+          "steal_pct": 0.042634832658281815,
+          "cpu_per_wall": 3.659940915050201,
           "nr_throttled": 0,
           "throttled_ms": 0.0
         },
-        "wall_seconds": 23.808054873000003
+        "wall_seconds": 23.71875112799998
       },
       "cache": {
         "size_mb": 1024,
-        "save_seconds": 3.5266470909118652,
-        "restore_seconds": 10.07043170928955
+        "save_seconds": 3.8592379093170166,
+        "restore_seconds": 7.871966600418091
       }
     },
     "cpu_accounting": {
-      "wall_seconds": 148.765837865,
-      "steal_pct": 0.3237223032925745,
-      "cpu_per_wall": 1.8078152206157374,
+      "wall_seconds": 148.490377336,
+      "steal_pct": 0.45301842614272625,
+      "cpu_per_wall": 1.7467932108023234,
       "nr_throttled": 0,
       "throttled_ms": 0.0
     },
     "timing": {
-      "queue_seconds": 10.0,
-      "job_seconds": 173.0
+      "queue_seconds": 7.0,
+      "job_seconds": 171.0
     }
   },
   {
@@ -790,12 +790,12 @@
     },
     "github": {
       "repository": "lockyer-labs/runnersbench",
-      "run_id": "45891031803",
+      "run_id": "45907339602",
       "run_attempt": "1",
-      "sha": "ab4b5766057aab8fcb14710e258c0ed880fb9e57"
+      "sha": "be3f03faba810d349584202c169a89a1168b373e"
     },
-    "started_at": "2026-11-26T20:26:51.219406+00:00",
-    "finished_at": "2026-11-26T20:29:25.099649+00:00",
+    "started_at": "2026-11-26T22:51:30.853101+00:00",
+    "finished_at": "2026-11-26T22:53:59.470093+00:00",
     "system": {
       "cpu": {
         "model": "AMD Ryzen 9 9950X 16-Core Processor",
@@ -874,7 +874,7 @@
       "disk": {
         "workdir": "/home/tenki/actions-runner/_work/_temp",
         "total_bytes": 155935379456,
-        "free_bytes": 86212743168,
+        "free_bytes": 86212616192,
         "mount": "/dev/vda ext4   rw,relatime,errors=remount-ro",
         "devices": [
           {
@@ -1046,7 +1046,7 @@
         "org": "AS19538 Luxor"
       },
       "runner": {
-        "name": "tenki-sandbox-bacac0b1-5ba4-4b18-be44-be7614cdbf34",
+        "name": "tenki-sandbox-f978e58d-16c2-4662-96ff-4572bdfa4ee6",
         "environment": "self-hosted"
       },
       "tools": {
@@ -1054,107 +1054,107 @@
         "gcc": "gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
         "python": "3.12.16"
       },
-      "wall_seconds": 0.10825064900000214
+      "wall_seconds": 0.11261045700000238
     },
     "benchmarks": {
       "apt_install": {
         "manager": "apt",
-        "update_seconds": 3.596644617999999,
-        "seconds": 10.470899701,
-        "wall_seconds": 10.470902937999998
+        "update_seconds": 3.0431136260000002,
+        "seconds": 5.234936503,
+        "wall_seconds": 5.234939379
       },
       "cpu_single": {
         "threads": 1,
-        "events_per_second": 6956.59,
-        "wall_seconds": 15.004114594
+        "events_per_second": 6957.19,
+        "wall_seconds": 15.004075870999998
       },
       "cpu_multi": {
         "threads": 4,
-        "events_per_second": 27064.7,
-        "wall_seconds": 15.00379933,
+        "events_per_second": 27209.04,
+        "wall_seconds": 15.003897776000002,
         "cpu_accounting": {
-          "wall_seconds": 15.003949752999993,
-          "steal_pct": 0.14992503748125938,
-          "cpu_per_wall": 3.94990845581513,
+          "wall_seconds": 15.004054421,
+          "steal_pct": 0.11658894070619585,
+          "cpu_per_wall": 3.964678368317683,
           "nr_throttled": 0,
           "throttled_ms": 0.0
         }
       },
       "memory": {
-        "mib_per_second": 42977.37,
-        "wall_seconds": 15.004139049999992
+        "mib_per_second": 43007.87,
+        "wall_seconds": 15.004303319999991
       },
       "disk": {
         "seq_write": {
-          "mb_per_second": 18826.066819,
-          "iops": 17952.936471,
-          "p99_latency_us": 1253.376,
+          "mb_per_second": 15292.950765,
+          "iops": 14583.427771,
+          "p99_latency_us": 4227.072,
           "direct": true
         },
         "seq_read": {
-          "mb_per_second": 23654.157806,
-          "iops": 22557.362842,
-          "p99_latency_us": 1044.48,
+          "mb_per_second": 18487.539149,
+          "iops": 17630.024665,
+          "p99_latency_us": 1220.608,
           "direct": true
         },
         "rand_read": {
-          "mb_per_second": 448.44797,
-          "iops": 109482.234518,
-          "p99_latency_us": 342.016,
+          "mb_per_second": 324.366829,
+          "iops": 79188.987401,
+          "p99_latency_us": 419.84,
           "direct": true
         },
         "rand_write": {
-          "mb_per_second": 508.422792,
-          "iops": 124124.525032,
-          "p99_latency_us": 395.264,
+          "mb_per_second": 486.296582,
+          "iops": 118722.618492,
+          "p99_latency_us": 350.208,
           "direct": true
         },
-        "wall_seconds": 69.22623673399998
+        "wall_seconds": 69.21904875
       },
       "download_cloudflare": {
-        "mb_per_second": 373.334926,
+        "mb_per_second": 461.020699,
         "bytes": 50000000,
-        "seconds": 0.133928,
-        "connect_seconds": 0.00373,
-        "ttfb_seconds": 0.048354,
-        "wall_seconds": 0.13832508499999108
+        "seconds": 0.108455,
+        "connect_seconds": 0.006025,
+        "ttfb_seconds": 0.051515,
+        "wall_seconds": 0.1179399829999852
       },
       "compile_redis": {
         "version": "8.10.3",
         "jobs": 4,
-        "seconds": 23.519083293999984,
+        "seconds": 23.635736975000015,
         "github_download": {
-          "mb_per_second": 16.244256,
+          "mb_per_second": 26.66076,
           "bytes": 4780701,
-          "seconds": 0.294301,
-          "connect_seconds": 0.015721,
-          "ttfb_seconds": 0.226598
+          "seconds": 0.179316,
+          "connect_seconds": 0.014724,
+          "ttfb_seconds": 0.108791
         },
         "cpu_accounting": {
-          "wall_seconds": 23.51908469700001,
-          "steal_pct": 0.13835674755214986,
-          "cpu_per_wall": 3.6392176439977537,
+          "wall_seconds": 23.635737987,
+          "steal_pct": 0.14822657490735838,
+          "cpu_per_wall": 3.6402502873962836,
           "nr_throttled": 0,
           "throttled_ms": 0.0
         },
-        "wall_seconds": 23.918933759999987
+        "wall_seconds": 23.90977871199999
       },
       "cache": {
         "size_mb": 1024,
-        "save_seconds": 3.7838077545166016,
-        "restore_seconds": 5.03366494178772
+        "save_seconds": 3.9215328693389893,
+        "restore_seconds": 8.549233436584473
       }
     },
     "cpu_accounting": {
-      "wall_seconds": 153.880248959,
-      "steal_pct": 0.6237480253407814,
-      "cpu_per_wall": 1.7233674873417841,
+      "wall_seconds": 148.616995889,
+      "steal_pct": 0.3174816482168954,
+      "cpu_per_wall": 1.7834231166801404,
       "nr_throttled": 0,
       "throttled_ms": 0.0
     },
     "timing": {
       "queue_seconds": 9.0,
-      "job_seconds": 173.0
+      "job_seconds": 172.0
     }
   }
 ]

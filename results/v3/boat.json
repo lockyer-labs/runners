@@ -19,544 +19,12 @@
     },
     "github": {
       "repository": "lockyer-labs/runnersbench",
-      "run_id": "45891031803",
+      "run_id": "45907339602",
       "run_attempt": "1",
-      "sha": "ab4b5766057aab8fcb14710e258c0ed880fb9e57"
+      "sha": "be3f03faba810d349584202c169a89a1168b373e"
     },
-    "started_at": "2026-11-26T20:27:03.355545+00:00",
-    "finished_at": "2026-11-26T20:29:35.698120+00:00",
-    "system": {
-      "cpu": {
-        "model": "AMD EPYC 4585PX 16-Core Processor",
-        "vendor": "AuthenticAMD",
-        "arch": "x86_64",
-        "logical_cpus": 4,
-        "available_cpus": 4,
-        "threads_per_core": "1",
-        "sockets": "1",
-        "max_mhz": null,
-        "l3_cache": "64 MiB (4 instances)",
-        "hypervisor": "KVM",
-        "flags": {
-          "avx2": true,
-          "avx512f": true,
-          "sha_ni": true,
-          "aes": true,
-          "vaes": true,
-          "asimd": false,
-          "sve": false,
-          "sve2": false,
-          "sha2": false
-        },
-        "cgroup_cpu_max": null,
-        "lscpu": {
-          "Architecture": "x86_64",
-          "CPU op-mode(s)": "32-bit, 64-bit",
-          "Address sizes": "48 bits physical, 48 bits virtual",
-          "Byte Order": "Little Endian",
-          "CPU(s)": "4",
-          "On-line CPU(s) list": "0-3",
-          "Vendor ID": "AuthenticAMD",
-          "Model name": "AMD EPYC 4585PX 16-Core Processor",
-          "CPU family": "26",
-          "Model": "68",
-          "Thread(s) per core": "1",
-          "Core(s) per socket": "4",
-          "Socket(s)": "1",
-          "Stepping": "0",
-          "BogoMIPS": "8583.91",
-          "Flags": "fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm rep_good nopl cpuid extd_apicid tsc_known_freq pni pclmulqdq ssse3 fma cx16 sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm cmp_legacy svm cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw perfctr_core ssbd ibrs ibpb stibp ibrs_enhanced vmmcall fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid avx512f avx512dq adx smap avx512ifma clflushopt clwb avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves avx_vnni avx512_bf16 clzero xsaveerptr wbnoinvd arat npt lbrv nrip_save tsc_scale vmcb_clean flushbyasid pausefilter pfthreshold v_vmsave_vmload vgif vnmi avx512vbmi umip pku ospke avx512_vbmi2 gfni vaes vpclmulqdq avx512_vnni avx512_bitalg avx512_vpopcntdq rdpid movdiri movdir64b fsrm avx512_vp2intersect flush_l1d arch_capabilities srso_user_kernel_no",
-          "Virtualization": "AMD-V",
-          "Hypervisor vendor": "KVM",
-          "Virtualization type": "full",
-          "L1d cache": "256 KiB (4 instances)",
-          "L1i cache": "256 KiB (4 instances)",
-          "L2 cache": "2 MiB (4 instances)",
-          "L3 cache": "64 MiB (4 instances)",
-          "NUMA node(s)": "1",
-          "NUMA node0 CPU(s)": "0-3",
-          "Vulnerability Gather data sampling": "Not affected",
-          "Vulnerability Indirect target selection": "Not affected",
-          "Vulnerability Itlb multihit": "Not affected",
-          "Vulnerability L1tf": "Not affected",
-          "Vulnerability Mds": "Not affected",
-          "Vulnerability Meltdown": "Not affected",
-          "Vulnerability Mmio stale data": "Not affected",
-          "Vulnerability Reg file data sampling": "Not affected",
-          "Vulnerability Retbleed": "Not affected",
-          "Vulnerability Spec rstack overflow": "Not affected",
-          "Vulnerability Spec store bypass": "Mitigation; Speculative Store Bypass disabled via prctl",
-          "Vulnerability Spectre v1": "Mitigation; usercopy/swapgs barriers and __user pointer sanitization",
-          "Vulnerability Spectre v2": "Mitigation; Enhanced / Automatic IBRS; IBPB conditional; STIBP disabled; PBRSB-eIBRS Not affected; BHI Not affected",
-          "Vulnerability Srbds": "Not affected",
-          "Vulnerability Tsa": "Not affected",
-          "Vulnerability Tsx async abort": "Not affected",
-          "Vulnerability Vmscape": "Not affected"
-        }
-      },
-      "memory": {
-        "total_bytes": 8327106560,
-        "cgroup_max": null
-      },
-      "disk": {
-        "workdir": "/home/runner/work/_temp",
-        "total_bytes": 84204138496,
-        "free_bytes": 52002091008,
-        "mount": "/dev/vda1[/home/user] ext4   rw,relatime,nobarrier",
-        "devices": [
-          {
-            "name": "vda",
-            "size": "80G",
-            "type": "disk",
-            "rota": true,
-            "model": null
-          },
-          {
-            "name": "vdb",
-            "size": "370K",
-            "type": "disk",
-            "rota": true,
-            "model": null
-          },
-          {
-            "name": "vdc",
-            "size": "100G",
-            "type": "disk",
-            "rota": true,
-            "model": null
-          }
-        ]
-      },
-      "os": {
-        "pretty_name": "Ubuntu 24.04.4 LTS",
-        "kernel": "6.8.0-117-generic",
-        "image_os": null,
-        "image_version": null
-      },
-      "virtualization": "kvm",
-      "virtualization_layers": {
-        "vm": "kvm",
-        "container": null
-      },
-      "dmi": {
-        "sys_vendor": null,
-        "product_name": null,
-        "product_version": null,
-        "board_vendor": null,
-        "bios_vendor": null,
-        "chassis_vendor": null
-      },
-      "network": {
-        "ip": "149.202.104.234",
-        "city": "Roubaix",
-        "region": "Hauts-de-France",
-        "country": "FR",
-        "org": "AS16276 OVH SAS"
-      },
-      "runner": {
-        "name": "ci-runnersbench-140153519049",
-        "environment": "self-hosted"
-      },
-      "tools": {
-        "docker": "Docker version 29.7.0, build c1eba93",
-        "gcc": "gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
-        "python": "3.12.16"
-      },
-      "wall_seconds": 0.16417805500003624
-    },
-    "benchmarks": {
-      "apt_install": {
-        "manager": "apt",
-        "update_seconds": 1.0464795210000375,
-        "seconds": 4.591877645000011,
-        "wall_seconds": 4.591880681000021
-      },
-      "cpu_single": {
-        "threads": 1,
-        "events_per_second": 6289.07,
-        "wall_seconds": 15.004999612000006
-      },
-      "cpu_multi": {
-        "threads": 4,
-        "events_per_second": 25392.92,
-        "wall_seconds": 15.004453548999948,
-        "cpu_accounting": {
-          "wall_seconds": 15.004642289999992,
-          "steal_pct": 0.016661112962345886,
-          "cpu_per_wall": 3.9974315842220607,
-          "nr_throttled": 0,
-          "throttled_ms": 0.0
-        }
-      },
-      "memory": {
-        "mib_per_second": 40271.04,
-        "wall_seconds": 15.004179899999997
-      },
-      "disk": {
-        "seq_write": {
-          "mb_per_second": 14456.187921,
-          "iops": 13785.42861,
-          "p99_latency_us": 1875.968,
-          "direct": true
-        },
-        "seq_read": {
-          "mb_per_second": 21303.385007,
-          "iops": 20315.491268,
-          "p99_latency_us": 1794.048,
-          "direct": true
-        },
-        "rand_read": {
-          "mb_per_second": 2244.481032,
-          "iops": 547966.935538,
-          "p99_latency_us": 110.08,
-          "direct": true
-        },
-        "rand_write": {
-          "mb_per_second": 1029.590667,
-          "iops": 251362.775815,
-          "p99_latency_us": 301.056,
-          "direct": true
-        },
-        "wall_seconds": 68.873082409
-      },
-      "download_cloudflare": {
-        "mb_per_second": 244.683037,
-        "bytes": 50000000,
-        "seconds": 0.204346,
-        "connect_seconds": 0.013514,
-        "ttfb_seconds": 0.07044,
-        "wall_seconds": 0.2090229249999993
-      },
-      "compile_redis": {
-        "version": "8.10.3",
-        "jobs": 4,
-        "seconds": 27.886523726000007,
-        "github_download": {
-          "mb_per_second": 9.85427,
-          "bytes": 4780701,
-          "seconds": 0.48514,
-          "connect_seconds": 0.022746,
-          "ttfb_seconds": 0.343202
-        },
-        "cpu_accounting": {
-          "wall_seconds": 27.886525248999988,
-          "steal_pct": 0.13450502152080346,
-          "cpu_per_wall": 3.6552250626368474,
-          "nr_throttled": 0,
-          "throttled_ms": 0.0
-        },
-        "wall_seconds": 28.48519587000004
-      },
-      "cache": {
-        "size_mb": 1024,
-        "save_seconds": 9.138625383377075,
-        "restore_seconds": 10.268484354019165
-      }
-    },
-    "cpu_accounting": {
-      "wall_seconds": 152.342582111,
-      "steal_pct": 0.3917532618438963,
-      "cpu_per_wall": 1.6383103039316185,
-      "nr_throttled": 0,
-      "throttled_ms": 0.0
-    },
-    "timing": {
-      "queue_seconds": 7.0,
-      "job_seconds": 188.0
-    }
-  },
-  {
-    "schema_version": 1,
-    "benchmark_version": 3,
-    "spec": {
-      "provider": "boat",
-      "name": "boat",
-      "label": "boat",
-      "arch": "x64",
-      "price_per_minute": 0.0006,
-      "billing": {
-        "increment_seconds": 1
-      },
-      "pricing_caveat": "Needs a plan from $20 a month, which comes back as VM time. Job starts above the plan's included number cost $0.03-0.07 each.",
-      "enabled": true,
-      "notes": "boat.dev. Ubuntu 24.04, one fresh VM per job, billed per second. Needs a plan from $20/month; the plan amount comes back as VM time. Starts above the plan's included count cost $0.03-0.07 each.",
-      "pricing_source": "https://docs.boat.dev/pricing",
-      "rep": 2
-    },
-    "github": {
-      "repository": "lockyer-labs/runnersbench",
-      "run_id": "45891031803",
-      "run_attempt": "1",
-      "sha": "ab4b5766057aab8fcb14710e258c0ed880fb9e57"
-    },
-    "started_at": "2026-11-26T20:27:33.155030+00:00",
-    "finished_at": "2026-11-26T20:30:04.081660+00:00",
-    "system": {
-      "cpu": {
-        "model": "AMD EPYC 4585PX 16-Core Processor",
-        "vendor": "AuthenticAMD",
-        "arch": "x86_64",
-        "logical_cpus": 4,
-        "available_cpus": 4,
-        "threads_per_core": "1",
-        "sockets": "1",
-        "max_mhz": null,
-        "l3_cache": "64 MiB (4 instances)",
-        "hypervisor": "KVM",
-        "flags": {
-          "avx2": true,
-          "avx512f": true,
-          "sha_ni": true,
-          "aes": true,
-          "vaes": true,
-          "asimd": false,
-          "sve": false,
-          "sve2": false,
-          "sha2": false
-        },
-        "cgroup_cpu_max": null,
-        "lscpu": {
-          "Architecture": "x86_64",
-          "CPU op-mode(s)": "32-bit, 64-bit",
-          "Address sizes": "48 bits physical, 48 bits virtual",
-          "Byte Order": "Little Endian",
-          "CPU(s)": "4",
-          "On-line CPU(s) list": "0-3",
-          "Vendor ID": "AuthenticAMD",
-          "Model name": "AMD EPYC 4585PX 16-Core Processor",
-          "CPU family": "26",
-          "Model": "68",
-          "Thread(s) per core": "1",
-          "Core(s) per socket": "4",
-          "Socket(s)": "1",
-          "Stepping": "0",
-          "BogoMIPS": "8583.91",
-          "Flags": "fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm rep_good nopl cpuid extd_apicid tsc_known_freq pni pclmulqdq ssse3 fma cx16 sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm cmp_legacy svm cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw perfctr_core ssbd ibrs ibpb stibp ibrs_enhanced vmmcall fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid avx512f avx512dq adx smap avx512ifma clflushopt clwb avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves avx_vnni avx512_bf16 clzero xsaveerptr wbnoinvd arat npt lbrv nrip_save tsc_scale vmcb_clean flushbyasid pausefilter pfthreshold v_vmsave_vmload vgif vnmi avx512vbmi umip pku ospke avx512_vbmi2 gfni vaes vpclmulqdq avx512_vnni avx512_bitalg avx512_vpopcntdq rdpid movdiri movdir64b fsrm avx512_vp2intersect flush_l1d arch_capabilities srso_user_kernel_no",
-          "Virtualization": "AMD-V",
-          "Hypervisor vendor": "KVM",
-          "Virtualization type": "full",
-          "L1d cache": "256 KiB (4 instances)",
-          "L1i cache": "256 KiB (4 instances)",
-          "L2 cache": "2 MiB (4 instances)",
-          "L3 cache": "64 MiB (4 instances)",
-          "NUMA node(s)": "1",
-          "NUMA node0 CPU(s)": "0-3",
-          "Vulnerability Gather data sampling": "Not affected",
-          "Vulnerability Indirect target selection": "Not affected",
-          "Vulnerability Itlb multihit": "Not affected",
-          "Vulnerability L1tf": "Not affected",
-          "Vulnerability Mds": "Not affected",
-          "Vulnerability Meltdown": "Not affected",
-          "Vulnerability Mmio stale data": "Not affected",
-          "Vulnerability Reg file data sampling": "Not affected",
-          "Vulnerability Retbleed": "Not affected",
-          "Vulnerability Spec rstack overflow": "Not affected",
-          "Vulnerability Spec store bypass": "Mitigation; Speculative Store Bypass disabled via prctl",
-          "Vulnerability Spectre v1": "Mitigation; usercopy/swapgs barriers and __user pointer sanitization",
-          "Vulnerability Spectre v2": "Mitigation; Enhanced / Automatic IBRS; IBPB conditional; STIBP disabled; PBRSB-eIBRS Not affected; BHI Not affected",
-          "Vulnerability Srbds": "Not affected",
-          "Vulnerability Tsa": "Not affected",
-          "Vulnerability Tsx async abort": "Not affected",
-          "Vulnerability Vmscape": "Not affected"
-        }
-      },
-      "memory": {
-        "total_bytes": 8327106560,
-        "cgroup_max": null
-      },
-      "disk": {
-        "workdir": "/home/runner/work/_temp",
-        "total_bytes": 84204138496,
-        "free_bytes": 52002082816,
-        "mount": "/dev/vda1[/home/user] ext4   rw,relatime,nobarrier",
-        "devices": [
-          {
-            "name": "vda",
-            "size": "80G",
-            "type": "disk",
-            "rota": true,
-            "model": null
-          },
-          {
-            "name": "vdb",
-            "size": "370K",
-            "type": "disk",
-            "rota": true,
-            "model": null
-          },
-          {
-            "name": "vdc",
-            "size": "100G",
-            "type": "disk",
-            "rota": true,
-            "model": null
-          }
-        ]
-      },
-      "os": {
-        "pretty_name": "Ubuntu 24.04.4 LTS",
-        "kernel": "6.8.0-117-generic",
-        "image_os": null,
-        "image_version": null
-      },
-      "virtualization": "kvm",
-      "virtualization_layers": {
-        "vm": "kvm",
-        "container": null
-      },
-      "dmi": {
-        "sys_vendor": null,
-        "product_name": null,
-        "product_version": null,
-        "board_vendor": null,
-        "bios_vendor": null,
-        "chassis_vendor": null
-      },
-      "network": {
-        "ip": "149.202.104.234",
-        "city": "Roubaix",
-        "region": "Hauts-de-France",
-        "country": "FR",
-        "org": "AS16276 OVH SAS"
-      },
-      "runner": {
-        "name": "ci-runnersbench-140153518936",
-        "environment": "self-hosted"
-      },
-      "tools": {
-        "docker": "Docker version 29.7.0, build c1eba93",
-        "gcc": "gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
-        "python": "3.12.16"
-      },
-      "wall_seconds": 0.16445311699999365
-    },
-    "benchmarks": {
-      "apt_install": {
-        "manager": "apt",
-        "update_seconds": 1.074785688999782,
-        "seconds": 4.616732366999713,
-        "wall_seconds": 4.616735763000179
-      },
-      "cpu_single": {
-        "threads": 1,
-        "events_per_second": 6641.89,
-        "wall_seconds": 15.004327630000262
-      },
-      "cpu_multi": {
-        "threads": 4,
-        "events_per_second": 25774.58,
-        "wall_seconds": 15.004564945000311,
-        "cpu_accounting": {
-          "wall_seconds": 15.004753873000027,
-          "steal_pct": 0.8495752123938031,
-          "cpu_per_wall": 3.96442370887798,
-          "nr_throttled": 0,
-          "throttled_ms": 0.0
-        }
-      },
-      "memory": {
-        "mib_per_second": 39154.75,
-        "wall_seconds": 15.006200810999871
-      },
-      "disk": {
-        "seq_write": {
-          "mb_per_second": 6667.914494,
-          "iops": 6358.018931,
-          "p99_latency_us": 9240.576,
-          "direct": true
-        },
-        "seq_read": {
-          "mb_per_second": 25374.896116,
-          "iops": 24198.386774,
-          "p99_latency_us": 1204.224,
-          "direct": true
-        },
-        "rand_read": {
-          "mb_per_second": 3074.837246,
-          "iops": 750690.553963,
-          "p99_latency_us": 79.36,
-          "direct": true
-        },
-        "rand_write": {
-          "mb_per_second": 1107.12742,
-          "iops": 270292.713819,
-          "p99_latency_us": 284.672,
-          "direct": true
-        },
-        "wall_seconds": 68.85542225499967
-      },
-      "download_cloudflare": {
-        "mb_per_second": 238.42108,
-        "bytes": 50000000,
-        "seconds": 0.209713,
-        "connect_seconds": 0.006994,
-        "ttfb_seconds": 0.053707,
-        "wall_seconds": 0.21417181199967672
-      },
-      "compile_redis": {
-        "version": "8.10.3",
-        "jobs": 4,
-        "seconds": 26.375139465999837,
-        "github_download": {
-          "mb_per_second": 8.393467,
-          "bytes": 4780701,
-          "seconds": 0.569574,
-          "connect_seconds": 0.041916,
-          "ttfb_seconds": 0.396417
-        },
-        "cpu_accounting": {
-          "wall_seconds": 26.375140909000038,
-          "steal_pct": 0.33175355450236965,
-          "cpu_per_wall": 3.6533887091810517,
-          "nr_throttled": 0,
-          "throttled_ms": 0.0
-        },
-        "wall_seconds": 27.05500300499989
-      },
-      "cache": {
-        "size_mb": 1024,
-        "save_seconds": 38.790804624557495,
-        "restore_seconds": 10.264463901519775
-      }
-    },
-    "cpu_accounting": {
-      "wall_seconds": 150.92663725300008,
-      "steal_pct": 0.538272512997108,
-      "cpu_per_wall": 1.6312009031732817,
-      "nr_throttled": 0,
-      "throttled_ms": 0.0
-    },
-    "timing": {
-      "queue_seconds": 7.0,
-      "job_seconds": 216.0
-    }
-  },
-  {
-    "schema_version": 1,
-    "benchmark_version": 3,
-    "spec": {
-      "provider": "boat",
-      "name": "boat",
-      "label": "boat",
-      "arch": "x64",
-      "price_per_minute": 0.0006,
-      "billing": {
-        "increment_seconds": 1
-      },
-      "pricing_caveat": "Needs a plan from $20 a month, which comes back as VM time. Job starts above the plan's included number cost $0.03-0.07 each.",
-      "enabled": true,
-      "notes": "boat.dev. Ubuntu 24.04, one fresh VM per job, billed per second. Needs a plan from $20/month; the plan amount comes back as VM time. Starts above the plan's included count cost $0.03-0.07 each.",
-      "pricing_source": "https://docs.boat.dev/pricing",
-      "rep": 3
-    },
-    "github": {
-      "repository": "lockyer-labs/runnersbench",
-      "run_id": "45891031803",
-      "run_attempt": "1",
-      "sha": "ab4b5766057aab8fcb14710e258c0ed880fb9e57"
-    },
-    "started_at": "2026-11-26T20:27:06.943345+00:00",
-    "finished_at": "2026-11-26T20:30:10.050540+00:00",
+    "started_at": "2026-11-26T22:52:05.681151+00:00",
+    "finished_at": "2026-11-26T22:54:42.293825+00:00",
     "system": {
       "cpu": {
         "model": "AMD EPYC 4585PX 16-Core Processor",
@@ -633,7 +101,7 @@
       "disk": {
         "workdir": "/home/runner/work/_temp",
         "total_bytes": 84204138496,
-        "free_bytes": 52002082816,
+        "free_bytes": 51966820352,
         "mount": "/dev/vda1[/home/user] ext4   rw,relatime,nobarrier",
         "devices": [
           {
@@ -679,14 +147,14 @@
         "chassis_vendor": null
       },
       "network": {
-        "ip": "51.210.206.206",
-        "city": "Strasbourg",
-        "region": "Grand Est",
+        "ip": "149.202.104.234",
+        "city": "Roubaix",
+        "region": "Hauts-de-France",
         "country": "FR",
         "org": "AS16276 OVH SAS"
       },
       "runner": {
-        "name": "ci-runnersbench-140153519052",
+        "name": "ci-runnersbench-140207169506",
         "environment": "self-hosted"
       },
       "tools": {
@@ -694,107 +162,639 @@
         "gcc": "gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
         "python": "3.12.16"
       },
-      "wall_seconds": 0.17558134699993388
+      "wall_seconds": 0.19206003999988752
     },
     "benchmarks": {
       "apt_install": {
         "manager": "apt",
-        "update_seconds": 1.1224826970000095,
-        "seconds": 4.927290697999979,
-        "wall_seconds": 4.92729366399999
+        "update_seconds": 4.153024403000018,
+        "seconds": 9.29602776899992,
+        "wall_seconds": 9.296031064999625
       },
       "cpu_single": {
         "threads": 1,
-        "events_per_second": 6418.42,
-        "wall_seconds": 15.004049827999893
+        "events_per_second": 6161.08,
+        "wall_seconds": 15.005089348000183
       },
       "cpu_multi": {
         "threads": 4,
-        "events_per_second": 25384.27,
-        "wall_seconds": 15.004444986000067,
+        "events_per_second": 22969.22,
+        "wall_seconds": 15.00562832300011,
         "cpu_accounting": {
-          "wall_seconds": 15.004599280999969,
-          "steal_pct": 0.0,
-          "cpu_per_wall": 3.9984392702823106,
+          "wall_seconds": 15.005849479000062,
+          "steal_pct": 0.13326669998334167,
+          "cpu_per_wall": 3.992509260061714,
           "nr_throttled": 0,
           "throttled_ms": 0.0
         }
       },
       "memory": {
-        "mib_per_second": 39607.92,
-        "wall_seconds": 15.004607746000033
+        "mib_per_second": 37660.24,
+        "wall_seconds": 15.008437102000244
       },
       "disk": {
         "seq_write": {
-          "mb_per_second": 12982.715674,
-          "iops": 12380.282629,
-          "p99_latency_us": 1957.888,
+          "mb_per_second": 2763.798658,
+          "iops": 2634.764063,
+          "p99_latency_us": 17694.72,
           "direct": true
         },
         "seq_read": {
-          "mb_per_second": 28883.197525,
-          "iops": 27544.163722,
-          "p99_latency_us": 684.032,
+          "mb_per_second": 12091.931543,
+          "iops": 11530.764616,
+          "p99_latency_us": 3522.56,
           "direct": true
         },
         "rand_read": {
-          "mb_per_second": 3314.943232,
-          "iops": 809310.179321,
-          "p99_latency_us": 48.384,
+          "mb_per_second": 2340.933763,
+          "iops": 571514.965669,
+          "p99_latency_us": 94.72,
           "direct": true
         },
         "rand_write": {
-          "mb_per_second": 1621.199038,
-          "iops": 395798.413439,
-          "p99_latency_us": 175.104,
+          "mb_per_second": 573.869505,
+          "iops": 140102.793147,
+          "p99_latency_us": 585.728,
           "direct": true
         },
-        "wall_seconds": 68.85408837499995
+        "wall_seconds": 68.90121020700008
       },
       "download_cloudflare": {
-        "mb_per_second": 248.084785,
+        "mb_per_second": 154.137354,
         "bytes": 50000000,
-        "seconds": 0.201544,
-        "connect_seconds": 0.00881,
-        "ttfb_seconds": 0.056652,
-        "wall_seconds": 0.22164325199992163
+        "seconds": 0.324386,
+        "connect_seconds": 0.005478,
+        "ttfb_seconds": 0.063203,
+        "wall_seconds": 0.33040294799957337
       },
       "compile_redis": {
         "version": "8.10.3",
         "jobs": 4,
-        "seconds": 58.2019937529999,
+        "seconds": 27.13171496599989,
         "github_download": {
-          "mb_per_second": 14.880262,
+          "mb_per_second": 7.814373,
           "bytes": 4780701,
-          "seconds": 0.321278,
-          "connect_seconds": 0.022295,
-          "ttfb_seconds": 0.193775
+          "seconds": 0.611783,
+          "connect_seconds": 0.030362,
+          "ttfb_seconds": 0.22964
         },
         "cpu_accounting": {
-          "wall_seconds": 58.20199864199981,
-          "steal_pct": 8.306216817948279,
-          "cpu_per_wall": 3.2940592672645805,
+          "wall_seconds": 27.131715606999933,
+          "steal_pct": 0.10145729570190001,
+          "cpu_per_wall": 3.628335355785681,
           "nr_throttled": 0,
           "throttled_ms": 0.0
         },
-        "wall_seconds": 58.90838132199997
+        "wall_seconds": 27.865900551000323
       },
       "cache": {
         "size_mb": 1024,
-        "save_seconds": 11.16213846206665,
-        "restore_seconds": 12.419894933700562
+        "save_seconds": 32.321356773376465,
+        "restore_seconds": 12.610676765441895
       }
     },
     "cpu_accounting": {
-      "wall_seconds": 183.10722723899994,
-      "steal_pct": 2.8835079251905884,
-      "cpu_per_wall": 1.906800563061745,
+      "wall_seconds": 156.61267398300015,
+      "steal_pct": 0.5444440854308701,
+      "cpu_per_wall": 1.5904626724337625,
+      "nr_throttled": 0,
+      "throttled_ms": 0.0
+    },
+    "timing": {
+      "queue_seconds": 6.0,
+      "job_seconds": 219.0
+    }
+  },
+  {
+    "schema_version": 1,
+    "benchmark_version": 3,
+    "spec": {
+      "provider": "boat",
+      "name": "boat",
+      "label": "boat",
+      "arch": "x64",
+      "price_per_minute": 0.0006,
+      "billing": {
+        "increment_seconds": 1
+      },
+      "pricing_caveat": "Needs a plan from $20 a month, which comes back as VM time. Job starts above the plan's included number cost $0.03-0.07 each.",
+      "enabled": true,
+      "notes": "boat.dev. Ubuntu 24.04, one fresh VM per job, billed per second. Needs a plan from $20/month; the plan amount comes back as VM time. Starts above the plan's included count cost $0.03-0.07 each.",
+      "pricing_source": "https://docs.boat.dev/pricing",
+      "rep": 2
+    },
+    "github": {
+      "repository": "lockyer-labs/runnersbench",
+      "run_id": "45907339602",
+      "run_attempt": "1",
+      "sha": "be3f03faba810d349584202c169a89a1168b373e"
+    },
+    "started_at": "2026-11-26T22:51:56.314691+00:00",
+    "finished_at": "2026-11-26T22:54:32.194690+00:00",
+    "system": {
+      "cpu": {
+        "model": "AMD EPYC 4585PX 16-Core Processor",
+        "vendor": "AuthenticAMD",
+        "arch": "x86_64",
+        "logical_cpus": 4,
+        "available_cpus": 4,
+        "threads_per_core": "1",
+        "sockets": "1",
+        "max_mhz": null,
+        "l3_cache": "64 MiB (4 instances)",
+        "hypervisor": "KVM",
+        "flags": {
+          "avx2": true,
+          "avx512f": true,
+          "sha_ni": true,
+          "aes": true,
+          "vaes": true,
+          "asimd": false,
+          "sve": false,
+          "sve2": false,
+          "sha2": false
+        },
+        "cgroup_cpu_max": null,
+        "lscpu": {
+          "Architecture": "x86_64",
+          "CPU op-mode(s)": "32-bit, 64-bit",
+          "Address sizes": "48 bits physical, 48 bits virtual",
+          "Byte Order": "Little Endian",
+          "CPU(s)": "4",
+          "On-line CPU(s) list": "0-3",
+          "Vendor ID": "AuthenticAMD",
+          "Model name": "AMD EPYC 4585PX 16-Core Processor",
+          "CPU family": "26",
+          "Model": "68",
+          "Thread(s) per core": "1",
+          "Core(s) per socket": "4",
+          "Socket(s)": "1",
+          "Stepping": "0",
+          "BogoMIPS": "8583.91",
+          "Flags": "fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm rep_good nopl cpuid extd_apicid tsc_known_freq pni pclmulqdq ssse3 fma cx16 sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm cmp_legacy svm cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw perfctr_core ssbd ibrs ibpb stibp ibrs_enhanced vmmcall fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid avx512f avx512dq adx smap avx512ifma clflushopt clwb avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves avx_vnni avx512_bf16 clzero xsaveerptr wbnoinvd arat npt lbrv nrip_save tsc_scale vmcb_clean flushbyasid pausefilter pfthreshold v_vmsave_vmload vgif vnmi avx512vbmi umip pku ospke avx512_vbmi2 gfni vaes vpclmulqdq avx512_vnni avx512_bitalg avx512_vpopcntdq rdpid movdiri movdir64b fsrm avx512_vp2intersect flush_l1d arch_capabilities srso_user_kernel_no",
+          "Virtualization": "AMD-V",
+          "Hypervisor vendor": "KVM",
+          "Virtualization type": "full",
+          "L1d cache": "256 KiB (4 instances)",
+          "L1i cache": "256 KiB (4 instances)",
+          "L2 cache": "2 MiB (4 instances)",
+          "L3 cache": "64 MiB (4 instances)",
+          "NUMA node(s)": "1",
+          "NUMA node0 CPU(s)": "0-3",
+          "Vulnerability Gather data sampling": "Not affected",
+          "Vulnerability Indirect target selection": "Not affected",
+          "Vulnerability Itlb multihit": "Not affected",
+          "Vulnerability L1tf": "Not affected",
+          "Vulnerability Mds": "Not affected",
+          "Vulnerability Meltdown": "Not affected",
+          "Vulnerability Mmio stale data": "Not affected",
+          "Vulnerability Reg file data sampling": "Not affected",
+          "Vulnerability Retbleed": "Not affected",
+          "Vulnerability Spec rstack overflow": "Not affected",
+          "Vulnerability Spec store bypass": "Mitigation; Speculative Store Bypass disabled via prctl",
+          "Vulnerability Spectre v1": "Mitigation; usercopy/swapgs barriers and __user pointer sanitization",
+          "Vulnerability Spectre v2": "Mitigation; Enhanced / Automatic IBRS; IBPB conditional; STIBP disabled; PBRSB-eIBRS Not affected; BHI Not affected",
+          "Vulnerability Srbds": "Not affected",
+          "Vulnerability Tsa": "Not affected",
+          "Vulnerability Tsx async abort": "Not affected",
+          "Vulnerability Vmscape": "Not affected"
+        }
+      },
+      "memory": {
+        "total_bytes": 8327110656,
+        "cgroup_max": null
+      },
+      "disk": {
+        "workdir": "/home/runner/work/_temp",
+        "total_bytes": 84204138496,
+        "free_bytes": 51966853120,
+        "mount": "/dev/vda1[/home/user] ext4   rw,relatime,nobarrier",
+        "devices": [
+          {
+            "name": "vda",
+            "size": "80G",
+            "type": "disk",
+            "rota": true,
+            "model": null
+          },
+          {
+            "name": "vdb",
+            "size": "370K",
+            "type": "disk",
+            "rota": true,
+            "model": null
+          },
+          {
+            "name": "vdc",
+            "size": "100G",
+            "type": "disk",
+            "rota": true,
+            "model": null
+          }
+        ]
+      },
+      "os": {
+        "pretty_name": "Ubuntu 24.04.4 LTS",
+        "kernel": "6.8.0-117-generic",
+        "image_os": null,
+        "image_version": null
+      },
+      "virtualization": "kvm",
+      "virtualization_layers": {
+        "vm": "kvm",
+        "container": null
+      },
+      "dmi": {
+        "sys_vendor": null,
+        "product_name": null,
+        "product_version": null,
+        "board_vendor": null,
+        "bios_vendor": null,
+        "chassis_vendor": null
+      },
+      "network": {
+        "ip": "149.202.104.234",
+        "city": "Roubaix",
+        "region": "Hauts-de-France",
+        "country": "FR",
+        "org": "AS16276 OVH SAS"
+      },
+      "runner": {
+        "name": "ci-runnersbench-140207169442",
+        "environment": "self-hosted"
+      },
+      "tools": {
+        "docker": "Docker version 29.7.0, build c1eba93",
+        "gcc": "gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+        "python": "3.12.16"
+      },
+      "wall_seconds": 0.1955144769999606
+    },
+    "benchmarks": {
+      "apt_install": {
+        "manager": "apt",
+        "update_seconds": 1.7247843669999838,
+        "seconds": 6.708234489000006,
+        "wall_seconds": 6.7082378640000115
+      },
+      "cpu_single": {
+        "threads": 1,
+        "events_per_second": 6235.13,
+        "wall_seconds": 15.00597037700004
+      },
+      "cpu_multi": {
+        "threads": 4,
+        "events_per_second": 23822.48,
+        "wall_seconds": 15.004948243999934,
+        "cpu_accounting": {
+          "wall_seconds": 15.00513343099999,
+          "steal_pct": 0.03331667499583542,
+          "cpu_per_wall": 3.996752129914468,
+          "nr_throttled": 0,
+          "throttled_ms": 0.0
+        }
+      },
+      "memory": {
+        "mib_per_second": 34032.38,
+        "wall_seconds": 15.00717497100004
+      },
+      "disk": {
+        "seq_write": {
+          "mb_per_second": 4295.835449,
+          "iops": 4095.828335,
+          "p99_latency_us": 7766.016,
+          "direct": true
+        },
+        "seq_read": {
+          "mb_per_second": 4726.280532,
+          "iops": 4506.332489,
+          "p99_latency_us": 11862.016,
+          "direct": true
+        },
+        "rand_read": {
+          "mb_per_second": 2063.83053,
+          "iops": 503862.809146,
+          "p99_latency_us": 99.84,
+          "direct": true
+        },
+        "rand_write": {
+          "mb_per_second": 741.910355,
+          "iops": 181128.391441,
+          "p99_latency_us": 489.472,
+          "direct": true
+        },
+        "wall_seconds": 68.93982871800006
+      },
+      "download_cloudflare": {
+        "mb_per_second": 198.79609,
+        "bytes": 50000000,
+        "seconds": 0.251514,
+        "connect_seconds": 0.005717,
+        "ttfb_seconds": 0.053321,
+        "wall_seconds": 0.2583988850000196
+      },
+      "compile_redis": {
+        "version": "8.10.3",
+        "jobs": 4,
+        "seconds": 29.288385619999985,
+        "github_download": {
+          "mb_per_second": 14.080059,
+          "bytes": 4780701,
+          "seconds": 0.339537,
+          "connect_seconds": 0.0207,
+          "ttfb_seconds": 0.192379
+        },
+        "cpu_accounting": {
+          "wall_seconds": 29.28838643200004,
+          "steal_pct": 0.6827686267815993,
+          "cpu_per_wall": 3.6047554632319274,
+          "nr_throttled": 0,
+          "throttled_ms": 0.0
+        },
+        "wall_seconds": 29.752613551999843
+      },
+      "cache": {
+        "size_mb": 1024,
+        "save_seconds": 19.44631814956665,
+        "restore_seconds": 12.74123501777649
+      }
+    },
+    "cpu_accounting": {
+      "wall_seconds": 155.88000064200003,
+      "steal_pct": 0.5950058525165822,
+      "cpu_per_wall": 1.605357531237878,
+      "nr_throttled": 0,
+      "throttled_ms": 0.0
+    },
+    "timing": {
+      "queue_seconds": 6.0,
+      "job_seconds": 209.0
+    }
+  },
+  {
+    "schema_version": 1,
+    "benchmark_version": 3,
+    "spec": {
+      "provider": "boat",
+      "name": "boat",
+      "label": "boat",
+      "arch": "x64",
+      "price_per_minute": 0.0006,
+      "billing": {
+        "increment_seconds": 1
+      },
+      "pricing_caveat": "Needs a plan from $20 a month, which comes back as VM time. Job starts above the plan's included number cost $0.03-0.07 each.",
+      "enabled": true,
+      "notes": "boat.dev. Ubuntu 24.04, one fresh VM per job, billed per second. Needs a plan from $20/month; the plan amount comes back as VM time. Starts above the plan's included count cost $0.03-0.07 each.",
+      "pricing_source": "https://docs.boat.dev/pricing",
+      "rep": 3
+    },
+    "github": {
+      "repository": "lockyer-labs/runnersbench",
+      "run_id": "45907339602",
+      "run_attempt": "1",
+      "sha": "be3f03faba810d349584202c169a89a1168b373e"
+    },
+    "started_at": "2026-11-26T22:51:52.119748+00:00",
+    "finished_at": "2026-11-26T22:54:21.578832+00:00",
+    "system": {
+      "cpu": {
+        "model": "AMD EPYC 4585PX 16-Core Processor",
+        "vendor": "AuthenticAMD",
+        "arch": "x86_64",
+        "logical_cpus": 4,
+        "available_cpus": 4,
+        "threads_per_core": "1",
+        "sockets": "1",
+        "max_mhz": null,
+        "l3_cache": "64 MiB (4 instances)",
+        "hypervisor": "KVM",
+        "flags": {
+          "avx2": true,
+          "avx512f": true,
+          "sha_ni": true,
+          "aes": true,
+          "vaes": true,
+          "asimd": false,
+          "sve": false,
+          "sve2": false,
+          "sha2": false
+        },
+        "cgroup_cpu_max": null,
+        "lscpu": {
+          "Architecture": "x86_64",
+          "CPU op-mode(s)": "32-bit, 64-bit",
+          "Address sizes": "48 bits physical, 48 bits virtual",
+          "Byte Order": "Little Endian",
+          "CPU(s)": "4",
+          "On-line CPU(s) list": "0-3",
+          "Vendor ID": "AuthenticAMD",
+          "Model name": "AMD EPYC 4585PX 16-Core Processor",
+          "CPU family": "26",
+          "Model": "68",
+          "Thread(s) per core": "1",
+          "Core(s) per socket": "4",
+          "Socket(s)": "1",
+          "Stepping": "0",
+          "BogoMIPS": "8583.91",
+          "Flags": "fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm rep_good nopl cpuid extd_apicid tsc_known_freq pni pclmulqdq ssse3 fma cx16 sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm cmp_legacy svm cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw perfctr_core ssbd ibrs ibpb stibp ibrs_enhanced vmmcall fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid avx512f avx512dq adx smap avx512ifma clflushopt clwb avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves avx_vnni avx512_bf16 clzero xsaveerptr wbnoinvd arat npt lbrv nrip_save tsc_scale vmcb_clean flushbyasid pausefilter pfthreshold v_vmsave_vmload vgif vnmi avx512vbmi umip pku ospke avx512_vbmi2 gfni vaes vpclmulqdq avx512_vnni avx512_bitalg avx512_vpopcntdq rdpid movdiri movdir64b fsrm avx512_vp2intersect flush_l1d arch_capabilities srso_user_kernel_no",
+          "Virtualization": "AMD-V",
+          "Hypervisor vendor": "KVM",
+          "Virtualization type": "full",
+          "L1d cache": "256 KiB (4 instances)",
+          "L1i cache": "256 KiB (4 instances)",
+          "L2 cache": "2 MiB (4 instances)",
+          "L3 cache": "64 MiB (4 instances)",
+          "NUMA node(s)": "1",
+          "NUMA node0 CPU(s)": "0-3",
+          "Vulnerability Gather data sampling": "Not affected",
+          "Vulnerability Indirect target selection": "Not affected",
+          "Vulnerability Itlb multihit": "Not affected",
+          "Vulnerability L1tf": "Not affected",
+          "Vulnerability Mds": "Not affected",
+          "Vulnerability Meltdown": "Not affected",
+          "Vulnerability Mmio stale data": "Not affected",
+          "Vulnerability Reg file data sampling": "Not affected",
+          "Vulnerability Retbleed": "Not affected",
+          "Vulnerability Spec rstack overflow": "Not affected",
+          "Vulnerability Spec store bypass": "Mitigation; Speculative Store Bypass disabled via prctl",
+          "Vulnerability Spectre v1": "Mitigation; usercopy/swapgs barriers and __user pointer sanitization",
+          "Vulnerability Spectre v2": "Mitigation; Enhanced / Automatic IBRS; IBPB conditional; STIBP disabled; PBRSB-eIBRS Not affected; BHI Not affected",
+          "Vulnerability Srbds": "Not affected",
+          "Vulnerability Tsa": "Not affected",
+          "Vulnerability Tsx async abort": "Not affected",
+          "Vulnerability Vmscape": "Not affected"
+        }
+      },
+      "memory": {
+        "total_bytes": 8327110656,
+        "cgroup_max": null
+      },
+      "disk": {
+        "workdir": "/home/runner/work/_temp",
+        "total_bytes": 84204138496,
+        "free_bytes": 51966849024,
+        "mount": "/dev/vda1[/home/user] ext4   rw,relatime,nobarrier",
+        "devices": [
+          {
+            "name": "vda",
+            "size": "80G",
+            "type": "disk",
+            "rota": true,
+            "model": null
+          },
+          {
+            "name": "vdb",
+            "size": "370K",
+            "type": "disk",
+            "rota": true,
+            "model": null
+          },
+          {
+            "name": "vdc",
+            "size": "100G",
+            "type": "disk",
+            "rota": true,
+            "model": null
+          }
+        ]
+      },
+      "os": {
+        "pretty_name": "Ubuntu 24.04.4 LTS",
+        "kernel": "6.8.0-117-generic",
+        "image_os": null,
+        "image_version": null
+      },
+      "virtualization": "kvm",
+      "virtualization_layers": {
+        "vm": "kvm",
+        "container": null
+      },
+      "dmi": {
+        "sys_vendor": null,
+        "product_name": null,
+        "product_version": null,
+        "board_vendor": null,
+        "bios_vendor": null,
+        "chassis_vendor": null
+      },
+      "network": {
+        "ip": "149.202.104.234",
+        "city": "Roubaix",
+        "region": "Hauts-de-France",
+        "country": "FR",
+        "org": "AS16276 OVH SAS"
+      },
+      "runner": {
+        "name": "ci-runnersbench-140207169435",
+        "environment": "self-hosted"
+      },
+      "tools": {
+        "docker": "Docker version 29.7.0, build c1eba93",
+        "gcc": "gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+        "python": "3.12.16"
+      },
+      "wall_seconds": 0.16645298499997807
+    },
+    "benchmarks": {
+      "apt_install": {
+        "manager": "apt",
+        "update_seconds": 1.0559463340000548,
+        "seconds": 4.461516071999995,
+        "wall_seconds": 4.461518345999934
+      },
+      "cpu_single": {
+        "threads": 1,
+        "events_per_second": 6367.13,
+        "wall_seconds": 15.004284534999897
+      },
+      "cpu_multi": {
+        "threads": 4,
+        "events_per_second": 25553.76,
+        "wall_seconds": 15.004188324999973,
+        "cpu_accounting": {
+          "wall_seconds": 15.004351289999931,
+          "steal_pct": 0.0,
+          "cpu_per_wall": 3.997954316090947,
+          "nr_throttled": 0,
+          "throttled_ms": 0.0
+        }
+      },
+      "memory": {
+        "mib_per_second": 38964.32,
+        "wall_seconds": 15.00442837300011
+      },
+      "disk": {
+        "seq_write": {
+          "mb_per_second": 10725.696106,
+          "iops": 10227.754449,
+          "p99_latency_us": 2867.2,
+          "direct": true
+        },
+        "seq_read": {
+          "mb_per_second": 14404.586497,
+          "iops": 13736.284248,
+          "p99_latency_us": 1875.968,
+          "direct": true
+        },
+        "rand_read": {
+          "mb_per_second": 2994.241531,
+          "iops": 731013.932405,
+          "p99_latency_us": 62.72,
+          "direct": true
+        },
+        "rand_write": {
+          "mb_per_second": 2294.742155,
+          "iops": 560237.650823,
+          "p99_latency_us": 100.864,
+          "direct": true
+        },
+        "wall_seconds": 68.87876595399996
+      },
+      "download_cloudflare": {
+        "mb_per_second": 310.97815,
+        "bytes": 50000000,
+        "seconds": 0.160783,
+        "connect_seconds": 0.012341,
+        "ttfb_seconds": 0.051426,
+        "wall_seconds": 0.164575531999958
+      },
+      "compile_redis": {
+        "version": "8.10.3",
+        "jobs": 4,
+        "seconds": 24.061908158999927,
+        "github_download": {
+          "mb_per_second": 2.98958,
+          "bytes": 4780701,
+          "seconds": 1.599121,
+          "connect_seconds": 0.024116,
+          "ttfb_seconds": 0.608946
+        },
+        "cpu_accounting": {
+          "wall_seconds": 24.061908829999993,
+          "steal_pct": 0.17664172901080633,
+          "cpu_per_wall": 3.57654289225399,
+          "nr_throttled": 0,
+          "throttled_ms": 0.0
+        },
+        "wall_seconds": 25.769307300000037
+      },
+      "cache": {
+        "size_mb": 1024,
+        "save_seconds": 20.059067726135254,
+        "restore_seconds": 11.807530403137207
+      }
+    },
+    "cpu_accounting": {
+      "wall_seconds": 149.45908785400002,
+      "steal_pct": 0.4050760568114968,
+      "cpu_per_wall": 1.595384164480691,
       "nr_throttled": 0,
       "throttled_ms": 0.0
     },
     "timing": {
       "queue_seconds": 7.0,
-      "job_seconds": 222.0
+      "job_seconds": 197.0
     }
   }
 ]
