@@ -1,6 +1,6 @@
 # Runner benchmark report
 
-Benchmark version 3. 75 samples from 2 workflow run(s). Benchmark values are medians across samples, with the lowest to highest sample in brackets; the best median in each column is bold.
+Benchmark version 3. 81 samples from 3 workflow run(s). Benchmark values are medians across samples, with the lowest to highest sample in brackets; the best median in each column is bold.
 
 ## Runners
 
@@ -11,6 +11,7 @@ Benchmark version 3. 75 samples from 2 workflow run(s). Benchmark values are med
 | depot | `depot-ubuntu-24.04-arm-4` | Neoverse-V2 | 4 | 15.6 | 156 | qemu | Ashburn, US | AS14618 Amazon.com, Inc. | 3 |
 | flamewill | `flamewill-4vcpu-16gb-ubuntu-2404` | Neoverse-V2 | 4 | 15.3 | 190 | – | Stockholm, SE | AS16509 Amazon.com, Inc. | 3 |
 | github | `ubuntu-24.04-arm` | Neoverse-N2 | 4 | 15.6 | 155 | microsoft | Moses Lake, US | AS8075 Microsoft Corporation | 3 |
+| ubicloud | `ubicloud-standard-4-arm` | Neoverse-N1 | 4 | 11.6 | 155 | – | Frankfurt am Main, DE | AS28753 Leaseweb Deutschland GmbH | 3 |
 | warpbuild | `warp-ubuntu-2404-arm64-4x` | Neoverse-V2 | 4 | 15.3 | 155 | amazon | Ashburn, US | AS14618 Amazon.com, Inc. | 3 |
 | avrea | `avrea-macos-26-8-vcpu` | Apple M5 Max (Virtual) | 8 | 24.0 | 361 | apple | Helsinki, FI | AS209378 Inios Oy | 3 |
 | blacksmith | `blacksmith-6vcpu-macos-26` | Apple M5 Max (Virtual) | 6 | 24.0 | 439 | apple | San Jose, US | AS402960 MACWEB | 3 |
@@ -30,6 +31,7 @@ Benchmark version 3. 75 samples from 2 workflow run(s). Benchmark values are med
 | groundbox | `groundbox-4vcpu` | AMD EPYC | 4 | 15.6 | 63 | kvm | Warrenton, US | AS16276 OVH SAS | 3 |
 | luxor | `luxor-ubuntu-medium-4c-8g` | AMD Ryzen 9 9950X 16-Core Processor | 4 | 7.8 | 156 | kvm | Seattle, US | AS19538 Luxor | 3 |
 | namespace | `nscloud-ubuntu-24.04-amd64-4x8` | AMD EPYC | 4 | 7.8 | 68 | kvm + container | Ashburn, US | AS401483 Namespace Labs | 3 |
+| ubicloud | `ubicloud-standard-4` | AMD Ryzen 9 7950X3D 16-Core Processor | 4 | 15.6 | 155 | kvm | Falkenstein, DE | AS24940 Hetzner Online GmbH | 3 |
 | warpbuild | `warp-ubuntu-2404-x64-4x` | AMD Ryzen 9 9950X 16-Core Processor | 4 | 15.6 | 265 | kvm | Chicago, US | AS398418 WarpBuild | 3 |
 
 ## Benchmarks
@@ -41,6 +43,7 @@ Benchmark version 3. 75 samples from 2 workflow run(s). Benchmark values are med
 | depot | `depot-ubuntu-24.04-arm-4` | **2.0 (1.0 to 2.0)** | 4.9 (4.9 to 5.3) | 3,338 (3,332 to 3,352) | 12,198 (11,731 to 13,189) | 26,506 (25,947 to 26,652) | 6,848 (6,664 to 8,403) | 9,880 (9,195 to 11,613) | 259,974 (241,970 to 290,660) | 277,804 (276,005 to 290,561) | 283 (251 to 302) | 4.9 (4.8 to 4.9) | 3.2 (3.2 to 3.3) | 40.7 (39.4 to 41.1) | $0.0082 ($0.0080 to $0.0084)\* |
 | flamewill | `flamewill-4vcpu-16gb-ubuntu-2404` | 33.0 (12.0 to 34.0) | 12.4 (10.5 to 15.9) | 3,334 (3,332 to 3,335) | 13,302 (13,267 to 13,302) | 26,628 (26,411 to 26,643) | 472 (472 to 472) | 226 (226 to 226) | 67,092 (67,092 to 67,092) | 33,545 (33,545 to 33,545) | 259 (232 to 275) | 5.5 (5.3 to 5.8) | 4.0 (3.9 to 4.0) | 40.7 (40.1 to 40.9) | $0.0022 |
 | github | `ubuntu-24.04-arm` | 6.0 | 17.5 (13.2 to 23.3) | 3,960 (3,959 to 3,962) | 15,759 (15,757 to 15,773) | 27,787 (27,781 to 27,860) | 414 (413 to 414) | 352 (352 to 352) | 19,595 (19,576 to 19,606) | 19,585 (19,559 to 19,587) | 155 (100.0 to 295) | 5.5 (4.5 to 5.8) | 7.2 (5.3 to 10.2) | 45.8 (43.1 to 46.1) | $0.0080\* |
+| ubicloud | `ubicloud-standard-4-arm` | 24.0 (20.0 to 27.0) | 31.3 (27.6 to 32.1) | 3,344 (3,341 to 3,350) | 13,151 (13,065 to 13,311) | 15,153 (15,130 to 15,154) | 967 (954 to 1,012) | 930 (903 to 974) | 91,678 (87,972 to 102,535) | 94,128 (82,126 to 94,162) | 252 (223 to 300) | 14.3 (12.6 to 14.7) | 14.3 (14.0 to 14.7) | 68.3 (67.3 to 75.0) | $0.0050 |
 | warpbuild | `warp-ubuntu-2404-arm64-4x` | 7.0 (6.0 to 21.0) | 22.6 (20.2 to 25.7) | 3,332 (3,330 to 3,334) | 13,268 (13,266 to 13,276) | 26,513 (26,349 to 26,640) | 315 (315 to 315) | 315 (315 to 315) | 4,198 (4,196 to 4,198) | 4,198 | 193 (137 to 296) | 4.1 (3.9 to 4.4) | 5.2 (5.2 to 5.6) | 42.0 (41.3 to 43.8) | $0.0060 |
 | avrea | `avrea-macos-26-8-vcpu` | 26.0 (25.0 to 27.0) | 4.1 (4.0 to 4.5) | – | – | 34,402 (34,182 to 34,407) | 17,783 (17,378 to 18,393) | 14,532 (14,461 to 14,617) | 103,018 (102,048 to 103,082) | 50,935 (46,085 to 60,150) | 274 (203 to 281) | 3.0 (2.9 to 3.2) | 2.8 (2.8 to 2.8) | 13.9 (13.9 to 13.9) | $0.0187 |
 | blacksmith | `blacksmith-6vcpu-macos-26` | 24.0 (22.0 to 37.0) | **2.9 (2.6 to 3.3)** | – | – | 30,029 (27,239 to 31,882) | 12,699 (12,160 to 12,905) | 11,148 (8,240 to 12,796) | 50,243 (49,449 to 59,797) | 23,255 (23,122 to 23,802) | 187 (166 to 201) | 2.7 (2.6 to 2.8) | 3.9 (3.6 to 5.0) | 19.2 (16.1 to 22.3) | $0.0800 |
@@ -60,6 +63,7 @@ Benchmark version 3. 75 samples from 2 workflow run(s). Benchmark values are med
 | groundbox | `groundbox-4vcpu` | 6.0 | 3.3 (2.9 to 6.0) | 7,015 (6,916 to 7,020) | 27,347 (27,059 to 27,549) | 42,888 (42,378 to 42,891) | 1,019 (71.8 to 1,058) | 1,096 (67.2 to 1,722) | 199,775 (27,100 to 199,823) | 199,990 (15,990 to 199,993) | 102 (101 to 103) | **0.7 (0.6 to 1.7)** | **1.1** | 29.9 (24.1 to 30.2) | $0.0030 ($0.0025 to $0.0031) |
 | luxor | `luxor-ubuntu-medium-4c-8g` | 9.0 (9.0 to 10.0) | 7.7 (5.3 to 10.5) | 6,915 (6,828 to 6,957) | 26,911 (26,679 to 27,065) | 42,658 (42,153 to 42,977) | 19,410 (17,512 to 23,654) | 15,845 (12,150 to 18,826) | 98,341 (93,011 to 109,482) | 125,225 (124,125 to 126,971) | 210 (166 to 373) | 3.8 (3.5 to 4.1) | 7.7 (5.0 to 10.1) | 23.6 (23.5 to 23.6) | $0.0032 |
 | namespace | `nscloud-ubuntu-24.04-amd64-4x8` | 7.0 (6.0 to 7.0) | 3.6 (3.4 to 3.7) | 6,879 (6,821 to 6,907) | 26,814 (26,070 to 27,023) | 42,155 (41,854 to 42,178) | 5,169 (5,113 to 6,151) | 3,388 (3,097 to 3,418) | 687,500 (658,912 to 703,405) | 526,727 (484,735 to 537,129) | 153 (6.5 to 301) | 3.3 (3.0 to 3.7) | 5.1 (4.5 to 5.7) | 23.9 (22.7 to 24.3) | $0.0040 |
+| ubicloud | `ubicloud-standard-4` | 16.0 (7.0 to 17.0) | 9.7 (9.1 to 11.3) | 5,762 (5,720 to 5,775) | 12,153 (12,090 to 12,185) | 37,244 (36,133 to 39,366) | 3,210 (2,565 to 3,253) | 2,727 (1,130 to 2,763) | 155,234 (125,023 to 167,301) | 123,978 (109,978 to 146,565) | 187 (166 to 202) | 12.3 (11.5 to 13.0) | 13.6 (12.5 to 17.0) | 39.4 (38.3 to 42.1) | $0.0040 |
 | warpbuild | `warp-ubuntu-2404-x64-4x` | 9.0 (8.0 to 9.0) | 7.2 (7.0 to 7.8) | 6,219 (6,028 to 6,486) | 12,551 (12,299 to 13,275) | 37,497 (37,280 to 38,346) | 3,668 (3,172 to 5,533) | 2,196 (2,152 to 2,905) | 77,092 (58,109 to 118,478) | 48,181 (21,065 to 79,818) | 52.1 (8.4 to 163) | 5.1 (4.7 to 5.2) | 5.7 (5.5 to 6.7) | 37.9 (36.6 to 38.4) | $0.0080 |
 
 \* Not plain pay-as-you-go, so the cost above leaves out:

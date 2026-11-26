@@ -46,13 +46,13 @@
    "@id": "https://runnersbench.com/#dataset",
    "url": "https://runnersbench.com/",
    "name": "GitHub Actions runner benchmarks",
-   "description": "CPU, memory, disk, network, queue time, Redis build time and cost for GitHub Actions runners from Avrea, Blacksmith, Buildkite, Celesto, Checklane, Depot, FlameWill, GitHub, Groundbox, Luxor, Namespace, WarpBuild and boat, on 4 vCPU Linux x64 and arm64 runners and Apple Silicon Macs.",
+   "description": "CPU, memory, disk, network, queue time, Redis build time and cost for GitHub Actions runners from Avrea, Blacksmith, Buildkite, Celesto, Checklane, Depot, FlameWill, GitHub, Groundbox, Luxor, Namespace, Ubicloud, WarpBuild and boat, on 4 vCPU Linux x64 and arm64 runners and Apple Silicon Macs.",
    "creator": {
     "@type": "Person",
     "name": "Daniel Lockyer",
     "url": "https://x.com/daniellockyer"
    },
-   "dateModified": "2026-11-26T20:44:24.557163+00:00",
+   "dateModified": "2026-11-26T20:57:51.742179+00:00",
    "isAccessibleForFree": true,
    "sameAs": "https://github.com/lockyer-labs/runnersbench",
    "keywords": [
@@ -70,6 +70,7 @@
     "Groundbox",
     "Luxor",
     "Namespace",
+    "Ubicloud",
     "WarpBuild",
     "boat"
    ],
@@ -132,7 +133,7 @@
      "name": "Which runner providers are compared?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Linux x64: Avrea, Blacksmith, Buildkite, Celesto, Checklane, Depot, GitHub, Groundbox, Luxor, Namespace, WarpBuild and boat. Linux arm64: Avrea, Blacksmith, Depot, FlameWill, GitHub and WarpBuild. macOS: Avrea, Blacksmith, Depot, GitHub, Groundbox, Luxor and WarpBuild. Linux runners are each provider's 4 vCPU size on Ubuntu 24.04; Macs are each provider's smallest Apple Silicon size on macOS 26."
+      "text": "Linux x64: Avrea, Blacksmith, Buildkite, Celesto, Checklane, Depot, GitHub, Groundbox, Luxor, Namespace, Ubicloud, WarpBuild and boat. Linux arm64: Avrea, Blacksmith, Depot, FlameWill, GitHub, Ubicloud and WarpBuild. macOS: Avrea, Blacksmith, Depot, GitHub, Groundbox, Luxor and WarpBuild. Linux runners are each provider's 4 vCPU size on Ubuntu 24.04; Macs are each provider's smallest Apple Silicon size on macOS 26."
      }
     },
     {
@@ -148,7 +149,7 @@
      "name": "Why do some runners cost more for short jobs?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Blacksmith, FlameWill, GitHub, Namespace and WarpBuild bill by the minute, rounding every job up, so a 25-second job is charged as a full minute. Per-second providers charge only for the time used, which makes a large difference for short jobs."
+      "text": "Blacksmith, FlameWill, GitHub, Namespace, Ubicloud and WarpBuild bill by the minute, rounding every job up, so a 25-second job is charged as a full minute. Per-second providers charge only for the time used, which makes a large difference for short jobs."
      }
     },
     {
@@ -156,7 +157,7 @@
      "name": "How often are the results updated?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "The benchmark runs weekly on GitHub Actions and the code is open source. These results were updated on 26 November 2026, covering 13 providers."
+      "text": "The benchmark runs weekly on GitHub Actions and the code is open source. These results were updated on 26 November 2026, covering 14 providers."
      }
     }
    ]
@@ -167,8 +168,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@500&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap">
-  <link rel="stylesheet" href="style.css?v=1795725864">
-  <script src="app.js?v=1795725864" defer></script>
+  <link rel="stylesheet" href="style.css?v=45894143001">
+  <script src="app.js?v=45894143001" defer></script>
 </head>
 <body>
   <header class="hero">
@@ -182,7 +183,7 @@
         </span>
       </nav>
       <h1>CI runner benchmarks</h1>
-      <p class="lede" id="lede">13 GitHub Actions runner providers, benchmarked side by side on Linux x64, arm64 and macOS. Refreshed weekly.</p>
+      <p class="lede" id="lede">14 GitHub Actions runner providers, benchmarked side by side on Linux x64, arm64 and macOS. Refreshed weekly.</p>
       <div id="tabs" class="tabs" role="tablist"></div>
       <div id="stats" class="stats"></div>
       <p id="meta" class="meta"></p>
@@ -212,10 +213,10 @@
       <div class="faq">
         <div><h3>Which GitHub Actions runner is the fastest?</h3><p>On Linux x64, Checklane built Redis fastest, in 22.7 s, ahead of Avrea (22.8 s) and Buildkite (23.4 s). On Linux arm64, Avrea built Redis fastest, in 19.2 s, ahead of FlameWill (40.7 s) and Depot (40.7 s). On macOS, Groundbox built Redis fastest, in 13.2 s, ahead of Avrea (13.9 s) and WarpBuild (15.9 s). Build time is the median of three runs of make -j on the Redis source.</p></div>
         <div><h3>Which GitHub Actions runner is the cheapest?</h3><p>On Linux x64, Celesto was the cheapest pay-as-you-go runner at $0.0009 per Redis build, against $0.0120 for GitHub. boat&#x27;s compute cost was lower, at $0.0003, but extra costs apply: Needs a plan from $20 a month, which comes back as VM time. Job starts above the plan&#x27;s included number cost $0.03-0.07 each. On Linux arm64, FlameWill was the cheapest pay-as-you-go runner at $0.0022 per Redis build, against $0.0082 for Depot. On macOS, Groundbox was the cheapest pay-as-you-go runner at $0.0117 per Redis build, against $0.0800 for WarpBuild. Costs use each provider&#x27;s list price and how it rounds a job&#x27;s duration; providers that need a plan or charge other fees are listed but not ranked cheapest.</p></div>
-        <div><h3>Which runner providers are compared?</h3><p>Linux x64: Avrea, Blacksmith, Buildkite, Celesto, Checklane, Depot, GitHub, Groundbox, Luxor, Namespace, WarpBuild and boat. Linux arm64: Avrea, Blacksmith, Depot, FlameWill, GitHub and WarpBuild. macOS: Avrea, Blacksmith, Depot, GitHub, Groundbox, Luxor and WarpBuild. Linux runners are each provider&#x27;s 4 vCPU size on Ubuntu 24.04; Macs are each provider&#x27;s smallest Apple Silicon size on macOS 26.</p></div>
+        <div><h3>Which runner providers are compared?</h3><p>Linux x64: Avrea, Blacksmith, Buildkite, Celesto, Checklane, Depot, GitHub, Groundbox, Luxor, Namespace, Ubicloud, WarpBuild and boat. Linux arm64: Avrea, Blacksmith, Depot, FlameWill, GitHub, Ubicloud and WarpBuild. macOS: Avrea, Blacksmith, Depot, GitHub, Groundbox, Luxor and WarpBuild. Linux runners are each provider&#x27;s 4 vCPU size on Ubuntu 24.04; Macs are each provider&#x27;s smallest Apple Silicon size on macOS 26.</p></div>
         <div><h3>How are the runners benchmarked?</h3><p>Every runner runs the same script at the same moment, three times: sysbench CPU and memory tests after a warm-up, fio sequential and 4k random disk tests, a download from Cloudflare, package installs, a 1 GB actions/cache save and restore, and a Redis build. Queue time comes from the GitHub API. The site shows each metric&#x27;s median and the spread across runs.</p></div>
-        <div><h3>Why do some runners cost more for short jobs?</h3><p>Blacksmith, FlameWill, GitHub, Namespace and WarpBuild bill by the minute, rounding every job up, so a 25-second job is charged as a full minute. Per-second providers charge only for the time used, which makes a large difference for short jobs.</p></div>
-        <div><h3>How often are the results updated?</h3><p>The benchmark runs weekly on GitHub Actions and the code is open source. These results were updated on 26 November 2026, covering 13 providers.</p></div>
+        <div><h3>Why do some runners cost more for short jobs?</h3><p>Blacksmith, FlameWill, GitHub, Namespace, Ubicloud and WarpBuild bill by the minute, rounding every job up, so a 25-second job is charged as a full minute. Per-second providers charge only for the time used, which makes a large difference for short jobs.</p></div>
+        <div><h3>How often are the results updated?</h3><p>The benchmark runs weekly on GitHub Actions and the code is open source. These results were updated on 26 November 2026, covering 14 providers.</p></div>
       </div>
     </section>
     <section id="errors-section" hidden>

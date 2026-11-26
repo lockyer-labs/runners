@@ -1,6 +1,6 @@
 {
- "generated_at": "2026-11-26T20:44:24.557163+00:00",
- "sample_count": 75,
+ "generated_at": "2026-11-26T20:57:51.742179+00:00",
+ "sample_count": 81,
  "benchmark_versions": [
   3
  ],
@@ -12,6 +12,10 @@
   {
    "run_id": "45891031803",
    "url": "https://github.com/lockyer-labs/runnersbench/actions/runs/45891031803"
+  },
+  {
+   "run_id": "45894143001",
+   "url": "https://github.com/lockyer-labs/runnersbench/actions/runs/45894143001"
   }
  ],
  "metrics": [
@@ -566,6 +570,102 @@
    "sample_count": 3,
    "measured_at": "2026-11-26T20:27:05.507904+00:00",
    "run_url": "https://github.com/lockyer-labs/runnersbench/actions/runs/45891031803"
+  },
+  {
+   "provider": "ubicloud",
+   "provider_name": "Ubicloud",
+   "label": "ubicloud-standard-4-arm",
+   "arch": "arm64",
+   "platform": "arm64",
+   "price_per_minute": 0.0025,
+   "billing": "per minute, rounded up",
+   "pricing_caveat": null,
+   "cpu_models": [
+    "Neoverse-N1"
+   ],
+   "vcpus": 4,
+   "memory_gib": 11.6,
+   "disk_gb": 155,
+   "virtualization": null,
+   "location": "Frankfurt am Main, DE",
+   "network": "AS28753 Leaseweb Deutschland GmbH",
+   "medians": {
+    "queue": 24.0,
+    "apt_install": 31.269625896,
+    "cpu_single": 3343.62,
+    "cpu_multi": 13150.77,
+    "memory": 15153.01,
+    "seq_read": 967.384202,
+    "seq_write": 929.568839,
+    "rand_read": 91678.088127,
+    "rand_write": 94128.258116,
+    "download": 252.004697,
+    "cache_save": 14.265215396881104,
+    "cache_restore": 14.275171041488647,
+    "redis_build": 68.33951387000002,
+    "redis_cost": 0.005
+   },
+   "ranges": {
+    "queue": [
+     20.0,
+     27.0
+    ],
+    "apt_install": [
+     27.626956647999997,
+     32.053742537000005
+    ],
+    "cpu_single": [
+     3340.82,
+     3350.2
+    ],
+    "cpu_multi": [
+     13065.17,
+     13310.94
+    ],
+    "memory": [
+     15129.96,
+     15153.64
+    ],
+    "seq_read": [
+     953.822212,
+     1012.261679
+    ],
+    "seq_write": [
+     902.921039,
+     974.376392
+    ],
+    "rand_read": [
+     87971.868542,
+     102535.230985
+    ],
+    "rand_write": [
+     82125.724952,
+     94161.589227
+    ],
+    "download": [
+     222.643761,
+     300.197529
+    ],
+    "cache_save": [
+     12.585150003433228,
+     14.68665623664856
+    ],
+    "cache_restore": [
+     13.978100538253784,
+     14.72251296043396
+    ],
+    "redis_build": [
+     67.31425768999998,
+     74.95788229799999
+    ],
+    "redis_cost": [
+     0.005,
+     0.005
+    ]
+   },
+   "sample_count": 3,
+   "measured_at": "2026-11-26T20:53:45.456579+00:00",
+   "run_url": "https://github.com/lockyer-labs/runnersbench/actions/runs/45894143001"
   },
   {
    "provider": "warpbuild",
@@ -2343,6 +2443,102 @@
    "run_url": "https://github.com/lockyer-labs/runnersbench/actions/runs/45891031803"
   },
   {
+   "provider": "ubicloud",
+   "provider_name": "Ubicloud",
+   "label": "ubicloud-standard-4",
+   "arch": "x64",
+   "platform": "x64",
+   "price_per_minute": 0.004,
+   "billing": "per minute, rounded up",
+   "pricing_caveat": null,
+   "cpu_models": [
+    "AMD Ryzen 9 7950X3D 16-Core Processor"
+   ],
+   "vcpus": 4,
+   "memory_gib": 15.6,
+   "disk_gb": 155,
+   "virtualization": "kvm",
+   "location": "Falkenstein, DE",
+   "network": "AS24940 Hetzner Online GmbH",
+   "medians": {
+    "queue": 16.0,
+    "apt_install": 9.702117311000002,
+    "cpu_single": 5761.82,
+    "cpu_multi": 12152.86,
+    "memory": 37243.78,
+    "seq_read": 3209.538563,
+    "seq_write": 2726.577127,
+    "rand_read": 155234.117725,
+    "rand_write": 123978.069591,
+    "download": 186.77973,
+    "cache_save": 12.310978651046753,
+    "cache_restore": 13.583085775375366,
+    "redis_build": 39.44017279099998,
+    "redis_cost": 0.004
+   },
+   "ranges": {
+    "queue": [
+     7.0,
+     17.0
+    ],
+    "apt_install": [
+     9.102852923,
+     11.324262269999998
+    ],
+    "cpu_single": [
+     5720.21,
+     5774.69
+    ],
+    "cpu_multi": [
+     12089.67,
+     12184.92
+    ],
+    "memory": [
+     36133.48,
+     39366.05
+    ],
+    "seq_read": [
+     2565.142728,
+     3253.080711
+    ],
+    "seq_write": [
+     1129.729516,
+     2763.080913
+    ],
+    "rand_read": [
+     125022.731818,
+     167301.179921
+    ],
+    "rand_write": [
+     109978.40144,
+     146565.295647
+    ],
+    "download": [
+     166.013679,
+     202.119832
+    ],
+    "cache_save": [
+     11.533445596694946,
+     12.988540410995483
+    ],
+    "cache_restore": [
+     12.521536111831665,
+     16.987642288208008
+    ],
+    "redis_build": [
+     38.300577836,
+     42.05936291399999
+    ],
+    "redis_cost": [
+     0.004,
+     0.004
+    ]
+   },
+   "sample_count": 3,
+   "measured_at": "2026-11-26T20:53:28.056086+00:00",
+   "run_url": "https://github.com/lockyer-labs/runnersbench/actions/runs/45894143001"
+  },
+  {
    "provider": "warpbuild",
    "provider_name": "WarpBuild",
    "label": "warp-ubuntu-2404-x64-4x",
@@ -2452,7 +2648,8 @@
   "groundbox": "#9498a0",
   "luxor": "#2f4b7c",
   "namespace": "#d6336c",
-  "warpbuild": "#8c8c1a"
+  "ubicloud": "#8c8c1a",
+  "warpbuild": "#00a3a3"
  },
  "errors": [
   {
