@@ -6651,14 +6651,14 @@
       "name": "Namespace",
       "label": "nscloud-ubuntu-24.04-amd64-4x8",
       "arch": "x64",
-      "price_per_minute": 0.008,
+      "price_per_minute": 0.004,
       "billing": {
         "increment_seconds": 60,
         "minimum_seconds": 60,
         "grace_seconds": 15
       },
       "enabled": true,
-      "notes": "4x8 is Namespace's standard 4 vCPU shape. $0.002 per compute-unit minute (1 vCPU, 2 GB).",
+      "notes": "4x8 is Namespace's standard 4 vCPU shape: 4 compute units at $0.001 each. Usage above a plan's included unit minutes is billed at the $0.006 overage rate.",
       "pricing_source": "https://namespace.so/pricing",
       "rep": 1
     },
@@ -7056,14 +7056,14 @@
       "name": "Namespace",
       "label": "nscloud-ubuntu-24.04-amd64-4x8",
       "arch": "x64",
-      "price_per_minute": 0.008,
+      "price_per_minute": 0.004,
       "billing": {
         "increment_seconds": 60,
         "minimum_seconds": 60,
         "grace_seconds": 15
       },
       "enabled": true,
-      "notes": "4x8 is Namespace's standard 4 vCPU shape. $0.002 per compute-unit minute (1 vCPU, 2 GB).",
+      "notes": "4x8 is Namespace's standard 4 vCPU shape: 4 compute units at $0.001 each. Usage above a plan's included unit minutes is billed at the $0.006 overage rate.",
       "pricing_source": "https://namespace.so/pricing",
       "rep": 2
     },
@@ -7461,14 +7461,14 @@
       "name": "Namespace",
       "label": "nscloud-ubuntu-24.04-amd64-4x8",
       "arch": "x64",
-      "price_per_minute": 0.008,
+      "price_per_minute": 0.004,
       "billing": {
         "increment_seconds": 60,
         "minimum_seconds": 60,
         "grace_seconds": 15
       },
       "enabled": true,
-      "notes": "4x8 is Namespace's standard 4 vCPU shape. $0.002 per compute-unit minute (1 vCPU, 2 GB).",
+      "notes": "4x8 is Namespace's standard 4 vCPU shape: 4 compute units at $0.001 each. Usage above a plan's included unit minutes is billed at the $0.006 overage rate.",
       "pricing_source": "https://namespace.so/pricing",
       "rep": 3
     },

@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-26T19:30:47.866732+00:00",
+ "generated_at": "2026-11-26T19:36:03.254675+00:00",
  "sample_count": 71,
  "benchmark_versions": [
   3
@@ -2164,7 +2164,7 @@
    "label": "nscloud-ubuntu-24.04-amd64-4x8",
    "arch": "x64",
    "platform": "x64",
-   "price_per_minute": 0.008,
+   "price_per_minute": 0.004,
    "billing": "per minute, rounded up after 15 s, 1 min minimum",
    "pricing_caveat": null,
    "cpu_models": [
@@ -2190,7 +2190,7 @@
     "cache_save": 3.5812621116638184,
     "cache_restore": 5.519932985305786,
     "redis_build": 23.574177214000002,
-    "redis_cost": 0.008
+    "redis_cost": 0.004
    },
    "ranges": {
     "queue": [
@@ -2246,8 +2246,8 @@
      24.820796555000015
     ],
     "redis_cost": [
-     0.008,
-     0.008
+     0.004,
+     0.004
     ]
    },
    "sample_count": 3,
