@@ -210,6 +210,17 @@
       "pricing_source": "https://www.warpbuild.com/pricing"
     },
     {
+      "provider": "flamewill",
+      "name": "FlameWill",
+      "label": "flamewill-4vcpu-16gb-ubuntu-2404",
+      "arch": "arm64",
+      "price_per_minute": 0.0022,
+      "billing": {"increment_seconds": 60},
+      "enabled": true,
+      "notes": "A fresh ARM64 machine per job, 190 GB local NVMe. Prepaid credit from $10, billed per minute, no subscription.",
+      "pricing_source": "https://flamewill.com/pricing/"
+    },
+    {
       "provider": "buildkite",
       "name": "Buildkite",
       "label": "buildkite-linux-amd64-4x16",
