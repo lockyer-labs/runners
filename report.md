@@ -21,14 +21,14 @@ Benchmark version 3. 71 samples from 3 workflow run(s). Benchmark values are med
 | avrea | `avrea-ubuntu-24.04-4-vcpu` | AMD EPYC 4585PX 16-Core Processor | 4 | 14.7 | 156 | kvm | Roubaix, FR | AS16276 OVH SAS | 3 |
 | blacksmith | `blacksmith-4vcpu-ubuntu-2404` | AMD EPYC<br>Intel(R) Xeon(R) Processor | 4 | 15.4 | 161 | kvm | Phoenix, US | AS20454 SECURED SERVERS LLC | 3 |
 | boat | `boat` | AMD EPYC 4585PX 16-Core Processor | 4 | 7.8 | 84 | kvm | Warsaw, PL | AS16276 OVH SAS | 3 |
-| buildkite | `buildkite-linux-amd64-4x16` | AMD EPYC | 4 | 15.7 | 101 | docker | Ashburn, US | AS401483 Namespace Labs | 3 |
-| celesto | `celesto-large` | Intel(R) Xeon(R) Platinum 8375C CPU @ 2.90GHz | 4 | 15.6 | 63 | docker | Ashburn, US | AS14618 Amazon.com, Inc. | 3 |
+| buildkite | `buildkite-linux-amd64-4x16` | AMD EPYC | 4 | 15.7 | 101 | kvm + container | Ashburn, US | AS401483 Namespace Labs | 3 |
+| celesto | `celesto-large` | Intel(R) Xeon(R) Platinum 8375C CPU @ 2.90GHz | 4 | 15.6 | 63 | kvm | Ashburn, US | AS14618 Amazon.com, Inc. | 3 |
 | checklane | `checklane-4vcpu-ubuntu-2404` | AMD EPYC | 4 | 15.6 | 169 | kvm | London, GB | AS212027 PebbleHost Ltd | 3 |
 | depot | `depot-ubuntu-24.04-4` | AMD EPYC 9R45 96-Core Processor | 4 | 15.6 | 156 | kvm | Ashburn, US | AS14618 Amazon.com, Inc. | 2 |
 | github | `ubuntu-24.04` | AMD EPYC 7763 64-Core Processor<br>AMD EPYC 9V74 80-Core Processor<br>Intel(R) Xeon(R) 6975P-C | 4 | 15.3 | 155 | amazon | Boardman, US | AS16509 Amazon.com, Inc. | 3 |
 | groundbox | `groundbox-4vcpu` | AMD EPYC | 4 | 15.6 | 63 | kvm | Warrenton, US | AS16276 OVH SAS | 3 |
 | luxor | `luxor-ubuntu-medium-4c-8g` | AMD Ryzen 9 9950X 16-Core Processor | 4 | 7.8 | 156 | kvm | Seattle, US | AS19538 Luxor | 3 |
-| namespace | `nscloud-ubuntu-24.04-amd64-4x8` | AMD EPYC | 4 | 7.8 | 68 | docker | Ashburn, US | AS401483 Namespace Labs | 3 |
+| namespace | `nscloud-ubuntu-24.04-amd64-4x8` | AMD EPYC | 4 | 7.8 | 68 | kvm + container | Ashburn, US | AS401483 Namespace Labs | 3 |
 | warpbuild | `warp-ubuntu-2404-x64-4x` | AMD Ryzen 9 7950X3D 16-Core Processor<br>AMD Ryzen 9 9950X 16-Core Processor | 4 | 15.6 | 265 | kvm | Falkenstein, DE | AS24940 Hetzner Online GmbH | 3 |
 
 ## Benchmarks
