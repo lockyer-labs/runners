@@ -52,7 +52,7 @@
     "name": "Daniel Lockyer",
     "url": "https://x.com/daniellockyer"
    },
-   "dateModified": "2026-11-26T22:09:57.041317+00:00",
+   "dateModified": "2026-11-26T22:24:42.673600+00:00",
    "isAccessibleForFree": true,
    "sameAs": "https://github.com/lockyer-labs/runnersbench",
    "keywords": [
@@ -168,8 +168,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@500&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap">
-  <link rel="stylesheet" href="style.css?v=1795730997">
-  <script src="app.js?v=1795730997" defer></script>
+  <link rel="stylesheet" href="style.css?v=1795731882">
+  <script src="app.js?v=1795731882" defer></script>
 </head>
 <body>
   <header class="hero">
@@ -195,7 +195,13 @@
   <main class="wrap">
     <section>
       <h2>Benchmarks</h2>
-      <p class="caption" id="benchmarks-caption"></p>
+      <div class="table-tools">
+        <p class="caption" id="benchmarks-caption"></p>
+        <span class="heat-controls">
+          <span class="heat-legend" id="heat-legend" hidden><span>best</span><span class="heat-scale" aria-hidden="true"></span><span>¼ or worse</span></span>
+          <label class="toggle"><input type="checkbox" id="heat-toggle"> Heat map</label>
+        </span>
+      </div>
       <div class="scroll bleed"><table id="benchmarks"></table></div>
       <p class="caption pricing-notes" hidden></p>
     </section>

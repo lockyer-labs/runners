@@ -192,6 +192,20 @@ tbody tr:hover td:not(.best) { background: var(--tint); }
 .row.best .val::before { content: "★ "; color: #d49a00; }
 .row.lowest-fees .val::before { content: "☆ "; color: #d49a00; }
 td.lowest-fees { outline: 1.5px dashed var(--accent); outline-offset: -4px; }
+
+.table-tools { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 8px 24px; }
+.heat-controls { display: inline-flex; align-items: center; gap: 20px; font-size: 13px; color: var(--muted); }
+.toggle { display: inline-flex; align-items: center; gap: 6px; cursor: pointer; }
+.toggle input { margin: 0; accent-color: var(--accent); }
+.heat-legend { display: inline-flex; align-items: center; gap: 8px; font-size: 12px; }
+.heat-legend[hidden] { display: none; }
+.heat-scale { width: 96px; height: 8px; background: linear-gradient(to left, hsl(10 65% 80%), hsl(70 65% 80%), hsl(130 65% 80%)); }
+#benchmarks.heat td[style*="--heat"] { background: hsl(var(--heat) 65% 87%); color: var(--fg); }
+#benchmarks.heat td.best { font-weight: 600; }
+@media (prefers-color-scheme: dark) {
+  #benchmarks.heat td[style*="--heat"] { background: hsl(var(--heat) 28% 19%); }
+  .heat-scale { background: linear-gradient(to left, hsl(10 28% 30%), hsl(70 28% 30%), hsl(130 28% 30%)); }
+}
 .nowrap { white-space: nowrap; }
 .stat .who.fees { margin-top: 4px; font-size: 13px; color: var(--hero-soft); cursor: help; }
 

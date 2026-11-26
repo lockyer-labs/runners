@@ -151,6 +151,19 @@ function renderStats(data) {
   }
 }
 
+// How a value compares with the best in its row: 1 is the best, 0.5 half as good.
+function ratioToBest(value, bestValue, metric) {
+  if (value === null || bestValue === null) return null;
+  if (metric.higher_is_better) return bestValue > 0 ? value / bestValue : null;
+  return value > 0 ? Math.min(bestValue / value, 1) : 1;
+}
+
+// Green at the best, amber at half as good, red at a quarter or worse.
+function heatHue(ratio) {
+  const t = Math.min(Math.max(1 + Math.log2(ratio) / 2, 0), 1);
+  return Math.round(10 + t * 120);
+}
+
 function renderTables(data) {
   const { runners, metrics } = data;
   const bests = Object.fromEntries(metrics.map((m) => [m.key, best(runners, m)]));
@@ -180,6 +193,11 @@ function renderTables(data) {
           const cell = textCell(compact(value, m), className);
           if (value !== null) cell.append(caveat(r, m) ?? "");
           cell.title = rangeText(r, m);
+          const ratio = eligible(r, m) ? ratioToBest(value, bests[m.key], m) : null;
+          if (ratio !== null) {
+            cell.style.setProperty("--heat", heatHue(ratio));
+            cell.title += ` · ${Math.round(ratio * 100)}% of the best`;
+          }
           cell.dataset.row = m.key;
           cell.dataset.col = r.label;
           return cell;
@@ -340,10 +358,26 @@ function renderTabs(data, onSelect) {
   select(platforms.some(([platform]) => platform === fromHash) ? fromHash : platforms[0][0]);
 }
 
+function enableHeatMap(node) {
+  const toggle = document.getElementById("heat-toggle");
+  const legend = document.getElementById("heat-legend");
+  const apply = () => {
+    node.classList.toggle("heat", toggle.checked);
+    legend.hidden = !toggle.checked;
+  };
+  toggle.checked = localStorage.getItem("heat") === "1";
+  toggle.addEventListener("change", () => {
+    localStorage.setItem("heat", toggle.checked ? "1" : "");
+    apply();
+  });
+  apply();
+}
+
 async function main() {
   const data = await (await fetch("data.json", { cache: "no-cache" })).json();
   color = (provider) => data.colors[provider];
   const resetHighlights = enableHighlighting(document.getElementById("benchmarks"));
+  enableHeatMap(document.getElementById("benchmarks"));
   document.querySelectorAll(".scroll").forEach(showOverflow);
   renderTabs(data, (platform) => render(data, platform, resetHighlights));
 }
