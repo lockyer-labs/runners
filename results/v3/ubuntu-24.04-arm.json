@@ -11,6 +11,7 @@
       "billing": {
         "increment_seconds": 60
       },
+      "pricing_caveat": "Free on public repos. This is GitHub's 4-core larger runner rate, which needs a GitHub Team ($4 per user a month) or Enterprise Cloud plan.",
       "enabled": true,
       "notes": "4 vCPU / 16 GB on public repos, where it is free; priced at the 4-core arm64 larger runner rate.",
       "pricing_source": "https://docs.github.com/en/billing/reference/actions-runner-pricing",
@@ -18,12 +19,12 @@
     },
     "github": {
       "repository": "lockyer-labs/runnersbench",
-      "run_id": "45620389115",
+      "run_id": "45891031803",
       "run_attempt": "1",
-      "sha": "ed05531d135a6957434933885f8c3d4585f38285"
+      "sha": "ab4b5766057aab8fcb14710e258c0ed880fb9e57"
     },
-    "started_at": "2026-11-25T13:08:07.113037+00:00",
-    "finished_at": "2026-11-25T13:11:27.703482+00:00",
+    "started_at": "2026-11-26T20:27:05.507904+00:00",
+    "finished_at": "2026-11-26T20:30:15.320177+00:00",
     "system": {
       "cpu": {
         "model": "Neoverse-N2",
@@ -91,13 +92,13 @@
         }
       },
       "memory": {
-        "total_bytes": 16715923456,
+        "total_bytes": 16715964416,
         "cgroup_max": null
       },
       "disk": {
         "workdir": "/home/runner/work/_temp",
         "total_bytes": 154894188544,
-        "free_bytes": 112438022144,
+        "free_bytes": 112391237632,
         "mount": "/dev/sda1 ext4   rw,relatime,discard,journal_async_commit,nobarrier,errors=remount-ro,commit=30,data=writeback",
         "devices": [
           {
@@ -116,6 +117,10 @@
         "image_version": "20261116.188.1"
       },
       "virtualization": "microsoft",
+      "virtualization_layers": {
+        "vm": "microsoft",
+        "container": null
+      },
       "dmi": {
         "sys_vendor": "Microsoft Corporation",
         "product_name": "Virtual Machine",
@@ -125,14 +130,14 @@
         "chassis_vendor": "Microsoft Corporation"
       },
       "network": {
-        "ip": "20.125.188.58",
-        "city": "Chicago",
-        "region": "Illinois",
+        "ip": "20.59.18.33",
+        "city": "Moses Lake",
+        "region": "Washington",
         "country": "US",
         "org": "AS8075 Microsoft Corporation"
       },
       "runner": {
-        "name": "GitHub Actions 1000000230",
+        "name": "GitHub Actions 1000000272",
         "environment": "github-hosted"
       },
       "tools": {
@@ -140,86 +145,107 @@
         "gcc": "gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
         "python": "3.12.16"
       },
-      "wall_seconds": 0.30282424099999616
+      "wall_seconds": 0.22727731799999873
     },
     "benchmarks": {
       "apt_install": {
         "manager": "apt",
-        "update_seconds": 12.834711524,
-        "seconds": 25.298345651999995,
-        "wall_seconds": 25.298349948000002
+        "update_seconds": 10.766531813999997,
+        "seconds": 23.25326563299999,
+        "wall_seconds": 23.253270904999994
       },
       "cpu_single": {
         "threads": 1,
-        "events_per_second": 3961.22,
-        "wall_seconds": 15.006753188000005
+        "events_per_second": 3958.9,
+        "wall_seconds": 15.007302386999996
       },
       "cpu_multi": {
         "threads": 4,
-        "events_per_second": 15713.81,
-        "wall_seconds": 15.006782228000006
+        "events_per_second": 15756.53,
+        "wall_seconds": 15.007028334999987,
+        "cpu_accounting": {
+          "wall_seconds": 15.007269262000008,
+          "steal_pct": 0.0,
+          "cpu_per_wall": 3.9933314285062216,
+          "nr_throttled": 0,
+          "throttled_ms": 0.0
+        }
       },
       "memory": {
-        "mib_per_second": 27826.23,
-        "wall_seconds": 15.007068426000004
+        "mib_per_second": 27781.02,
+        "wall_seconds": 15.007456059000006
       },
       "disk": {
         "seq_write": {
-          "mb_per_second": 351.08198,
-          "iops": 333.820792,
-          "p99_latency_us": 79167.488,
+          "mb_per_second": 351.871608,
+          "iops": 334.573973,
+          "p99_latency_us": 80216.064,
           "direct": true
         },
         "seq_read": {
-          "mb_per_second": 414.049155,
-          "iops": 393.870903,
-          "p99_latency_us": 65798.144,
+          "mb_per_second": 413.953752,
+          "iops": 393.780318,
+          "p99_latency_us": 69730.304,
           "direct": true
         },
         "rand_read": {
-          "mb_per_second": 80.209078,
-          "iops": 19580.227985,
-          "p99_latency_us": 35389.44,
+          "mb_per_second": 80.189922,
+          "iops": 19575.551556,
+          "p99_latency_us": 40108.032,
           "direct": true
         },
         "rand_write": {
-          "mb_per_second": 80.193083,
-          "iops": 19576.323157,
-          "p99_latency_us": 16908.288,
+          "mb_per_second": 80.235564,
+          "iops": 19586.69422,
+          "p99_latency_us": 23199.744,
           "direct": true
         },
-        "wall_seconds": 69.325561324
+        "wall_seconds": 69.37775417699999
       },
       "download_cloudflare": {
-        "mb_per_second": 171.362572,
+        "mb_per_second": 294.844351,
         "bytes": 50000000,
-        "seconds": 0.291779,
-        "connect_seconds": 0.011231,
-        "ttfb_seconds": 0.0752,
-        "wall_seconds": 0.298960658999988
+        "seconds": 0.169581,
+        "connect_seconds": 0.015053,
+        "ttfb_seconds": 0.073446,
+        "wall_seconds": 0.1760763670000074
       },
       "compile_redis": {
         "version": "8.10.3",
         "jobs": 4,
-        "seconds": 54.64692650800001,
+        "seconds": 46.122805218999986,
         "github_download": {
-          "mb_per_second": 14.343537,
+          "mb_per_second": 15.756102,
           "bytes": 4780701,
-          "seconds": 0.3333,
-          "connect_seconds": 0.042259,
-          "ttfb_seconds": 0.150327
+          "seconds": 0.303419,
+          "connect_seconds": 0.044187,
+          "ttfb_seconds": 0.25783
         },
-        "wall_seconds": 55.233394664
+        "cpu_accounting": {
+          "wall_seconds": 46.122806483000005,
+          "steal_pct": 0.0,
+          "cpu_per_wall": 3.595271247449342,
+          "nr_throttled": 0,
+          "throttled_ms": 0.0
+        },
+        "wall_seconds": 46.658106538
       },
       "cache": {
         "size_mb": 1024,
-        "save_seconds": 4.975942373275757,
-        "restore_seconds": 6.79339337348938
+        "save_seconds": 5.842719078063965,
+        "restore_seconds": 10.190528869628906
       }
+    },
+    "cpu_accounting": {
+      "wall_seconds": 189.812274288,
+      "steal_pct": 0.0,
+      "cpu_per_wall": 1.5626281341003432,
+      "nr_throttled": 0,
+      "throttled_ms": 0.0
     },
     "timing": {
       "queue_seconds": 6.0,
-      "job_seconds": 224.0
+      "job_seconds": 227.0
     }
   },
   {
@@ -234,6 +260,7 @@
       "billing": {
         "increment_seconds": 60
       },
+      "pricing_caveat": "Free on public repos. This is GitHub's 4-core larger runner rate, which needs a GitHub Team ($4 per user a month) or Enterprise Cloud plan.",
       "enabled": true,
       "notes": "4 vCPU / 16 GB on public repos, where it is free; priced at the 4-core arm64 larger runner rate.",
       "pricing_source": "https://docs.github.com/en/billing/reference/actions-runner-pricing",
@@ -241,12 +268,12 @@
     },
     "github": {
       "repository": "lockyer-labs/runnersbench",
-      "run_id": "45620389115",
+      "run_id": "45891031803",
       "run_attempt": "1",
-      "sha": "ed05531d135a6957434933885f8c3d4585f38285"
+      "sha": "ab4b5766057aab8fcb14710e258c0ed880fb9e57"
     },
-    "started_at": "2026-11-25T13:08:08.134115+00:00",
-    "finished_at": "2026-11-25T13:11:13.660650+00:00",
+    "started_at": "2026-11-26T20:26:56.852443+00:00",
+    "finished_at": "2026-11-26T20:30:00.884794+00:00",
     "system": {
       "cpu": {
         "model": "Neoverse-N2",
@@ -320,7 +347,7 @@
       "disk": {
         "workdir": "/home/runner/work/_temp",
         "total_bytes": 154894188544,
-        "free_bytes": 112439881728,
+        "free_bytes": 112407154688,
         "mount": "/dev/sda1 ext4   rw,relatime,discard,journal_async_commit,nobarrier,errors=remount-ro,commit=30,data=writeback",
         "devices": [
           {
@@ -339,6 +366,10 @@
         "image_version": "20261116.188.1"
       },
       "virtualization": "microsoft",
+      "virtualization_layers": {
+        "vm": "microsoft",
+        "container": null
+      },
       "dmi": {
         "sys_vendor": "Microsoft Corporation",
         "product_name": "Virtual Machine",
@@ -348,14 +379,14 @@
         "chassis_vendor": "Microsoft Corporation"
       },
       "network": {
-        "ip": "52.165.63.9",
-        "city": "Des Moines",
-        "region": "Iowa",
+        "ip": "130.131.115.213",
+        "city": "Chicago",
+        "region": "Illinois",
         "country": "US",
         "org": "AS8075 Microsoft Corporation"
       },
       "runner": {
-        "name": "GitHub Actions 1000000231",
+        "name": "GitHub Actions 1000000279",
         "environment": "github-hosted"
       },
       "tools": {
@@ -363,86 +394,107 @@
         "gcc": "gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
         "python": "3.12.16"
       },
-      "wall_seconds": 0.2359013280000113
+      "wall_seconds": 0.2796050869999931
     },
     "benchmarks": {
       "apt_install": {
         "manager": "apt",
-        "update_seconds": 9.329200097000012,
-        "seconds": 20.115579180999987,
-        "wall_seconds": 20.115582932999985
+        "update_seconds": 9.034432934999984,
+        "seconds": 17.504808437999998,
+        "wall_seconds": 17.504812926
       },
       "cpu_single": {
         "threads": 1,
-        "events_per_second": 3959.81,
-        "wall_seconds": 15.006801182000004
+        "events_per_second": 3959.82,
+        "wall_seconds": 15.007165622999992
       },
       "cpu_multi": {
         "threads": 4,
-        "events_per_second": 15719.77,
-        "wall_seconds": 15.007792553000002
+        "events_per_second": 15759.42,
+        "wall_seconds": 15.007120759000031,
+        "cpu_accounting": {
+          "wall_seconds": 15.007387310000013,
+          "steal_pct": 0.0,
+          "cpu_per_wall": 3.994965863248581,
+          "nr_throttled": 0,
+          "throttled_ms": 0.0
+        }
       },
       "memory": {
-        "mib_per_second": 27817.04,
-        "wall_seconds": 15.006933973000002
+        "mib_per_second": 27786.88,
+        "wall_seconds": 15.007599358999983
       },
       "disk": {
         "seq_write": {
-          "mb_per_second": 323.593258,
-          "iops": 307.605372,
-          "p99_latency_us": 88604.672,
+          "mb_per_second": 351.732225,
+          "iops": 334.441047,
+          "p99_latency_us": 77070.336,
           "direct": true
         },
         "seq_read": {
-          "mb_per_second": 413.259431,
-          "iops": 393.116304,
-          "p99_latency_us": 69730.304,
+          "mb_per_second": 413.634075,
+          "iops": 393.473193,
+          "p99_latency_us": 65798.144,
           "direct": true
         },
         "rand_read": {
-          "mb_per_second": 80.332769,
-          "iops": 19610.425972,
-          "p99_latency_us": 37486.592,
+          "mb_per_second": 80.269422,
+          "iops": 19594.960336,
+          "p99_latency_us": 35389.44,
           "direct": true
         },
         "rand_write": {
-          "mb_per_second": 80.159153,
-          "iops": 19568.041031,
-          "p99_latency_us": 23986.176,
+          "mb_per_second": 80.120771,
+          "iops": 19558.670751,
+          "p99_latency_us": 17170.432,
           "direct": true
         },
-        "wall_seconds": 69.25778765799998
+        "wall_seconds": 69.338522608
       },
       "download_cloudflare": {
-        "mb_per_second": 191.65753,
+        "mb_per_second": 99.984402,
         "bytes": 50000000,
-        "seconds": 0.260882,
-        "connect_seconds": 0.028452,
-        "ttfb_seconds": 0.092194,
-        "wall_seconds": 0.26857751800002916
+        "seconds": 0.500078,
+        "connect_seconds": 0.00987,
+        "ttfb_seconds": 0.060383,
+        "wall_seconds": 0.5065448099999799
       },
       "compile_redis": {
         "version": "8.10.3",
         "jobs": 4,
-        "seconds": 44.53284158500003,
+        "seconds": 45.75177998200007,
         "github_download": {
-          "mb_per_second": 13.908869,
+          "mb_per_second": 17.097624,
           "bytes": 4780701,
-          "seconds": 0.343716,
-          "connect_seconds": 0.057773,
-          "ttfb_seconds": 0.160877
+          "seconds": 0.279612,
+          "connect_seconds": 0.04854,
+          "ttfb_seconds": 0.133036
         },
-        "wall_seconds": 45.453605933000006
+        "cpu_accounting": {
+          "wall_seconds": 45.751781813000036,
+          "steal_pct": 0.0,
+          "cpu_per_wall": 3.6497376360663023,
+          "nr_throttled": 0,
+          "throttled_ms": 0.0
+        },
+        "wall_seconds": 46.288044439999965
       },
       "cache": {
         "size_mb": 1024,
-        "save_seconds": 5.529387712478638,
-        "restore_seconds": 6.8677818775177
+        "save_seconds": 5.475699186325073,
+        "restore_seconds": 7.168878555297852
       }
+    },
+    "cpu_accounting": {
+      "wall_seconds": 184.032353205,
+      "steal_pct": 0.0,
+      "cpu_per_wall": 1.6253011755319635,
+      "nr_throttled": 0,
+      "throttled_ms": 0.0
     },
     "timing": {
       "queue_seconds": 6.0,
-      "job_seconds": 209.0
+      "job_seconds": 211.0
     }
   },
   {
@@ -457,6 +509,7 @@
       "billing": {
         "increment_seconds": 60
       },
+      "pricing_caveat": "Free on public repos. This is GitHub's 4-core larger runner rate, which needs a GitHub Team ($4 per user a month) or Enterprise Cloud plan.",
       "enabled": true,
       "notes": "4 vCPU / 16 GB on public repos, where it is free; priced at the 4-core arm64 larger runner rate.",
       "pricing_source": "https://docs.github.com/en/billing/reference/actions-runner-pricing",
@@ -464,12 +517,12 @@
     },
     "github": {
       "repository": "lockyer-labs/runnersbench",
-      "run_id": "45620389115",
+      "run_id": "45891031803",
       "run_attempt": "1",
-      "sha": "ed05531d135a6957434933885f8c3d4585f38285"
+      "sha": "ab4b5766057aab8fcb14710e258c0ed880fb9e57"
     },
-    "started_at": "2026-11-25T13:08:06.589807+00:00",
-    "finished_at": "2026-11-25T13:11:21.873768+00:00",
+    "started_at": "2026-11-26T20:26:53.839508+00:00",
+    "finished_at": "2026-11-26T20:29:50.796633+00:00",
     "system": {
       "cpu": {
         "model": "Neoverse-N2",
@@ -537,13 +590,13 @@
         }
       },
       "memory": {
-        "total_bytes": 16715923456,
+        "total_bytes": 16715862016,
         "cgroup_max": null
       },
       "disk": {
         "workdir": "/home/runner/work/_temp",
         "total_bytes": 154894188544,
-        "free_bytes": 112439873536,
+        "free_bytes": 112146071552,
         "mount": "/dev/sda1 ext4   rw,relatime,discard,journal_async_commit,nobarrier,errors=remount-ro,commit=30,data=writeback",
         "devices": [
           {
@@ -557,11 +610,15 @@
       },
       "os": {
         "pretty_name": "Ubuntu 24.04.5 LTS",
-        "kernel": "7.0.0-1017-azure",
+        "kernel": "7.0.0-1020-azure",
         "image_os": "ubuntu24-arm64",
-        "image_version": "20261116.188.1"
+        "image_version": "20261122.193.1"
       },
       "virtualization": "microsoft",
+      "virtualization_layers": {
+        "vm": "microsoft",
+        "container": null
+      },
       "dmi": {
         "sys_vendor": "Microsoft Corporation",
         "product_name": "Virtual Machine",
@@ -571,14 +628,14 @@
         "chassis_vendor": "Microsoft Corporation"
       },
       "network": {
-        "ip": "20.125.186.69",
-        "city": "Chicago",
-        "region": "Illinois",
+        "ip": "68.154.38.165",
+        "city": "Boydton",
+        "region": "Virginia",
         "country": "US",
         "org": "AS8075 Microsoft Corporation"
       },
       "runner": {
-        "name": "GitHub Actions 1000000225",
+        "name": "GitHub Actions 1000000280",
         "environment": "github-hosted"
       },
       "tools": {
@@ -586,86 +643,107 @@
         "gcc": "gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
         "python": "3.12.16"
       },
-      "wall_seconds": 0.24876900800001067
+      "wall_seconds": 0.5588472219999403
     },
     "benchmarks": {
       "apt_install": {
         "manager": "apt",
-        "update_seconds": 9.340412940999997,
-        "seconds": 22.54201305000001,
-        "wall_seconds": 22.542017177999995
+        "update_seconds": 6.10648047799998,
+        "seconds": 13.173661339999967,
+        "wall_seconds": 13.173665619999952
       },
       "cpu_single": {
         "threads": 1,
-        "events_per_second": 3960.93,
-        "wall_seconds": 15.006908288000005
+        "events_per_second": 3961.52,
+        "wall_seconds": 15.006514870999922
       },
       "cpu_multi": {
         "threads": 4,
-        "events_per_second": 15760.02,
-        "wall_seconds": 15.006927884999982
+        "events_per_second": 15772.53,
+        "wall_seconds": 15.00649673700002,
+        "cpu_accounting": {
+          "wall_seconds": 15.006709140999988,
+          "steal_pct": 0.0,
+          "cpu_per_wall": 3.9951463999658023,
+          "nr_throttled": 0,
+          "throttled_ms": 0.0
+        }
       },
       "memory": {
-        "mib_per_second": 27842.35,
-        "wall_seconds": 15.007297074999997
+        "mib_per_second": 27860.46,
+        "wall_seconds": 15.007163250999952
       },
       "disk": {
         "seq_write": {
-          "mb_per_second": 351.592843,
-          "iops": 334.308122,
-          "p99_latency_us": 77070.336,
+          "mb_per_second": 351.639163,
+          "iops": 334.352363,
+          "p99_latency_us": 80216.064,
           "direct": true
         },
         "seq_read": {
-          "mb_per_second": 412.961323,
-          "iops": 392.8334,
+          "mb_per_second": 413.045758,
+          "iops": 392.911865,
           "p99_latency_us": 65798.144,
           "direct": true
         },
         "rand_read": {
-          "mb_per_second": 80.205667,
-          "iops": 19579.401993,
-          "p99_latency_us": 35389.44,
+          "mb_per_second": 80.316659,
+          "iops": 19606.4929,
+          "p99_latency_us": 35913.728,
           "direct": true
         },
         "rand_write": {
-          "mb_per_second": 80.220113,
-          "iops": 19582.922277,
-          "p99_latency_us": 16908.288,
+          "mb_per_second": 80.228304,
+          "iops": 19584.92201,
+          "p99_latency_us": 17170.432,
           "direct": true
         },
-        "wall_seconds": 69.40567578900001
+        "wall_seconds": 69.304662141
       },
       "download_cloudflare": {
-        "mb_per_second": 104.919463,
+        "mb_per_second": 154.943151,
         "bytes": 50000000,
-        "seconds": 0.476556,
-        "connect_seconds": 0.009799,
-        "ttfb_seconds": 0.077121,
-        "wall_seconds": 0.48373462200001427
+        "seconds": 0.322699,
+        "connect_seconds": 0.019791,
+        "ttfb_seconds": 0.088735,
+        "wall_seconds": 0.32886798599997746
       },
       "compile_redis": {
         "version": "8.10.3",
         "jobs": 4,
-        "seconds": 51.935346942999985,
+        "seconds": 43.07479813300006,
         "github_download": {
-          "mb_per_second": 14.936283,
+          "mb_per_second": 26.883999,
           "bytes": 4780701,
-          "seconds": 0.320073,
-          "connect_seconds": 0.048219,
-          "ttfb_seconds": 0.193488
+          "seconds": 0.177827,
+          "connect_seconds": 0.017272,
+          "ttfb_seconds": 0.134166
         },
-        "wall_seconds": 52.50402888300002
+        "cpu_accounting": {
+          "wall_seconds": 43.0747993089999,
+          "steal_pct": 0.0,
+          "cpu_per_wall": 3.602338315888086,
+          "nr_throttled": 0,
+          "throttled_ms": 0.0
+        },
+        "wall_seconds": 43.49386187999994
       },
       "cache": {
         "size_mb": 1024,
-        "save_seconds": 4.998773574829102,
-        "restore_seconds": 6.660710096359253
+        "save_seconds": 4.529326915740967,
+        "restore_seconds": 5.284292459487915
       }
     },
+    "cpu_accounting": {
+      "wall_seconds": 176.95713001500008,
+      "steal_pct": 0.0,
+      "cpu_per_wall": 1.5952281774465455,
+      "nr_throttled": 0,
+      "throttled_ms": 0.0
+    },
     "timing": {
-      "queue_seconds": 5.0,
-      "job_seconds": 218.0
+      "queue_seconds": 6.0,
+      "job_seconds": 200.0
     }
   }
 ]

@@ -11,18 +11,19 @@
       "billing": {
         "increment_seconds": 1
       },
+      "pricing_caveat": "Needs a plan: Developer is $20 a month with 2,000 minutes included.",
       "enabled": true,
       "pricing_source": "https://depot.dev/docs/github-actions/runner-types",
       "rep": 1
     },
     "github": {
       "repository": "lockyer-labs/runnersbench",
-      "run_id": "45620389115",
+      "run_id": "45891031803",
       "run_attempt": "1",
-      "sha": "ed05531d135a6957434933885f8c3d4585f38285"
+      "sha": "ab4b5766057aab8fcb14710e258c0ed880fb9e57"
     },
-    "started_at": "2026-11-25T13:08:11.961176+00:00",
-    "finished_at": "2026-11-25T13:10:55.066926+00:00",
+    "started_at": "2026-11-26T20:26:49.674112+00:00",
+    "finished_at": "2026-11-26T20:29:34.196289+00:00",
     "system": {
       "cpu": {
         "model": "Neoverse-V2",
@@ -91,8 +92,8 @@
       "disk": {
         "workdir": "/home/runner/work/_temp",
         "total_bytes": 155959910400,
-        "free_bytes": 118886719488,
-        "mount": "/dev/mapper/root ext4   rw,noatime,lazytime,nobarrier,noinit_itable",
+        "free_bytes": 118886707200,
+        "mount": "/dev/vda ext4   rw,noatime,lazytime,nobarrier,noinit_itable",
         "devices": [
           {
             "name": "loop0",
@@ -103,28 +104,28 @@
           },
           {
             "name": "loop1",
-            "size": "69.1M",
-            "type": "loop",
-            "rota": true,
-            "model": null
-          },
-          {
-            "name": "loop2",
             "size": "186.8M",
             "type": "loop",
             "rota": true,
             "model": null
           },
           {
+            "name": "loop2",
+            "size": "69.1M",
+            "type": "loop",
+            "rota": true,
+            "model": null
+          },
+          {
             "name": "loop3",
-            "size": "46.8M",
+            "size": "54.7M",
             "type": "loop",
             "rota": true,
             "model": null
           },
           {
             "name": "loop4",
-            "size": "54.7M",
+            "size": "46.8M",
             "type": "loop",
             "rota": true,
             "model": null
@@ -159,14 +160,14 @@
           },
           {
             "name": "vda",
-            "size": "300M",
+            "size": "150G",
             "type": "disk",
             "rota": true,
             "model": null
           },
           {
             "name": "vdb",
-            "size": "150G",
+            "size": "4G",
             "type": "disk",
             "rota": true,
             "model": null
@@ -174,13 +175,6 @@
           {
             "name": "vdc",
             "size": "150G",
-            "type": "disk",
-            "rota": true,
-            "model": null
-          },
-          {
-            "name": "vdd",
-            "size": "4G",
             "type": "disk",
             "rota": true,
             "model": null
@@ -194,6 +188,10 @@
         "image_version": "dev"
       },
       "virtualization": "qemu",
+      "virtualization_layers": {
+        "vm": "qemu",
+        "container": null
+      },
       "dmi": {
         "sys_vendor": null,
         "product_name": null,
@@ -203,14 +201,14 @@
         "chassis_vendor": null
       },
       "network": {
-        "ip": "44.215.29.35",
+        "ip": "98.94.251.147",
         "city": "Ashburn",
         "region": "Virginia",
         "country": "US",
         "org": "AS14618 Amazon.com, Inc."
       },
       "runner": {
-        "name": "depot-8bg90s1x3h",
+        "name": "depot-kfdnjd3qmt",
         "environment": "self-hosted"
       },
       "tools": {
@@ -218,86 +216,107 @@
         "gcc": "gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
         "python": "3.12.16"
       },
-      "wall_seconds": 0.0984922509999997
+      "wall_seconds": 0.12378217000000191
     },
     "benchmarks": {
       "apt_install": {
         "manager": "apt",
-        "update_seconds": 1.8511054560000026,
-        "seconds": 4.220337843000003,
-        "wall_seconds": 4.220341490000003
+        "update_seconds": 1.8518748030000012,
+        "seconds": 5.304434144999998,
+        "wall_seconds": 5.3044378210000005
       },
       "cpu_single": {
         "threads": 1,
-        "events_per_second": 3329.53,
-        "wall_seconds": 15.005455988000001
+        "events_per_second": 3352.33,
+        "wall_seconds": 15.005414127999998
       },
       "cpu_multi": {
         "threads": 4,
-        "events_per_second": 13043.34,
-        "wall_seconds": 15.005304315000004
+        "events_per_second": 13189.4,
+        "wall_seconds": 15.005413572000002,
+        "cpu_accounting": {
+          "wall_seconds": 15.005588413000005,
+          "steal_pct": 0.0,
+          "cpu_per_wall": 3.982516270286826,
+          "nr_throttled": 0,
+          "throttled_ms": 0.0
+        }
       },
       "memory": {
-        "mib_per_second": 26554.75,
-        "wall_seconds": 15.005224791999993
+        "mib_per_second": 26652.43,
+        "wall_seconds": 15.005420964000002
       },
       "disk": {
         "seq_write": {
-          "mb_per_second": 14599.39893,
-          "iops": 13922.0052,
-          "p99_latency_us": 4554.752,
+          "mb_per_second": 11613.323459,
+          "iops": 11074.261716,
+          "p99_latency_us": 2277.376,
           "direct": true
         },
         "seq_read": {
-          "mb_per_second": 1367.328008,
-          "iops": 1302.98587,
-          "p99_latency_us": 25559.04,
+          "mb_per_second": 8402.51818,
+          "iops": 8012.265849,
+          "p99_latency_us": 2670.592,
           "direct": true
         },
         "rand_read": {
-          "mb_per_second": 299.123226,
-          "iops": 73026.064929,
-          "p99_latency_us": 1056.768,
+          "mb_per_second": 1190.553009,
+          "iops": 290660.222652,
+          "p99_latency_us": 121.344,
           "direct": true
         },
         "rand_write": {
-          "mb_per_second": 809.616271,
-          "iops": 197658.089461,
-          "p99_latency_us": 350.208,
+          "mb_per_second": 1190.145075,
+          "iops": 290560.629291,
+          "p99_latency_us": 142.336,
           "direct": true
         },
-        "wall_seconds": 69.19251722700001
+        "wall_seconds": 69.21252222300001
       },
       "download_cloudflare": {
-        "mb_per_second": 83.412436,
+        "mb_per_second": 302.286495,
         "bytes": 50000000,
-        "seconds": 0.599431,
-        "connect_seconds": 0.011331,
-        "ttfb_seconds": 0.357055,
-        "wall_seconds": 0.6043243150000137
+        "seconds": 0.165406,
+        "connect_seconds": 0.008083,
+        "ttfb_seconds": 0.06245,
+        "wall_seconds": 0.17068590499999914
       },
       "compile_redis": {
         "version": "8.10.3",
         "jobs": 4,
-        "seconds": 38.73777904799999,
+        "seconds": 39.38912405799999,
         "github_download": {
-          "mb_per_second": 58.020328,
+          "mb_per_second": 32.030424,
           "bytes": 4780701,
-          "seconds": 0.082397,
-          "connect_seconds": 0.015526,
-          "ttfb_seconds": 0.065569
+          "seconds": 0.149255,
+          "connect_seconds": 0.012707,
+          "ttfb_seconds": 0.126542
         },
-        "wall_seconds": 38.96681998400001
+        "cpu_accounting": {
+          "wall_seconds": 39.38912572999999,
+          "steal_pct": 0.0,
+          "cpu_per_wall": 3.627600190454901,
+          "nr_throttled": 0,
+          "throttled_ms": 0.0
+        },
+        "wall_seconds": 39.68692217399999
       },
       "cache": {
         "size_mb": 1024,
-        "save_seconds": 12.441445589065552,
-        "restore_seconds": 3.906001091003418
+        "save_seconds": 4.792252540588379,
+        "restore_seconds": 3.156768321990967
       }
     },
+    "cpu_accounting": {
+      "wall_seconds": 164.52217656,
+      "steal_pct": 0.0,
+      "cpu_per_wall": 1.7512289590633168,
+      "nr_throttled": 0,
+      "throttled_ms": 0.0
+    },
     "timing": {
-      "queue_seconds": 2.0,
-      "job_seconds": 194.0
+      "queue_seconds": 1.0,
+      "job_seconds": 187.0
     }
   },
   {
@@ -312,18 +331,19 @@
       "billing": {
         "increment_seconds": 1
       },
+      "pricing_caveat": "Needs a plan: Developer is $20 a month with 2,000 minutes included.",
       "enabled": true,
       "pricing_source": "https://depot.dev/docs/github-actions/runner-types",
       "rep": 2
     },
     "github": {
       "repository": "lockyer-labs/runnersbench",
-      "run_id": "45620389115",
+      "run_id": "45891031803",
       "run_attempt": "1",
-      "sha": "ed05531d135a6957434933885f8c3d4585f38285"
+      "sha": "ab4b5766057aab8fcb14710e258c0ed880fb9e57"
     },
-    "started_at": "2026-11-25T13:08:10.938751+00:00",
-    "finished_at": "2026-11-25T13:10:55.078340+00:00",
+    "started_at": "2026-11-26T20:26:50.375442+00:00",
+    "finished_at": "2026-11-26T20:29:36.290059+00:00",
     "system": {
       "cpu": {
         "model": "Neoverse-V2",
@@ -393,7 +413,7 @@
         "workdir": "/home/runner/work/_temp",
         "total_bytes": 155959910400,
         "free_bytes": 118886715392,
-        "mount": "/dev/mapper/root ext4   rw,noatime,lazytime,nobarrier,noinit_itable",
+        "mount": "/dev/vda ext4   rw,noatime,lazytime,nobarrier,noinit_itable",
         "devices": [
           {
             "name": "loop0",
@@ -418,14 +438,14 @@
           },
           {
             "name": "loop3",
-            "size": "46.8M",
+            "size": "54.7M",
             "type": "loop",
             "rota": true,
             "model": null
           },
           {
             "name": "loop4",
-            "size": "54.7M",
+            "size": "46.8M",
             "type": "loop",
             "rota": true,
             "model": null
@@ -460,28 +480,21 @@
           },
           {
             "name": "vda",
-            "size": "300M",
-            "type": "disk",
-            "rota": true,
-            "model": null
-          },
-          {
-            "name": "vdb",
             "size": "150G",
             "type": "disk",
             "rota": true,
             "model": null
           },
           {
-            "name": "vdc",
-            "size": "180G",
+            "name": "vdb",
+            "size": "4G",
             "type": "disk",
             "rota": true,
             "model": null
           },
           {
-            "name": "vdd",
-            "size": "4G",
+            "name": "vdc",
+            "size": "150G",
             "type": "disk",
             "rota": true,
             "model": null
@@ -495,6 +508,10 @@
         "image_version": "dev"
       },
       "virtualization": "qemu",
+      "virtualization_layers": {
+        "vm": "qemu",
+        "container": null
+      },
       "dmi": {
         "sys_vendor": null,
         "product_name": null,
@@ -504,14 +521,14 @@
         "chassis_vendor": null
       },
       "network": {
-        "ip": "34.237.72.165",
+        "ip": "54.236.142.149",
         "city": "Ashburn",
         "region": "Virginia",
         "country": "US",
         "org": "AS14618 Amazon.com, Inc."
       },
       "runner": {
-        "name": "depot-hkz78hlq82",
+        "name": "depot-cm3vr4wzq5",
         "environment": "self-hosted"
       },
       "tools": {
@@ -519,86 +536,107 @@
         "gcc": "gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
         "python": "3.12.16"
       },
-      "wall_seconds": 0.10296361500000017
+      "wall_seconds": 0.15662932900000115
     },
     "benchmarks": {
       "apt_install": {
         "manager": "apt",
-        "update_seconds": 1.8443155749999995,
-        "seconds": 5.118720399000001,
-        "wall_seconds": 5.118724177000001
+        "update_seconds": 1.902624823,
+        "seconds": 4.9131763190000015,
+        "wall_seconds": 4.913179885000002
       },
       "cpu_single": {
         "threads": 1,
-        "events_per_second": 3204.57,
-        "wall_seconds": 15.005486728000001
+        "events_per_second": 3338.29,
+        "wall_seconds": 15.010413021999998
       },
       "cpu_multi": {
         "threads": 4,
-        "events_per_second": 13085.01,
-        "wall_seconds": 15.005618667999997
+        "events_per_second": 12198.22,
+        "wall_seconds": 15.009427174999999,
+        "cpu_accounting": {
+          "wall_seconds": 15.012116726999999,
+          "steal_pct": 0.0,
+          "cpu_per_wall": 3.7676232491767254,
+          "nr_throttled": 0,
+          "throttled_ms": 0.0
+        }
       },
       "memory": {
-        "mib_per_second": 26687.73,
-        "wall_seconds": 15.005485936
+        "mib_per_second": 26506.23,
+        "wall_seconds": 15.008192336999997
       },
       "disk": {
         "seq_write": {
-          "mb_per_second": 15793.437676,
-          "iops": 15060.795947,
-          "p99_latency_us": 4177.92,
+          "mb_per_second": 9879.933175,
+          "iops": 9421.238584,
+          "p99_latency_us": 5210.112,
           "direct": true
         },
         "seq_read": {
-          "mb_per_second": 2127.334891,
-          "iops": 2027.785181,
-          "p99_latency_us": 18743.296,
+          "mb_per_second": 6664.070228,
+          "iops": 6354.352753,
+          "p99_latency_us": 6848.512,
           "direct": true
         },
         "rand_read": {
-          "mb_per_second": 354.086789,
-          "iops": 86444.903673,
-          "p99_latency_us": 954.368,
+          "mb_per_second": 1064.862248,
+          "iops": 259974.068395,
+          "p99_latency_us": 226.304,
           "direct": true
         },
         "rand_write": {
-          "mb_per_second": 749.919959,
-          "iops": 183083.794414,
-          "p99_latency_us": 452.608,
+          "mb_per_second": 1130.526035,
+          "iops": 276005.199653,
+          "p99_latency_us": 156.672,
           "direct": true
         },
-        "wall_seconds": 69.21876076199999
+        "wall_seconds": 69.232818804
       },
       "download_cloudflare": {
-        "mb_per_second": 228.828762,
+        "mb_per_second": 251.079642,
         "bytes": 50000000,
-        "seconds": 0.218504,
-        "connect_seconds": 0.013787,
-        "ttfb_seconds": 0.066142,
-        "wall_seconds": 0.22480991199998357
+        "seconds": 0.19914,
+        "connect_seconds": 0.037885,
+        "ttfb_seconds": 0.090696,
+        "wall_seconds": 0.20467839299999468
       },
       "compile_redis": {
         "version": "8.10.3",
         "jobs": 4,
-        "seconds": 39.14165590600001,
+        "seconds": 41.09819302300002,
         "github_download": {
-          "mb_per_second": 29.840774,
+          "mb_per_second": 49.460473,
           "bytes": 4780701,
-          "seconds": 0.160207,
-          "connect_seconds": 0.012051,
-          "ttfb_seconds": 0.128916
+          "seconds": 0.096657,
+          "connect_seconds": 0.016345,
+          "ttfb_seconds": 0.064943
         },
-        "wall_seconds": 39.450672188
+        "cpu_accounting": {
+          "wall_seconds": 41.098194119,
+          "steal_pct": 0.0,
+          "cpu_per_wall": 3.6068738098511584,
+          "nr_throttled": 0,
+          "throttled_ms": 0.0
+        },
+        "wall_seconds": 41.367262998
       },
       "cache": {
         "size_mb": 1024,
-        "save_seconds": 11.841303825378418,
-        "restore_seconds": 3.5769362449645996
+        "save_seconds": 4.885615825653076,
+        "restore_seconds": 3.190676212310791
       }
     },
+    "cpu_accounting": {
+      "wall_seconds": 165.914618504,
+      "steal_pct": 0.0,
+      "cpu_per_wall": 1.7441501093107319,
+      "nr_throttled": 0,
+      "throttled_ms": 0.0
+    },
     "timing": {
-      "queue_seconds": 1.0,
-      "job_seconds": 195.0
+      "queue_seconds": 2.0,
+      "job_seconds": 190.0
     }
   },
   {
@@ -613,18 +651,19 @@
       "billing": {
         "increment_seconds": 1
       },
+      "pricing_caveat": "Needs a plan: Developer is $20 a month with 2,000 minutes included.",
       "enabled": true,
       "pricing_source": "https://depot.dev/docs/github-actions/runner-types",
       "rep": 3
     },
     "github": {
       "repository": "lockyer-labs/runnersbench",
-      "run_id": "45620389115",
+      "run_id": "45891031803",
       "run_attempt": "1",
-      "sha": "ed05531d135a6957434933885f8c3d4585f38285"
+      "sha": "ab4b5766057aab8fcb14710e258c0ed880fb9e57"
     },
-    "started_at": "2026-11-25T13:08:11.027646+00:00",
-    "finished_at": "2026-11-25T13:10:54.010039+00:00",
+    "started_at": "2026-11-26T20:26:50.414346+00:00",
+    "finished_at": "2026-11-26T20:29:35.838507+00:00",
     "system": {
       "cpu": {
         "model": "Neoverse-V2",
@@ -693,8 +732,8 @@
       "disk": {
         "workdir": "/home/runner/work/_temp",
         "total_bytes": 155959910400,
-        "free_bytes": 118886727680,
-        "mount": "/dev/mapper/root ext4   rw,noatime,lazytime,nobarrier,noinit_itable",
+        "free_bytes": 118886711296,
+        "mount": "/dev/vda ext4   rw,noatime,lazytime,nobarrier,noinit_itable",
         "devices": [
           {
             "name": "loop0",
@@ -761,14 +800,14 @@
           },
           {
             "name": "vda",
-            "size": "300M",
+            "size": "150G",
             "type": "disk",
             "rota": true,
             "model": null
           },
           {
             "name": "vdb",
-            "size": "150G",
+            "size": "4G",
             "type": "disk",
             "rota": true,
             "model": null
@@ -776,13 +815,6 @@
           {
             "name": "vdc",
             "size": "150G",
-            "type": "disk",
-            "rota": true,
-            "model": null
-          },
-          {
-            "name": "vdd",
-            "size": "4G",
             "type": "disk",
             "rota": true,
             "model": null
@@ -796,6 +828,10 @@
         "image_version": "dev"
       },
       "virtualization": "qemu",
+      "virtualization_layers": {
+        "vm": "qemu",
+        "container": null
+      },
       "dmi": {
         "sys_vendor": null,
         "product_name": null,
@@ -805,14 +841,14 @@
         "chassis_vendor": null
       },
       "network": {
-        "ip": "34.199.88.116",
+        "ip": "52.205.70.46",
         "city": "Ashburn",
         "region": "Virginia",
         "country": "US",
         "org": "AS14618 Amazon.com, Inc."
       },
       "runner": {
-        "name": "depot-qr8s16s1nn",
+        "name": "depot-5s4tgf4srh",
         "environment": "self-hosted"
       },
       "tools": {
@@ -820,86 +856,107 @@
         "gcc": "gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
         "python": "3.12.16"
       },
-      "wall_seconds": 0.10636817600000015
+      "wall_seconds": 0.11773480099999745
     },
     "benchmarks": {
       "apt_install": {
         "manager": "apt",
-        "update_seconds": 1.78138796,
-        "seconds": 4.979638157,
-        "wall_seconds": 4.979642164999998
+        "update_seconds": 1.8938791660000014,
+        "seconds": 4.912745929,
+        "wall_seconds": 4.912749312999999
       },
       "cpu_single": {
         "threads": 1,
-        "events_per_second": 3337.95,
-        "wall_seconds": 15.005335365999997
+        "events_per_second": 3331.62,
+        "wall_seconds": 15.009802253999997
       },
       "cpu_multi": {
         "threads": 4,
-        "events_per_second": 13181.8,
-        "wall_seconds": 15.005467370999995
+        "events_per_second": 11731.23,
+        "wall_seconds": 15.016240643000003,
+        "cpu_accounting": {
+          "wall_seconds": 15.016423046999996,
+          "steal_pct": 0.0,
+          "cpu_per_wall": 3.6810364110674896,
+          "nr_throttled": 0,
+          "throttled_ms": 0.0
+        }
       },
       "memory": {
-        "mib_per_second": 26689.66,
-        "wall_seconds": 15.005182954000006
+        "mib_per_second": 25946.63,
+        "wall_seconds": 15.008362239
       },
       "disk": {
         "seq_write": {
-          "mb_per_second": 14180.485793,
-          "iops": 13522.565162,
-          "p99_latency_us": 4145.152,
+          "mb_per_second": 9195.204923,
+          "iops": 8768.230903,
+          "p99_latency_us": 5734.4,
           "direct": true
         },
         "seq_read": {
-          "mb_per_second": 1165.402752,
-          "iops": 1110.41514,
-          "p99_latency_us": 56360.96,
+          "mb_per_second": 6848.142838,
+          "iops": 6529.898007,
+          "p99_latency_us": 6717.44,
           "direct": true
         },
         "rand_read": {
-          "mb_per_second": 299.177836,
-          "iops": 73039.397374,
-          "p99_latency_us": 1073.152,
+          "mb_per_second": 991.117865,
+          "iops": 241970.068662,
+          "p99_latency_us": 724.992,
           "direct": true
         },
         "rand_write": {
-          "mb_per_second": 820.480597,
-          "iops": 200310.512632,
-          "p99_latency_us": 301.056,
+          "mb_per_second": 1137.893428,
+          "iops": 277803.879741,
+          "p99_latency_us": 171.008,
           "direct": true
         },
-        "wall_seconds": 69.260081833
+        "wall_seconds": 69.24283725699999
       },
       "download_cloudflare": {
-        "mb_per_second": 169.914872,
+        "mb_per_second": 283.337488,
         "bytes": 50000000,
-        "seconds": 0.294265,
-        "connect_seconds": 0.029965,
-        "ttfb_seconds": 0.130697,
-        "wall_seconds": 0.3000949180000134
+        "seconds": 0.176468,
+        "connect_seconds": 0.030855,
+        "ttfb_seconds": 0.084188,
+        "wall_seconds": 0.18189713699999288
       },
       "compile_redis": {
         "version": "8.10.3",
         "jobs": 4,
-        "seconds": 38.06993930099998,
+        "seconds": 40.665002207000015,
         "github_download": {
-          "mb_per_second": 49.804156,
+          "mb_per_second": 43.578977,
           "bytes": 4780701,
-          "seconds": 0.09599,
-          "connect_seconds": 0.030263,
-          "ttfb_seconds": 0.077683
+          "seconds": 0.109702,
+          "connect_seconds": 0.043953,
+          "ttfb_seconds": 0.090997
         },
-        "wall_seconds": 38.313606050999994
+        "cpu_accounting": {
+          "wall_seconds": 40.665003481000014,
+          "steal_pct": 0.0,
+          "cpu_per_wall": 3.616574140187025,
+          "nr_throttled": 0,
+          "throttled_ms": 0.0
+        },
+        "wall_seconds": 40.92528980099999
       },
       "cache": {
         "size_mb": 1024,
-        "save_seconds": 12.043895721435547,
-        "restore_seconds": 3.6496331691741943
+        "save_seconds": 4.915233135223389,
+        "restore_seconds": 3.3146305084228516
       }
+    },
+    "cpu_accounting": {
+      "wall_seconds": 165.424161814,
+      "steal_pct": 0.0,
+      "cpu_per_wall": 1.7425024061727177,
+      "nr_throttled": 0,
+      "throttled_ms": 0.0
     },
     "timing": {
       "queue_seconds": 2.0,
-      "job_seconds": 192.0
+      "job_seconds": 189.0
     }
   }
 ]

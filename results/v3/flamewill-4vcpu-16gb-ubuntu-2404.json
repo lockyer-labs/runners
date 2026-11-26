@@ -18,12 +18,12 @@
     },
     "github": {
       "repository": "lockyer-labs/runnersbench",
-      "run_id": "45885271185",
+      "run_id": "45891031803",
       "run_attempt": "1",
-      "sha": "3eb1ed5cbf8afecdd6ce0bb33955e4b9cc94c39d"
+      "sha": "ab4b5766057aab8fcb14710e258c0ed880fb9e57"
     },
-    "started_at": "2026-11-26T19:40:54.478902+00:00",
-    "finished_at": "2026-11-26T19:43:49.695049+00:00",
+    "started_at": "2026-11-26T20:27:27.159776+00:00",
+    "finished_at": "2026-11-26T20:30:25.611598+00:00",
     "system": {
       "cpu": {
         "model": "Neoverse-V2",
@@ -95,68 +95,68 @@
       "disk": {
         "workdir": "/opt/actions-runner/_work/_temp",
         "total_bytes": 189868064768,
-        "free_bytes": 179768922112,
-        "mount": "/dev/nvme1n1p3[/_work] ext4   rw,noatime",
+        "free_bytes": 179768930304,
+        "mount": "/dev/nvme0n1p3[/_work] ext4   rw,noatime",
         "devices": [
           {
             "name": "loop0",
-            "size": "113.3M",
-            "type": "loop",
-            "rota": false,
-            "model": null
-          },
-          {
-            "name": "loop1",
-            "size": "115.9M",
-            "type": "loop",
-            "rota": false,
-            "model": null
-          },
-          {
-            "name": "loop2",
-            "size": "125M",
-            "type": "loop",
-            "rota": false,
-            "model": null
-          },
-          {
-            "name": "loop3",
             "size": "76.6M",
             "type": "loop",
             "rota": false,
             "model": null
           },
           {
-            "name": "loop4",
-            "size": "135M",
+            "name": "loop1",
+            "size": "71.3M",
             "type": "loop",
             "rota": false,
             "model": null
           },
           {
-            "name": "loop5",
-            "size": "73.1M",
-            "type": "loop",
-            "rota": false,
-            "model": null
-          },
-          {
-            "name": "loop6",
-            "size": "84.5M",
-            "type": "loop",
-            "rota": false,
-            "model": null
-          },
-          {
-            "name": "loop7",
+            "name": "loop2",
             "size": "144.1M",
             "type": "loop",
             "rota": false,
             "model": null
           },
           {
-            "name": "loop8",
+            "name": "loop3",
+            "size": "113.3M",
+            "type": "loop",
+            "rota": false,
+            "model": null
+          },
+          {
+            "name": "loop4",
+            "size": "115.9M",
+            "type": "loop",
+            "rota": false,
+            "model": null
+          },
+          {
+            "name": "loop5",
+            "size": "135M",
+            "type": "loop",
+            "rota": false,
+            "model": null
+          },
+          {
+            "name": "loop6",
             "size": "96M",
+            "type": "loop",
+            "rota": false,
+            "model": null
+          },
+          {
+            "name": "loop7",
+            "size": "45M",
+            "type": "loop",
+            "rota": false,
+            "model": null
+          },
+          {
+            "name": "loop8",
+            "size": "125M",
             "type": "loop",
             "rota": false,
             "model": null
@@ -170,105 +170,105 @@
           },
           {
             "name": "loop10",
-            "size": "71.3M",
+            "size": "84.5M",
             "type": "loop",
             "rota": false,
             "model": null
           },
           {
             "name": "loop11",
-            "size": "41.1M",
+            "size": "73.1M",
             "type": "loop",
             "rota": false,
             "model": null
           },
           {
             "name": "loop12",
-            "size": "45M",
+            "size": "41.1M",
             "type": "loop",
             "rota": false,
             "model": null
           },
           {
             "name": "loop13",
-            "size": "52.8M",
-            "type": "loop",
-            "rota": false,
-            "model": null
-          },
-          {
-            "name": "loop14",
-            "size": "196M",
-            "type": "loop",
-            "rota": false,
-            "model": null
-          },
-          {
-            "name": "loop15",
             "size": "210.2M",
             "type": "loop",
             "rota": false,
             "model": null
           },
           {
-            "name": "loop16",
-            "size": "2.6G",
-            "type": "loop",
-            "rota": false,
-            "model": null
-          },
-          {
-            "name": "loop17",
-            "size": "146.6M",
-            "type": "loop",
-            "rota": false,
-            "model": null
-          },
-          {
-            "name": "loop18",
-            "size": "195.1M",
-            "type": "loop",
-            "rota": false,
-            "model": null
-          },
-          {
-            "name": "loop19",
-            "size": "81.3M",
-            "type": "loop",
-            "rota": false,
-            "model": null
-          },
-          {
-            "name": "loop20",
-            "size": "148.1M",
-            "type": "loop",
-            "rota": false,
-            "model": null
-          },
-          {
-            "name": "loop21",
+            "name": "loop14",
             "size": "106.7M",
             "type": "loop",
             "rota": false,
             "model": null
           },
           {
-            "name": "loop22",
+            "name": "loop15",
             "size": "214.2M",
             "type": "loop",
             "rota": false,
             "model": null
           },
           {
+            "name": "loop16",
+            "size": "195.1M",
+            "type": "loop",
+            "rota": false,
+            "model": null
+          },
+          {
+            "name": "loop17",
+            "size": "241.9M",
+            "type": "loop",
+            "rota": false,
+            "model": null
+          },
+          {
+            "name": "loop18",
+            "size": "196M",
+            "type": "loop",
+            "rota": false,
+            "model": null
+          },
+          {
+            "name": "loop19",
+            "size": "148.1M",
+            "type": "loop",
+            "rota": false,
+            "model": null
+          },
+          {
+            "name": "loop20",
+            "size": "81.3M",
+            "type": "loop",
+            "rota": false,
+            "model": null
+          },
+          {
+            "name": "loop21",
+            "size": "2.6G",
+            "type": "loop",
+            "rota": false,
+            "model": null
+          },
+          {
+            "name": "loop22",
+            "size": "52.8M",
+            "type": "loop",
+            "rota": false,
+            "model": null
+          },
+          {
             "name": "loop23",
-            "size": "9.2M",
+            "size": "146.6M",
             "type": "loop",
             "rota": false,
             "model": null
           },
           {
             "name": "loop24",
-            "size": "241.9M",
+            "size": "9.2M",
             "type": "loop",
             "rota": false,
             "model": null
@@ -288,14 +288,14 @@
             "model": null
           },
           {
-            "name": "nvme0n1",
+            "name": "nvme1n1",
             "size": "20G",
             "type": "disk",
             "rota": false,
             "model": null
           },
           {
-            "name": "nvme1n1",
+            "name": "nvme0n1",
             "size": "220.7G",
             "type": "disk",
             "rota": false,
@@ -323,14 +323,14 @@
         "chassis_vendor": "Amazon EC2"
       },
       "network": {
-        "ip": "16.192.171.182",
+        "ip": "13.53.243.172",
         "city": "Stockholm",
         "region": "Stockholm",
         "country": "SE",
         "org": "AS16509 Amazon.com, Inc."
       },
       "runner": {
-        "name": "flamewill-b08f30-5872a482a28280ff",
+        "name": "flamewill-b08f30-b219effe1eb4bb3e",
         "environment": "self-hosted"
       },
       "tools": {
@@ -338,53 +338,53 @@
         "gcc": "gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
         "python": "3.12.16"
       },
-      "wall_seconds": 0.27233005899999796
+      "wall_seconds": 1.7909802149999976
     },
     "benchmarks": {
       "apt_install": {
         "manager": "apt",
-        "update_seconds": 5.979140201,
-        "seconds": 13.699500283000006,
-        "wall_seconds": 13.699504424000004
+        "update_seconds": 6.751595532000003,
+        "seconds": 15.863465478000002,
+        "wall_seconds": 15.863469183999996
       },
       "cpu_single": {
         "threads": 1,
-        "events_per_second": 3331.43,
-        "wall_seconds": 15.006104437999994
+        "events_per_second": 3335.05,
+        "wall_seconds": 15.005999919999994
       },
       "cpu_multi": {
         "threads": 4,
-        "events_per_second": 13302.67,
-        "wall_seconds": 15.006094653000005,
+        "events_per_second": 13302.37,
+        "wall_seconds": 15.006018087000001,
         "cpu_accounting": {
-          "wall_seconds": 15.006301370000003,
+          "wall_seconds": 15.006228555000007,
           "steal_pct": 0.0,
-          "cpu_per_wall": 3.993322439851812,
+          "cpu_per_wall": 3.994141484672327,
           "nr_throttled": 0,
           "throttled_ms": 0.0
         }
       },
       "memory": {
-        "mib_per_second": 26631.42,
-        "wall_seconds": 15.006523301000001
+        "mib_per_second": 26410.99,
+        "wall_seconds": 15.006113812999999
       },
       "disk": {
         "seq_write": {
-          "mb_per_second": 225.77861,
-          "iops": 214.323643,
+          "mb_per_second": 225.788262,
+          "iops": 214.333112,
           "p99_latency_us": 119013.376,
           "direct": true
         },
         "seq_read": {
-          "mb_per_second": 472.396251,
-          "iops": 449.447918,
-          "p99_latency_us": 42205.184,
+          "mb_per_second": 472.364831,
+          "iops": 449.418025,
+          "p99_latency_us": 49020.928,
           "direct": true
         },
         "rand_read": {
           "mb_per_second": 274.81536,
           "iops": 67091.527232,
-          "p99_latency_us": 544.768,
+          "p99_latency_us": 528.384,
           "direct": true
         },
         "rand_write": {
@@ -393,52 +393,52 @@
           "p99_latency_us": 962.56,
           "direct": true
         },
-        "wall_seconds": 69.269105079
+        "wall_seconds": 69.22702283100001
       },
       "download_cloudflare": {
-        "mb_per_second": 265.960276,
+        "mb_per_second": 258.772383,
         "bytes": 50000000,
-        "seconds": 0.187998,
-        "connect_seconds": 0.017027,
-        "ttfb_seconds": 0.074204,
-        "wall_seconds": 0.19322859799999037
+        "seconds": 0.19322,
+        "connect_seconds": 0.011585,
+        "ttfb_seconds": 0.061955,
+        "wall_seconds": 0.19844887200000016
       },
       "compile_redis": {
         "version": "8.10.3",
         "jobs": 4,
-        "seconds": 41.05033837000002,
+        "seconds": 40.65288672700001,
         "github_download": {
-          "mb_per_second": 9.029953,
+          "mb_per_second": 9.205463,
           "bytes": 4780701,
-          "seconds": 0.529427,
-          "connect_seconds": 0.020706,
-          "ttfb_seconds": 0.376739
+          "seconds": 0.519333,
+          "connect_seconds": 0.016769,
+          "ttfb_seconds": 0.376007
         },
         "cpu_accounting": {
-          "wall_seconds": 41.05033951899998,
+          "wall_seconds": 40.652887937,
           "steal_pct": 0.0,
-          "cpu_per_wall": 3.621066274767345,
+          "cpu_per_wall": 3.623014439423096,
           "nr_throttled": 0,
           "throttled_ms": 0.0
         },
-        "wall_seconds": 41.754892144999985
+        "wall_seconds": 41.34467276799998
       },
       "cache": {
         "size_mb": 1024,
-        "save_seconds": 5.699916839599609,
-        "restore_seconds": 4.163844347000122
+        "save_seconds": 5.339870452880859,
+        "restore_seconds": 4.046962261199951
       }
     },
     "cpu_accounting": {
-      "wall_seconds": 175.216147874,
+      "wall_seconds": 178.451822852,
       "steal_pct": 0.0,
-      "cpu_per_wall": 1.5718528419997764,
+      "cpu_per_wall": 1.538336765703278,
       "nr_throttled": 0,
       "throttled_ms": 0.0
     },
     "timing": {
-      "queue_seconds": 40.0,
-      "job_seconds": 211.0
+      "queue_seconds": 34.0,
+      "job_seconds": 213.0
     }
   },
   {
@@ -460,12 +460,12 @@
     },
     "github": {
       "repository": "lockyer-labs/runnersbench",
-      "run_id": "45885271185",
+      "run_id": "45891031803",
       "run_attempt": "1",
-      "sha": "3eb1ed5cbf8afecdd6ce0bb33955e4b9cc94c39d"
+      "sha": "ab4b5766057aab8fcb14710e258c0ed880fb9e57"
     },
-    "started_at": "2026-11-26T19:40:57.153296+00:00",
-    "finished_at": "2026-11-26T19:43:51.027010+00:00",
+    "started_at": "2026-11-26T20:27:28.801936+00:00",
+    "finished_at": "2026-11-26T20:30:24.344978+00:00",
     "system": {
       "cpu": {
         "model": "Neoverse-V2",
@@ -531,13 +531,13 @@
         }
       },
       "memory": {
-        "total_bytes": 16433483776,
+        "total_bytes": 16433475584,
         "cgroup_max": null
       },
       "disk": {
         "workdir": "/opt/actions-runner/_work/_temp",
         "total_bytes": 189868064768,
-        "free_bytes": 179752079360,
+        "free_bytes": 179768930304,
         "mount": "/dev/nvme1n1p3[/_work] ext4   rw,noatime",
         "devices": [
           {
@@ -549,77 +549,77 @@
           },
           {
             "name": "loop1",
-            "size": "76.6M",
-            "type": "loop",
-            "rota": false,
-            "model": null
-          },
-          {
-            "name": "loop2",
-            "size": "96M",
-            "type": "loop",
-            "rota": false,
-            "model": null
-          },
-          {
-            "name": "loop3",
-            "size": "144.1M",
-            "type": "loop",
-            "rota": false,
-            "model": null
-          },
-          {
-            "name": "loop4",
-            "size": "125M",
-            "type": "loop",
-            "rota": false,
-            "model": null
-          },
-          {
-            "name": "loop5",
             "size": "113.3M",
             "type": "loop",
             "rota": false,
             "model": null
           },
           {
-            "name": "loop6",
+            "name": "loop2",
+            "size": "144.1M",
+            "type": "loop",
+            "rota": false,
+            "model": null
+          },
+          {
+            "name": "loop3",
+            "size": "125M",
+            "type": "loop",
+            "rota": false,
+            "model": null
+          },
+          {
+            "name": "loop4",
+            "size": "38.3M",
+            "type": "loop",
+            "rota": false,
+            "model": null
+          },
+          {
+            "name": "loop5",
             "size": "115.9M",
             "type": "loop",
             "rota": false,
             "model": null
           },
           {
-            "name": "loop7",
-            "size": "71.3M",
-            "type": "loop",
-            "rota": false,
-            "model": null
-          },
-          {
-            "name": "loop8",
-            "size": "73.1M",
-            "type": "loop",
-            "rota": false,
-            "model": null
-          },
-          {
-            "name": "loop9",
-            "size": "84.5M",
-            "type": "loop",
-            "rota": false,
-            "model": null
-          },
-          {
-            "name": "loop10",
+            "name": "loop6",
             "size": "41.1M",
             "type": "loop",
             "rota": false,
             "model": null
           },
           {
+            "name": "loop7",
+            "size": "52.8M",
+            "type": "loop",
+            "rota": false,
+            "model": null
+          },
+          {
+            "name": "loop8",
+            "size": "96M",
+            "type": "loop",
+            "rota": false,
+            "model": null
+          },
+          {
+            "name": "loop9",
+            "size": "71.3M",
+            "type": "loop",
+            "rota": false,
+            "model": null
+          },
+          {
+            "name": "loop10",
+            "size": "106.7M",
+            "type": "loop",
+            "rota": false,
+            "model": null
+          },
+          {
             "name": "loop11",
-            "size": "38.3M",
+            "size": "84.5M",
             "type": "loop",
             "rota": false,
             "model": null
@@ -633,91 +633,91 @@
           },
           {
             "name": "loop13",
-            "size": "210.2M",
-            "type": "loop",
-            "rota": false,
-            "model": null
-          },
-          {
-            "name": "loop14",
-            "size": "106.7M",
-            "type": "loop",
-            "rota": false,
-            "model": null
-          },
-          {
-            "name": "loop15",
-            "size": "196M",
-            "type": "loop",
-            "rota": false,
-            "model": null
-          },
-          {
-            "name": "loop16",
-            "size": "214.2M",
-            "type": "loop",
-            "rota": false,
-            "model": null
-          },
-          {
-            "name": "loop17",
-            "size": "148.1M",
-            "type": "loop",
-            "rota": false,
-            "model": null
-          },
-          {
-            "name": "loop18",
-            "size": "52.8M",
-            "type": "loop",
-            "rota": false,
-            "model": null
-          },
-          {
-            "name": "loop19",
-            "size": "81.3M",
-            "type": "loop",
-            "rota": false,
-            "model": null
-          },
-          {
-            "name": "loop20",
-            "size": "2.6G",
-            "type": "loop",
-            "rota": false,
-            "model": null
-          },
-          {
-            "name": "loop21",
-            "size": "178.3M",
-            "type": "loop",
-            "rota": false,
-            "model": null
-          },
-          {
-            "name": "loop22",
             "size": "146.6M",
             "type": "loop",
             "rota": false,
             "model": null
           },
           {
-            "name": "loop23",
-            "size": "245.7M",
+            "name": "loop14",
+            "size": "195.1M",
             "type": "loop",
             "rota": false,
             "model": null
           },
           {
-            "name": "loop24",
+            "name": "loop15",
+            "size": "73.1M",
+            "type": "loop",
+            "rota": false,
+            "model": null
+          },
+          {
+            "name": "loop16",
+            "size": "76.6M",
+            "type": "loop",
+            "rota": false,
+            "model": null
+          },
+          {
+            "name": "loop17",
+            "size": "196M",
+            "type": "loop",
+            "rota": false,
+            "model": null
+          },
+          {
+            "name": "loop18",
+            "size": "2.6G",
+            "type": "loop",
+            "rota": false,
+            "model": null
+          },
+          {
+            "name": "loop19",
+            "size": "210.2M",
+            "type": "loop",
+            "rota": false,
+            "model": null
+          },
+          {
+            "name": "loop20",
+            "size": "148.1M",
+            "type": "loop",
+            "rota": false,
+            "model": null
+          },
+          {
+            "name": "loop21",
             "size": "9.2M",
             "type": "loop",
             "rota": false,
             "model": null
           },
           {
+            "name": "loop22",
+            "size": "81.3M",
+            "type": "loop",
+            "rota": false,
+            "model": null
+          },
+          {
+            "name": "loop23",
+            "size": "178.3M",
+            "type": "loop",
+            "rota": false,
+            "model": null
+          },
+          {
+            "name": "loop24",
+            "size": "245.7M",
+            "type": "loop",
+            "rota": false,
+            "model": null
+          },
+          {
             "name": "loop25",
-            "size": "195.1M",
+            "size": "214.2M",
             "type": "loop",
             "rota": false,
             "model": null
@@ -765,14 +765,14 @@
         "chassis_vendor": "Amazon EC2"
       },
       "network": {
-        "ip": "13.53.151.210",
+        "ip": "16.170.35.97",
         "city": "Stockholm",
         "region": "Stockholm",
         "country": "SE",
         "org": "AS16509 Amazon.com, Inc."
       },
       "runner": {
-        "name": "flamewill-b08f30-a88cc81d9be7645c",
+        "name": "flamewill-b08f30-d734a87cffa8a1c3",
         "environment": "self-hosted"
       },
       "tools": {
@@ -780,106 +780,106 @@
         "gcc": "gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
         "python": "3.12.16"
       },
-      "wall_seconds": 0.3086075579999985
+      "wall_seconds": 1.9767208839999952
     },
     "benchmarks": {
       "apt_install": {
         "manager": "apt",
-        "update_seconds": 7.037473525000003,
-        "seconds": 12.485338260000006,
-        "wall_seconds": 12.485341964999996
+        "update_seconds": 5.796370969999998,
+        "seconds": 12.385236475,
+        "wall_seconds": 12.385240260000003
       },
       "cpu_single": {
         "threads": 1,
-        "events_per_second": 3329.39,
-        "wall_seconds": 15.005866549000004
+        "events_per_second": 3334.13,
+        "wall_seconds": 15.006197817
       },
       "cpu_multi": {
         "threads": 4,
-        "events_per_second": 13306.63,
-        "wall_seconds": 15.006067291000008,
+        "events_per_second": 13301.95,
+        "wall_seconds": 15.005939438000013,
         "cpu_accounting": {
-          "wall_seconds": 15.006282595999991,
+          "wall_seconds": 15.006127394000004,
           "steal_pct": 0.0,
-          "cpu_per_wall": 3.9951933209615027,
+          "cpu_per_wall": 3.9946348865442656,
           "nr_throttled": 0,
           "throttled_ms": 0.0
         }
       },
       "memory": {
-        "mib_per_second": 26628.8,
-        "wall_seconds": 15.006373881000002
+        "mib_per_second": 26643.01,
+        "wall_seconds": 15.006096868
       },
       "disk": {
         "seq_write": {
-          "mb_per_second": 225.758301,
-          "iops": 214.304671,
+          "mb_per_second": 225.728348,
+          "iops": 214.276237,
           "p99_latency_us": 119013.376,
           "direct": true
         },
         "seq_read": {
-          "mb_per_second": 472.364831,
-          "iops": 449.418025,
+          "mb_per_second": 472.396251,
+          "iops": 449.447918,
           "p99_latency_us": 46399.488,
           "direct": true
         },
         "rand_read": {
-          "mb_per_second": 274.814813,
-          "iops": 67091.393907,
-          "p99_latency_us": 552.96,
+          "mb_per_second": 274.815906,
+          "iops": 67091.660556,
+          "p99_latency_us": 528.384,
           "direct": true
         },
         "rand_write": {
-          "mb_per_second": 137.410547,
-          "iops": 33545.430305,
+          "mb_per_second": 137.409727,
+          "iops": 33545.230318,
           "p99_latency_us": 962.56,
           "direct": true
         },
-        "wall_seconds": 69.27137426599998
+        "wall_seconds": 69.27961748400001
       },
       "download_cloudflare": {
-        "mb_per_second": 211.974885,
+        "mb_per_second": 231.571537,
         "bytes": 50000000,
-        "seconds": 0.235877,
-        "connect_seconds": 0.011725,
-        "ttfb_seconds": 0.083554,
-        "wall_seconds": 0.2410936020000065
+        "seconds": 0.215916,
+        "connect_seconds": 0.00588,
+        "ttfb_seconds": 0.106679,
+        "wall_seconds": 0.22101229099999387
       },
       "compile_redis": {
         "version": "8.10.3",
         "jobs": 4,
-        "seconds": 40.83695250700001,
+        "seconds": 40.85347742799999,
         "github_download": {
-          "mb_per_second": 8.991012,
+          "mb_per_second": 7.605206,
           "bytes": 4780701,
-          "seconds": 0.53172,
-          "connect_seconds": 0.016871,
-          "ttfb_seconds": 0.383743
+          "seconds": 0.628609,
+          "connect_seconds": 0.019718,
+          "ttfb_seconds": 0.385476
         },
         "cpu_accounting": {
-          "wall_seconds": 40.83695339299999,
+          "wall_seconds": 40.853478424,
           "steal_pct": 0.0,
-          "cpu_per_wall": 3.631269908235097,
+          "cpu_per_wall": 3.6174887843376458,
           "nr_throttled": 0,
           "throttled_ms": 0.0
         },
-        "wall_seconds": 41.540918086999994
+        "wall_seconds": 41.653746652000024
       },
       "cache": {
         "size_mb": 1024,
-        "save_seconds": 5.354060173034668,
-        "restore_seconds": 4.035944700241089
+        "save_seconds": 5.759899616241455,
+        "restore_seconds": 3.9173288345336914
       }
     },
     "cpu_accounting": {
-      "wall_seconds": 173.873715771,
+      "wall_seconds": 175.54304473,
       "steal_pct": 0.0,
-      "cpu_per_wall": 1.581360349842247,
+      "cpu_per_wall": 1.5647273318203887,
       "nr_throttled": 0,
       "throttled_ms": 0.0
     },
     "timing": {
-      "queue_seconds": 40.0,
+      "queue_seconds": 33.0,
       "job_seconds": 212.0
     }
   },
@@ -902,12 +902,12 @@
     },
     "github": {
       "repository": "lockyer-labs/runnersbench",
-      "run_id": "45885271185",
+      "run_id": "45891031803",
       "run_attempt": "1",
-      "sha": "3eb1ed5cbf8afecdd6ce0bb33955e4b9cc94c39d"
+      "sha": "ab4b5766057aab8fcb14710e258c0ed880fb9e57"
     },
-    "started_at": "2026-11-26T19:40:53.838105+00:00",
-    "finished_at": "2026-11-26T19:43:47.834396+00:00",
+    "started_at": "2026-11-26T20:26:59.320475+00:00",
+    "finished_at": "2026-11-26T20:29:50.397403+00:00",
     "system": {
       "cpu": {
         "model": "Neoverse-V2",
@@ -973,102 +973,102 @@
         }
       },
       "memory": {
-        "total_bytes": 16433479680,
+        "total_bytes": 16433475584,
         "cgroup_max": null
       },
       "disk": {
         "workdir": "/opt/actions-runner/_work/_temp",
         "total_bytes": 189868064768,
-        "free_bytes": 179768901632,
-        "mount": "/dev/nvme0n1p3[/_work] ext4   rw,noatime",
+        "free_bytes": 179735244800,
+        "mount": "/dev/nvme1n1p3[/_work] ext4   rw,noatime",
         "devices": [
           {
             "name": "loop0",
-            "size": "115.9M",
-            "type": "loop",
-            "rota": false,
-            "model": null
-          },
-          {
-            "name": "loop1",
-            "size": "144.1M",
-            "type": "loop",
-            "rota": false,
-            "model": null
-          },
-          {
-            "name": "loop2",
-            "size": "135M",
-            "type": "loop",
-            "rota": false,
-            "model": null
-          },
-          {
-            "name": "loop3",
-            "size": "125M",
-            "type": "loop",
-            "rota": false,
-            "model": null
-          },
-          {
-            "name": "loop4",
-            "size": "113.3M",
-            "type": "loop",
-            "rota": false,
-            "model": null
-          },
-          {
-            "name": "loop5",
             "size": "71.3M",
             "type": "loop",
             "rota": false,
             "model": null
           },
           {
-            "name": "loop6",
-            "size": "38.3M",
+            "name": "loop1",
+            "size": "115.9M",
             "type": "loop",
             "rota": false,
             "model": null
           },
           {
-            "name": "loop7",
+            "name": "loop2",
             "size": "73.1M",
             "type": "loop",
             "rota": false,
             "model": null
           },
           {
-            "name": "loop8",
-            "size": "84.5M",
+            "name": "loop3",
+            "size": "96M",
             "type": "loop",
             "rota": false,
             "model": null
           },
           {
-            "name": "loop9",
-            "size": "76.6M",
-            "type": "loop",
-            "rota": false,
-            "model": null
-          },
-          {
-            "name": "loop10",
-            "size": "52.8M",
-            "type": "loop",
-            "rota": false,
-            "model": null
-          },
-          {
-            "name": "loop11",
+            "name": "loop4",
             "size": "45M",
             "type": "loop",
             "rota": false,
             "model": null
           },
           {
+            "name": "loop5",
+            "size": "38.3M",
+            "type": "loop",
+            "rota": false,
+            "model": null
+          },
+          {
+            "name": "loop6",
+            "size": "135M",
+            "type": "loop",
+            "rota": false,
+            "model": null
+          },
+          {
+            "name": "loop7",
+            "size": "113.3M",
+            "type": "loop",
+            "rota": false,
+            "model": null
+          },
+          {
+            "name": "loop8",
+            "size": "76.6M",
+            "type": "loop",
+            "rota": false,
+            "model": null
+          },
+          {
+            "name": "loop9",
+            "size": "125M",
+            "type": "loop",
+            "rota": false,
+            "model": null
+          },
+          {
+            "name": "loop10",
+            "size": "84.5M",
+            "type": "loop",
+            "rota": false,
+            "model": null
+          },
+          {
+            "name": "loop11",
+            "size": "144.1M",
+            "type": "loop",
+            "rota": false,
+            "model": null
+          },
+          {
             "name": "loop12",
-            "size": "96M",
+            "size": "106.7M",
             "type": "loop",
             "rota": false,
             "model": null
@@ -1082,70 +1082,70 @@
           },
           {
             "name": "loop14",
-            "size": "195.1M",
+            "size": "52.8M",
             "type": "loop",
             "rota": false,
             "model": null
           },
           {
             "name": "loop15",
-            "size": "106.7M",
-            "type": "loop",
-            "rota": false,
-            "model": null
-          },
-          {
-            "name": "loop16",
-            "size": "210.2M",
-            "type": "loop",
-            "rota": false,
-            "model": null
-          },
-          {
-            "name": "loop17",
             "size": "196M",
             "type": "loop",
             "rota": false,
             "model": null
           },
           {
-            "name": "loop18",
+            "name": "loop16",
+            "size": "195.1M",
+            "type": "loop",
+            "rota": false,
+            "model": null
+          },
+          {
+            "name": "loop17",
             "size": "9.2M",
             "type": "loop",
             "rota": false,
             "model": null
           },
           {
-            "name": "loop19",
-            "size": "148.1M",
-            "type": "loop",
-            "rota": false,
-            "model": null
-          },
-          {
-            "name": "loop20",
+            "name": "loop18",
             "size": "146.6M",
             "type": "loop",
             "rota": false,
             "model": null
           },
           {
-            "name": "loop21",
+            "name": "loop19",
             "size": "2.6G",
             "type": "loop",
             "rota": false,
             "model": null
           },
           {
+            "name": "loop20",
+            "size": "210.2M",
+            "type": "loop",
+            "rota": false,
+            "model": null
+          },
+          {
+            "name": "loop21",
+            "size": "148.1M",
+            "type": "loop",
+            "rota": false,
+            "model": null
+          },
+          {
             "name": "loop22",
-            "size": "214.2M",
+            "size": "241.9M",
             "type": "loop",
             "rota": false,
             "model": null
           },
           {
             "name": "loop23",
-            "size": "241.9M",
+            "size": "214.2M",
             "type": "loop",
             "rota": false,
             "model": null
@@ -1172,14 +1172,14 @@
             "model": null
           },
           {
-            "name": "nvme1n1",
+            "name": "nvme0n1",
             "size": "20G",
             "type": "disk",
             "rota": false,
             "model": null
           },
           {
-            "name": "nvme0n1",
+            "name": "nvme1n1",
             "size": "220.7G",
             "type": "disk",
             "rota": false,
@@ -1207,14 +1207,14 @@
         "chassis_vendor": "Amazon EC2"
       },
       "network": {
-        "ip": "16.16.149.58",
+        "ip": "13.50.237.176",
         "city": "Stockholm",
         "region": "Stockholm",
         "country": "SE",
         "org": "AS16509 Amazon.com, Inc."
       },
       "runner": {
-        "name": "flamewill-b08f30-30073e5197ac29cf",
+        "name": "flamewill-b08f30-0ec8b7855257f1c3",
         "environment": "self-hosted"
       },
       "tools": {
@@ -1222,107 +1222,107 @@
         "gcc": "gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
         "python": "3.12.16"
       },
-      "wall_seconds": 0.33311851500000245
+      "wall_seconds": 0.22711484000001292
     },
     "benchmarks": {
       "apt_install": {
         "manager": "apt",
-        "update_seconds": 7.512759396,
-        "seconds": 12.773833234000001,
-        "wall_seconds": 12.773837565999997
+        "update_seconds": 5.097021947999963,
+        "seconds": 10.507807248999995,
+        "wall_seconds": 10.507810973000005
       },
       "cpu_single": {
         "threads": 1,
-        "events_per_second": 3329.88,
-        "wall_seconds": 15.006046365000003
+        "events_per_second": 3332.18,
+        "wall_seconds": 15.00588012899999
       },
       "cpu_multi": {
         "threads": 4,
-        "events_per_second": 13298.89,
-        "wall_seconds": 15.005981182,
+        "events_per_second": 13267.04,
+        "wall_seconds": 15.006180621999988,
         "cpu_accounting": {
-          "wall_seconds": 15.006181376,
+          "wall_seconds": 15.006383872000015,
           "steal_pct": 0.0,
-          "cpu_per_wall": 3.9928878972387545,
+          "cpu_per_wall": 3.993433762001523,
           "nr_throttled": 0,
           "throttled_ms": 0.0
         }
       },
       "memory": {
-        "mib_per_second": 26364.19,
-        "wall_seconds": 15.006059741000001
+        "mib_per_second": 26628.39,
+        "wall_seconds": 15.006089811000038
       },
       "disk": {
         "seq_write": {
-          "mb_per_second": 225.773281,
-          "iops": 214.318891,
-          "p99_latency_us": 119013.376,
+          "mb_per_second": 225.763625,
+          "iops": 214.309418,
+          "p99_latency_us": 116916.224,
           "direct": true
         },
         "seq_read": {
           "mb_per_second": 472.364831,
           "iops": 449.418025,
-          "p99_latency_us": 46399.488,
+          "p99_latency_us": 46923.776,
           "direct": true
         },
         "rand_read": {
-          "mb_per_second": 274.815633,
-          "iops": 67091.593894,
-          "p99_latency_us": 536.576,
+          "mb_per_second": 274.816452,
+          "iops": 67091.79388,
+          "p99_latency_us": 651.264,
           "direct": true
         },
         "rand_write": {
-          "mb_per_second": 137.410547,
-          "iops": 33545.430305,
-          "p99_latency_us": 962.56,
+          "mb_per_second": 137.41,
+          "iops": 33545.29698,
+          "p99_latency_us": 970.752,
           "direct": true
         },
-        "wall_seconds": 69.22576918200001
+        "wall_seconds": 69.26553538799999
       },
       "download_cloudflare": {
-        "mb_per_second": 162.523403,
+        "mb_per_second": 274.52466,
         "bytes": 50000000,
-        "seconds": 0.307648,
-        "connect_seconds": 0.012223,
-        "ttfb_seconds": 0.09796,
-        "wall_seconds": 0.31287405700001614
+        "seconds": 0.182133,
+        "connect_seconds": 0.01162,
+        "ttfb_seconds": 0.076837,
+        "wall_seconds": 0.18744399000001977
       },
       "compile_redis": {
         "version": "8.10.3",
         "jobs": 4,
-        "seconds": 40.618146945999996,
+        "seconds": 40.129916251,
         "github_download": {
-          "mb_per_second": 8.969824,
+          "mb_per_second": 8.559143,
           "bytes": 4780701,
-          "seconds": 0.532976,
-          "connect_seconds": 0.034321,
-          "ttfb_seconds": 0.383172
+          "seconds": 0.558549,
+          "connect_seconds": 0.017315,
+          "ttfb_seconds": 0.404071
         },
         "cpu_accounting": {
-          "wall_seconds": 40.618148116999976,
+          "wall_seconds": 40.12991765999999,
           "steal_pct": 0.0,
-          "cpu_per_wall": 3.6427313124616254,
+          "cpu_per_wall": 3.630159454456255,
           "nr_throttled": 0,
           "throttled_ms": 0.0
         },
-        "wall_seconds": 41.32421286100001
+        "wall_seconds": 40.86243737000001
       },
       "cache": {
         "size_mb": 1024,
-        "save_seconds": 5.534735679626465,
-        "restore_seconds": 4.324632883071899
+        "save_seconds": 5.50908350944519,
+        "restore_seconds": 3.968846559524536
       }
     },
     "cpu_accounting": {
-      "wall_seconds": 173.99629094000002,
+      "wall_seconds": 171.07693271,
       "steal_pct": 0.0,
-      "cpu_per_wall": 1.5792980328227675,
+      "cpu_per_wall": 1.5873443350795273,
       "nr_throttled": 0,
       "throttled_ms": 0.0
     },
     "timing": {
-      "queue_seconds": 40.0,
-      "job_seconds": 209.0
+      "queue_seconds": 12.0,
+      "job_seconds": 199.0
     }
   }
 ]

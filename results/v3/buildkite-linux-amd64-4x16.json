@@ -11,6 +11,7 @@
       "billing": {
         "increment_seconds": 1
       },
+      "pricing_caveat": "4 vCPU hosted agents need the Pro plan, $30 per active user a month.",
       "enabled": true,
       "notes": "Buildkite hosted agent (Medium). Runs .buildkite/pipeline.yml, started by the bench-buildkite job. Needs a paid or trial plan.",
       "pricing_source": "https://buildkite.com/platform/pipelines/hosting-options/linux-hosted-agents/",
@@ -23,12 +24,12 @@
     },
     "github": {
       "repository": "lockyer-labs/runnersbench",
-      "run_id": "45620389115",
+      "run_id": "45891031803",
       "run_attempt": "1",
-      "sha": "ed05531d135a6957434933885f8c3d4585f38285"
+      "sha": "ab4b5766057aab8fcb14710e258c0ed880fb9e57"
     },
-    "started_at": "2026-11-25T13:08:00.011800+00:00",
-    "finished_at": "2026-11-25T13:10:25.171564+00:00",
+    "started_at": "2026-11-26T20:26:47.070673+00:00",
+    "finished_at": "2026-11-26T20:29:14.459093+00:00",
     "system": {
       "cpu": {
         "model": "AMD EPYC",
@@ -105,10 +106,10 @@
         "cgroup_max": "max"
       },
       "disk": {
-        "workdir": "/buildkite/builds/v90mvb3eamogi-1/daniel-lockyer/runners/.bench-work",
+        "workdir": "/buildkite/builds/8petmf5pdatqc-1/daniel-lockyer/runners/.bench-work",
         "total_bytes": 101376720896,
-        "free_bytes": 100990058496,
-        "mount": "overlay overlay rw,relatime,lowerdir=/disk/extra0,upperdir=/namespace/containers/rootfs/pgtlphun9konm/fs,workdir=/namespace/containers/rootfs/pgtlphun9konm/work,uuid=on",
+        "free_bytes": 100989829120,
+        "mount": "overlay overlay rw,relatime,lowerdir=/disk/extra0,upperdir=/namespace/containers/rootfs/8lalb2fpm0s98/fs,workdir=/namespace/containers/rootfs/8lalb2fpm0s98/work,uuid=on",
         "devices": [
           {
             "name": "nbd0",
@@ -308,6 +309,10 @@
         "image_version": null
       },
       "virtualization": "docker",
+      "virtualization_layers": {
+        "vm": "kvm",
+        "container": "docker"
+      },
       "dmi": {
         "sys_vendor": null,
         "product_name": null,
@@ -317,14 +322,14 @@
         "chassis_vendor": null
       },
       "network": {
-        "ip": "216.176.227.208",
+        "ip": "216.176.227.228",
         "city": "Ashburn",
         "region": "Virginia",
         "country": "US",
         "org": "AS401483 Namespace Labs"
       },
       "runner": {
-        "name": "v90mvb3eamogi-1",
+        "name": "8petmf5pdatqc-1",
         "environment": "buildkite"
       },
       "tools": {
@@ -332,85 +337,106 @@
         "gcc": "gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
         "python": "3.12.3"
       },
-      "wall_seconds": 0.10519744600000003
+      "wall_seconds": 0.2166219650000003
     },
     "benchmarks": {
       "apt_install": {
         "manager": "apt",
-        "update_seconds": 1.8680225230000005,
-        "seconds": 3.328887658,
-        "wall_seconds": 3.3288908870000005
+        "update_seconds": 1.757218656,
+        "seconds": 3.2174404569999995,
+        "wall_seconds": 3.2174443670000006
       },
       "cpu_single": {
         "threads": 1,
-        "events_per_second": 6890.26,
-        "wall_seconds": 15.003830610999998
+        "events_per_second": 6820.54,
+        "wall_seconds": 15.003936366
       },
       "cpu_multi": {
         "threads": 4,
-        "events_per_second": 27204.05,
-        "wall_seconds": 15.004316461999998
+        "events_per_second": 26171.41,
+        "wall_seconds": 15.003717883,
+        "cpu_accounting": {
+          "wall_seconds": 15.003860460999995,
+          "steal_pct": 0.016661112962345886,
+          "cpu_per_wall": 3.977646763319896,
+          "nr_throttled": 0,
+          "throttled_ms": 0.0
+        }
       },
       "memory": {
-        "mib_per_second": 42406.18,
-        "wall_seconds": 15.004068826999998
+        "mib_per_second": 41645.96,
+        "wall_seconds": 15.004039739
       },
       "disk": {
         "seq_write": {
-          "mb_per_second": 4393.590059,
-          "iops": 4188.987401,
-          "p99_latency_us": 4816.896,
+          "mb_per_second": 3619.862458,
+          "iops": 3451.10326,
+          "p99_latency_us": 6717.44,
           "direct": true
         },
         "seq_read": {
-          "mb_per_second": 5900.083623,
-          "iops": 5625.691621,
-          "p99_latency_us": 3620.864,
+          "mb_per_second": 5080.641156,
+          "iops": 4844.210386,
+          "p99_latency_us": 4227.072,
           "direct": true
         },
         "rand_read": {
-          "mb_per_second": 2758.500771,
-          "iops": 673459.969335,
-          "p99_latency_us": 81.408,
+          "mb_per_second": 2728.174371,
+          "iops": 666056.062929,
+          "p99_latency_us": 85.504,
           "direct": true
         },
         "rand_write": {
-          "mb_per_second": 2365.919882,
-          "iops": 577615.092327,
-          "p99_latency_us": 76.288,
+          "mb_per_second": 1960.544761,
+          "iops": 478646.556896,
+          "p99_latency_us": 128.512,
           "direct": true
         },
-        "wall_seconds": 69.21331348199999
+        "wall_seconds": 69.24924735100001
       },
       "download_cloudflare": {
-        "mb_per_second": 210.731279,
+        "mb_per_second": 303.76117,
         "bytes": 50000000,
-        "seconds": 0.237269,
-        "connect_seconds": 0.00899,
-        "ttfb_seconds": 0.050774,
-        "wall_seconds": 0.24421537199999932
+        "seconds": 0.164603,
+        "connect_seconds": 0.030984,
+        "ttfb_seconds": 0.076369,
+        "wall_seconds": 0.17209218899999712
       },
       "compile_redis": {
         "version": "8.10.3",
         "jobs": 4,
-        "seconds": 22.020862584000014,
+        "seconds": 23.612911659000005,
         "github_download": {
-          "mb_per_second": 35.870412,
+          "mb_per_second": 5.978215,
           "bytes": 4780701,
-          "seconds": 0.133277,
-          "connect_seconds": 0.00317,
-          "ttfb_seconds": 0.113135
+          "seconds": 0.799687,
+          "connect_seconds": 0.003872,
+          "ttfb_seconds": 0.204177
         },
-        "wall_seconds": 22.251268347999996
+        "cpu_accounting": {
+          "wall_seconds": 23.612912970999986,
+          "steal_pct": 0.021130480718436345,
+          "cpu_per_wall": 3.7221400471827475,
+          "nr_throttled": 0,
+          "throttled_ms": 0.0
+        },
+        "wall_seconds": 24.515988948
       }
     },
+    "cpu_accounting": {
+      "wall_seconds": 147.388425204,
+      "steal_pct": 0.010111905082917622,
+      "cpu_per_wall": 1.6256455055298158,
+      "nr_throttled": 0,
+      "throttled_ms": 0.0
+    },
     "timing": {
-      "queue_seconds": 4.76,
-      "job_seconds": 145.929
+      "queue_seconds": 5.184,
+      "job_seconds": 148.287
     },
     "buildkite": {
-      "build_url": "https://buildkite.com/daniel-lockyer/runners/builds/9",
-      "job_url": "https://buildkite.com/daniel-lockyer/runners/builds/9#01a212d1-de52-4cdb-bd2d-e94b64304294"
+      "build_url": "https://buildkite.com/daniel-lockyer/runners/builds/13",
+      "job_url": "https://buildkite.com/daniel-lockyer/runners/builds/13#01a21989-eff4-4137-ab1c-c6cdfd13e5be"
     }
   },
   {
@@ -425,6 +451,7 @@
       "billing": {
         "increment_seconds": 1
       },
+      "pricing_caveat": "4 vCPU hosted agents need the Pro plan, $30 per active user a month.",
       "enabled": true,
       "notes": "Buildkite hosted agent (Medium). Runs .buildkite/pipeline.yml, started by the bench-buildkite job. Needs a paid or trial plan.",
       "pricing_source": "https://buildkite.com/platform/pipelines/hosting-options/linux-hosted-agents/",
@@ -437,12 +464,12 @@
     },
     "github": {
       "repository": "lockyer-labs/runnersbench",
-      "run_id": "45620389115",
+      "run_id": "45891031803",
       "run_attempt": "1",
-      "sha": "ed05531d135a6957434933885f8c3d4585f38285"
+      "sha": "ab4b5766057aab8fcb14710e258c0ed880fb9e57"
     },
-    "started_at": "2026-11-25T13:08:00.810058+00:00",
-    "finished_at": "2026-11-25T13:10:30.620236+00:00",
+    "started_at": "2026-11-26T20:26:45.553240+00:00",
+    "finished_at": "2026-11-26T20:29:12.170133+00:00",
     "system": {
       "cpu": {
         "model": "AMD EPYC",
@@ -519,10 +546,10 @@
         "cgroup_max": "max"
       },
       "disk": {
-        "workdir": "/buildkite/builds/mc5mnn4ji49nk-1/daniel-lockyer/runners/.bench-work",
+        "workdir": "/buildkite/builds/5jfesqvvk79a2-1/daniel-lockyer/runners/.bench-work",
         "total_bytes": 101376720896,
-        "free_bytes": 100990058496,
-        "mount": "overlay overlay rw,relatime,lowerdir=/disk/extra0,upperdir=/namespace/containers/rootfs/7l7oimrkrtc2k/fs,workdir=/namespace/containers/rootfs/7l7oimrkrtc2k/work,uuid=on",
+        "free_bytes": 100989829120,
+        "mount": "overlay overlay rw,relatime,lowerdir=/disk/extra0,upperdir=/namespace/containers/rootfs/7kk2pnukhgt8e/fs,workdir=/namespace/containers/rootfs/7kk2pnukhgt8e/work,uuid=on",
         "devices": [
           {
             "name": "nbd0",
@@ -722,6 +749,10 @@
         "image_version": null
       },
       "virtualization": "docker",
+      "virtualization_layers": {
+        "vm": "kvm",
+        "container": "docker"
+      },
       "dmi": {
         "sys_vendor": null,
         "product_name": null,
@@ -731,14 +762,14 @@
         "chassis_vendor": null
       },
       "network": {
-        "ip": "216.176.224.194",
+        "ip": "216.176.227.194",
         "city": "Ashburn",
         "region": "Virginia",
         "country": "US",
         "org": "AS401483 Namespace Labs"
       },
       "runner": {
-        "name": "mc5mnn4ji49nk-1",
+        "name": "5jfesqvvk79a2-1",
         "environment": "buildkite"
       },
       "tools": {
@@ -746,85 +777,106 @@
         "gcc": "gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
         "python": "3.12.3"
       },
-      "wall_seconds": 0.14082538200000005
+      "wall_seconds": 0.2497726560000002
     },
     "benchmarks": {
       "apt_install": {
         "manager": "apt",
-        "update_seconds": 1.704576459,
-        "seconds": 3.2036737850000003,
-        "wall_seconds": 3.203678187
+        "update_seconds": 2.63254754,
+        "seconds": 4.813604694,
+        "wall_seconds": 4.813608233999999
       },
       "cpu_single": {
         "threads": 1,
-        "events_per_second": 6769.26,
-        "wall_seconds": 15.00377573
+        "events_per_second": 6879.16,
+        "wall_seconds": 15.004313633
       },
       "cpu_multi": {
         "threads": 4,
-        "events_per_second": 26324.16,
-        "wall_seconds": 15.003820701000002
+        "events_per_second": 27247.33,
+        "wall_seconds": 15.003867392,
+        "cpu_accounting": {
+          "wall_seconds": 15.004068798999999,
+          "steal_pct": 0.0,
+          "cpu_per_wall": 3.979616182777009,
+          "nr_throttled": 0,
+          "throttled_ms": 0.0
+        }
       },
       "memory": {
-        "mib_per_second": 41492.9,
-        "wall_seconds": 15.003943381
+        "mib_per_second": 42590.41,
+        "wall_seconds": 15.004340860999996
       },
       "disk": {
         "seq_write": {
-          "mb_per_second": 3848.157186,
-          "iops": 3668.822079,
-          "p99_latency_us": 5603.328,
+          "mb_per_second": 4498.929972,
+          "iops": 4289.44737,
+          "p99_latency_us": 4751.36,
           "direct": true
         },
         "seq_read": {
-          "mb_per_second": 5019.757902,
-          "iops": 4786.14759,
-          "p99_latency_us": 4358.144,
+          "mb_per_second": 5939.15795,
+          "iops": 5662.955803,
+          "p99_latency_us": 3653.632,
           "direct": true
         },
         "rand_read": {
-          "mb_per_second": 2742.850726,
-          "iops": 669639.15739,
-          "p99_latency_us": 84.48,
+          "mb_per_second": 2521.664814,
+          "iops": 615638.690754,
+          "p99_latency_us": 88.576,
           "direct": true
         },
         "rand_write": {
-          "mb_per_second": 1933.862192,
-          "iops": 472132.257849,
-          "p99_latency_us": 144.384,
+          "mb_per_second": 2440.766289,
+          "iops": 595888.074128,
+          "p99_latency_us": 70.144,
           "direct": true
         },
-        "wall_seconds": 69.237039598
+        "wall_seconds": 69.18401031799999
       },
       "download_cloudflare": {
-        "mb_per_second": 17.442777,
+        "mb_per_second": 232.069175,
         "bytes": 50000000,
-        "seconds": 2.866516,
-        "connect_seconds": 0.00827,
-        "ttfb_seconds": 0.667562,
-        "wall_seconds": 2.874549436999999
+        "seconds": 0.215453,
+        "connect_seconds": 0.02989,
+        "ttfb_seconds": 0.073791,
+        "wall_seconds": 0.22192629500000294
       },
       "compile_redis": {
         "version": "8.10.3",
         "jobs": 4,
-        "seconds": 24.18631594599998,
+        "seconds": 21.912562729,
         "github_download": {
-          "mb_per_second": 100.510911,
+          "mb_per_second": 39.373582,
           "bytes": 4780701,
-          "seconds": 0.047564,
-          "connect_seconds": 0.003589,
-          "ttfb_seconds": 0.030414
+          "seconds": 0.121419,
+          "connect_seconds": 0.003292,
+          "ttfb_seconds": 0.103158
         },
-        "wall_seconds": 24.337750805000013
+        "cpu_accounting": {
+          "wall_seconds": 21.912563952,
+          "steal_pct": 0.0,
+          "cpu_per_wall": 3.719790489992406,
+          "nr_throttled": 0,
+          "throttled_ms": 0.0
+        },
+        "wall_seconds": 22.130064341999997
       }
     },
+    "cpu_accounting": {
+      "wall_seconds": 146.61690006499998,
+      "steal_pct": 0.005072880381480605,
+      "cpu_per_wall": 1.6023315654324193,
+      "nr_throttled": 0,
+      "throttled_ms": 0.0
+    },
     "timing": {
-      "queue_seconds": 5.179,
-      "job_seconds": 150.678
+      "queue_seconds": 4.85,
+      "job_seconds": 147.35
     },
     "buildkite": {
-      "build_url": "https://buildkite.com/daniel-lockyer/runners/builds/11",
-      "job_url": "https://buildkite.com/daniel-lockyer/runners/builds/11#01a212d1-df3d-4404-9394-4ad6e4a26980"
+      "build_url": "https://buildkite.com/daniel-lockyer/runners/builds/12",
+      "job_url": "https://buildkite.com/daniel-lockyer/runners/builds/12#01a21989-ec39-4361-9750-bf83bd223413"
     }
   },
   {
@@ -839,6 +891,7 @@
       "billing": {
         "increment_seconds": 1
       },
+      "pricing_caveat": "4 vCPU hosted agents need the Pro plan, $30 per active user a month.",
       "enabled": true,
       "notes": "Buildkite hosted agent (Medium). Runs .buildkite/pipeline.yml, started by the bench-buildkite job. Needs a paid or trial plan.",
       "pricing_source": "https://buildkite.com/platform/pipelines/hosting-options/linux-hosted-agents/",
@@ -851,12 +904,12 @@
     },
     "github": {
       "repository": "lockyer-labs/runnersbench",
-      "run_id": "45620389115",
+      "run_id": "45891031803",
       "run_attempt": "1",
-      "sha": "ed05531d135a6957434933885f8c3d4585f38285"
+      "sha": "ab4b5766057aab8fcb14710e258c0ed880fb9e57"
     },
-    "started_at": "2026-11-25T13:07:59.845289+00:00",
-    "finished_at": "2026-11-25T13:10:26.452080+00:00",
+    "started_at": "2026-11-26T20:26:49.579383+00:00",
+    "finished_at": "2026-11-26T20:29:15.982582+00:00",
     "system": {
       "cpu": {
         "model": "AMD EPYC",
@@ -933,10 +986,10 @@
         "cgroup_max": "max"
       },
       "disk": {
-        "workdir": "/buildkite/builds/vb396fjus8fqi-1/daniel-lockyer/runners/.bench-work",
+        "workdir": "/buildkite/builds/j9gg9ui1shj5m-1/daniel-lockyer/runners/.bench-work",
         "total_bytes": 101376720896,
-        "free_bytes": 100990058496,
-        "mount": "overlay overlay rw,relatime,lowerdir=/disk/extra0,upperdir=/namespace/containers/rootfs/3fhhce1jvunu6/fs,workdir=/namespace/containers/rootfs/3fhhce1jvunu6/work,uuid=on",
+        "free_bytes": 100989829120,
+        "mount": "overlay overlay rw,relatime,lowerdir=/disk/extra0,upperdir=/namespace/containers/rootfs/k0egjs385vjgi/fs,workdir=/namespace/containers/rootfs/k0egjs385vjgi/work,uuid=on",
         "devices": [
           {
             "name": "nbd0",
@@ -1136,6 +1189,10 @@
         "image_version": null
       },
       "virtualization": "docker",
+      "virtualization_layers": {
+        "vm": "kvm",
+        "container": "docker"
+      },
       "dmi": {
         "sys_vendor": null,
         "product_name": null,
@@ -1145,14 +1202,14 @@
         "chassis_vendor": null
       },
       "network": {
-        "ip": "216.176.224.194",
+        "ip": "216.176.227.229",
         "city": "Ashburn",
         "region": "Virginia",
         "country": "US",
         "org": "AS401483 Namespace Labs"
       },
       "runner": {
-        "name": "vb396fjus8fqi-1",
+        "name": "j9gg9ui1shj5m-1",
         "environment": "buildkite"
       },
       "tools": {
@@ -1160,85 +1217,106 @@
         "gcc": "gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
         "python": "3.12.3"
       },
-      "wall_seconds": 0.23731259100000024
+      "wall_seconds": 0.09459764700000006
     },
     "benchmarks": {
       "apt_install": {
         "manager": "apt",
-        "update_seconds": 1.9565767250000001,
-        "seconds": 3.4916850609999996,
-        "wall_seconds": 3.49168823
+        "update_seconds": 1.872851872,
+        "seconds": 3.2116657809999998,
+        "wall_seconds": 3.211669421
       },
       "cpu_single": {
         "threads": 1,
-        "events_per_second": 6898.87,
-        "wall_seconds": 15.003814826000001
+        "events_per_second": 6914.72,
+        "wall_seconds": 15.004025792
       },
       "cpu_multi": {
         "threads": 4,
-        "events_per_second": 27041.3,
-        "wall_seconds": 15.003792831000002
+        "events_per_second": 26904.18,
+        "wall_seconds": 15.003836572,
+        "cpu_accounting": {
+          "wall_seconds": 15.004015544999998,
+          "steal_pct": 0.01665833749791771,
+          "cpu_per_wall": 3.9777010908182184,
+          "nr_throttled": 0,
+          "throttled_ms": 0.0
+        }
       },
       "memory": {
-        "mib_per_second": 42020.43,
-        "wall_seconds": 15.004022845000001
+        "mib_per_second": 42141.62,
+        "wall_seconds": 15.004170479000003
       },
       "disk": {
         "seq_write": {
-          "mb_per_second": 3915.611078,
-          "iops": 3733.151123,
-          "p99_latency_us": 5406.72,
+          "mb_per_second": 3490.826307,
+          "iops": 3328.044797,
+          "p99_latency_us": 7634.944,
           "direct": true
         },
         "seq_read": {
-          "mb_per_second": 5189.68579,
-          "iops": 4948.203453,
+          "mb_per_second": 5253.994164,
+          "iops": 5009.532698,
           "p99_latency_us": 4079.616,
           "direct": true
         },
         "rand_read": {
-          "mb_per_second": 2855.310923,
-          "iops": 697095.260316,
-          "p99_latency_us": 83.456,
+          "mb_per_second": 2914.946619,
+          "iops": 711654.823012,
+          "p99_latency_us": 80.384,
           "direct": true
         },
         "rand_write": {
-          "mb_per_second": 1815.292262,
-          "iops": 443184.521032,
-          "p99_latency_us": 148.48,
+          "mb_per_second": 2056.236779,
+          "iops": 502008.799413,
+          "p99_latency_us": 87.552,
           "direct": true
         },
-        "wall_seconds": 69.240321871
+        "wall_seconds": 69.233618997
       },
       "download_cloudflare": {
-        "mb_per_second": 133.375302,
+        "mb_per_second": 294.330603,
         "bytes": 50000000,
-        "seconds": 0.374882,
-        "connect_seconds": 0.002462,
-        "ttfb_seconds": 0.187691,
-        "wall_seconds": 0.3825226520000058
+        "seconds": 0.169877,
+        "connect_seconds": 0.001112,
+        "ttfb_seconds": 0.043465,
+        "wall_seconds": 0.17576251999999215
       },
       "compile_redis": {
         "version": "8.10.3",
         "jobs": 4,
-        "seconds": 23.083589114000006,
+        "seconds": 23.39032947999999,
         "github_download": {
-          "mb_per_second": 88.147893,
+          "mb_per_second": 26.097523,
           "bytes": 4780701,
-          "seconds": 0.054235,
-          "connect_seconds": 0.002987,
-          "ttfb_seconds": 0.029447
+          "seconds": 0.183186,
+          "connect_seconds": 0.016029,
+          "ttfb_seconds": 0.061475
         },
-        "wall_seconds": 23.238700473999984
+        "cpu_accounting": {
+          "wall_seconds": 23.390330682999988,
+          "steal_pct": 0.032,
+          "cpu_per_wall": 3.705828668040129,
+          "nr_throttled": 0,
+          "throttled_ms": 0.0
+        },
+        "wall_seconds": 23.670074801
       }
     },
+    "cpu_accounting": {
+      "wall_seconds": 146.403192628,
+      "steal_pct": 0.011868832445996813,
+      "cpu_per_wall": 1.6260050940615338,
+      "nr_throttled": 0,
+      "throttled_ms": 0.0
+    },
     "timing": {
-      "queue_seconds": 4.757,
-      "job_seconds": 147.36
+      "queue_seconds": 4.736,
+      "job_seconds": 147.103
     },
     "buildkite": {
-      "build_url": "https://buildkite.com/daniel-lockyer/runners/builds/10",
-      "job_url": "https://buildkite.com/daniel-lockyer/runners/builds/10#01a212d1-ddb6-412e-922f-9a30a0bdeb18"
+      "build_url": "https://buildkite.com/daniel-lockyer/runners/builds/14",
+      "job_url": "https://buildkite.com/daniel-lockyer/runners/builds/14#01a21989-fc54-47d4-9998-55d784b1c936"
     }
   }
 ]

@@ -11,6 +11,7 @@
       "billing": {
         "increment_seconds": 1
       },
+      "pricing_caveat": "Needs a plan from $20 a month, which comes back as VM time. Job starts above the plan's included number cost $0.03-0.07 each.",
       "enabled": true,
       "notes": "boat.dev. Ubuntu 24.04, one fresh VM per job, billed per second. Needs a plan from $20/month; the plan amount comes back as VM time. Starts above the plan's included count cost $0.03-0.07 each.",
       "pricing_source": "https://docs.boat.dev/pricing",
@@ -18,12 +19,12 @@
     },
     "github": {
       "repository": "lockyer-labs/runnersbench",
-      "run_id": "45654935956",
+      "run_id": "45891031803",
       "run_attempt": "1",
-      "sha": "d00e6281093b5bfa9aec9085ce48416f4f0fab20"
+      "sha": "ab4b5766057aab8fcb14710e258c0ed880fb9e57"
     },
-    "started_at": "2026-11-25T16:33:13.645699+00:00",
-    "finished_at": "2026-11-25T16:35:46.970111+00:00",
+    "started_at": "2026-11-26T20:27:03.355545+00:00",
+    "finished_at": "2026-11-26T20:29:35.698120+00:00",
     "system": {
       "cpu": {
         "model": "AMD EPYC 4585PX 16-Core Processor",
@@ -63,7 +64,7 @@
           "Core(s) per socket": "4",
           "Socket(s)": "1",
           "Stepping": "0",
-          "BogoMIPS": "8583.85",
+          "BogoMIPS": "8583.91",
           "Flags": "fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm rep_good nopl cpuid extd_apicid tsc_known_freq pni pclmulqdq ssse3 fma cx16 sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm cmp_legacy svm cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw perfctr_core ssbd ibrs ibpb stibp ibrs_enhanced vmmcall fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid avx512f avx512dq adx smap avx512ifma clflushopt clwb avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves avx_vnni avx512_bf16 clzero xsaveerptr wbnoinvd arat npt lbrv nrip_save tsc_scale vmcb_clean flushbyasid pausefilter pfthreshold v_vmsave_vmload vgif vnmi avx512vbmi umip pku ospke avx512_vbmi2 gfni vaes vpclmulqdq avx512_vnni avx512_bitalg avx512_vpopcntdq rdpid movdiri movdir64b fsrm avx512_vp2intersect flush_l1d arch_capabilities srso_user_kernel_no",
           "Virtualization": "AMD-V",
           "Hypervisor vendor": "KVM",
@@ -94,13 +95,13 @@
         }
       },
       "memory": {
-        "total_bytes": 8327110656,
+        "total_bytes": 8327106560,
         "cgroup_max": null
       },
       "disk": {
         "workdir": "/home/runner/work/_temp",
         "total_bytes": 84204138496,
-        "free_bytes": 51937239040,
+        "free_bytes": 52002091008,
         "mount": "/dev/vda1[/home/user] ext4   rw,relatime,nobarrier",
         "devices": [
           {
@@ -133,6 +134,10 @@
         "image_version": null
       },
       "virtualization": "kvm",
+      "virtualization_layers": {
+        "vm": "kvm",
+        "container": null
+      },
       "dmi": {
         "sys_vendor": null,
         "product_name": null,
@@ -142,14 +147,14 @@
         "chassis_vendor": null
       },
       "network": {
-        "ip": "57.128.238.177",
-        "city": "Warsaw",
-        "region": "Mazovia",
-        "country": "PL",
+        "ip": "149.202.104.234",
+        "city": "Roubaix",
+        "region": "Hauts-de-France",
+        "country": "FR",
         "org": "AS16276 OVH SAS"
       },
       "runner": {
-        "name": "ci-runnersbench-139349095672",
+        "name": "ci-runnersbench-140153519049",
         "environment": "self-hosted"
       },
       "tools": {
@@ -157,86 +162,107 @@
         "gcc": "gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
         "python": "3.12.16"
       },
-      "wall_seconds": 0.20776299400000653
+      "wall_seconds": 0.16417805500003624
     },
     "benchmarks": {
       "apt_install": {
         "manager": "apt",
-        "update_seconds": 1.4596928210000044,
-        "seconds": 6.78100382400001,
-        "wall_seconds": 6.781007340000002
+        "update_seconds": 1.0464795210000375,
+        "seconds": 4.591877645000011,
+        "wall_seconds": 4.591880681000021
       },
       "cpu_single": {
         "threads": 1,
-        "events_per_second": 6326.94,
-        "wall_seconds": 15.006068557000006
+        "events_per_second": 6289.07,
+        "wall_seconds": 15.004999612000006
       },
       "cpu_multi": {
         "threads": 4,
-        "events_per_second": 24410.01,
-        "wall_seconds": 15.00539822200001
+        "events_per_second": 25392.92,
+        "wall_seconds": 15.004453548999948,
+        "cpu_accounting": {
+          "wall_seconds": 15.004642289999992,
+          "steal_pct": 0.016661112962345886,
+          "cpu_per_wall": 3.9974315842220607,
+          "nr_throttled": 0,
+          "throttled_ms": 0.0
+        }
       },
       "memory": {
-        "mib_per_second": 37779.06,
-        "wall_seconds": 15.007274176999985
+        "mib_per_second": 40271.04,
+        "wall_seconds": 15.004179899999997
       },
       "disk": {
         "seq_write": {
-          "mb_per_second": 5322.206385,
-          "iops": 5074.651736,
-          "p99_latency_us": 7700.48,
+          "mb_per_second": 14456.187921,
+          "iops": 13785.42861,
+          "p99_latency_us": 1875.968,
           "direct": true
         },
         "seq_read": {
-          "mb_per_second": 13390.261696,
-          "iops": 12768.882075,
-          "p99_latency_us": 2473.984,
+          "mb_per_second": 21303.385007,
+          "iops": 20315.491268,
+          "p99_latency_us": 1794.048,
           "direct": true
         },
         "rand_read": {
-          "mb_per_second": 2761.385802,
-          "iops": 674164.322379,
-          "p99_latency_us": 100.864,
+          "mb_per_second": 2244.481032,
+          "iops": 547966.935538,
+          "p99_latency_us": 110.08,
           "direct": true
         },
         "rand_write": {
-          "mb_per_second": 1586.57622,
-          "iops": 387345.643624,
-          "p99_latency_us": 164.864,
+          "mb_per_second": 1029.590667,
+          "iops": 251362.775815,
+          "p99_latency_us": 301.056,
           "direct": true
         },
-        "wall_seconds": 68.872807005
+        "wall_seconds": 68.873082409
       },
       "download_cloudflare": {
-        "mb_per_second": 185.741722,
+        "mb_per_second": 244.683037,
         "bytes": 50000000,
-        "seconds": 0.269191,
-        "connect_seconds": 0.004221,
-        "ttfb_seconds": 0.051032,
-        "wall_seconds": 0.2739959900000031
+        "seconds": 0.204346,
+        "connect_seconds": 0.013514,
+        "ttfb_seconds": 0.07044,
+        "wall_seconds": 0.2090229249999993
       },
       "compile_redis": {
         "version": "8.10.3",
         "jobs": 4,
-        "seconds": 26.447431327999993,
+        "seconds": 27.886523726000007,
         "github_download": {
-          "mb_per_second": 7.948995,
+          "mb_per_second": 9.85427,
           "bytes": 4780701,
-          "seconds": 0.601422,
-          "connect_seconds": 0.04273,
-          "ttfb_seconds": 0.437107
+          "seconds": 0.48514,
+          "connect_seconds": 0.022746,
+          "ttfb_seconds": 0.343202
         },
-        "wall_seconds": 27.163035390999994
+        "cpu_accounting": {
+          "wall_seconds": 27.886525248999988,
+          "steal_pct": 0.13450502152080346,
+          "cpu_per_wall": 3.6552250626368474,
+          "nr_throttled": 0,
+          "throttled_ms": 0.0
+        },
+        "wall_seconds": 28.48519587000004
       },
       "cache": {
         "size_mb": 1024,
-        "save_seconds": 9.45542311668396,
-        "restore_seconds": 14.129352807998657
+        "save_seconds": 9.138625383377075,
+        "restore_seconds": 10.268484354019165
       }
     },
+    "cpu_accounting": {
+      "wall_seconds": 152.342582111,
+      "steal_pct": 0.3917532618438963,
+      "cpu_per_wall": 1.6383103039316185,
+      "nr_throttled": 0,
+      "throttled_ms": 0.0
+    },
     "timing": {
-      "queue_seconds": 8.0,
-      "job_seconds": 197.0
+      "queue_seconds": 7.0,
+      "job_seconds": 188.0
     }
   },
   {
@@ -251,6 +277,7 @@
       "billing": {
         "increment_seconds": 1
       },
+      "pricing_caveat": "Needs a plan from $20 a month, which comes back as VM time. Job starts above the plan's included number cost $0.03-0.07 each.",
       "enabled": true,
       "notes": "boat.dev. Ubuntu 24.04, one fresh VM per job, billed per second. Needs a plan from $20/month; the plan amount comes back as VM time. Starts above the plan's included count cost $0.03-0.07 each.",
       "pricing_source": "https://docs.boat.dev/pricing",
@@ -258,12 +285,12 @@
     },
     "github": {
       "repository": "lockyer-labs/runnersbench",
-      "run_id": "45654935956",
+      "run_id": "45891031803",
       "run_attempt": "1",
-      "sha": "d00e6281093b5bfa9aec9085ce48416f4f0fab20"
+      "sha": "ab4b5766057aab8fcb14710e258c0ed880fb9e57"
     },
-    "started_at": "2026-11-25T16:33:11.751837+00:00",
-    "finished_at": "2026-11-25T16:35:44.578034+00:00",
+    "started_at": "2026-11-26T20:27:33.155030+00:00",
+    "finished_at": "2026-11-26T20:30:04.081660+00:00",
     "system": {
       "cpu": {
         "model": "AMD EPYC 4585PX 16-Core Processor",
@@ -303,7 +330,7 @@
           "Core(s) per socket": "4",
           "Socket(s)": "1",
           "Stepping": "0",
-          "BogoMIPS": "8583.90",
+          "BogoMIPS": "8583.91",
           "Flags": "fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm rep_good nopl cpuid extd_apicid tsc_known_freq pni pclmulqdq ssse3 fma cx16 sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm cmp_legacy svm cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw perfctr_core ssbd ibrs ibpb stibp ibrs_enhanced vmmcall fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid avx512f avx512dq adx smap avx512ifma clflushopt clwb avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves avx_vnni avx512_bf16 clzero xsaveerptr wbnoinvd arat npt lbrv nrip_save tsc_scale vmcb_clean flushbyasid pausefilter pfthreshold v_vmsave_vmload vgif vnmi avx512vbmi umip pku ospke avx512_vbmi2 gfni vaes vpclmulqdq avx512_vnni avx512_bitalg avx512_vpopcntdq rdpid movdiri movdir64b fsrm avx512_vp2intersect flush_l1d arch_capabilities srso_user_kernel_no",
           "Virtualization": "AMD-V",
           "Hypervisor vendor": "KVM",
@@ -334,13 +361,13 @@
         }
       },
       "memory": {
-        "total_bytes": 8327110656,
+        "total_bytes": 8327106560,
         "cgroup_max": null
       },
       "disk": {
         "workdir": "/home/runner/work/_temp",
         "total_bytes": 84204138496,
-        "free_bytes": 51936993280,
+        "free_bytes": 52002082816,
         "mount": "/dev/vda1[/home/user] ext4   rw,relatime,nobarrier",
         "devices": [
           {
@@ -373,6 +400,10 @@
         "image_version": null
       },
       "virtualization": "kvm",
+      "virtualization_layers": {
+        "vm": "kvm",
+        "container": null
+      },
       "dmi": {
         "sys_vendor": null,
         "product_name": null,
@@ -382,14 +413,14 @@
         "chassis_vendor": null
       },
       "network": {
-        "ip": "57.128.236.105",
-        "city": "Warsaw",
-        "region": "Mazovia",
-        "country": "PL",
+        "ip": "149.202.104.234",
+        "city": "Roubaix",
+        "region": "Hauts-de-France",
+        "country": "FR",
         "org": "AS16276 OVH SAS"
       },
       "runner": {
-        "name": "ci-runnersbench-139349095559",
+        "name": "ci-runnersbench-140153518936",
         "environment": "self-hosted"
       },
       "tools": {
@@ -397,86 +428,107 @@
         "gcc": "gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
         "python": "3.12.16"
       },
-      "wall_seconds": 0.19767260500000816
+      "wall_seconds": 0.16445311699999365
     },
     "benchmarks": {
       "apt_install": {
         "manager": "apt",
-        "update_seconds": 1.4106643489999868,
-        "seconds": 6.05481220099999,
-        "wall_seconds": 6.054815867000002
+        "update_seconds": 1.074785688999782,
+        "seconds": 4.616732366999713,
+        "wall_seconds": 4.616735763000179
       },
       "cpu_single": {
         "threads": 1,
-        "events_per_second": 6433.5,
-        "wall_seconds": 15.005018022000002
+        "events_per_second": 6641.89,
+        "wall_seconds": 15.004327630000262
       },
       "cpu_multi": {
         "threads": 4,
-        "events_per_second": 25226.16,
-        "wall_seconds": 15.004639034000007
+        "events_per_second": 25774.58,
+        "wall_seconds": 15.004564945000311,
+        "cpu_accounting": {
+          "wall_seconds": 15.004753873000027,
+          "steal_pct": 0.8495752123938031,
+          "cpu_per_wall": 3.96442370887798,
+          "nr_throttled": 0,
+          "throttled_ms": 0.0
+        }
       },
       "memory": {
-        "mib_per_second": 38861.1,
-        "wall_seconds": 15.005140834000002
+        "mib_per_second": 39154.75,
+        "wall_seconds": 15.006200810999871
       },
       "disk": {
         "seq_write": {
-          "mb_per_second": 6277.47685,
-          "iops": 5985.60192,
-          "p99_latency_us": 7045.12,
+          "mb_per_second": 6667.914494,
+          "iops": 6358.018931,
+          "p99_latency_us": 9240.576,
           "direct": true
         },
         "seq_read": {
-          "mb_per_second": 13115.483198,
-          "iops": 12506.89954,
-          "p99_latency_us": 2670.592,
+          "mb_per_second": 25374.896116,
+          "iops": 24198.386774,
+          "p99_latency_us": 1204.224,
           "direct": true
         },
         "rand_read": {
-          "mb_per_second": 2504.026703,
-          "iops": 611332.577828,
-          "p99_latency_us": 107.008,
+          "mb_per_second": 3074.837246,
+          "iops": 750690.553963,
+          "p99_latency_us": 79.36,
           "direct": true
         },
         "rand_write": {
-          "mb_per_second": 1596.735261,
-          "iops": 389825.878275,
-          "p99_latency_us": 162.816,
+          "mb_per_second": 1107.12742,
+          "iops": 270292.713819,
+          "p99_latency_us": 284.672,
           "direct": true
         },
-        "wall_seconds": 68.86581189500001
+        "wall_seconds": 68.85542225499967
       },
       "download_cloudflare": {
-        "mb_per_second": 253.161993,
+        "mb_per_second": 238.42108,
         "bytes": 50000000,
-        "seconds": 0.197502,
-        "connect_seconds": 0.003701,
-        "ttfb_seconds": 0.050047,
-        "wall_seconds": 0.20250398400000336
+        "seconds": 0.209713,
+        "connect_seconds": 0.006994,
+        "ttfb_seconds": 0.053707,
+        "wall_seconds": 0.21417181199967672
       },
       "compile_redis": {
         "version": "8.10.3",
         "jobs": 4,
-        "seconds": 26.726210114999986,
+        "seconds": 26.375139465999837,
         "github_download": {
-          "mb_per_second": 7.451391,
+          "mb_per_second": 8.393467,
           "bytes": 4780701,
-          "seconds": 0.641585,
-          "connect_seconds": 0.045957,
-          "ttfb_seconds": 0.477817
+          "seconds": 0.569574,
+          "connect_seconds": 0.041916,
+          "ttfb_seconds": 0.396417
         },
-        "wall_seconds": 27.483700941999984
+        "cpu_accounting": {
+          "wall_seconds": 26.375140909000038,
+          "steal_pct": 0.33175355450236965,
+          "cpu_per_wall": 3.6533887091810517,
+          "nr_throttled": 0,
+          "throttled_ms": 0.0
+        },
+        "wall_seconds": 27.05500300499989
       },
       "cache": {
         "size_mb": 1024,
-        "save_seconds": 8.373608827590942,
-        "restore_seconds": 13.726392984390259
+        "save_seconds": 38.790804624557495,
+        "restore_seconds": 10.264463901519775
       }
     },
+    "cpu_accounting": {
+      "wall_seconds": 150.92663725300008,
+      "steal_pct": 0.538272512997108,
+      "cpu_per_wall": 1.6312009031732817,
+      "nr_throttled": 0,
+      "throttled_ms": 0.0
+    },
     "timing": {
-      "queue_seconds": 8.0,
-      "job_seconds": 196.0
+      "queue_seconds": 7.0,
+      "job_seconds": 216.0
     }
   },
   {
@@ -491,6 +543,7 @@
       "billing": {
         "increment_seconds": 1
       },
+      "pricing_caveat": "Needs a plan from $20 a month, which comes back as VM time. Job starts above the plan's included number cost $0.03-0.07 each.",
       "enabled": true,
       "notes": "boat.dev. Ubuntu 24.04, one fresh VM per job, billed per second. Needs a plan from $20/month; the plan amount comes back as VM time. Starts above the plan's included count cost $0.03-0.07 each.",
       "pricing_source": "https://docs.boat.dev/pricing",
@@ -498,12 +551,12 @@
     },
     "github": {
       "repository": "lockyer-labs/runnersbench",
-      "run_id": "45654935956",
+      "run_id": "45891031803",
       "run_attempt": "1",
-      "sha": "d00e6281093b5bfa9aec9085ce48416f4f0fab20"
+      "sha": "ab4b5766057aab8fcb14710e258c0ed880fb9e57"
     },
-    "started_at": "2026-11-25T16:33:16.899184+00:00",
-    "finished_at": "2026-11-25T16:35:50.397581+00:00",
+    "started_at": "2026-11-26T20:27:06.943345+00:00",
+    "finished_at": "2026-11-26T20:30:10.050540+00:00",
     "system": {
       "cpu": {
         "model": "AMD EPYC 4585PX 16-Core Processor",
@@ -543,7 +596,7 @@
           "Core(s) per socket": "4",
           "Socket(s)": "1",
           "Stepping": "0",
-          "BogoMIPS": "8583.90",
+          "BogoMIPS": "8583.91",
           "Flags": "fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm rep_good nopl cpuid extd_apicid tsc_known_freq pni pclmulqdq ssse3 fma cx16 sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm cmp_legacy svm cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw perfctr_core ssbd ibrs ibpb stibp ibrs_enhanced vmmcall fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid avx512f avx512dq adx smap avx512ifma clflushopt clwb avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves avx_vnni avx512_bf16 clzero xsaveerptr wbnoinvd arat npt lbrv nrip_save tsc_scale vmcb_clean flushbyasid pausefilter pfthreshold v_vmsave_vmload vgif vnmi avx512vbmi umip pku ospke avx512_vbmi2 gfni vaes vpclmulqdq avx512_vnni avx512_bitalg avx512_vpopcntdq rdpid movdiri movdir64b fsrm avx512_vp2intersect flush_l1d arch_capabilities srso_user_kernel_no",
           "Virtualization": "AMD-V",
           "Hypervisor vendor": "KVM",
@@ -580,7 +633,7 @@
       "disk": {
         "workdir": "/home/runner/work/_temp",
         "total_bytes": 84204138496,
-        "free_bytes": 51936997376,
+        "free_bytes": 52002082816,
         "mount": "/dev/vda1[/home/user] ext4   rw,relatime,nobarrier",
         "devices": [
           {
@@ -613,6 +666,10 @@
         "image_version": null
       },
       "virtualization": "kvm",
+      "virtualization_layers": {
+        "vm": "kvm",
+        "container": null
+      },
       "dmi": {
         "sys_vendor": null,
         "product_name": null,
@@ -622,14 +679,14 @@
         "chassis_vendor": null
       },
       "network": {
-        "ip": "57.128.236.105",
-        "city": "Warsaw",
-        "region": "Mazovia",
-        "country": "PL",
+        "ip": "51.210.206.206",
+        "city": "Strasbourg",
+        "region": "Grand Est",
+        "country": "FR",
         "org": "AS16276 OVH SAS"
       },
       "runner": {
-        "name": "ci-runnersbench-139349095952",
+        "name": "ci-runnersbench-140153519052",
         "environment": "self-hosted"
       },
       "tools": {
@@ -637,86 +694,107 @@
         "gcc": "gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
         "python": "3.12.16"
       },
-      "wall_seconds": 0.20306250299999817
+      "wall_seconds": 0.17558134699993388
     },
     "benchmarks": {
       "apt_install": {
         "manager": "apt",
-        "update_seconds": 1.4117714829999954,
-        "seconds": 6.185318132000006,
-        "wall_seconds": 6.185322550999999
+        "update_seconds": 1.1224826970000095,
+        "seconds": 4.927290697999979,
+        "wall_seconds": 4.92729366399999
       },
       "cpu_single": {
         "threads": 1,
-        "events_per_second": 6475.81,
-        "wall_seconds": 15.005417777000005
+        "events_per_second": 6418.42,
+        "wall_seconds": 15.004049827999893
       },
       "cpu_multi": {
         "threads": 4,
-        "events_per_second": 25103.41,
-        "wall_seconds": 15.004526096000006
+        "events_per_second": 25384.27,
+        "wall_seconds": 15.004444986000067,
+        "cpu_accounting": {
+          "wall_seconds": 15.004599280999969,
+          "steal_pct": 0.0,
+          "cpu_per_wall": 3.9984392702823106,
+          "nr_throttled": 0,
+          "throttled_ms": 0.0
+        }
       },
       "memory": {
-        "mib_per_second": 38897.31,
-        "wall_seconds": 15.005200883000015
+        "mib_per_second": 39607.92,
+        "wall_seconds": 15.004607746000033
       },
       "disk": {
         "seq_write": {
-          "mb_per_second": 6185.662046,
-          "iops": 5898.107424,
-          "p99_latency_us": 8585.216,
+          "mb_per_second": 12982.715674,
+          "iops": 12380.282629,
+          "p99_latency_us": 1957.888,
           "direct": true
         },
         "seq_read": {
-          "mb_per_second": 16303.151442,
-          "iops": 15546.896874,
-          "p99_latency_us": 2179.072,
+          "mb_per_second": 28883.197525,
+          "iops": 27544.163722,
+          "p99_latency_us": 684.032,
           "direct": true
         },
         "rand_read": {
-          "mb_per_second": 2574.045612,
-          "iops": 628427.038197,
-          "p99_latency_us": 105.984,
+          "mb_per_second": 3314.943232,
+          "iops": 809310.179321,
+          "p99_latency_us": 48.384,
           "direct": true
         },
         "rand_write": {
-          "mb_per_second": 1603.410204,
-          "iops": 391455.436304,
-          "p99_latency_us": 158.72,
+          "mb_per_second": 1621.199038,
+          "iops": 395798.413439,
+          "p99_latency_us": 175.104,
           "direct": true
         },
-        "wall_seconds": 68.88065163600001
+        "wall_seconds": 68.85408837499995
       },
       "download_cloudflare": {
-        "mb_per_second": 208.431469,
+        "mb_per_second": 248.084785,
         "bytes": 50000000,
-        "seconds": 0.239887,
-        "connect_seconds": 0.002158,
-        "ttfb_seconds": 0.04441,
-        "wall_seconds": 0.2455101740000032
+        "seconds": 0.201544,
+        "connect_seconds": 0.00881,
+        "ttfb_seconds": 0.056652,
+        "wall_seconds": 0.22164325199992163
       },
       "compile_redis": {
         "version": "8.10.3",
         "jobs": 4,
-        "seconds": 26.85613685300001,
+        "seconds": 58.2019937529999,
         "github_download": {
-          "mb_per_second": 4.850627,
+          "mb_per_second": 14.880262,
           "bytes": 4780701,
-          "seconds": 0.985584,
-          "connect_seconds": 0.042283,
-          "ttfb_seconds": 0.265925
+          "seconds": 0.321278,
+          "connect_seconds": 0.022295,
+          "ttfb_seconds": 0.193775
         },
-        "wall_seconds": 27.9612951
+        "cpu_accounting": {
+          "wall_seconds": 58.20199864199981,
+          "steal_pct": 8.306216817948279,
+          "cpu_per_wall": 3.2940592672645805,
+          "nr_throttled": 0,
+          "throttled_ms": 0.0
+        },
+        "wall_seconds": 58.90838132199997
       },
       "cache": {
         "size_mb": 1024,
-        "save_seconds": 7.9303014278411865,
-        "restore_seconds": 15.730244636535645
+        "save_seconds": 11.16213846206665,
+        "restore_seconds": 12.419894933700562
       }
     },
+    "cpu_accounting": {
+      "wall_seconds": 183.10722723899994,
+      "steal_pct": 2.8835079251905884,
+      "cpu_per_wall": 1.906800563061745,
+      "nr_throttled": 0,
+      "throttled_ms": 0.0
+    },
     "timing": {
-      "queue_seconds": 8.0,
-      "job_seconds": 200.0
+      "queue_seconds": 7.0,
+      "job_seconds": 222.0
     }
   }
 ]
