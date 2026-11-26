@@ -1,6 +1,6 @@
 {
- "generated_at": "2026-11-26T19:36:03.254675+00:00",
- "sample_count": 71,
+ "generated_at": "2026-11-26T19:44:11.213245+00:00",
+ "sample_count": 74,
  "benchmark_versions": [
   3
  ],
@@ -16,6 +16,10 @@
   {
    "run_id": "45654935956",
    "url": "https://github.com/lockyer-labs/runnersbench/actions/runs/45654935956"
+  },
+  {
+   "run_id": "45885271185",
+   "url": "https://github.com/lockyer-labs/runnersbench/actions/runs/45885271185"
   }
  ],
  "metrics": [
@@ -378,6 +382,102 @@
    "sample_count": 3,
    "measured_at": "2026-11-25T13:08:11.961176+00:00",
    "run_url": "https://github.com/lockyer-labs/runnersbench/actions/runs/45620389115"
+  },
+  {
+   "provider": "flamewill",
+   "provider_name": "FlameWill",
+   "label": "flamewill-4vcpu-16gb-ubuntu-2404",
+   "arch": "arm64",
+   "platform": "arm64",
+   "price_per_minute": 0.0022,
+   "billing": "per minute, rounded up",
+   "pricing_caveat": null,
+   "cpu_models": [
+    "Neoverse-V2"
+   ],
+   "vcpus": 4,
+   "memory_gib": 15.3,
+   "disk_gb": 190,
+   "virtualization": null,
+   "location": "Stockholm, SE",
+   "network": "AS16509 Amazon.com, Inc.",
+   "medians": {
+    "queue": 40.0,
+    "apt_install": 12.773833234000001,
+    "cpu_single": 3329.88,
+    "cpu_multi": 13302.67,
+    "memory": 26628.8,
+    "seq_read": 472.364831,
+    "seq_write": 225.773281,
+    "rand_read": 67091.527232,
+    "rand_write": 33545.430305,
+    "download": 211.974885,
+    "cache_save": 5.534735679626465,
+    "cache_restore": 4.163844347000122,
+    "redis_build": 40.83695250700001,
+    "redis_cost": 0.0022
+   },
+   "ranges": {
+    "queue": [
+     40.0,
+     40.0
+    ],
+    "apt_install": [
+     12.485338260000006,
+     13.699500283000006
+    ],
+    "cpu_single": [
+     3329.39,
+     3331.43
+    ],
+    "cpu_multi": [
+     13298.89,
+     13306.63
+    ],
+    "memory": [
+     26364.19,
+     26631.42
+    ],
+    "seq_read": [
+     472.364831,
+     472.396251
+    ],
+    "seq_write": [
+     225.758301,
+     225.77861
+    ],
+    "rand_read": [
+     67091.393907,
+     67091.593894
+    ],
+    "rand_write": [
+     33545.430305,
+     33545.430305
+    ],
+    "download": [
+     162.523403,
+     265.960276
+    ],
+    "cache_save": [
+     5.354060173034668,
+     5.699916839599609
+    ],
+    "cache_restore": [
+     4.035944700241089,
+     4.324632883071899
+    ],
+    "redis_build": [
+     40.618146945999996,
+     41.05033837000002
+    ],
+    "redis_cost": [
+     0.0022,
+     0.0022
+    ]
+   },
+   "sample_count": 3,
+   "measured_at": "2026-11-26T19:40:57.153296+00:00",
+   "run_url": "https://github.com/lockyer-labs/runnersbench/actions/runs/45885271185"
   },
   {
    "provider": "github",
@@ -2360,11 +2460,12 @@
   "celesto": "#3ca951",
   "checklane": "#ff8ab7",
   "depot": "#a463f2",
-  "github": "#97bbf5",
-  "groundbox": "#9c6b4e",
-  "luxor": "#9498a0",
-  "namespace": "#2f4b7c",
-  "warpbuild": "#d6336c"
+  "flamewill": "#97bbf5",
+  "github": "#9c6b4e",
+  "groundbox": "#9498a0",
+  "luxor": "#2f4b7c",
+  "namespace": "#d6336c",
+  "warpbuild": "#8c8c1a"
  },
  "errors": [
   {

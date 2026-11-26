@@ -1,6 +1,6 @@
 # Runner benchmark report
 
-Benchmark version 3. 71 samples from 3 workflow run(s). Benchmark values are medians across samples, with the lowest to highest sample in brackets; the best median in each column is bold.
+Benchmark version 3. 74 samples from 4 workflow run(s). Benchmark values are medians across samples, with the lowest to highest sample in brackets; the best median in each column is bold.
 
 ## Runners
 
@@ -9,6 +9,7 @@ Benchmark version 3. 71 samples from 3 workflow run(s). Benchmark values are med
 | avrea | `avrea-ubuntu-24.04-arm-4-vcpu` | - | 4 | 14.7 | 155 | vm-other | Helsinki, FI | AS209378 Inios Oy | 3 |
 | blacksmith | `blacksmith-4vcpu-ubuntu-2404-arm` | Ampere-1a | 4 | 11.7 | 133 | – | Phoenix, US | AS20454 SECURED SERVERS LLC | 3 |
 | depot | `depot-ubuntu-24.04-arm-4` | Neoverse-V2 | 4 | 15.6 | 156 | qemu | Ashburn, US | AS14618 Amazon.com, Inc. | 3 |
+| flamewill | `flamewill-4vcpu-16gb-ubuntu-2404` | Neoverse-V2 | 4 | 15.3 | 190 | – | Stockholm, SE | AS16509 Amazon.com, Inc. | 3 |
 | github | `ubuntu-24.04-arm` | Neoverse-N2 | 4 | 15.6 | 155 | microsoft | Des Moines, US | AS8075 Microsoft Corporation | 3 |
 | warpbuild | `warp-ubuntu-2404-arm64-4x` | Neoverse-V2 | 4 | 15.3 | 155 | amazon | Ashburn, US | AS14618 Amazon.com, Inc. | 3 |
 | avrea | `avrea-macos-26-8-vcpu` | Apple M5 Max (Virtual) | 8 | 24.0 | 361 | apple | Helsinki, FI | AS209378 Inios Oy | 3 |
@@ -38,6 +39,7 @@ Benchmark version 3. 71 samples from 3 workflow run(s). Benchmark values are med
 | avrea | `avrea-ubuntu-24.04-arm-4-vcpu` | 20.0 (14.0 to 24.0) | 7.9 (7.5 to 11.0) | **12,360 (11,773 to 13,312)** | **48,607 (48,550 to 49,018)** | **49,638 (48,641 to 54,223)** | **30,159 (24,441 to 32,773)** | **23,021 (19,859 to 28,019)** | 103,870 (96,730 to 104,593) | 113,300 (112,526 to 118,129) | 233 (143 to 281) | 2.9 (2.9 to 3.4) | 2.4 (2.4 to 3.2) | 19.9 (19.6 to 20.0) | $0.0080 |
 | blacksmith | `blacksmith-4vcpu-ubuntu-2404-arm` | 10.0 (9.0 to 10.0) | 13.0 (11.5 to 14.8) | 929 (928 to 931) | 3,659 (3,644 to 3,666) | 26,285 (26,213 to 26,289) | 1,506 (1,502 to 1,562) | 883 (764 to 887) | 227,249 (220,683 to 235,255) | 92,255 (91,681 to 92,513) | 123 (122 to 269) | 4.0 (3.7 to 4.1) | 5.3 (4.9 to 5.3) | 50.9 (50.8 to 51.2) | $0.0050 |
 | depot | `depot-ubuntu-24.04-arm-4` | **2.0 (1.0 to 2.0)** | 5.0 (4.2 to 5.1) | 3,330 (3,205 to 3,338) | 13,085 (13,043 to 13,182) | 26,688 (26,555 to 26,690) | 1,367 (1,165 to 2,127) | 14,599 (14,180 to 15,793) | 73,039 (73,026 to 86,445) | 197,658 (183,084 to 200,311) | 170 (83.4 to 229) | 12.0 (11.8 to 12.4) | 3.6 (3.6 to 3.9) | 38.7 (38.1 to 39.1) | $0.0078 ($0.0078 to $0.0080)\* |
+| flamewill | `flamewill-4vcpu-16gb-ubuntu-2404` | 40.0 | 12.8 (12.5 to 13.7) | 3,330 (3,329 to 3,331) | 13,303 (13,299 to 13,307) | 26,629 (26,364 to 26,631) | 472 (472 to 472) | 226 (226 to 226) | 67,092 (67,091 to 67,092) | 33,545 | 212 (163 to 266) | 5.5 (5.4 to 5.7) | 4.2 (4.0 to 4.3) | 40.8 (40.6 to 41.1) | $0.0022 |
 | github | `ubuntu-24.04-arm` | 6.0 (5.0 to 6.0) | 22.5 (20.1 to 25.3) | 3,961 (3,960 to 3,961) | 15,720 (15,714 to 15,760) | 27,826 (27,817 to 27,842) | 413 (413 to 414) | 351 (324 to 352) | 19,580 (19,579 to 19,610) | 19,576 (19,568 to 19,583) | 171 (105 to 192) | 5.0 (5.0 to 5.5) | 6.8 (6.7 to 6.9) | 51.9 (44.5 to 54.6) | $0.0080\* |
 | warpbuild | `warp-ubuntu-2404-arm64-4x` | 40.0 (40.0 to 41.0) | 25.8 (21.6 to 26.4) | 3,333 (3,329 to 3,341) | 13,280 (13,267 to 13,291) | 26,572 (26,554 to 26,591) | 315 (315 to 315) | 315 (315 to 315) | 4,198 (4,198 to 4,198) | 4,198 (4,198 to 4,198) | 151 (28.8 to 167) | 4.5 (3.4 to 6.0) | 5.3 (4.4 to 8.0) | 42.3 (42.2 to 44.0) | $0.0060 |
 | avrea | `avrea-macos-26-8-vcpu` | 26.0 (25.0 to 27.0) | 4.1 (4.0 to 4.5) | – | – | 34,402 (34,182 to 34,407) | 17,783 (17,378 to 18,393) | 14,532 (14,461 to 14,617) | 103,018 (102,048 to 103,082) | 50,935 (46,085 to 60,150) | 274 (203 to 281) | 3.0 (2.9 to 3.2) | 2.8 (2.8 to 2.8) | 13.9 (13.9 to 13.9) | $0.0187 |
