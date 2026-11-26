@@ -25,6 +25,13 @@
   --mark: #fffae6;
   --mark-line: #ecd48a;
 
+  --hero-bg: var(--p1);
+  --hero-fg: var(--fg);
+  --hero-text: var(--muted);
+  --hero-soft: var(--p6);
+  --hero-faint: var(--p5);
+  --hero-line: var(--p3);
+
   --display: "Funnel Display", system-ui, sans-serif;
   --body: Inter, system-ui, sans-serif;
   --mono: "IBM Plex Mono", ui-monospace, monospace;
@@ -43,6 +50,13 @@
     --link: #8fb0ff;
     --mark: #2a2512;
     --mark-line: #6b5a1e;
+
+    --hero-bg: var(--p7);
+    --hero-fg: #fefefe;
+    --hero-text: var(--p3);
+    --hero-soft: var(--p4);
+    --hero-faint: var(--p5);
+    --hero-line: var(--p6);
   }
 }
 
@@ -61,19 +75,19 @@ code { font-family: var(--mono); font-size: 0.85em; }
 
 /* Hero */
 
-.hero { background: var(--p7); color: var(--on-accent); }
+.hero { background: var(--hero-bg); color: var(--hero-fg); border-bottom: 1px solid var(--line); }
 .hero nav { display: flex; justify-content: space-between; align-items: center; padding: 28px 0 56px; }
 .brand { font: 500 26px var(--display); letter-spacing: -0.01em; }
-.brand span { color: var(--p4); }
+.brand span { color: var(--hero-soft); }
 .links-top { display: flex; gap: 24px; font: 500 15px var(--body); }
-.links-top a { color: var(--p3); text-decoration: none; white-space: nowrap; }
-.links-top a:hover { color: var(--on-accent); }
+.links-top a { color: var(--hero-text); text-decoration: none; white-space: nowrap; }
+.links-top a:hover { color: var(--hero-fg); }
 h1 { font: 500 64px/1.05 var(--display); letter-spacing: -0.02em; margin: 0 0 16px; }
-.lede { color: var(--p3); max-width: 60ch; margin: 0 0 40px; }
-.tabs { display: flex; flex-wrap: wrap; gap: 28px; border-bottom: 1px solid var(--p6); margin: 0 0 32px; }
+.lede { color: var(--hero-text); max-width: 60ch; margin: 0 0 40px; }
+.tabs { display: flex; flex-wrap: wrap; gap: 28px; border-bottom: 1px solid var(--hero-line); margin: 0 0 32px; }
 .tab {
   font: 500 15px var(--body);
-  color: var(--p4);
+  color: var(--hero-soft);
   background: none;
   border: 0;
   border-bottom: 2px solid transparent;
@@ -81,20 +95,20 @@ h1 { font: 500 64px/1.05 var(--display); letter-spacing: -0.02em; margin: 0 0 16
   padding: 0 0 12px;
   cursor: pointer;
 }
-.tab:hover { color: var(--on-accent); }
-.tab[aria-selected="true"] { color: var(--on-accent); border-bottom-color: var(--on-accent); }
-.tab .count { margin-left: 6px; color: var(--p5); font-weight: 400; }
+.tab:hover { color: var(--hero-fg); }
+.tab[aria-selected="true"] { color: var(--hero-fg); border-bottom-color: var(--hero-fg); }
+.tab .count { margin-left: 6px; color: var(--hero-faint); font-weight: 400; }
 .hero-foot { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px 32px; margin-top: 32px; padding-bottom: 56px; }
-.meta { font-size: 13px; color: var(--p4); margin: 0; }
-.sponsor { display: inline-flex; align-items: center; gap: 10px; font-size: 13px; color: var(--p4); text-decoration: none; }
+.meta { font-size: 13px; color: var(--hero-soft); margin: 0; }
+.sponsor { display: inline-flex; align-items: center; gap: 10px; font-size: 13px; color: var(--hero-soft); text-decoration: none; }
 .sponsor img { display: block; height: 30px; width: auto; opacity: 0.9; }
 .sponsor:hover img { opacity: 1; }
 
 .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 32px; max-width: 1000px; }
-.stat .label { font-size: 13px; color: var(--p4); }
+.stat .label { font-size: 13px; color: var(--hero-soft); }
 .stat .value { font: 500 32px/1.2 var(--display); margin-top: 4px; white-space: nowrap; }
-.stat .unit { font-size: 15px; color: var(--p4); margin-left: 4px; }
-.stat .who { font-size: 14px; color: var(--p3); margin-top: 2px; }
+.stat .unit { font-size: 15px; color: var(--hero-soft); margin-left: 4px; }
+.stat .who { font-size: 14px; color: var(--hero-text); margin-top: 2px; }
 
 /* Sections */
 
@@ -179,7 +193,7 @@ tbody tr:hover td:not(.best) { background: var(--tint); }
 .row.lowest-fees .val::before { content: "☆ "; color: #d49a00; }
 td.lowest-fees { outline: 1.5px dashed var(--accent); outline-offset: -4px; }
 .nowrap { white-space: nowrap; }
-.stat .who.fees { margin-top: 4px; font-size: 13px; color: var(--p4); cursor: help; }
+.stat .who.fees { margin-top: 4px; font-size: 13px; color: var(--hero-soft); cursor: help; }
 
 .swatch {
   display: inline-block;
