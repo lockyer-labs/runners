@@ -201,7 +201,7 @@ td.lowest-fees { outline: 1.5px dashed var(--accent); outline-offset: -4px; }
 .heat-legend[hidden] { display: none; }
 .heat-scale { width: 96px; height: 8px; background: linear-gradient(to left, hsl(10 65% 80%), hsl(70 65% 80%), hsl(130 65% 80%)); }
 #benchmarks.heat td[style*="--heat"] { background: hsl(var(--heat) 65% 87%); color: var(--fg); }
-#benchmarks.heat td.best { font-weight: 600; box-shadow: inset 0 0 0 2px var(--fg); }
+#benchmarks.heat td.best { font-weight: 600; box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--fg) 40%, transparent); }
 @media (prefers-color-scheme: dark) {
   #benchmarks.heat td[style*="--heat"] { background: hsl(var(--heat) 28% 19%); }
   .heat-scale { background: linear-gradient(to left, hsl(10 28% 30%), hsl(70 28% 30%), hsl(130 28% 30%)); }
