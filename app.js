@@ -7,10 +7,10 @@ const PLATFORMS = [
 ];
 
 const HEADLINES = [
-  ["redis_build", "fastest redis build"],
-  ["redis_cost", "cheapest redis build"],
-  ["cpu_multi", "most cpu throughput"],
-  ["queue", "shortest queue"],
+  ["redis_build", "Fastest Redis build"],
+  ["redis_cost", "Cheapest Redis build"],
+  ["cpu_multi", "Most CPU throughput"],
+  ["queue", "Shortest queue"],
 ];
 
 function el(tag, props = {}, ...children) {
@@ -132,7 +132,7 @@ function feesLine(runners, metric) {
   const r = lowestWithFees(runners, metric);
   if (!r) return null;
   return el("div", { className: "who fees", title: r.pricing_caveat },
-    `${fmt(r.medians[metric.key], metric)} `, swatch(r), r.provider_name, " · ", el("span", { className: "nowrap", textContent: "extra costs apply" }));
+    `${r.provider_name} is ${fmt(r.medians[metric.key], metric)} + fees`);
 }
 
 function renderStats(data) {
@@ -309,7 +309,7 @@ function render(data, platform, resetHighlights) {
     document.getElementById(id).replaceChildren();
   }
   document.getElementById("meta").textContent =
-    `benchmark v${data.benchmark_versions.join(", ")} · ${runners.length} runners · updated ${new Date(data.generated_at).toLocaleDateString()}`;
+    `Updated ${new Date(data.generated_at).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" })} · median of 3 runs · benchmark v${data.benchmark_versions.join(", ")}`;
   renderStats(view);
   renderTables(view);
   renderBoards(view);
