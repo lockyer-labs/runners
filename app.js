@@ -218,14 +218,13 @@ function renderTables(data) {
   document.getElementById("runners-caption").textContent = `${runners.length} runners · as reported by each machine`;
   table(
     document.getElementById("runners"),
-    ["Provider", "CPU", "vCPU · RAM · Disk", "Price", "Compliance", "Virtualization", "Location", "Measured"],
+    ["Provider", "CPU", "vCPU · RAM · Disk", "Price", "Compliance", "Location", "Measured"],
     runners.map((r) => [
       stacked([swatch(r), r.provider_name], r.label, "provider"),
       truncate(r.cpu_models.join(", ")),
       textCell([r.vcpus, r.memory_gib && `${r.memory_gib} GiB`, r.disk_gb && `${r.disk_gb} GB`].filter(Boolean).join(" · ") || null),
       stacked([r.price_per_minute === null ? "–" : `$${r.price_per_minute}/min`, caveat(r) ?? ""], r.billing),
       complianceCell(data.compliance?.[r.provider]),
-      textCell(r.virtualization),
       stacked(r.location ?? "–", r.network?.replace(/^AS\d+\s+/, "")),
       el("td", {}, el("a", { href: r.run_url, textContent: new Date(r.measured_at).toLocaleDateString() })),
     ]),
