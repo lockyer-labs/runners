@@ -52,7 +52,7 @@
     "name": "Daniel Lockyer",
     "url": "https://x.com/daniellockyer"
    },
-   "dateModified": "2026-11-27T14:02:34.774512+00:00",
+   "dateModified": "2026-11-27T16:11:40.019238+00:00",
    "isAccessibleForFree": true,
    "sameAs": "https://github.com/lockyer-labs/runnersbench",
    "keywords": [
@@ -170,8 +170,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@500&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap">
-  <link rel="stylesheet" href="style.css?v=1795788154">
-  <script src="app.js?v=1795788154" defer></script>
+  <link rel="stylesheet" href="style.css?v=1795795900">
+  <script src="app.js?v=1795795900" defer></script>
 </head>
 <body>
   <header class="hero">
@@ -194,8 +194,17 @@
       </div>
     </div>
   </header>
+  <nav class="section-nav" aria-label="Sections">
+    <div class="wrap">
+      <a href="#s-benchmarks">Benchmarks</a>
+      <a href="#s-leaderboards">Leaderboards</a>
+      <a href="#s-runners">Runners</a>
+      <a href="#s-locations">Locations</a>
+      <a href="#questions">Questions</a>
+    </div>
+  </nav>
   <main class="wrap">
-    <section>
+    <section id="s-benchmarks">
       <h2>Benchmarks</h2>
       <div class="table-tools">
         <p class="caption" id="benchmarks-caption"></p>
@@ -207,20 +216,20 @@
       <div class="scroll bleed"><table id="benchmarks"></table></div>
       <p class="caption pricing-notes" hidden></p>
     </section>
-    <section>
+    <section id="s-leaderboards">
       <h2>Leaderboards</h2>
       <p class="note">Each metric ranked from best to worst, or combine the ones you care about.</p>
       <div id="custom" class="board custom"></div>
       <div id="boards" class="grid"></div>
     </section>
-    <section>
+    <section id="s-runners">
       <h2>Runners</h2>
       <p class="note">What each provider's runner reported about itself. Compliance is what each provider states on its own site, linked to the source.</p>
       <p class="caption" id="runners-caption"></p>
       <div class="scroll"><table id="runners"></table></div>
       <p class="caption pricing-notes" hidden></p>
     </section>
-    <section>
+    <section id="s-locations">
       <h2>Locations</h2>
       <p class="note">Approximate, from each runner's IP address: where its traffic reaches the internet.</p>
       <div id="map" class="map"></div>

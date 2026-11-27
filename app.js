@@ -604,6 +604,36 @@ function enableHeatMap(node) {
   apply();
 }
 
+// Scrolls without touching location.hash, which holds the selected platform tab.
+function enableSectionNav() {
+  const nav = document.querySelector(".section-nav");
+  const links = [...nav.querySelectorAll("a")];
+  const sections = links.map((a) => document.querySelector(a.getAttribute("href")));
+  const bar = nav.querySelector(".wrap");
+  let shown;
+  for (const [i, a] of links.entries()) {
+    a.addEventListener("click", (e) => {
+      e.preventDefault();
+      sections[i].scrollIntoView({ behavior: "smooth" });
+    });
+  }
+  const update = () => {
+    const line = nav.offsetHeight + 24;
+    let current = -1;
+    sections.forEach((s, i) => {
+      if (s.getBoundingClientRect().top <= line) current = i;
+    });
+    if (innerHeight + scrollY >= document.documentElement.scrollHeight - 2) current = sections.length - 1;
+    if (current === shown) return;
+    shown = current;
+    links.forEach((a, i) => a.classList.toggle("active", i === current));
+    const a = links[current];
+    if (a) bar.scrollLeft = a.offsetLeft - (bar.clientWidth - a.offsetWidth) / 2;
+  };
+  addEventListener("scroll", update, { passive: true });
+  update();
+}
+
 async function main() {
   const data = await (await fetch("data.json", { cache: "no-cache" })).json();
   color = (provider) => data.colors[provider];
@@ -617,6 +647,7 @@ async function main() {
       applySort();
     }),
   );
+  enableSectionNav();
 }
 
 main();
