@@ -145,6 +145,18 @@
       "pricing_source": "https://docs.boat.dev/pricing"
     },
     {
+      "provider": "homemade",
+      "name": "Homemade",
+      "label": "homemade-small",
+      "arch": "x64",
+      "price_per_minute": 0.00054,
+      "billing": {"increment_seconds": 1},
+      "pricing_caveat": "Pro is $20 a month and includes $20 of running time. Hobby is free with lower limits.",
+      "enabled": true,
+      "notes": "homemade.dev. Ubuntu 24.04, 4 vCPU, 8 GB, one fresh microVM per job, billed per second. Pro is $20 a month and includes $20 of running time.",
+      "pricing_source": "https://homemade.dev/pricing"
+    },
+    {
       "provider": "github",
       "name": "GitHub",
       "label": "ubuntu-24.04-arm",
