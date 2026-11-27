@@ -356,7 +356,7 @@ function renderCustom(data) {
     return chip;
   }));
   node.replaceChildren(
-    el("h3", {}, "Your leaderboard"),
+    el("h3", {}, "Leaderboard"),
     el("p", { className: "caption", textContent: "Pick the metrics that matter to you. Each runner scores the average of how close it gets to the best on each one, so 100 means best on all of them." }),
     chips,
   );
@@ -376,7 +376,7 @@ function renderCustom(data) {
   const winner = scored.find(({ r }) => chosen.every((m) => eligible(r, m)));
   node.style.setProperty("--picked", chosen.length);
   node.append(el("div", { className: "row head" },
-    el("span"), el("span"), el("span", { className: "val", textContent: "Score" }),
+    el("span", { className: "name" }), el("span", { className: "bar-head" }), el("span", { className: "val", textContent: "Score" }),
     ...chosen.map((m) => el("span", { className: "raw" }, m.label, hint(m)))));
   node.append(...scored.map((entry) => {
     const { r, parts, score } = entry;
