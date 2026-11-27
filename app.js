@@ -374,6 +374,10 @@ function renderCustom(data) {
   }
   scored.sort((a, b) => b.score - a.score);
   const winner = scored.find(({ r }) => chosen.every((m) => eligible(r, m)));
+  node.style.setProperty("--picked", chosen.length);
+  node.append(el("div", { className: "row head" },
+    el("span"), el("span"), el("span", { className: "val", textContent: "Score" }),
+    ...chosen.map((m) => el("span", { className: "raw" }, m.label, hint(m)))));
   node.append(...scored.map((entry) => {
     const { r, parts, score } = entry;
     const fill = el("div", { className: "fill" });
@@ -385,7 +389,12 @@ function renderCustom(data) {
     return el("div", { className: rowClass, title: [r.label, ...breakdown].join("\n") },
       el("span", { className: "name" }, swatch(r), r.provider_name),
       el("div", { className: "track" }, fill),
-      el("span", { className: "val" }, String(Math.round(score * 100)), ...marks));
+      el("span", { className: "val" }, String(Math.round(score * 100)), ...marks),
+      ...chosen.map((m) => {
+        const value = r.medians[m.key];
+        const className = !eligible(r, m) ? "raw caveated" : value === best(data.runners, m) ? "raw top" : "raw";
+        return el("span", { className }, fmt(value, m), caveat(r, m) ?? "");
+      }));
   }));
   if (unranked.length) {
     node.append(el("p", { className: "caption unranked", textContent: `Not ranked, missing a picked metric: ${unranked.map((r) => r.provider_name).join(", ")}` }));

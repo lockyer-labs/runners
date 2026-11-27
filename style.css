@@ -173,7 +173,13 @@ tbody tr:hover td:not(.best) { background: var(--tint); }
 }
 .board { display: grid; grid-template-columns: 110px 1fr auto; column-gap: 10px; align-content: start; background: var(--tint); padding: 20px 22px 16px; min-width: 0; }
 .board h3 { grid-column: 1 / -1; font: 500 17px var(--body); margin: 0 0 14px; }
-.custom { margin-bottom: 24px; }
+.board.custom { --name-col: 110px; grid-template-columns: var(--name-col) minmax(80px, 1fr) auto repeat(var(--picked, 0), auto); margin-bottom: 24px; overflow-x: auto; }
+.custom .row.head { align-items: end; padding-bottom: 6px; color: var(--muted); font: 12px var(--body); }
+.custom .head .raw { max-width: 11ch; white-space: normal; }
+.custom .raw { padding-left: 14px; text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.custom .raw.top { font-weight: 600; }
+.custom .raw.caveated { color: var(--muted); }
+.custom .row:not(.head) .raw { border-left: 1px solid var(--line); }
 .custom h3 { margin-bottom: 4px; }
 .custom > .caption { grid-column: 1 / -1; margin: 0 0 12px; }
 .custom > .unranked { margin: 10px 0 0; }
@@ -281,4 +287,5 @@ footer a { color: var(--on-accent); }
   #benchmarks thead th { white-space: nowrap; }
   #benchmarks td:first-child { min-width: 9em; }
   .board { grid-template-columns: 96px 1fr auto; }
+  .custom { --name-col: 96px; }
 }
