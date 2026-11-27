@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-27T10:53:03.882184+00:00",
+ "generated_at": "2026-11-27T11:04:51.490502+00:00",
  "sample_count": 84,
  "benchmark_versions": [
   4
@@ -109,6 +109,10 @@
    "disk_gb": 155,
    "virtualization": "vm-other",
    "location": "Helsinki, FI",
+   "coordinates": [
+    60.17,
+    24.94
+   ],
    "network": "AS209378 Inios Oy",
    "medians": {
     "queue": 19.0,
@@ -210,6 +214,10 @@
    "disk_gb": 133,
    "virtualization": null,
    "location": "Phoenix, US",
+   "coordinates": [
+    33.45,
+    -112.07
+   ],
    "network": "AS20454 SECURED SERVERS LLC",
    "medians": {
     "queue": 11.0,
@@ -311,6 +319,10 @@
    "disk_gb": 156,
    "virtualization": "qemu",
    "location": "Ashburn, US",
+   "coordinates": [
+    39.04,
+    -77.49
+   ],
    "network": "AS14618 Amazon.com, Inc.",
    "medians": {
     "queue": 2.0,
@@ -413,6 +425,10 @@
    "disk_gb": 190,
    "virtualization": null,
    "location": "Stockholm, SE",
+   "coordinates": [
+    59.33,
+    18.07
+   ],
    "network": "AS16509 Amazon.com, Inc.",
    "medians": {
     "queue": 30.0,
@@ -515,6 +531,10 @@
    "disk_gb": 155,
    "virtualization": "microsoft",
    "location": "Des Moines, US",
+   "coordinates": [
+    41.59,
+    -93.62
+   ],
    "network": "AS8075 Microsoft Corporation",
    "medians": {
     "queue": 5.0,
@@ -616,6 +636,10 @@
    "disk_gb": 155,
    "virtualization": null,
    "location": "Frankfurt am Main, DE",
+   "coordinates": [
+    50.11,
+    8.68
+   ],
    "network": "AS28753 Leaseweb Deutschland GmbH",
    "medians": {
     "queue": 45.0,
@@ -717,6 +741,10 @@
    "disk_gb": 155,
    "virtualization": "amazon",
    "location": "Ashburn, US",
+   "coordinates": [
+    39.04,
+    -77.49
+   ],
    "network": "AS14618 Amazon.com, Inc.",
    "medians": {
     "queue": 20.0,
@@ -818,6 +846,10 @@
    "disk_gb": 361,
    "virtualization": "apple",
    "location": "Helsinki, FI",
+   "coordinates": [
+    60.17,
+    24.94
+   ],
    "network": "AS209378 Inios Oy",
    "medians": {
     "queue": 24.0,
@@ -910,6 +942,10 @@
    "disk_gb": 439,
    "virtualization": "apple",
    "location": "San Jose, US",
+   "coordinates": [
+    37.34,
+    -121.89
+   ],
    "network": "AS402960 MACWEB",
    "medians": {
     "queue": 23.0,
@@ -1002,6 +1038,10 @@
    "disk_gb": 424,
    "virtualization": "apple",
    "location": "Ashburn, US",
+   "coordinates": [
+    39.04,
+    -77.49
+   ],
    "network": "AS14618 Amazon.com, Inc.",
    "medians": {
     "queue": 4.0,
@@ -1094,6 +1134,10 @@
    "disk_gb": 343,
    "virtualization": "apple",
    "location": "San Jose, US",
+   "coordinates": [
+    37.34,
+    -121.89
+   ],
    "network": "AS8075 Microsoft Corporation",
    "medians": {
     "queue": 4.0,
@@ -1186,6 +1230,10 @@
    "disk_gb": 139,
    "virtualization": "apple",
    "location": "Martinez, US",
+   "coordinates": [
+    38.02,
+    -122.13
+   ],
    "network": "AS7922 Comcast Cable Communications, LLC",
    "medians": {
     "queue": 25.0,
@@ -1278,6 +1326,10 @@
    "disk_gb": 449,
    "virtualization": "apple",
    "location": "Seattle, US",
+   "coordinates": [
+    47.61,
+    -122.33
+   ],
    "network": "AS19538 Luxor",
    "medians": {
     "queue": 27.0,
@@ -1370,6 +1422,10 @@
    "disk_gb": 424,
    "virtualization": "apple",
    "location": "Las Vegas, US",
+   "coordinates": [
+    36.17,
+    -115.14
+   ],
    "network": "AS395337 MacStadium, Inc.",
    "medians": {
     "queue": 26.0,
@@ -1462,6 +1518,10 @@
    "disk_gb": 156,
    "virtualization": "kvm",
    "location": "Roubaix, FR",
+   "coordinates": [
+    50.69,
+    3.18
+   ],
    "network": "AS16276 OVH SAS",
    "medians": {
     "queue": 8.0,
@@ -1563,6 +1623,10 @@
    "disk_gb": 161,
    "virtualization": "kvm",
    "location": "Phoenix, US",
+   "coordinates": [
+    33.45,
+    -112.07
+   ],
    "network": "AS20454 SECURED SERVERS LLC",
    "medians": {
     "queue": 8.0,
@@ -1664,6 +1728,10 @@
    "disk_gb": 84,
    "virtualization": "kvm",
    "location": "Strasbourg, FR",
+   "coordinates": [
+    48.57,
+    7.75
+   ],
    "network": "AS16276 OVH SAS",
    "medians": {
     "queue": 6.0,
@@ -1765,6 +1833,10 @@
    "disk_gb": 101,
    "virtualization": "kvm + container",
    "location": "Ashburn, US",
+   "coordinates": [
+    39.04,
+    -77.49
+   ],
    "network": "AS401483 Namespace Labs",
    "medians": {
     "queue": 5.707,
@@ -1860,6 +1932,10 @@
    "disk_gb": 63,
    "virtualization": "kvm",
    "location": "Ashburn, US",
+   "coordinates": [
+    39.04,
+    -77.49
+   ],
    "network": "AS14618 Amazon.com, Inc.",
    "medians": {
     "queue": 9.0,
@@ -1961,6 +2037,10 @@
    "disk_gb": 169,
    "virtualization": "kvm",
    "location": "London, GB",
+   "coordinates": [
+    51.51,
+    -0.13
+   ],
    "network": "AS212027 PebbleHost Ltd",
    "medians": {
     "queue": 6.0,
@@ -2062,6 +2142,10 @@
    "disk_gb": 156,
    "virtualization": "kvm",
    "location": "Ashburn, US",
+   "coordinates": [
+    39.04,
+    -77.49
+   ],
    "network": "AS14618 Amazon.com, Inc.",
    "medians": {
     "queue": 2.0,
@@ -2164,6 +2248,10 @@
    "disk_gb": 155,
    "virtualization": "amazon",
    "location": "Boardman, US",
+   "coordinates": [
+    45.84,
+    -119.7
+   ],
    "network": "AS16509 Amazon.com, Inc.",
    "medians": {
     "queue": 4.0,
@@ -2265,6 +2353,10 @@
    "disk_gb": 63,
    "virtualization": "kvm",
    "location": "Warrenton, US",
+   "coordinates": [
+    38.71,
+    -77.8
+   ],
    "network": "AS16276 OVH SAS",
    "medians": {
     "queue": 5.0,
@@ -2366,6 +2458,10 @@
    "disk_gb": 32,
    "virtualization": "kvm",
    "location": "Gravelines, FR",
+   "coordinates": [
+    50.99,
+    2.13
+   ],
    "network": "AS16276 OVH SAS",
    "medians": {
     "queue": 143.0,
@@ -2467,6 +2563,10 @@
    "disk_gb": 156,
    "virtualization": "kvm",
    "location": "Seattle, US",
+   "coordinates": [
+    47.61,
+    -122.33
+   ],
    "network": "AS19538 Luxor",
    "medians": {
     "queue": 8.0,
@@ -2568,6 +2668,10 @@
    "disk_gb": 68,
    "virtualization": "kvm + container",
    "location": "Ashburn, US",
+   "coordinates": [
+    39.04,
+    -77.49
+   ],
    "network": "AS401483 Namespace Labs",
    "medians": {
     "queue": 7.0,
@@ -2669,6 +2773,10 @@
    "disk_gb": 155,
    "virtualization": "kvm",
    "location": "Falkenstein, DE",
+   "coordinates": [
+    50.48,
+    12.37
+   ],
    "network": "AS24940 Hetzner Online GmbH",
    "medians": {
     "queue": 18.0,
@@ -2770,6 +2878,10 @@
    "disk_gb": 265,
    "virtualization": "kvm",
    "location": "Chicago, US",
+   "coordinates": [
+    41.88,
+    -87.63
+   ],
    "network": "AS398418 WarpBuild",
    "medians": {
     "queue": 9.0,

@@ -235,7 +235,26 @@ footer p { margin: 0 0 12px; }
 footer .links { display: flex; flex-wrap: wrap; gap: 8px 24px; font: 14px var(--mono); }
 footer a { color: var(--on-accent); }
 
+.map { display: grid; gap: 16px; }
+.map-canvas { position: relative; background: var(--tint); }
+.map-canvas svg { display: block; width: 100%; height: 100%; fill: var(--p3); }
+.pin { position: absolute; display: flex; transform: translate(-50%, -50%); padding: 2px; background: var(--bg); border-radius: 999px; box-shadow: 0 0 0 1px var(--line); cursor: default; transition: opacity 0.15s; }
+.pin .dot { width: 12px; height: 12px; border-radius: 50%; }
+.pin .dot + .dot { margin-left: -3px; box-shadow: -1px 0 0 1px var(--bg); }
+.pin.on { z-index: 1; box-shadow: 0 0 0 2px var(--fg); }
+.map.focus .pin:not(.on) { opacity: 0.35; }
+.map-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 0 16px; list-style: none; margin: 0; padding: 0; font-size: 13px; }
+.map-list li { padding: 6px 8px; border-top: 1px solid var(--line); }
+.map-list li.on { background: var(--tint); }
+.map-list .where { display: block; font-weight: 500; }
+.map-list .who { display: flex; flex-wrap: wrap; gap: 2px 12px; color: var(--muted); }
+@media (prefers-color-scheme: dark) {
+  .map-canvas svg { fill: var(--tint-strong); }
+  .map-canvas { background: var(--bg); box-shadow: inset 0 0 0 1px var(--line); }
+}
+
 @media (max-width: 700px) {
+  .pin .dot { width: 8px; height: 8px; }
   .wrap { padding: 0 18px; }
   .hero nav { padding-bottom: 32px; }
   h1 { font-size: clamp(26px, 8.4vw, 40px); margin-bottom: 28px; white-space: nowrap; }

@@ -363,6 +363,84 @@ function renderBoards(data) {
   }
 }
 
+// Miller projection in degree units, matching scripts/worldmap.py.
+function project([lat, lon]) {
+  return [lon, (-180 / Math.PI) * 1.25 * Math.log(Math.tan(Math.PI / 4 + (0.4 * lat * Math.PI) / 180))];
+}
+
+// Frames the runners of every tab, so the map stays still when switching tabs.
+function mapFrame(runners) {
+  const points = runners.filter((r) => r.coordinates).map((r) => project(r.coordinates));
+  const xs = points.map((p) => p[0]);
+  const ys = points.map((p) => p[1]);
+  const x = Math.min(...xs) - 14;
+  const width = Math.max(...xs) + 14 - x;
+  let y = Math.min(...ys) - 10;
+  let height = Math.max(...ys) + 10 - y;
+  const minHeight = width / 2.6;
+  if (height < minHeight) {
+    y -= (minHeight - height) / 2;
+    height = minHeight;
+  }
+  return { x, y, width, height };
+}
+
+function renderMap(data, everyRunner) {
+  const node = document.getElementById("map");
+  const frame = mapFrame(everyRunner);
+  const cities = new Map();
+  for (const r of data.runners.filter((r) => r.coordinates)) {
+    if (!cities.has(r.location)) cities.set(r.location, { name: r.location, point: project(r.coordinates), runners: [] });
+    cities.get(r.location).runners.push(r);
+  }
+  // Cities closer than 3% of the map's width share a marker.
+  const markers = [];
+  for (const city of [...cities.values()].sort((a, b) => b.runners.length - a.runners.length)) {
+    const near = markers.find((m) => Math.hypot(m.point[0] - city.point[0], m.point[1] - city.point[1]) < frame.width * 0.03);
+    if (near) near.cities.push(city);
+    else markers.push({ point: city.point, cities: [city] });
+  }
+
+  const NS = "http://www.w3.org/2000/svg";
+  const svg = document.createElementNS(NS, "svg");
+  svg.setAttribute("viewBox", `${frame.x} ${frame.y} ${frame.width} ${frame.height}`);
+  svg.setAttribute("aria-hidden", "true");
+  const land = document.createElementNS(NS, "use");
+  land.setAttribute("href", "land.svg#land");
+  svg.append(land);
+  const canvas = el("div", { className: "map-canvas", style: `aspect-ratio:${frame.width} / ${frame.height}` }, svg);
+  const list = el("ul", { className: "map-list" });
+
+  markers.forEach((marker, i) => {
+    const runners = marker.cities.flatMap((c) => c.runners);
+    const providers = [...new Map(runners.map((r) => [r.provider, r])).values()];
+    const pin = el("span", {
+      className: "pin",
+      title: marker.cities.map((c) => `${c.name}: ${c.runners.map((r) => r.provider_name).join(", ")}`).join("\n"),
+      style: `left:${((marker.point[0] - frame.x) / frame.width) * 100}%;top:${((marker.point[1] - frame.y) / frame.height) * 100}%`,
+    }, ...providers.map((r) => el("span", { className: "dot", style: `background:${color(r.provider)}` })));
+    pin.dataset.marker = i;
+    canvas.append(pin);
+    for (const city of marker.cities) {
+      const item = el("li", {},
+        el("span", { className: "where", textContent: city.name }),
+        el("span", { className: "who" }, ...city.runners.map((r) => el("span", { className: "nowrap" }, swatch(r), r.provider_name))));
+      item.dataset.marker = i;
+      list.append(item);
+    }
+  });
+
+  const focus = (marker) => {
+    node.classList.toggle("focus", marker !== null);
+    for (const item of node.querySelectorAll("[data-marker]")) item.classList.toggle("on", item.dataset.marker === marker);
+  };
+  for (const item of [...canvas.querySelectorAll(".pin"), ...list.children]) {
+    item.addEventListener("mouseenter", () => focus(item.dataset.marker));
+    item.addEventListener("mouseleave", () => focus(null));
+  }
+  node.append(canvas, list);
+}
+
 function renderErrors(data) {
   document.getElementById("errors-section").hidden = !data.errors.length;
   document.getElementById("errors").append(...data.errors.map((e) =>
@@ -373,7 +451,7 @@ function render(data, platform, afterRender) {
   const runners = data.runners.filter((r) => r.platform === platform);
   const labels = new Set(runners.map((r) => r.label));
   const view = { ...data, runners, errors: data.errors.filter((e) => labels.has(e.label)) };
-  for (const id of ["stats", "benchmarks", "runners", "boards", "errors"]) {
+  for (const id of ["stats", "benchmarks", "runners", "map", "boards", "errors"]) {
     document.getElementById(id).replaceChildren();
   }
   document.getElementById("meta").textContent =
@@ -381,6 +459,7 @@ function render(data, platform, afterRender) {
   renderStats(view);
   renderTables(view);
   renderBoards(view);
+  renderMap(view, data.runners);
   renderErrors(view);
   renderCaveats(runners);
   afterRender();
