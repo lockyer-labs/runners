@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-27T12:17:12.422698+00:00",
+ "generated_at": "2026-11-27T13:20:46.962391+00:00",
  "sample_count": 84,
  "benchmark_versions": [
   4
@@ -2984,5 +2984,59 @@
   "ubicloud": "#8c8c1a",
   "warpbuild": "#00a3a3"
  },
- "errors": []
+ "errors": [],
+ "compliance": {
+  "avrea": {
+   "soc2": "Type II",
+   "iso27001": true,
+   "source": "https://avrea.com/trust-security"
+  },
+  "blacksmith": {
+   "soc2": "Type II",
+   "source": "https://www.blacksmith.sh/security"
+  },
+  "boat": {
+   "soc2": "In progress",
+   "source": "https://docs.boat.dev/compliance"
+  },
+  "buildkite": {
+   "soc2": "Type II",
+   "source": "https://buildkite.com/about/security/"
+  },
+  "celesto": {
+   "soc2": "In progress",
+   "note": "ISO 27001 is also in progress.",
+   "source": "https://trust.celesto.ai/"
+  },
+  "depot": {
+   "soc2": "Type II",
+   "source": "https://depot.dev/security"
+  },
+  "github": {
+   "soc2": "Type II",
+   "iso27001": true,
+   "source": "https://docs.github.com/en/enterprise-cloud@latest/admin/overview/accessing-compliance-reports-for-your-enterprise"
+  },
+  "groundbox": {
+   "note": "Says it has no SOC 2 report.",
+   "source": "https://groundbox.dev/compare/blacksmith"
+  },
+  "luxor": {
+   "soc2": "In progress",
+   "note": "Its parent company, Luxor Technology, has a SOC 2 Type II report.",
+   "source": "https://luxor.ai/company/security"
+  },
+  "namespace": {
+   "soc2": "Type II",
+   "source": "https://trust.namespace.so/"
+  },
+  "ubicloud": {
+   "soc2": "Type II",
+   "source": "https://www.ubicloud.com/docs/security/overview"
+  },
+  "warpbuild": {
+   "soc2": "Type II",
+   "source": "https://trust.warpbuild.com/"
+  }
+ }
 }

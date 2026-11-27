@@ -228,6 +228,7 @@ td.lowest-fees { outline: 1.5px dashed var(--accent); outline-offset: -4px; }
   .heat-scale { background: linear-gradient(to left, hsl(10 28% 30%), hsl(70 28% 30%), hsl(130 28% 30%)); }
 }
 .nowrap { white-space: nowrap; }
+td.muted, td.muted a { color: var(--muted); }
 .stat .who.fees { margin-top: 4px; font-size: 13px; color: var(--hero-soft); cursor: help; }
 
 .swatch {

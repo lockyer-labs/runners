@@ -218,17 +218,31 @@ function renderTables(data) {
   document.getElementById("runners-caption").textContent = `${runners.length} runners · as reported by each machine`;
   table(
     document.getElementById("runners"),
-    ["Provider", "CPU", "vCPU · RAM · Disk", "Price", "Virtualization", "Location", "Measured"],
+    ["Provider", "CPU", "vCPU · RAM · Disk", "Price", "Compliance", "Virtualization", "Location", "Measured"],
     runners.map((r) => [
       stacked([swatch(r), r.provider_name], r.label, "provider"),
       truncate(r.cpu_models.join(", ")),
       textCell([r.vcpus, r.memory_gib && `${r.memory_gib} GiB`, r.disk_gb && `${r.disk_gb} GB`].filter(Boolean).join(" · ") || null),
       stacked([r.price_per_minute === null ? "–" : `$${r.price_per_minute}/min`, caveat(r) ?? ""], r.billing),
+      complianceCell(data.compliance?.[r.provider]),
       textCell(r.virtualization),
       stacked(r.location ?? "–", r.network?.replace(/^AS\d+\s+/, "")),
       el("td", {}, el("a", { href: r.run_url, textContent: new Date(r.measured_at).toLocaleDateString() })),
     ]),
   );
+}
+
+function complianceText(entry) {
+  if (!entry) return null;
+  const soc2 = entry.soc2 === "In progress" ? "SOC 2 in progress" : entry.soc2 && `SOC 2 ${entry.soc2}`;
+  return [soc2, entry.iso27001 === true && "ISO 27001"].filter(Boolean).join(" · ") || null;
+}
+
+function complianceCell(entry) {
+  const text = complianceText(entry);
+  if (!text) return el("td", { className: "muted", textContent: "–", title: entry?.note ?? "No claim found on the provider's site" });
+  const link = el("a", { href: entry.source, textContent: text, title: entry.note ?? "As stated by the provider" });
+  return el("td", { className: entry.soc2 === "In progress" ? "muted" : "" }, link);
 }
 
 function enableHighlighting(node) {
