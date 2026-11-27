@@ -217,7 +217,7 @@ function renderTables(data) {
 
   document.getElementById("runners-caption").textContent = `${runners.length} runners · as reported by each machine`;
   const runnersTable = document.getElementById("runners");
-  const headers = ["Provider", "CPU", "vCPU · RAM · Disk", "Price", "Compliance", "Location", "Measured"];
+  const headers = ["Provider", "CPU", "vCPU · RAM · Disk", "Price", "Compliance", "Location"];
   table(
     runnersTable,
     headers,
@@ -228,7 +228,6 @@ function renderTables(data) {
       stacked([r.price_per_minute === null ? "–" : `$${r.price_per_minute}/min`, caveat(r) ?? ""], r.billing),
       complianceCell(data.compliance?.[r.provider]),
       stacked(r.location ?? "–", r.network?.replace(/^AS\d+\s+/, "")),
-      el("td", {}, el("a", { href: r.run_url, textContent: new Date(r.measured_at).toLocaleDateString() })),
     ]),
   );
   // Labels and a single content box per cell, for the card layout on narrow screens.
