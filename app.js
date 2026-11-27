@@ -595,7 +595,8 @@ function enableHeatMap(node) {
     node.classList.toggle("heat", toggle.checked);
     legend.hidden = !toggle.checked;
   };
-  toggle.checked = localStorage.getItem("heat") === "1";
+  // On unless the visitor turned it off, which stores "".
+  toggle.checked = localStorage.getItem("heat") !== "";
   toggle.addEventListener("change", () => {
     localStorage.setItem("heat", toggle.checked ? "1" : "");
     apply();
