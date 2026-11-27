@@ -101,9 +101,19 @@ jobs:
         run: |
           echo "CACHE_DIR=$RUNNER_TEMP/cache-bench" >> "$GITHUB_ENV"
           python bench/cache.py generate "$RUNNER_TEMP/cache-bench"
+      # Providers whose cache needs their own action set cache_action in providers.json; uses: can't be an
+      # expression, so each one gets its own steps.
       - name: Cache save
+        if: ${{ !matrix.cache_action }}
         continue-on-error: true
         uses: actions/cache/save@v6
+        with:
+          path: ${{ env.CACHE_DIR }}
+          key: ${{ env.CACHE_KEY }}
+      - name: Cache save (WarpBuild)
+        if: ${{ matrix.cache_action == 'WarpBuilds/cache' }}
+        continue-on-error: true
+        uses: WarpBuilds/cache/save@v2
         with:
           path: ${{ env.CACHE_DIR }}
           key: ${{ env.CACHE_KEY }}
@@ -112,14 +122,23 @@ jobs:
         run: python bench/cache.py saved "$CACHE_DIR"
       - name: Cache restore
         id: restore
+        if: ${{ !matrix.cache_action }}
         continue-on-error: true
         uses: actions/cache/restore@v6
         with:
           path: ${{ env.CACHE_DIR }}
           key: ${{ env.CACHE_KEY }}
+      - name: Cache restore (WarpBuild)
+        id: restore-warpbuild
+        if: ${{ matrix.cache_action == 'WarpBuilds/cache' }}
+        continue-on-error: true
+        uses: WarpBuilds/cache/restore@v2
+        with:
+          path: ${{ env.CACHE_DIR }}
+          key: ${{ env.CACHE_KEY }}
       - name: Check restored data
         continue-on-error: true
-        run: python bench/cache.py restored "$CACHE_DIR" "${{ steps.restore.outputs.cache-hit }}"
+        run: python bench/cache.py restored "$CACHE_DIR" "${{ steps.restore.outputs.cache-hit || steps.restore-warpbuild.outputs.cache-hit }}"
       - name: Benchmark
         env:
           RUNNER_SPEC: ${{ toJSON(matrix) }}
@@ -130,10 +149,18 @@ jobs:
           path: ${{ runner.temp }}/result.json
           if-no-files-found: error
       - name: Delete the cache
-        if: always()
+        if: ${{ always() && !matrix.cache_action }}
         env:
           GITHUB_TOKEN: ${{ github.token }}
         run: python bench/cache.py delete "$CACHE_KEY"
+      - name: Delete the cache (WarpBuild)
+        if: ${{ always() && matrix.cache_action == 'WarpBuilds/cache' }}
+        continue-on-error: true
+        uses: WarpBuilds/cache@v2
+        with:
+          path: ${{ env.CACHE_DIR }}
+          key: ${{ env.CACHE_KEY }}
+          delete-cache: true
 
   bench-buildkite:
     needs: setup

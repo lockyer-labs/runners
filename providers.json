@@ -52,6 +52,7 @@
       "arch": "x64",
       "price_per_minute": 0.008,
       "billing": {"increment_seconds": 60},
+      "cache_action": "WarpBuilds/cache",
       "enabled": true,
       "notes": "Pinned to Ubuntu 24.04 to match GitHub.",
       "pricing_source": "https://www.warpbuild.com/pricing"
@@ -218,6 +219,7 @@
       "arch": "arm64",
       "price_per_minute": 0.006,
       "billing": {"increment_seconds": 60},
+      "cache_action": "WarpBuilds/cache",
       "enabled": true,
       "pricing_source": "https://www.warpbuild.com/pricing"
     },
@@ -345,6 +347,7 @@
       "os": "macos",
       "price_per_minute": 0.08,
       "billing": {"increment_seconds": 60},
+      "cache_action": "WarpBuilds/cache",
       "enabled": true,
       "notes": "Smallest macOS size.",
       "pricing_source": "https://docs.warpbuild.com/ci/cloud-runners"

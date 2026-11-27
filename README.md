@@ -55,7 +55,7 @@ each provider runs its smallest Apple Silicon machine on macOS 26.
 | **Memory** | `sysbench memory`, single thread |
 | **Disk** | `fio` sequential read/write (1M), 4k random read/write IOPS, and 4k writes each followed by `fsync` (Linux only) |
 | **Network** | Download a 1 GB [release asset](https://github.com/lockyer-labs/runnersbench/releases/tag/download-test) from GitHub over 4 connections, for 10 s or the whole file, so sustained limits show rather than bursts |
-| **Cache** | Save and restore 1 GB of incompressible data with the stock `actions/cache`, so providers that speed it up show it |
+| **Cache** | Save and restore 1 GB of incompressible data with the stock `actions/cache`, which most providers redirect to their own storage. Providers whose cache needs its own action use that instead (WarpBuild: `WarpBuilds/cache`) |
 | **Redis build** | `make -j$(nproc)`, and its cost at list price with each provider's billing rounding |
 
 Plus the system details each runner reports: CPU model, memory, disk,
@@ -108,6 +108,8 @@ install its GitHub App on this repo's account, then add an entry to
   per-minute rounded up. `minimum_seconds` and `grace_seconds` cover rules
   like Namespace's.
 - `price_per_minute` may be `null`; `enabled: false` parks a runner.
+- `cache_action` names a provider's own cache action, for providers that
+  don't redirect the stock `actions/cache`. The workflow needs matching steps.
 
 <details>
 <summary><strong>Buildkite setup</strong></summary>
