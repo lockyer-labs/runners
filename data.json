@@ -1,6 +1,6 @@
 {
- "generated_at": "2026-11-27T10:40:31.008143+00:00",
- "sample_count": 81,
+ "generated_at": "2026-11-27T10:53:03.882184+00:00",
+ "sample_count": 84,
  "benchmark_versions": [
   4
  ],
@@ -8,6 +8,10 @@
   {
    "run_id": "45926553981",
    "url": "https://github.com/lockyer-labs/runnersbench/actions/runs/45926553981"
+  },
+  {
+   "run_id": "45984948181",
+   "url": "https://github.com/lockyer-labs/runnersbench/actions/runs/45984948181"
   }
  ],
  "metrics": [
@@ -2346,6 +2350,107 @@
    "run_url": "https://github.com/lockyer-labs/runnersbench/actions/runs/45926553981"
   },
   {
+   "provider": "homemade",
+   "provider_name": "Homemade",
+   "label": "homemade-small",
+   "arch": "x64",
+   "platform": "x64",
+   "price_per_minute": 0.00054,
+   "billing": "per second",
+   "pricing_caveat": "Pro is $20 a month and includes $20 of running time. Hobby is free with lower limits.",
+   "cpu_models": [
+    "AMD EPYC"
+   ],
+   "vcpus": 4,
+   "memory_gib": 7.8,
+   "disk_gb": 32,
+   "virtualization": "kvm",
+   "location": "Gravelines, FR",
+   "network": "AS16276 OVH SAS",
+   "medians": {
+    "queue": 143.0,
+    "apt_install": 9.478436102,
+    "cpu_single": 5447.09,
+    "cpu_multi": 20384.74,
+    "memory": 38533.16,
+    "seq_read": 3966.848076,
+    "seq_write": 1101.207497,
+    "rand_read": 245138.524098,
+    "rand_write": 139080.661289,
+    "fsync": 5496.250375,
+    "download": 36.86494472988221,
+    "cache_save": 3.4015979766845703,
+    "cache_restore": 3.3953473567962646,
+    "redis_build": 35.16364314499998,
+    "redis_cost": 0.00032399999999999996
+   },
+   "ranges": {
+    "queue": [
+     139.0,
+     143.0
+    ],
+    "apt_install": [
+     6.4664756489999995,
+     9.916548251000002
+    ],
+    "cpu_single": [
+     5437.65,
+     5509.9
+    ],
+    "cpu_multi": [
+     20328.12,
+     21027.5
+    ],
+    "memory": [
+     37595.07,
+     38669.56
+    ],
+    "seq_read": [
+     2746.177275,
+     5995.078275
+    ],
+    "seq_write": [
+     1038.231429,
+     1104.003327
+    ],
+    "rand_read": [
+     240008.199453,
+     248478.834744
+    ],
+    "rand_write": [
+     135837.74415,
+     186429.971335
+    ],
+    "fsync": [
+     5452.854715,
+     6418.458154
+    ],
+    "download": [
+     36.26273267458106,
+     60.335400455848955
+    ],
+    "cache_save": [
+     2.95691180229187,
+     3.5329647064208984
+    ],
+    "cache_restore": [
+     2.809619188308716,
+     3.4651026725769043
+    ],
+    "redis_build": [
+     31.425356647,
+     35.34753994599998
+    ],
+    "redis_cost": [
+     0.000288,
+     0.00032399999999999996
+    ]
+   },
+   "sample_count": 3,
+   "measured_at": "2026-11-27T10:49:35.744939+00:00",
+   "run_url": "https://github.com/lockyer-labs/runnersbench/actions/runs/45984948181"
+  },
+  {
    "provider": "luxor",
    "provider_name": "Luxor",
    "label": "luxor-ubuntu-medium-4c-8g",
@@ -2761,6 +2866,7 @@
   "flamewill": "#97bbf5",
   "github": "#9c6b4e",
   "groundbox": "#9498a0",
+  "homemade": "#a9c934",
   "luxor": "#2f4b7c",
   "namespace": "#d6336c",
   "ubicloud": "#8c8c1a",
