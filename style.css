@@ -101,7 +101,7 @@ h1 { font: 500 64px/1.05 var(--display); letter-spacing: -0.02em; margin: 0 0 16
 .hero-foot { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px 32px; margin-top: 32px; padding-bottom: 56px; }
 .meta { font-size: 13px; color: var(--hero-soft); margin: 0; }
 .sponsor { display: inline-flex; align-items: center; gap: 10px; font-size: 13px; color: var(--hero-soft); text-decoration: none; }
-.sponsor img { display: block; height: 30px; width: auto; opacity: 0.9; }
+.sponsor img { display: block; height: 44px; width: auto; opacity: 0.9; }
 .sponsor:hover img { opacity: 1; }
 
 .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 32px; max-width: 1000px; }
