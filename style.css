@@ -157,6 +157,12 @@ td.num { text-align: right; font: 14px var(--mono); font-variant-numeric: tabula
 td.best { background: var(--accent); color: var(--on-accent); font-weight: 500; }
 tbody tr:hover td:not(.best) { background: var(--tint); }
 .hint { color: var(--muted); margin-left: 6px; cursor: help; }
+#benchmarks .sort { all: unset; cursor: pointer; }
+#benchmarks .sort:hover { text-decoration: underline; text-underline-offset: 3px; }
+#benchmarks .sort:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+#benchmarks td.sorted .sort { font-weight: 600; }
+.sort-order { display: block; font-size: 11px; color: var(--muted); }
+.sort-order:empty { display: none; }
 
 /* Leaderboards */
 

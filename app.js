@@ -174,16 +174,24 @@ function renderTables(data) {
   table(
     benchmarks,
     [
-      el("th", { className: "corner", textContent: "Metric" }),
-      ...runners.map((r) => {
+      el("th", { className: "corner" }, el("button", { className: "sort", type: "button", title: "Restore the default order", textContent: "Metric" })),
+      ...runners.map((r, i) => {
         const th = el("th", { className: "provider", title: r.label, style: `border-top-color:${color(r.provider)}`, textContent: r.provider_name });
         th.dataset.col = r.label;
+        th.dataset.index = i;
         return th;
       }),
     ],
     metrics.map((m) => {
-      const label = el("td", {}, m.label, hint(m));
+      const label = el(
+        "td",
+        {},
+        el("button", { className: "sort", type: "button", title: `Sort runners by ${m.label}`, textContent: m.label }),
+        hint(m),
+        el("span", { className: "sort-order" }),
+      );
       label.dataset.row = m.key;
+      label.dataset.higher = m.higher_is_better ? "1" : "";
       return [
         label,
         ...runners.map((r) => {
@@ -200,6 +208,7 @@ function renderTables(data) {
           }
           cell.dataset.row = m.key;
           cell.dataset.col = r.label;
+          cell.dataset.value = value ?? "";
           return cell;
         }),
       ];
@@ -278,6 +287,47 @@ function enableHighlighting(node) {
   return reset;
 }
 
+// Reorders the runner columns by one metric row, best first or worst first. Runners without a value go last.
+function enableSorting(node) {
+  let sort = null;
+
+  const apply = () => {
+    const headers = [...node.querySelectorAll("thead th[data-col]")];
+    const original = headers.sort((a, b) => a.dataset.index - b.dataset.index).map((th) => th.dataset.col);
+    const label = sort && node.querySelector(`tbody td[data-row="${sort.row}"]:not([data-col])`);
+    let order = original;
+    if (label) {
+      const values = new Map(
+        [...node.querySelectorAll(`td[data-row="${sort.row}"][data-col]`)].map((c) => [c.dataset.col, c.dataset.value === "" ? null : Number(c.dataset.value)]),
+      );
+      const sign = (label.dataset.higher === "1") === sort.bestFirst ? -1 : 1;
+      order = [...original].sort((a, b) => {
+        const x = values.get(a);
+        const y = values.get(b);
+        if (x === null || y === null) return (x === null) - (y === null);
+        return sign * (x - y);
+      });
+    }
+    for (const tr of node.querySelectorAll("tr")) {
+      const cells = new Map([...tr.querySelectorAll("[data-col]")].map((c) => [c.dataset.col, c]));
+      tr.append(...order.map((col) => cells.get(col)));
+    }
+    for (const td of node.querySelectorAll("tbody td[data-row]:not([data-col])")) {
+      td.classList.toggle("sorted", td === label);
+      td.querySelector(".sort-order").textContent = td === label ? (sort.bestFirst ? "best first" : "worst first") : "";
+    }
+  };
+
+  node.addEventListener("click", (e) => {
+    const button = !e.shiftKey && e.target.closest("button.sort");
+    if (!button) return;
+    const row = button.closest("td")?.dataset.row;
+    sort = !row ? null : sort?.row === row ? { row, bestFirst: !sort.bestFirst } : { row, bestFirst: true };
+    apply();
+  });
+  return apply;
+}
+
 function renderBoards(data) {
   const container = document.getElementById("boards");
   for (const metric of data.metrics) {
@@ -319,7 +369,7 @@ function renderErrors(data) {
     el("li", {}, el("code", { textContent: e.label }), ` ${e.benchmark} (run ${e.run_id}): ${e.error}`)));
 }
 
-function render(data, platform, resetHighlights) {
+function render(data, platform, afterRender) {
   const runners = data.runners.filter((r) => r.platform === platform);
   const labels = new Set(runners.map((r) => r.label));
   const view = { ...data, runners, errors: data.errors.filter((e) => labels.has(e.label)) };
@@ -333,7 +383,7 @@ function render(data, platform, resetHighlights) {
   renderBoards(view);
   renderErrors(view);
   renderCaveats(runners);
-  resetHighlights();
+  afterRender();
 }
 
 function renderTabs(data, onSelect) {
@@ -377,9 +427,15 @@ async function main() {
   const data = await (await fetch("data.json", { cache: "no-cache" })).json();
   color = (provider) => data.colors[provider];
   const resetHighlights = enableHighlighting(document.getElementById("benchmarks"));
+  const applySort = enableSorting(document.getElementById("benchmarks"));
   enableHeatMap(document.getElementById("benchmarks"));
   document.querySelectorAll(".scroll").forEach(showOverflow);
-  renderTabs(data, (platform) => render(data, platform, resetHighlights));
+  renderTabs(data, (platform) =>
+    render(data, platform, () => {
+      resetHighlights();
+      applySort();
+    }),
+  );
 }
 
 main();
