@@ -328,6 +328,70 @@ function enableSorting(node) {
   return apply;
 }
 
+const DEFAULT_PICKS = ["redis_build", "redis_cost", "download"];
+let picks = (new URLSearchParams(location.search).get("pick") ?? localStorage.getItem("picks") ?? DEFAULT_PICKS.join(","))
+  .split(",")
+  .filter(Boolean);
+
+function savePicks() {
+  localStorage.setItem("picks", picks.join(","));
+  const url = new URL(location.href);
+  url.searchParams.set("pick", picks.join(","));
+  history.replaceState(null, "", url);
+}
+
+// Ranks runners by the average of their share of the best value on each picked metric.
+function renderCustom(data) {
+  const node = document.getElementById("custom");
+  const available = data.metrics.filter((m) => best(data.runners, m) !== null);
+  const chosen = available.filter((m) => picks.includes(m.key));
+  const chips = el("div", { className: "picks" }, ...available.map((m) => {
+    const chip = el("button", { type: "button", className: "pick", textContent: m.label });
+    chip.setAttribute("aria-pressed", chosen.includes(m));
+    chip.addEventListener("click", () => {
+      picks = picks.includes(m.key) ? picks.filter((k) => k !== m.key) : [...picks, m.key];
+      savePicks();
+      renderCustom(data);
+    });
+    return chip;
+  }));
+  node.replaceChildren(
+    el("h3", {}, "Your leaderboard"),
+    el("p", { className: "caption", textContent: "Pick the metrics that matter to you. Each runner scores the average of how close it gets to the best on each one, so 100 means best on all of them." }),
+    chips,
+  );
+  if (!chosen.length) {
+    node.append(el("p", { className: "caption", textContent: "Pick at least one metric." }));
+    return;
+  }
+
+  const scored = [];
+  const unranked = [];
+  for (const r of data.runners) {
+    const parts = chosen.map((m) => [m, ratioToBest(r.medians[m.key], best(data.runners, m), m)]);
+    if (parts.some(([, ratio]) => ratio === null)) unranked.push(r);
+    else scored.push({ r, parts, score: parts.reduce((sum, [, ratio]) => sum + Math.min(ratio, 1), 0) / parts.length });
+  }
+  scored.sort((a, b) => b.score - a.score);
+  const winner = scored.find(({ r }) => chosen.every((m) => eligible(r, m)));
+  node.append(...scored.map((entry) => {
+    const { r, parts, score } = entry;
+    const fill = el("div", { className: "fill" });
+    fill.style.width = `${score * 100}%`;
+    fill.style.background = color(r.provider);
+    const breakdown = parts.map(([m, ratio]) => `${m.label}: ${fmt(r.medians[m.key], m)}, ${Math.round(Math.min(ratio, 1) * 100)}% of the best`);
+    const marks = chosen.map((m) => caveat(r, m)).filter(Boolean);
+    const rowClass = marks.length ? "row caveated" : entry === winner ? "row best" : "row";
+    return el("div", { className: rowClass, title: [r.label, ...breakdown].join("\n") },
+      el("span", { className: "name" }, swatch(r), r.provider_name),
+      el("div", { className: "track" }, fill),
+      el("span", { className: "val" }, String(Math.round(score * 100)), ...marks));
+  }));
+  if (unranked.length) {
+    node.append(el("p", { className: "caption unranked", textContent: `Not ranked, missing a picked metric: ${unranked.map((r) => r.provider_name).join(", ")}` }));
+  }
+}
+
 function renderBoards(data) {
   const container = document.getElementById("boards");
   for (const metric of data.metrics) {
@@ -451,13 +515,14 @@ function render(data, platform, afterRender) {
   const runners = data.runners.filter((r) => r.platform === platform);
   const labels = new Set(runners.map((r) => r.label));
   const view = { ...data, runners, errors: data.errors.filter((e) => labels.has(e.label)) };
-  for (const id of ["stats", "benchmarks", "runners", "map", "boards", "errors"]) {
+  for (const id of ["stats", "benchmarks", "runners", "map", "custom", "boards", "errors"]) {
     document.getElementById(id).replaceChildren();
   }
   document.getElementById("meta").textContent =
     `Updated ${new Date(data.generated_at).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" })} · median of 3 runs · benchmark v${data.benchmark_versions.join(", ")}`;
   renderStats(view);
   renderTables(view);
+  renderCustom(view);
   renderBoards(view);
   renderMap(view, data.runners);
   renderErrors(view);
@@ -478,7 +543,7 @@ function renderTabs(data, onSelect) {
     tab.setAttribute("role", "tab");
     tab.dataset.platform = platform;
     tab.addEventListener("click", () => {
-      history.replaceState(null, "", platform === PLATFORMS[0][0] ? location.pathname : `#${platform}`);
+      history.replaceState(null, "", platform === PLATFORMS[0][0] ? location.pathname + location.search : `#${platform}`);
       select(platform);
     });
     container.append(tab);
