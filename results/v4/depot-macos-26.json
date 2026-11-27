@@ -1,0 +1,515 @@
+[
+  {
+    "schema_version": 1,
+    "benchmark_version": 4,
+    "spec": {
+      "provider": "depot",
+      "name": "Depot",
+      "label": "depot-macos-26",
+      "arch": "arm64",
+      "os": "macos",
+      "price_per_minute": 0.08,
+      "billing": {
+        "increment_seconds": 1
+      },
+      "pricing_caveat": "Needs a plan: Developer is $20 a month with 2,000 minutes included.",
+      "enabled": true,
+      "notes": "M4 host with 10 cores; the job gets 9.",
+      "pricing_source": "https://depot.dev/docs/github-actions/runner-types",
+      "rep": 1
+    },
+    "github": {
+      "repository": "lockyer-labs/runnersbench",
+      "run_id": "45926553981",
+      "run_attempt": "1",
+      "sha": "0b7af443198a30e733e6c4df94817d0afb867f24"
+    },
+    "started_at": "2026-11-27T02:08:55.814366+00:00",
+    "finished_at": "2026-11-27T02:11:07.432581+00:00",
+    "system": {
+      "cpu": {
+        "model": "Apple M4 (Virtual)",
+        "vendor": "Apple",
+        "arch": "arm64",
+        "logical_cpus": 9,
+        "available_cpus": 9,
+        "threads_per_core": null,
+        "sockets": null,
+        "max_mhz": null,
+        "l3_cache": null,
+        "hypervisor": null,
+        "flags": null,
+        "cgroup_cpu_max": null,
+        "lscpu": {}
+      },
+      "memory": {
+        "total_bytes": 18253611008,
+        "cgroup_max": null
+      },
+      "disk": {
+        "workdir": "/Users/runner/work/_temp",
+        "total_bytes": 423603732480,
+        "free_bytes": 189709606912,
+        "mount": null,
+        "devices": null
+      },
+      "os": {
+        "pretty_name": "macOS 26.3.1",
+        "kernel": "25.3.0",
+        "image_os": null,
+        "image_version": null
+      },
+      "virtualization": "apple",
+      "virtualization_layers": {
+        "vm": "apple",
+        "container": null
+      },
+      "dmi": {
+        "product_name": "VirtualMac2,1"
+      },
+      "network": {
+        "ip": "3.90.114.251",
+        "city": "Ashburn",
+        "region": "Virginia",
+        "country": "US",
+        "org": "AS14618 Amazon.com, Inc."
+      },
+      "runner": {
+        "name": "depot-x7bcx73s9h",
+        "environment": "self-hosted"
+      },
+      "tools": {
+        "docker": null,
+        "gcc": "Apple clang version 21.0.0 (clang-2100.0.123.102)",
+        "python": "3.12.16"
+      },
+      "wall_seconds": 2.1102332920000038
+    },
+    "benchmarks": {
+      "apt_install": {
+        "manager": "brew",
+        "seconds": 22.960197583999985,
+        "wall_seconds": 22.96020762500001
+      },
+      "cpu_single": {
+        "skipped": "sysbench's CPU test doesn't do real work on macOS"
+      },
+      "cpu_multi": {
+        "skipped": "sysbench's CPU test doesn't do real work on macOS"
+      },
+      "memory": {
+        "mib_per_second": 33695.84,
+        "wall_seconds": 15.012816375
+      },
+      "disk": {
+        "seq_write": {
+          "mb_per_second": 1215.825374,
+          "iops": 1159.43478,
+          "p99_latency_us": 204472.32,
+          "direct": true
+        },
+        "seq_read": {
+          "mb_per_second": 6212.688743,
+          "iops": 5923.88189,
+          "p99_latency_us": 3391.488,
+          "direct": true
+        },
+        "rand_read": {
+          "mb_per_second": 171.106365,
+          "iops": 41773.015132,
+          "p99_latency_us": 544.768,
+          "direct": true
+        },
+        "rand_write": {
+          "mb_per_second": 98.833987,
+          "iops": 24128.391441,
+          "p99_latency_us": 921.6,
+          "direct": true
+        },
+        "wall_seconds": 71.97262341700002
+      },
+      "fsync": {
+        "skipped": "fsync doesn't flush to disk on macOS"
+      },
+      "download": {
+        "mb_per_second": 363.98750688446273,
+        "bytes": 1000000000,
+        "seconds": 2.747347041000012,
+        "streams": 4,
+        "requests": 20,
+        "errors": [],
+        "wall_seconds": 2.747474291000003
+      },
+      "compile_redis": {
+        "version": "8.10.3",
+        "jobs": 9,
+        "seconds": 16.449616124999977,
+        "github_download": {
+          "mb_per_second": 33.582479,
+          "bytes": 4780701,
+          "seconds": 0.142357,
+          "connect_seconds": 0.009483,
+          "ttfb_seconds": 0.111228
+        },
+        "cpu_accounting": {
+          "wall_seconds": 16.449616332999994
+        },
+        "wall_seconds": 16.81331966700003
+      },
+      "cache": {
+        "size_mb": 1024,
+        "save_seconds": 7.044228792190552,
+        "restore_seconds": 4.933716058731079
+      }
+    },
+    "cpu_accounting": {
+      "wall_seconds": 131.618026875
+    },
+    "timing": {
+      "queue_seconds": 5.0,
+      "job_seconds": 154.0
+    }
+  },
+  {
+    "schema_version": 1,
+    "benchmark_version": 4,
+    "spec": {
+      "provider": "depot",
+      "name": "Depot",
+      "label": "depot-macos-26",
+      "arch": "arm64",
+      "os": "macos",
+      "price_per_minute": 0.08,
+      "billing": {
+        "increment_seconds": 1
+      },
+      "pricing_caveat": "Needs a plan: Developer is $20 a month with 2,000 minutes included.",
+      "enabled": true,
+      "notes": "M4 host with 10 cores; the job gets 9.",
+      "pricing_source": "https://depot.dev/docs/github-actions/runner-types",
+      "rep": 2
+    },
+    "github": {
+      "repository": "lockyer-labs/runnersbench",
+      "run_id": "45926553981",
+      "run_attempt": "1",
+      "sha": "0b7af443198a30e733e6c4df94817d0afb867f24"
+    },
+    "started_at": "2026-11-27T02:08:55.118603+00:00",
+    "finished_at": "2026-11-27T02:11:13.528947+00:00",
+    "system": {
+      "cpu": {
+        "model": "Apple M4 (Virtual)",
+        "vendor": "Apple",
+        "arch": "arm64",
+        "logical_cpus": 9,
+        "available_cpus": 9,
+        "threads_per_core": null,
+        "sockets": null,
+        "max_mhz": null,
+        "l3_cache": null,
+        "hypervisor": null,
+        "flags": null,
+        "cgroup_cpu_max": null,
+        "lscpu": {}
+      },
+      "memory": {
+        "total_bytes": 18253611008,
+        "cgroup_max": null
+      },
+      "disk": {
+        "workdir": "/Users/runner/work/_temp",
+        "total_bytes": 423603732480,
+        "free_bytes": 189709684736,
+        "mount": null,
+        "devices": null
+      },
+      "os": {
+        "pretty_name": "macOS 26.3.1",
+        "kernel": "25.3.0",
+        "image_os": null,
+        "image_version": null
+      },
+      "virtualization": "apple",
+      "virtualization_layers": {
+        "vm": "apple",
+        "container": null
+      },
+      "dmi": {
+        "product_name": "VirtualMac2,1"
+      },
+      "network": {
+        "ip": "34.229.87.39",
+        "city": "Ashburn",
+        "region": "Virginia",
+        "country": "US",
+        "org": "AS14618 Amazon.com, Inc."
+      },
+      "runner": {
+        "name": "depot-8lsw75j7ns",
+        "environment": "self-hosted"
+      },
+      "tools": {
+        "docker": null,
+        "gcc": "Apple clang version 21.0.0 (clang-2100.0.123.102)",
+        "python": "3.12.16"
+      },
+      "wall_seconds": 1.9878369580000026
+    },
+    "benchmarks": {
+      "apt_install": {
+        "manager": "brew",
+        "seconds": 28.519715708000007,
+        "wall_seconds": 28.51972645799998
+      },
+      "cpu_single": {
+        "skipped": "sysbench's CPU test doesn't do real work on macOS"
+      },
+      "cpu_multi": {
+        "skipped": "sysbench's CPU test doesn't do real work on macOS"
+      },
+      "memory": {
+        "mib_per_second": 33724.99,
+        "wall_seconds": 15.013071042000007
+      },
+      "disk": {
+        "seq_write": {
+          "mb_per_second": 1198.441985,
+          "iops": 1142.857143,
+          "p99_latency_us": 208666.624,
+          "direct": true
+        },
+        "seq_read": {
+          "mb_per_second": 6232.328139,
+          "iops": 5942.611478,
+          "p99_latency_us": 3424.256,
+          "direct": true
+        },
+        "rand_read": {
+          "mb_per_second": 164.101853,
+          "iops": 40062.929138,
+          "p99_latency_us": 1073.152,
+          "direct": true
+        },
+        "rand_write": {
+          "mb_per_second": 93.466995,
+          "iops": 22818.090921,
+          "p99_latency_us": 1646.592,
+          "direct": true
+        },
+        "wall_seconds": 71.91752891700003
+      },
+      "fsync": {
+        "skipped": "fsync doesn't flush to disk on macOS"
+      },
+      "download": {
+        "mb_per_second": 385.5513104214265,
+        "bytes": 1000000000,
+        "seconds": 2.5936885000000416,
+        "streams": 4,
+        "requests": 20,
+        "errors": [],
+        "wall_seconds": 2.5937980000000493
+      },
+      "compile_redis": {
+        "version": "8.10.3",
+        "jobs": 9,
+        "seconds": 17.332558333999998,
+        "github_download": {
+          "mb_per_second": 6.145981,
+          "bytes": 4780701,
+          "seconds": 0.777858,
+          "connect_seconds": 0.009095,
+          "ttfb_seconds": 0.177141
+        },
+        "cpu_accounting": {
+          "wall_seconds": 17.332557542000018
+        },
+        "wall_seconds": 18.376949500000023
+      },
+      "cache": {
+        "size_mb": 1024,
+        "save_seconds": 7.507252216339111,
+        "restore_seconds": 4.792555809020996
+      }
+    },
+    "cpu_accounting": {
+      "wall_seconds": 138.410246583
+    },
+    "timing": {
+      "queue_seconds": 4.0,
+      "job_seconds": 161.0
+    }
+  },
+  {
+    "schema_version": 1,
+    "benchmark_version": 4,
+    "spec": {
+      "provider": "depot",
+      "name": "Depot",
+      "label": "depot-macos-26",
+      "arch": "arm64",
+      "os": "macos",
+      "price_per_minute": 0.08,
+      "billing": {
+        "increment_seconds": 1
+      },
+      "pricing_caveat": "Needs a plan: Developer is $20 a month with 2,000 minutes included.",
+      "enabled": true,
+      "notes": "M4 host with 10 cores; the job gets 9.",
+      "pricing_source": "https://depot.dev/docs/github-actions/runner-types",
+      "rep": 3
+    },
+    "github": {
+      "repository": "lockyer-labs/runnersbench",
+      "run_id": "45926553981",
+      "run_attempt": "1",
+      "sha": "0b7af443198a30e733e6c4df94817d0afb867f24"
+    },
+    "started_at": "2026-11-27T02:08:58.062651+00:00",
+    "finished_at": "2026-11-27T02:11:11.794233+00:00",
+    "system": {
+      "cpu": {
+        "model": "Apple M4 (Virtual)",
+        "vendor": "Apple",
+        "arch": "arm64",
+        "logical_cpus": 9,
+        "available_cpus": 9,
+        "threads_per_core": null,
+        "sockets": null,
+        "max_mhz": null,
+        "l3_cache": null,
+        "hypervisor": null,
+        "flags": null,
+        "cgroup_cpu_max": null,
+        "lscpu": {}
+      },
+      "memory": {
+        "total_bytes": 18253611008,
+        "cgroup_max": null
+      },
+      "disk": {
+        "workdir": "/Users/runner/work/_temp",
+        "total_bytes": 423603732480,
+        "free_bytes": 189700411392,
+        "mount": null,
+        "devices": null
+      },
+      "os": {
+        "pretty_name": "macOS 26.3.1",
+        "kernel": "25.3.0",
+        "image_os": null,
+        "image_version": null
+      },
+      "virtualization": "apple",
+      "virtualization_layers": {
+        "vm": "apple",
+        "container": null
+      },
+      "dmi": {
+        "product_name": "VirtualMac2,1"
+      },
+      "network": {
+        "ip": "50.17.37.47",
+        "city": "Ashburn",
+        "region": "Virginia",
+        "country": "US",
+        "org": "AS14618 Amazon.com, Inc."
+      },
+      "runner": {
+        "name": "depot-9fp2g04kr6",
+        "environment": "self-hosted"
+      },
+      "tools": {
+        "docker": null,
+        "gcc": "Apple clang version 21.0.0 (clang-2100.0.123.102)",
+        "python": "3.12.16"
+      },
+      "wall_seconds": 2.1711433750000424
+    },
+    "benchmarks": {
+      "apt_install": {
+        "manager": "brew",
+        "seconds": 21.893183833000023,
+        "wall_seconds": 21.893191082999977
+      },
+      "cpu_single": {
+        "skipped": "sysbench's CPU test doesn't do real work on macOS"
+      },
+      "cpu_multi": {
+        "skipped": "sysbench's CPU test doesn't do real work on macOS"
+      },
+      "memory": {
+        "mib_per_second": 31740.81,
+        "wall_seconds": 15.01342379199997
+      },
+      "disk": {
+        "seq_write": {
+          "mb_per_second": 1355.377428,
+          "iops": 1292.521994,
+          "p99_latency_us": 177209.344,
+          "direct": true
+        },
+        "seq_read": {
+          "mb_per_second": 4773.59262,
+          "iops": 4551.386297,
+          "p99_latency_us": 5865.472,
+          "direct": true
+        },
+        "rand_read": {
+          "mb_per_second": 46.76146,
+          "iops": 11415.372309,
+          "p99_latency_us": 2605.056,
+          "direct": true
+        },
+        "rand_write": {
+          "mb_per_second": 40.74294,
+          "iops": 9946.007199,
+          "p99_latency_us": 2932.736,
+          "direct": true
+        },
+        "wall_seconds": 71.71281837499998
+      },
+      "fsync": {
+        "skipped": "fsync doesn't flush to disk on macOS"
+      },
+      "download": {
+        "mb_per_second": 348.7795136679476,
+        "bytes": 1000000000,
+        "seconds": 2.8671408750000182,
+        "streams": 4,
+        "requests": 20,
+        "errors": [],
+        "wall_seconds": 2.867274540999972
+      },
+      "compile_redis": {
+        "version": "8.10.3",
+        "jobs": 9,
+        "seconds": 19.444630167000014,
+        "github_download": {
+          "mb_per_second": 34.307639,
+          "bytes": 4780701,
+          "seconds": 0.139348,
+          "connect_seconds": 0.009332,
+          "ttfb_seconds": 0.108954
+        },
+        "cpu_accounting": {
+          "wall_seconds": 19.44463424999998
+        },
+        "wall_seconds": 20.06039004099995
+      },
+      "cache": {
+        "size_mb": 1024,
+        "save_seconds": 5.874235153198242,
+        "restore_seconds": 5.407747030258179
+      }
+    },
+    "cpu_accounting": {
+      "wall_seconds": 133.719827291
+    },
+    "timing": {
+      "queue_seconds": 4.0,
+      "job_seconds": 159.0
+    }
+  }
+]

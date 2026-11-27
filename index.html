@@ -52,7 +52,7 @@
     "name": "Daniel Lockyer",
     "url": "https://x.com/daniellockyer"
    },
-   "dateModified": "2026-11-26T22:56:34.750824+00:00",
+   "dateModified": "2026-11-27T02:15:48.675822+00:00",
    "isAccessibleForFree": true,
    "sameAs": "https://github.com/lockyer-labs/runnersbench",
    "keywords": [
@@ -84,6 +84,7 @@
     "Seq write (MB/s)",
     "4k rand read (IOPS)",
     "4k rand write (IOPS)",
+    "fsync writes (/s)",
     "Download (MB/s)",
     "Cache save 1 GB (s)",
     "Cache restore 1 GB (s)",
@@ -117,7 +118,7 @@
      "name": "Which GitHub Actions runner is the fastest?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "On Linux x64, Avrea built Redis fastest, in 22.5 s, ahead of Buildkite (23.4 s) and Luxor (23.6 s). On Linux arm64, Avrea built Redis fastest, in 19.3 s, ahead of Depot (38.5 s) and FlameWill (40.0 s). On macOS, Groundbox built Redis fastest, in 12.9 s, ahead of Avrea (13.8 s) and Blacksmith (16.7 s). Build time is the median of three runs of make -j on the Redis source."
+      "text": "On Linux x64, Avrea built Redis fastest, in 22.4 s, ahead of Buildkite (23.2 s) and Luxor (23.3 s). On Linux arm64, Avrea built Redis fastest, in 19.1 s, ahead of Depot (40.2 s) and FlameWill (41.8 s). On macOS, Groundbox built Redis fastest, in 12.4 s, ahead of Avrea (13.2 s) and WarpBuild (15.8 s). Build time is the median of three runs of make -j on the Redis source."
      }
     },
     {
@@ -125,7 +126,7 @@
      "name": "Which GitHub Actions runner is the cheapest?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "On Linux x64, Celesto was the cheapest pay-as-you-go runner at $0.0011 per Redis build, against $0.0120 for GitHub. boat's compute cost was lower, at $0.0003, but extra costs apply: Needs a plan from $20 a month, which comes back as VM time. Job starts above the plan's included number cost $0.03-0.07 each. On Linux arm64, FlameWill was the cheapest pay-as-you-go runner at $0.0022 per Redis build, against $0.0080 for GitHub. On macOS, Groundbox was the cheapest pay-as-you-go runner at $0.0108 per Redis build, against $0.0800 for WarpBuild. Costs use each provider's list price and how it rounds a job's duration; providers that need a plan or charge other fees are listed but not ranked cheapest."
+      "text": "On Linux x64, Celesto was the cheapest pay-as-you-go runner at $0.0010 per Redis build, against $0.0120 for GitHub. boat's compute cost was lower, at $0.0003, but extra costs apply: Needs a plan from $20 a month, which comes back as VM time. Job starts above the plan's included number cost $0.03-0.07 each. On Linux arm64, FlameWill was the cheapest pay-as-you-go runner at $0.0022 per Redis build, against $0.0082 for Depot. On macOS, Groundbox was the cheapest pay-as-you-go runner at $0.0108 per Redis build, against $0.0800 for WarpBuild. Costs use each provider's list price and how it rounds a job's duration; providers that need a plan or charge other fees are listed but not ranked cheapest."
      }
     },
     {
@@ -141,7 +142,7 @@
      "name": "How are the runners benchmarked?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Every runner runs the same script at the same moment, three times: sysbench CPU and memory tests after a warm-up, fio sequential and 4k random disk tests, a download from Cloudflare, package installs, a 1 GB actions/cache save and restore, and a Redis build. Queue time comes from the GitHub API. The site shows each metric's median and the spread across runs."
+      "text": "Every runner runs the same script at the same moment, three times: sysbench CPU and memory tests after a warm-up, fio sequential, 4k random and fsync disk tests, a 10-second sustained download test, package installs, a 1 GB actions/cache save and restore, and a Redis build. Queue time comes from the GitHub API. The site shows each metric's median and the spread across runs."
      }
     },
     {
@@ -157,7 +158,7 @@
      "name": "How often are the results updated?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "The benchmark runs weekly on GitHub Actions and the code is open source. These results were updated on 26 November 2026, covering 14 providers."
+      "text": "The benchmark runs weekly on GitHub Actions and the code is open source. These results were updated on 27 November 2026, covering 14 providers."
      }
     }
    ]
@@ -168,8 +169,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@500&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap">
-  <link rel="stylesheet" href="style.css?v=45907339602">
-  <script src="app.js?v=45907339602" defer></script>
+  <link rel="stylesheet" href="style.css?v=45926553981">
+  <script src="app.js?v=45926553981" defer></script>
 </head>
 <body>
   <header class="hero">
@@ -220,12 +221,12 @@
     <section id="questions">
       <h2>Questions</h2>
       <div class="faq">
-        <div><h3>Which GitHub Actions runner is the fastest?</h3><p>On Linux x64, Avrea built Redis fastest, in 22.5 s, ahead of Buildkite (23.4 s) and Luxor (23.6 s). On Linux arm64, Avrea built Redis fastest, in 19.3 s, ahead of Depot (38.5 s) and FlameWill (40.0 s). On macOS, Groundbox built Redis fastest, in 12.9 s, ahead of Avrea (13.8 s) and Blacksmith (16.7 s). Build time is the median of three runs of make -j on the Redis source.</p></div>
-        <div><h3>Which GitHub Actions runner is the cheapest?</h3><p>On Linux x64, Celesto was the cheapest pay-as-you-go runner at $0.0011 per Redis build, against $0.0120 for GitHub. boat&#x27;s compute cost was lower, at $0.0003, but extra costs apply: Needs a plan from $20 a month, which comes back as VM time. Job starts above the plan&#x27;s included number cost $0.03-0.07 each. On Linux arm64, FlameWill was the cheapest pay-as-you-go runner at $0.0022 per Redis build, against $0.0080 for GitHub. On macOS, Groundbox was the cheapest pay-as-you-go runner at $0.0108 per Redis build, against $0.0800 for WarpBuild. Costs use each provider&#x27;s list price and how it rounds a job&#x27;s duration; providers that need a plan or charge other fees are listed but not ranked cheapest.</p></div>
+        <div><h3>Which GitHub Actions runner is the fastest?</h3><p>On Linux x64, Avrea built Redis fastest, in 22.4 s, ahead of Buildkite (23.2 s) and Luxor (23.3 s). On Linux arm64, Avrea built Redis fastest, in 19.1 s, ahead of Depot (40.2 s) and FlameWill (41.8 s). On macOS, Groundbox built Redis fastest, in 12.4 s, ahead of Avrea (13.2 s) and WarpBuild (15.8 s). Build time is the median of three runs of make -j on the Redis source.</p></div>
+        <div><h3>Which GitHub Actions runner is the cheapest?</h3><p>On Linux x64, Celesto was the cheapest pay-as-you-go runner at $0.0010 per Redis build, against $0.0120 for GitHub. boat&#x27;s compute cost was lower, at $0.0003, but extra costs apply: Needs a plan from $20 a month, which comes back as VM time. Job starts above the plan&#x27;s included number cost $0.03-0.07 each. On Linux arm64, FlameWill was the cheapest pay-as-you-go runner at $0.0022 per Redis build, against $0.0082 for Depot. On macOS, Groundbox was the cheapest pay-as-you-go runner at $0.0108 per Redis build, against $0.0800 for WarpBuild. Costs use each provider&#x27;s list price and how it rounds a job&#x27;s duration; providers that need a plan or charge other fees are listed but not ranked cheapest.</p></div>
         <div><h3>Which runner providers are compared?</h3><p>Linux x64: Avrea, Blacksmith, Buildkite, Celesto, Checklane, Depot, GitHub, Groundbox, Luxor, Namespace, Ubicloud, WarpBuild and boat. Linux arm64: Avrea, Blacksmith, Depot, FlameWill, GitHub, Ubicloud and WarpBuild. macOS: Avrea, Blacksmith, Depot, GitHub, Groundbox, Luxor and WarpBuild. Linux runners are each provider&#x27;s 4 vCPU size on Ubuntu 24.04; Macs are each provider&#x27;s smallest Apple Silicon size on macOS 26.</p></div>
-        <div><h3>How are the runners benchmarked?</h3><p>Every runner runs the same script at the same moment, three times: sysbench CPU and memory tests after a warm-up, fio sequential and 4k random disk tests, a download from Cloudflare, package installs, a 1 GB actions/cache save and restore, and a Redis build. Queue time comes from the GitHub API. The site shows each metric&#x27;s median and the spread across runs.</p></div>
+        <div><h3>How are the runners benchmarked?</h3><p>Every runner runs the same script at the same moment, three times: sysbench CPU and memory tests after a warm-up, fio sequential, 4k random and fsync disk tests, a 10-second sustained download test, package installs, a 1 GB actions/cache save and restore, and a Redis build. Queue time comes from the GitHub API. The site shows each metric&#x27;s median and the spread across runs.</p></div>
         <div><h3>Why do some runners cost more for short jobs?</h3><p>Blacksmith, FlameWill, GitHub, Namespace, Ubicloud and WarpBuild bill by the minute, rounding every job up, so a 25-second job is charged as a full minute. Per-second providers charge only for the time used, which makes a large difference for short jobs.</p></div>
-        <div><h3>How often are the results updated?</h3><p>The benchmark runs weekly on GitHub Actions and the code is open source. These results were updated on 26 November 2026, covering 14 providers.</p></div>
+        <div><h3>How often are the results updated?</h3><p>The benchmark runs weekly on GitHub Actions and the code is open source. These results were updated on 27 November 2026, covering 14 providers.</p></div>
       </div>
     </section>
     <section id="errors-section" hidden>

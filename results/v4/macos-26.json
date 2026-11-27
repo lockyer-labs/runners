@@ -1,0 +1,512 @@
+[
+  {
+    "schema_version": 1,
+    "benchmark_version": 4,
+    "spec": {
+      "provider": "github",
+      "name": "GitHub",
+      "label": "macos-26",
+      "arch": "arm64",
+      "os": "macos",
+      "price_per_minute": 0.062,
+      "billing": {
+        "increment_seconds": 60
+      },
+      "enabled": true,
+      "notes": "Standard M1 runner, free on public repos; priced at GitHub's macOS rate. The 5-core M2 Pro macos-26-xlarge is $0.102.",
+      "pricing_source": "https://docs.github.com/en/billing/reference/actions-runner-pricing",
+      "rep": 1
+    },
+    "github": {
+      "repository": "lockyer-labs/runnersbench",
+      "run_id": "45926553981",
+      "run_attempt": "1",
+      "sha": "0b7af443198a30e733e6c4df94817d0afb867f24"
+    },
+    "started_at": "2026-11-27T02:09:14.835997+00:00",
+    "finished_at": "2026-11-27T02:11:42.953887+00:00",
+    "system": {
+      "cpu": {
+        "model": "Apple M1 (Virtual)",
+        "vendor": "Apple",
+        "arch": "arm64",
+        "logical_cpus": 3,
+        "available_cpus": 3,
+        "threads_per_core": null,
+        "sockets": null,
+        "max_mhz": null,
+        "l3_cache": null,
+        "hypervisor": null,
+        "flags": null,
+        "cgroup_cpu_max": null,
+        "lscpu": {}
+      },
+      "memory": {
+        "total_bytes": 7516192768,
+        "cgroup_max": null
+      },
+      "disk": {
+        "workdir": "/Users/runner/work/_temp",
+        "total_bytes": 343073095680,
+        "free_bytes": 99931955200,
+        "mount": null,
+        "devices": null
+      },
+      "os": {
+        "pretty_name": "macOS 26.7.2",
+        "kernel": "25.6.0",
+        "image_os": "macos26",
+        "image_version": "20261117.0516.1"
+      },
+      "virtualization": "apple",
+      "virtualization_layers": {
+        "vm": "apple",
+        "container": null
+      },
+      "dmi": {
+        "product_name": "VirtualMac2,1"
+      },
+      "network": {
+        "ip": "13.105.117.184",
+        "city": "San Antonio",
+        "region": "Texas",
+        "country": "US",
+        "org": "AS8075 Microsoft Corporation"
+      },
+      "runner": {
+        "name": "GitHub Actions 1000000348",
+        "environment": "github-hosted"
+      },
+      "tools": {
+        "docker": null,
+        "gcc": "Apple clang version 21.0.0 (clang-2100.1.1.101)",
+        "python": "3.12.16"
+      },
+      "wall_seconds": 2.710726875000006
+    },
+    "benchmarks": {
+      "apt_install": {
+        "manager": "brew",
+        "seconds": 6.966773791999998,
+        "wall_seconds": 6.9667800420000106
+      },
+      "cpu_single": {
+        "skipped": "sysbench's CPU test doesn't do real work on macOS"
+      },
+      "cpu_multi": {
+        "skipped": "sysbench's CPU test doesn't do real work on macOS"
+      },
+      "memory": {
+        "mib_per_second": 20774.62,
+        "wall_seconds": 15.016787749999992
+      },
+      "disk": {
+        "seq_write": {
+          "mb_per_second": 5561.765655,
+          "iops": 5304.046397,
+          "p99_latency_us": 22413.312,
+          "direct": true
+        },
+        "seq_read": {
+          "mb_per_second": 7471.042861,
+          "iops": 7123.94216,
+          "p99_latency_us": 11075.584,
+          "direct": true
+        },
+        "rand_read": {
+          "mb_per_second": 112.464441,
+          "iops": 27456.47247,
+          "p99_latency_us": 2473.984,
+          "direct": true
+        },
+        "rand_write": {
+          "mb_per_second": 34.379813,
+          "iops": 8392.509663,
+          "p99_latency_us": 10813.44,
+          "direct": true
+        },
+        "wall_seconds": 71.27523037499998
+      },
+      "fsync": {
+        "skipped": "fsync doesn't flush to disk on macOS"
+      },
+      "download": {
+        "mb_per_second": 150.42958269949898,
+        "bytes": 1000000000,
+        "seconds": 6.6476286250000385,
+        "streams": 4,
+        "requests": 20,
+        "errors": [],
+        "wall_seconds": 6.647825624999996
+      },
+      "compile_redis": {
+        "version": "8.10.3",
+        "jobs": 3,
+        "seconds": 44.149344541000005,
+        "github_download": {
+          "mb_per_second": 11.881473,
+          "bytes": 4780701,
+          "seconds": 0.402366,
+          "connect_seconds": 0.072669,
+          "ttfb_seconds": 0.210099
+        },
+        "cpu_accounting": {
+          "wall_seconds": 44.14942808300003
+        },
+        "wall_seconds": 45.422617291999984
+      },
+      "cache": {
+        "size_mb": 1024,
+        "save_seconds": 17.91895890235901,
+        "restore_seconds": 12.691963911056519
+      }
+    },
+    "cpu_accounting": {
+      "wall_seconds": 148.043735917
+    },
+    "timing": {
+      "queue_seconds": 4.0,
+      "job_seconds": 195.0
+    }
+  },
+  {
+    "schema_version": 1,
+    "benchmark_version": 4,
+    "spec": {
+      "provider": "github",
+      "name": "GitHub",
+      "label": "macos-26",
+      "arch": "arm64",
+      "os": "macos",
+      "price_per_minute": 0.062,
+      "billing": {
+        "increment_seconds": 60
+      },
+      "enabled": true,
+      "notes": "Standard M1 runner, free on public repos; priced at GitHub's macOS rate. The 5-core M2 Pro macos-26-xlarge is $0.102.",
+      "pricing_source": "https://docs.github.com/en/billing/reference/actions-runner-pricing",
+      "rep": 2
+    },
+    "github": {
+      "repository": "lockyer-labs/runnersbench",
+      "run_id": "45926553981",
+      "run_attempt": "1",
+      "sha": "0b7af443198a30e733e6c4df94817d0afb867f24"
+    },
+    "started_at": "2026-11-27T02:09:29.951890+00:00",
+    "finished_at": "2026-11-27T02:12:59.097480+00:00",
+    "system": {
+      "cpu": {
+        "model": "Apple M1 (Virtual)",
+        "vendor": "Apple",
+        "arch": "arm64",
+        "logical_cpus": 3,
+        "available_cpus": 3,
+        "threads_per_core": null,
+        "sockets": null,
+        "max_mhz": null,
+        "l3_cache": null,
+        "hypervisor": null,
+        "flags": null,
+        "cgroup_cpu_max": null,
+        "lscpu": {}
+      },
+      "memory": {
+        "total_bytes": 7516192768,
+        "cgroup_max": null
+      },
+      "disk": {
+        "workdir": "/Users/runner/work/_temp",
+        "total_bytes": 343073095680,
+        "free_bytes": 100472049664,
+        "mount": null,
+        "devices": null
+      },
+      "os": {
+        "pretty_name": "macOS 26.7.2",
+        "kernel": "25.6.0",
+        "image_os": "macos26",
+        "image_version": "20261117.0516.1"
+      },
+      "virtualization": "apple",
+      "virtualization_layers": {
+        "vm": "apple",
+        "container": null
+      },
+      "dmi": {
+        "product_name": "VirtualMac2,1"
+      },
+      "network": {
+        "ip": "13.105.49.124",
+        "city": "Santa Clara",
+        "region": "California",
+        "country": "US",
+        "org": "AS8075 Microsoft Corporation"
+      },
+      "runner": {
+        "name": "GitHub Actions 1000000346",
+        "environment": "github-hosted"
+      },
+      "tools": {
+        "docker": null,
+        "gcc": "Apple clang version 21.0.0 (clang-2100.1.1.101)",
+        "python": "3.12.16"
+      },
+      "wall_seconds": 3.9645053339999947
+    },
+    "benchmarks": {
+      "apt_install": {
+        "manager": "brew",
+        "seconds": 11.542788082999976,
+        "wall_seconds": 11.542828291999967
+      },
+      "cpu_single": {
+        "skipped": "sysbench's CPU test doesn't do real work on macOS"
+      },
+      "cpu_multi": {
+        "skipped": "sysbench's CPU test doesn't do real work on macOS"
+      },
+      "memory": {
+        "mib_per_second": 17627.76,
+        "wall_seconds": 15.045581000000027
+      },
+      "disk": {
+        "seq_write": {
+          "mb_per_second": 2964.558223,
+          "iops": 2827.156379,
+          "p99_latency_us": 38535.168,
+          "direct": true
+        },
+        "seq_read": {
+          "mb_per_second": 6318.154395,
+          "iops": 6024.461774,
+          "p99_latency_us": 13697.024,
+          "direct": true
+        },
+        "rand_read": {
+          "mb_per_second": 108.189719,
+          "iops": 26412.505833,
+          "p99_latency_us": 2637.824,
+          "direct": true
+        },
+        "rand_write": {
+          "mb_per_second": 56.068044,
+          "iops": 13687.487501,
+          "p99_latency_us": 7110.656,
+          "direct": true
+        },
+        "wall_seconds": 70.545686542
+      },
+      "fsync": {
+        "skipped": "fsync doesn't flush to disk on macOS"
+      },
+      "download": {
+        "mb_per_second": 18.435576801814836,
+        "bytes": 1000000000,
+        "seconds": 54.24294616599997,
+        "streams": 4,
+        "requests": 20,
+        "errors": [],
+        "wall_seconds": 54.24362766600001
+      },
+      "compile_redis": {
+        "version": "8.10.3",
+        "jobs": 3,
+        "seconds": 51.96864462499997,
+        "github_download": {
+          "mb_per_second": 8.479066,
+          "bytes": 4780701,
+          "seconds": 0.563824,
+          "connect_seconds": 0.074294,
+          "ttfb_seconds": 0.357527
+        },
+        "cpu_accounting": {
+          "wall_seconds": 51.96876925000004
+        },
+        "wall_seconds": 53.691109832999985
+      },
+      "cache": {
+        "size_mb": 1024,
+        "save_seconds": 14.647082090377808,
+        "restore_seconds": 24.142974138259888
+      }
+    },
+    "cpu_accounting": {
+      "wall_seconds": 209.04141841699996
+    },
+    "timing": {
+      "queue_seconds": 4.0,
+      "job_seconds": 273.0
+    }
+  },
+  {
+    "schema_version": 1,
+    "benchmark_version": 4,
+    "spec": {
+      "provider": "github",
+      "name": "GitHub",
+      "label": "macos-26",
+      "arch": "arm64",
+      "os": "macos",
+      "price_per_minute": 0.062,
+      "billing": {
+        "increment_seconds": 60
+      },
+      "enabled": true,
+      "notes": "Standard M1 runner, free on public repos; priced at GitHub's macOS rate. The 5-core M2 Pro macos-26-xlarge is $0.102.",
+      "pricing_source": "https://docs.github.com/en/billing/reference/actions-runner-pricing",
+      "rep": 3
+    },
+    "github": {
+      "repository": "lockyer-labs/runnersbench",
+      "run_id": "45926553981",
+      "run_attempt": "1",
+      "sha": "0b7af443198a30e733e6c4df94817d0afb867f24"
+    },
+    "started_at": "2026-11-27T02:09:39.197051+00:00",
+    "finished_at": "2026-11-27T02:13:57.571438+00:00",
+    "system": {
+      "cpu": {
+        "model": "Apple M1 (Virtual)",
+        "vendor": "Apple",
+        "arch": "arm64",
+        "logical_cpus": 3,
+        "available_cpus": 3,
+        "threads_per_core": null,
+        "sockets": null,
+        "max_mhz": null,
+        "l3_cache": null,
+        "hypervisor": null,
+        "flags": null,
+        "cgroup_cpu_max": null,
+        "lscpu": {}
+      },
+      "memory": {
+        "total_bytes": 7516192768,
+        "cgroup_max": null
+      },
+      "disk": {
+        "workdir": "/Users/runner/work/_temp",
+        "total_bytes": 343073095680,
+        "free_bytes": 101750984704,
+        "mount": null,
+        "devices": null
+      },
+      "os": {
+        "pretty_name": "macOS 26.7.2",
+        "kernel": "25.6.0",
+        "image_os": "macos26",
+        "image_version": "20261117.0516.1"
+      },
+      "virtualization": "apple",
+      "virtualization_layers": {
+        "vm": "apple",
+        "container": null
+      },
+      "dmi": {
+        "product_name": "VirtualMac2,1"
+      },
+      "network": {
+        "ip": "13.105.117.75",
+        "city": "San Jose",
+        "region": "California",
+        "country": "US",
+        "org": "AS8075 Microsoft Corporation"
+      },
+      "runner": {
+        "name": "GitHub Actions 1000000347",
+        "environment": "github-hosted"
+      },
+      "tools": {
+        "docker": null,
+        "gcc": "Apple clang version 21.0.0 (clang-2100.1.1.101)",
+        "python": "3.12.16"
+      },
+      "wall_seconds": 3.478340041999985
+    },
+    "benchmarks": {
+      "apt_install": {
+        "manager": "brew",
+        "seconds": 14.341541250000006,
+        "wall_seconds": 14.341624499999995
+      },
+      "cpu_single": {
+        "skipped": "sysbench's CPU test doesn't do real work on macOS"
+      },
+      "cpu_multi": {
+        "skipped": "sysbench's CPU test doesn't do real work on macOS"
+      },
+      "memory": {
+        "mib_per_second": 16197.24,
+        "wall_seconds": 15.063239707999998
+      },
+      "disk": {
+        "seq_write": {
+          "mb_per_second": 4761.717676,
+          "iops": 4541.061192,
+          "p99_latency_us": 24510.464,
+          "direct": true
+        },
+        "seq_read": {
+          "mb_per_second": 6875.015593,
+          "iops": 6555.52593,
+          "p99_latency_us": 11075.584,
+          "direct": true
+        },
+        "rand_read": {
+          "mb_per_second": 143.578711,
+          "iops": 35052.463169,
+          "p99_latency_us": 1859.584,
+          "direct": true
+        },
+        "rand_write": {
+          "mb_per_second": 69.998109,
+          "iops": 17088.382324,
+          "p99_latency_us": 4177.92,
+          "direct": true
+        },
+        "wall_seconds": 72.72501916599998
+      },
+      "fsync": {
+        "skipped": "fsync doesn't flush to disk on macOS"
+      },
+      "download": {
+        "mb_per_second": 10.485019688708316,
+        "bytes": 1000000000,
+        "seconds": 95.37416520800002,
+        "streams": 4,
+        "requests": 20,
+        "errors": [],
+        "wall_seconds": 95.37690904200002
+      },
+      "compile_redis": {
+        "version": "8.10.3",
+        "jobs": 3,
+        "seconds": 55.394723957999986,
+        "github_download": {
+          "mb_per_second": 5.414126,
+          "bytes": 4780701,
+          "seconds": 0.883005,
+          "connect_seconds": 0.077586,
+          "ttfb_seconds": 0.294008
+        },
+        "cpu_accounting": {
+          "wall_seconds": 55.394799750000004
+        },
+        "wall_seconds": 57.382384833
+      },
+      "cache": {
+        "size_mb": 1024,
+        "save_seconds": 15.743886232376099,
+        "restore_seconds": 32.34624886512756
+      }
+    },
+    "cpu_accounting": {
+      "wall_seconds": 258.377045
+    },
+    "timing": {
+      "queue_seconds": 4.0,
+      "job_seconds": 333.0
+    }
+  }
+]

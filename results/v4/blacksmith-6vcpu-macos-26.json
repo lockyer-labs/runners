@@ -1,0 +1,512 @@
+[
+  {
+    "schema_version": 1,
+    "benchmark_version": 4,
+    "spec": {
+      "provider": "blacksmith",
+      "name": "Blacksmith",
+      "label": "blacksmith-6vcpu-macos-26",
+      "arch": "arm64",
+      "os": "macos",
+      "price_per_minute": 0.08,
+      "billing": {
+        "increment_seconds": 60
+      },
+      "enabled": true,
+      "notes": "M4. Smallest macOS size.",
+      "pricing_source": "https://www.blacksmith.sh/pricing",
+      "rep": 1
+    },
+    "github": {
+      "repository": "lockyer-labs/runnersbench",
+      "run_id": "45926553981",
+      "run_attempt": "1",
+      "sha": "0b7af443198a30e733e6c4df94817d0afb867f24"
+    },
+    "started_at": "2026-11-27T02:09:09.459545+00:00",
+    "finished_at": "2026-11-27T02:11:07.811330+00:00",
+    "system": {
+      "cpu": {
+        "model": "Apple M5 Max (Virtual)",
+        "vendor": "Apple",
+        "arch": "arm64",
+        "logical_cpus": 6,
+        "available_cpus": 6,
+        "threads_per_core": null,
+        "sockets": null,
+        "max_mhz": null,
+        "l3_cache": null,
+        "hypervisor": null,
+        "flags": null,
+        "cgroup_cpu_max": null,
+        "lscpu": {}
+      },
+      "memory": {
+        "total_bytes": 25769803776,
+        "cgroup_max": null
+      },
+      "disk": {
+        "workdir": "/Users/runner/_work/_temp",
+        "total_bytes": 438636077056,
+        "free_bytes": 161988763648,
+        "mount": null,
+        "devices": null
+      },
+      "os": {
+        "pretty_name": "macOS 26.3",
+        "kernel": "25.3.0",
+        "image_os": "macos26",
+        "image_version": "133416"
+      },
+      "virtualization": "apple",
+      "virtualization_layers": {
+        "vm": "apple",
+        "container": null
+      },
+      "dmi": {
+        "product_name": "VirtualMac2,1"
+      },
+      "network": {
+        "ip": "207.186.81.162",
+        "city": "San Jose",
+        "region": "California",
+        "country": "US",
+        "org": "AS402960 MACWEB"
+      },
+      "runner": {
+        "name": "blacksmith-6vcpu-macos-26-yj6omn7j4xhz3v77",
+        "environment": "self-hosted"
+      },
+      "tools": {
+        "docker": null,
+        "gcc": "Apple clang version 21.0.0 (clang-2100.1.1.101)",
+        "python": "3.12.16"
+      },
+      "wall_seconds": 1.3202832500000028
+    },
+    "benchmarks": {
+      "apt_install": {
+        "manager": "brew",
+        "seconds": 2.416072665999998,
+        "wall_seconds": 2.4160777499999995
+      },
+      "cpu_single": {
+        "skipped": "sysbench's CPU test doesn't do real work on macOS"
+      },
+      "cpu_multi": {
+        "skipped": "sysbench's CPU test doesn't do real work on macOS"
+      },
+      "memory": {
+        "mib_per_second": 30867.33,
+        "wall_seconds": 15.022534291999996
+      },
+      "disk": {
+        "seq_write": {
+          "mb_per_second": 11175.257611,
+          "iops": 10656.489567,
+          "p99_latency_us": 5079.04,
+          "direct": true
+        },
+        "seq_read": {
+          "mb_per_second": 12447.095509,
+          "iops": 11869.408706,
+          "p99_latency_us": 2768.896,
+          "direct": true
+        },
+        "rand_read": {
+          "mb_per_second": 214.990168,
+          "iops": 52486.767549,
+          "p99_latency_us": 675.84,
+          "direct": true
+        },
+        "rand_write": {
+          "mb_per_second": 98.803405,
+          "iops": 24120.925272,
+          "p99_latency_us": 1974.272,
+          "direct": true
+        },
+        "wall_seconds": 72.779834416
+      },
+      "fsync": {
+        "skipped": "fsync doesn't flush to disk on macOS"
+      },
+      "download": {
+        "mb_per_second": 154.74738078436494,
+        "bytes": 1000000000,
+        "seconds": 6.462144916,
+        "streams": 4,
+        "requests": 20,
+        "errors": [],
+        "wall_seconds": 6.462298583000006
+      },
+      "compile_redis": {
+        "version": "8.10.3",
+        "jobs": 6,
+        "seconds": 19.557210249999997,
+        "github_download": {
+          "mb_per_second": 9.534971,
+          "bytes": 4780701,
+          "seconds": 0.501386,
+          "connect_seconds": 0.057887,
+          "ttfb_seconds": 0.323203
+        },
+        "cpu_accounting": {
+          "wall_seconds": 19.557217334
+        },
+        "wall_seconds": 20.349727583000004
+      },
+      "cache": {
+        "size_mb": 1024,
+        "save_seconds": 2.631279230117798,
+        "restore_seconds": 4.038370132446289
+      }
+    },
+    "cpu_accounting": {
+      "wall_seconds": 118.35167425
+    },
+    "timing": {
+      "queue_seconds": 22.0,
+      "job_seconds": 141.0
+    }
+  },
+  {
+    "schema_version": 1,
+    "benchmark_version": 4,
+    "spec": {
+      "provider": "blacksmith",
+      "name": "Blacksmith",
+      "label": "blacksmith-6vcpu-macos-26",
+      "arch": "arm64",
+      "os": "macos",
+      "price_per_minute": 0.08,
+      "billing": {
+        "increment_seconds": 60
+      },
+      "enabled": true,
+      "notes": "M4. Smallest macOS size.",
+      "pricing_source": "https://www.blacksmith.sh/pricing",
+      "rep": 2
+    },
+    "github": {
+      "repository": "lockyer-labs/runnersbench",
+      "run_id": "45926553981",
+      "run_attempt": "1",
+      "sha": "0b7af443198a30e733e6c4df94817d0afb867f24"
+    },
+    "started_at": "2026-11-27T02:09:22.532408+00:00",
+    "finished_at": "2026-11-27T02:11:15.701959+00:00",
+    "system": {
+      "cpu": {
+        "model": "Apple M5 Max (Virtual)",
+        "vendor": "Apple",
+        "arch": "arm64",
+        "logical_cpus": 6,
+        "available_cpus": 6,
+        "threads_per_core": null,
+        "sockets": null,
+        "max_mhz": null,
+        "l3_cache": null,
+        "hypervisor": null,
+        "flags": null,
+        "cgroup_cpu_max": null,
+        "lscpu": {}
+      },
+      "memory": {
+        "total_bytes": 25769803776,
+        "cgroup_max": null
+      },
+      "disk": {
+        "workdir": "/Users/runner/_work/_temp",
+        "total_bytes": 438636077056,
+        "free_bytes": 162166689792,
+        "mount": null,
+        "devices": null
+      },
+      "os": {
+        "pretty_name": "macOS 26.3",
+        "kernel": "25.3.0",
+        "image_os": "macos26",
+        "image_version": "133416"
+      },
+      "virtualization": "apple",
+      "virtualization_layers": {
+        "vm": "apple",
+        "container": null
+      },
+      "dmi": {
+        "product_name": "VirtualMac2,1"
+      },
+      "network": {
+        "ip": "207.186.80.71",
+        "city": "San Jose",
+        "region": "California",
+        "country": "US",
+        "org": "AS402960 MACWEB"
+      },
+      "runner": {
+        "name": "blacksmith-6vcpu-macos-26-nxu7vsazldu53abj",
+        "environment": "self-hosted"
+      },
+      "tools": {
+        "docker": null,
+        "gcc": "Apple clang version 21.0.0 (clang-2100.1.1.101)",
+        "python": "3.12.16"
+      },
+      "wall_seconds": 1.524936750000002
+    },
+    "benchmarks": {
+      "apt_install": {
+        "manager": "brew",
+        "seconds": 2.4746974999999978,
+        "wall_seconds": 2.47470225
+      },
+      "cpu_single": {
+        "skipped": "sysbench's CPU test doesn't do real work on macOS"
+      },
+      "cpu_multi": {
+        "skipped": "sysbench's CPU test doesn't do real work on macOS"
+      },
+      "memory": {
+        "mib_per_second": 27969.5,
+        "wall_seconds": 15.024965916
+      },
+      "disk": {
+        "seq_write": {
+          "mb_per_second": 10597.243716,
+          "iops": 10105.319291,
+          "p99_latency_us": 5210.112,
+          "direct": true
+        },
+        "seq_read": {
+          "mb_per_second": 13075.220563,
+          "iops": 12468.5021,
+          "p99_latency_us": 1974.272,
+          "direct": true
+        },
+        "rand_read": {
+          "mb_per_second": 211.860214,
+          "iops": 51722.751817,
+          "p99_latency_us": 505.856,
+          "direct": true
+        },
+        "rand_write": {
+          "mb_per_second": 105.119016,
+          "iops": 25662.822479,
+          "p99_latency_us": 2088.96,
+          "direct": true
+        },
+        "wall_seconds": 72.861737958
+      },
+      "fsync": {
+        "skipped": "fsync doesn't flush to disk on macOS"
+      },
+      "download": {
+        "mb_per_second": 428.80906536668806,
+        "bytes": 1000000000,
+        "seconds": 2.3320402500000057,
+        "streams": 4,
+        "requests": 20,
+        "errors": [],
+        "wall_seconds": 2.3321297079999965
+      },
+      "compile_redis": {
+        "version": "8.10.3",
+        "jobs": 6,
+        "seconds": 18.03960166600001,
+        "github_download": {
+          "mb_per_second": 7.729908,
+          "bytes": 4780701,
+          "seconds": 0.618468,
+          "connect_seconds": 0.055069,
+          "ttfb_seconds": 0.325762
+        },
+        "cpu_accounting": {
+          "wall_seconds": 18.03960491700002
+        },
+        "wall_seconds": 18.949992874999992
+      },
+      "cache": {
+        "size_mb": 1024,
+        "save_seconds": 2.8615870475769043,
+        "restore_seconds": 5.155931234359741
+      }
+    },
+    "cpu_accounting": {
+      "wall_seconds": 113.16941312499999
+    },
+    "timing": {
+      "queue_seconds": 33.0,
+      "job_seconds": 137.0
+    }
+  },
+  {
+    "schema_version": 1,
+    "benchmark_version": 4,
+    "spec": {
+      "provider": "blacksmith",
+      "name": "Blacksmith",
+      "label": "blacksmith-6vcpu-macos-26",
+      "arch": "arm64",
+      "os": "macos",
+      "price_per_minute": 0.08,
+      "billing": {
+        "increment_seconds": 60
+      },
+      "enabled": true,
+      "notes": "M4. Smallest macOS size.",
+      "pricing_source": "https://www.blacksmith.sh/pricing",
+      "rep": 3
+    },
+    "github": {
+      "repository": "lockyer-labs/runnersbench",
+      "run_id": "45926553981",
+      "run_attempt": "1",
+      "sha": "0b7af443198a30e733e6c4df94817d0afb867f24"
+    },
+    "started_at": "2026-11-27T02:09:09.757496+00:00",
+    "finished_at": "2026-11-27T02:11:02.968481+00:00",
+    "system": {
+      "cpu": {
+        "model": "Apple M5 Max (Virtual)",
+        "vendor": "Apple",
+        "arch": "arm64",
+        "logical_cpus": 6,
+        "available_cpus": 6,
+        "threads_per_core": null,
+        "sockets": null,
+        "max_mhz": null,
+        "l3_cache": null,
+        "hypervisor": null,
+        "flags": null,
+        "cgroup_cpu_max": null,
+        "lscpu": {}
+      },
+      "memory": {
+        "total_bytes": 25769803776,
+        "cgroup_max": null
+      },
+      "disk": {
+        "workdir": "/Users/runner/_work/_temp",
+        "total_bytes": 437562335232,
+        "free_bytes": 161025093632,
+        "mount": null,
+        "devices": null
+      },
+      "os": {
+        "pretty_name": "macOS 26.3",
+        "kernel": "25.3.0",
+        "image_os": "macos26",
+        "image_version": "133416"
+      },
+      "virtualization": "apple",
+      "virtualization_layers": {
+        "vm": "apple",
+        "container": null
+      },
+      "dmi": {
+        "product_name": "VirtualMac2,1"
+      },
+      "network": {
+        "ip": "207.186.80.85",
+        "city": "San Jose",
+        "region": "California",
+        "country": "US",
+        "org": "AS402960 MACWEB"
+      },
+      "runner": {
+        "name": "blacksmith-6vcpu-macos-26-yzbk63latj4t4goz",
+        "environment": "self-hosted"
+      },
+      "tools": {
+        "docker": null,
+        "gcc": "Apple clang version 21.0.0 (clang-2100.1.1.101)",
+        "python": "3.12.16"
+      },
+      "wall_seconds": 1.419874500000006
+    },
+    "benchmarks": {
+      "apt_install": {
+        "manager": "brew",
+        "seconds": 2.3489408749999967,
+        "wall_seconds": 2.348945125
+      },
+      "cpu_single": {
+        "skipped": "sysbench's CPU test doesn't do real work on macOS"
+      },
+      "cpu_multi": {
+        "skipped": "sysbench's CPU test doesn't do real work on macOS"
+      },
+      "memory": {
+        "mib_per_second": 31840.49,
+        "wall_seconds": 15.021286541999999
+      },
+      "disk": {
+        "seq_write": {
+          "mb_per_second": 9487.582193,
+          "iops": 9047.063529,
+          "p99_latency_us": 5734.4,
+          "direct": true
+        },
+        "seq_read": {
+          "mb_per_second": 11840.68906,
+          "iops": 11291.161179,
+          "p99_latency_us": 3751.936,
+          "direct": true
+        },
+        "rand_read": {
+          "mb_per_second": 214.746063,
+          "iops": 52427.238184,
+          "p99_latency_us": 643.072,
+          "direct": true
+        },
+        "rand_write": {
+          "mb_per_second": 103.397992,
+          "iops": 25242.65049,
+          "p99_latency_us": 1859.584,
+          "direct": true
+        },
+        "wall_seconds": 72.69650179199999
+      },
+      "fsync": {
+        "skipped": "fsync doesn't flush to disk on macOS"
+      },
+      "download": {
+        "mb_per_second": 161.03572598096832,
+        "bytes": 1000000000,
+        "seconds": 6.209802166000003,
+        "streams": 4,
+        "requests": 20,
+        "errors": [],
+        "wall_seconds": 6.209886957999984
+      },
+      "compile_redis": {
+        "version": "8.10.3",
+        "jobs": 6,
+        "seconds": 14.799887708,
+        "github_download": {
+          "mb_per_second": 9.622349,
+          "bytes": 4780701,
+          "seconds": 0.496833,
+          "connect_seconds": 0.067994,
+          "ttfb_seconds": 0.330892
+        },
+        "cpu_accounting": {
+          "wall_seconds": 14.79988849999998
+        },
+        "wall_seconds": 15.513591915999996
+      },
+      "cache": {
+        "size_mb": 1024,
+        "save_seconds": 2.6709139347076416,
+        "restore_seconds": 3.831634283065796
+      }
+    },
+    "cpu_accounting": {
+      "wall_seconds": 113.2108695
+    },
+    "timing": {
+      "queue_seconds": 23.0,
+      "job_seconds": 135.0
+    }
+  }
+]

@@ -1,0 +1,821 @@
+[
+  {
+    "schema_version": 1,
+    "benchmark_version": 4,
+    "spec": {
+      "provider": "avrea",
+      "name": "Avrea",
+      "label": "avrea-ubuntu-24.04-arm-4-vcpu",
+      "arch": "arm64",
+      "price_per_minute": 0.024,
+      "billing": {
+        "increment_seconds": 1
+      },
+      "enabled": true,
+      "notes": "Runs on Apple M5 Max hardware. Pinned to Ubuntu 24.04.",
+      "pricing_source": "https://avrea.com/pricing",
+      "rep": 1
+    },
+    "github": {
+      "repository": "lockyer-labs/runnersbench",
+      "run_id": "45926553981",
+      "run_attempt": "1",
+      "sha": "0b7af443198a30e733e6c4df94817d0afb867f24"
+    },
+    "started_at": "2026-11-27T02:09:04.689315+00:00",
+    "finished_at": "2026-11-27T02:15:17.279179+00:00",
+    "system": {
+      "cpu": {
+        "model": "-",
+        "vendor": "Apple",
+        "arch": "aarch64",
+        "logical_cpus": 4,
+        "available_cpus": 4,
+        "threads_per_core": "1",
+        "sockets": "-",
+        "max_mhz": null,
+        "l3_cache": null,
+        "hypervisor": null,
+        "flags": {
+          "avx2": false,
+          "avx512f": false,
+          "sha_ni": false,
+          "aes": true,
+          "vaes": false,
+          "asimd": true,
+          "sve": false,
+          "sve2": false,
+          "sha2": true
+        },
+        "cgroup_cpu_max": null,
+        "lscpu": {
+          "Architecture": "aarch64",
+          "CPU op-mode(s)": "64-bit",
+          "Byte Order": "Little Endian",
+          "CPU(s)": "4",
+          "On-line CPU(s) list": "0-3",
+          "Vendor ID": "Apple",
+          "Model name": "-",
+          "Model": "0",
+          "Thread(s) per core": "1",
+          "Core(s) per cluster": "4",
+          "Socket(s)": "-",
+          "Cluster(s)": "1",
+          "Stepping": "0x0",
+          "BogoMIPS": "48.00",
+          "Flags": "fp asimd evtstrm aes pmull sha1 sha2 crc32 atomics fphp asimdhp cpuid asimdrdm jscvt fcma lrcpc dcpop sha3 asimddp sha512 asimdfhm dit uscat ilrcpc flagm sb paca pacg dcpodp flagm2 frint i8mm bf16 bti afp rpres ebf16",
+          "NUMA node(s)": "1",
+          "NUMA node0 CPU(s)": "0-3",
+          "Vulnerability Gather data sampling": "Not affected",
+          "Vulnerability Ghostwrite": "Not affected",
+          "Vulnerability Indirect target selection": "Not affected",
+          "Vulnerability Itlb multihit": "Not affected",
+          "Vulnerability L1tf": "Not affected",
+          "Vulnerability Mds": "Not affected",
+          "Vulnerability Meltdown": "Not affected",
+          "Vulnerability Mmio stale data": "Not affected",
+          "Vulnerability Old microcode": "Not affected",
+          "Vulnerability Reg file data sampling": "Not affected",
+          "Vulnerability Retbleed": "Not affected",
+          "Vulnerability Spec rstack overflow": "Not affected",
+          "Vulnerability Spec store bypass": "Vulnerable",
+          "Vulnerability Spectre v1": "Mitigation; __user pointer sanitization",
+          "Vulnerability Spectre v2": "Mitigation; CSV2, but not BHB",
+          "Vulnerability Srbds": "Not affected",
+          "Vulnerability Tsa": "Not affected",
+          "Vulnerability Tsx async abort": "Not affected",
+          "Vulnerability Vmscape": "Not affected"
+        }
+      },
+      "memory": {
+        "total_bytes": 15758802944,
+        "cgroup_max": null
+      },
+      "disk": {
+        "workdir": "/home/runner/_work/_temp",
+        "total_bytes": 154894188544,
+        "free_bytes": 94087725056,
+        "mount": "/dev/vda1 ext4   rw,relatime,discard,nobarrier,errors=remount-ro,commit=30",
+        "devices": [
+          {
+            "name": "nullb0",
+            "size": "250G",
+            "type": "disk",
+            "rota": false,
+            "model": null
+          },
+          {
+            "name": "zram0",
+            "size": "0B",
+            "type": "disk",
+            "rota": false,
+            "model": null
+          },
+          {
+            "name": "vda",
+            "size": "150G",
+            "type": "disk",
+            "rota": true,
+            "model": null
+          },
+          {
+            "name": "vdb",
+            "size": "900K",
+            "type": "disk",
+            "rota": true,
+            "model": null
+          }
+        ]
+      },
+      "os": {
+        "pretty_name": "Ubuntu 24.04.5 LTS",
+        "kernel": "7.3.5-avrea",
+        "image_os": "ubuntu24",
+        "image_version": "dev"
+      },
+      "virtualization": "vm-other",
+      "virtualization_layers": {
+        "vm": "vm-other",
+        "container": null
+      },
+      "dmi": {
+        "sys_vendor": null,
+        "product_name": null,
+        "product_version": null,
+        "board_vendor": null,
+        "bios_vendor": null,
+        "chassis_vendor": null
+      },
+      "network": {
+        "ip": "85.208.3.50",
+        "city": "Helsinki",
+        "region": "Uusimaa",
+        "country": "FI",
+        "org": "AS209378 Inios Oy"
+      },
+      "runner": {
+        "name": "avrea-exe-01a21ac2ee3e71ca941fe10fe235c8c5",
+        "environment": "self-hosted"
+      },
+      "tools": {
+        "docker": "Docker version 29.9.3, build 5457199",
+        "gcc": "gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+        "python": "3.12.16"
+      },
+      "wall_seconds": 0.20313191700000033
+    },
+    "benchmarks": {
+      "apt_install": {
+        "manager": "apt",
+        "update_seconds": 4.025275584999999,
+        "seconds": 7.599633753999999,
+        "wall_seconds": 7.599636379
+      },
+      "cpu_single": {
+        "threads": 1,
+        "events_per_second": 12196.51,
+        "wall_seconds": 15.003711936999998
+      },
+      "cpu_multi": {
+        "threads": 4,
+        "events_per_second": 48422.02,
+        "wall_seconds": 15.003196144999997,
+        "cpu_accounting": {
+          "wall_seconds": 15.003347888,
+          "steal_pct": 0.0,
+          "cpu_per_wall": 3.99484171449081,
+          "nr_throttled": 0,
+          "throttled_ms": 0.0
+        }
+      },
+      "memory": {
+        "mib_per_second": 46771.43,
+        "wall_seconds": 15.003465410999993
+      },
+      "disk": {
+        "seq_write": {
+          "mb_per_second": 14564.93803,
+          "iops": 13889.140724,
+          "p99_latency_us": 1531.904,
+          "direct": true
+        },
+        "seq_read": {
+          "mb_per_second": 24394.05361,
+          "iops": 23262.982468,
+          "p99_latency_us": 946.176,
+          "direct": true
+        },
+        "rand_read": {
+          "mb_per_second": 406.211468,
+          "iops": 99170.65529,
+          "p99_latency_us": 444.416,
+          "direct": true
+        },
+        "rand_write": {
+          "mb_per_second": 433.561094,
+          "iops": 105847.743484,
+          "p99_latency_us": 489.472,
+          "direct": true
+        },
+        "wall_seconds": 69.22973522399998
+      },
+      "fsync": {
+        "writes_per_second": 4449.555044,
+        "sync_mean_us": 222.446654719,
+        "sync_p99_us": 374.784,
+        "wall_seconds": 10.260401824000013
+      },
+      "download": {
+        "mb_per_second": 3.025254266937033,
+        "bytes": 650000000,
+        "seconds": 214.85797313099997,
+        "streams": 4,
+        "requests": 13,
+        "errors": [],
+        "wall_seconds": 214.85812129700003
+      },
+      "compile_redis": {
+        "version": "8.10.3",
+        "jobs": 4,
+        "seconds": 19.117070678000005,
+        "github_download": {
+          "mb_per_second": 4.064585,
+          "bytes": 4780701,
+          "seconds": 1.176184,
+          "connect_seconds": 0.071339,
+          "ttfb_seconds": 0.524467
+        },
+        "cpu_accounting": {
+          "wall_seconds": 19.117067636,
+          "steal_pct": 0.0,
+          "cpu_per_wall": 3.657255460473383,
+          "nr_throttled": 0,
+          "throttled_ms": 0.0
+        },
+        "wall_seconds": 20.42410625399998
+      },
+      "cache": {
+        "size_mb": 1024,
+        "save_seconds": 3.3425683975219727,
+        "restore_seconds": 2.361933946609497
+      }
+    },
+    "cpu_accounting": {
+      "wall_seconds": 372.589866072,
+      "steal_pct": 0.0,
+      "cpu_per_wall": 0.7032612098724264,
+      "nr_throttled": 0,
+      "throttled_ms": 0.0
+    },
+    "timing": {
+      "queue_seconds": 19.0,
+      "job_seconds": 395.0
+    }
+  },
+  {
+    "schema_version": 1,
+    "benchmark_version": 4,
+    "spec": {
+      "provider": "avrea",
+      "name": "Avrea",
+      "label": "avrea-ubuntu-24.04-arm-4-vcpu",
+      "arch": "arm64",
+      "price_per_minute": 0.024,
+      "billing": {
+        "increment_seconds": 1
+      },
+      "enabled": true,
+      "notes": "Runs on Apple M5 Max hardware. Pinned to Ubuntu 24.04.",
+      "pricing_source": "https://avrea.com/pricing",
+      "rep": 2
+    },
+    "github": {
+      "repository": "lockyer-labs/runnersbench",
+      "run_id": "45926553981",
+      "run_attempt": "1",
+      "sha": "0b7af443198a30e733e6c4df94817d0afb867f24"
+    },
+    "started_at": "2026-11-27T02:09:04.439452+00:00",
+    "finished_at": "2026-11-27T02:15:17.043790+00:00",
+    "system": {
+      "cpu": {
+        "model": "-",
+        "vendor": "Apple",
+        "arch": "aarch64",
+        "logical_cpus": 4,
+        "available_cpus": 4,
+        "threads_per_core": "1",
+        "sockets": "-",
+        "max_mhz": null,
+        "l3_cache": null,
+        "hypervisor": null,
+        "flags": {
+          "avx2": false,
+          "avx512f": false,
+          "sha_ni": false,
+          "aes": true,
+          "vaes": false,
+          "asimd": true,
+          "sve": false,
+          "sve2": false,
+          "sha2": true
+        },
+        "cgroup_cpu_max": null,
+        "lscpu": {
+          "Architecture": "aarch64",
+          "CPU op-mode(s)": "64-bit",
+          "Byte Order": "Little Endian",
+          "CPU(s)": "4",
+          "On-line CPU(s) list": "0-3",
+          "Vendor ID": "Apple",
+          "Model name": "-",
+          "Model": "0",
+          "Thread(s) per core": "1",
+          "Core(s) per cluster": "4",
+          "Socket(s)": "-",
+          "Cluster(s)": "1",
+          "Stepping": "0x0",
+          "BogoMIPS": "48.00",
+          "Flags": "fp asimd evtstrm aes pmull sha1 sha2 crc32 atomics fphp asimdhp cpuid asimdrdm jscvt fcma lrcpc dcpop sha3 asimddp sha512 asimdfhm dit uscat ilrcpc flagm sb paca pacg dcpodp flagm2 frint i8mm bf16 bti afp rpres ebf16",
+          "NUMA node(s)": "1",
+          "NUMA node0 CPU(s)": "0-3",
+          "Vulnerability Gather data sampling": "Not affected",
+          "Vulnerability Ghostwrite": "Not affected",
+          "Vulnerability Indirect target selection": "Not affected",
+          "Vulnerability Itlb multihit": "Not affected",
+          "Vulnerability L1tf": "Not affected",
+          "Vulnerability Mds": "Not affected",
+          "Vulnerability Meltdown": "Not affected",
+          "Vulnerability Mmio stale data": "Not affected",
+          "Vulnerability Old microcode": "Not affected",
+          "Vulnerability Reg file data sampling": "Not affected",
+          "Vulnerability Retbleed": "Not affected",
+          "Vulnerability Spec rstack overflow": "Not affected",
+          "Vulnerability Spec store bypass": "Vulnerable",
+          "Vulnerability Spectre v1": "Mitigation; __user pointer sanitization",
+          "Vulnerability Spectre v2": "Mitigation; CSV2, but not BHB",
+          "Vulnerability Srbds": "Not affected",
+          "Vulnerability Tsa": "Not affected",
+          "Vulnerability Tsx async abort": "Not affected",
+          "Vulnerability Vmscape": "Not affected"
+        }
+      },
+      "memory": {
+        "total_bytes": 15758802944,
+        "cgroup_max": null
+      },
+      "disk": {
+        "workdir": "/home/runner/_work/_temp",
+        "total_bytes": 154894188544,
+        "free_bytes": 94087725056,
+        "mount": "/dev/vda1 ext4   rw,relatime,discard,nobarrier,errors=remount-ro,commit=30",
+        "devices": [
+          {
+            "name": "nullb0",
+            "size": "250G",
+            "type": "disk",
+            "rota": false,
+            "model": null
+          },
+          {
+            "name": "zram0",
+            "size": "0B",
+            "type": "disk",
+            "rota": false,
+            "model": null
+          },
+          {
+            "name": "vda",
+            "size": "150G",
+            "type": "disk",
+            "rota": true,
+            "model": null
+          },
+          {
+            "name": "vdb",
+            "size": "900K",
+            "type": "disk",
+            "rota": true,
+            "model": null
+          }
+        ]
+      },
+      "os": {
+        "pretty_name": "Ubuntu 24.04.5 LTS",
+        "kernel": "7.3.5-avrea",
+        "image_os": "ubuntu24",
+        "image_version": "dev"
+      },
+      "virtualization": "vm-other",
+      "virtualization_layers": {
+        "vm": "vm-other",
+        "container": null
+      },
+      "dmi": {
+        "sys_vendor": null,
+        "product_name": null,
+        "product_version": null,
+        "board_vendor": null,
+        "bios_vendor": null,
+        "chassis_vendor": null
+      },
+      "network": {
+        "ip": "85.208.3.50",
+        "city": "Helsinki",
+        "region": "Uusimaa",
+        "country": "FI",
+        "org": "AS209378 Inios Oy"
+      },
+      "runner": {
+        "name": "avrea-exe-01a21ac2ee3f71c7a3fae9d2422eaf5d",
+        "environment": "self-hosted"
+      },
+      "tools": {
+        "docker": "Docker version 29.9.3, build 5457199",
+        "gcc": "gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+        "python": "3.12.16"
+      },
+      "wall_seconds": 0.20117379099999866
+    },
+    "benchmarks": {
+      "apt_install": {
+        "manager": "apt",
+        "update_seconds": 4.099639292999999,
+        "seconds": 7.768943961999998,
+        "wall_seconds": 7.768946170000003
+      },
+      "cpu_single": {
+        "threads": 1,
+        "events_per_second": 12066.32,
+        "wall_seconds": 15.003246578999999
+      },
+      "cpu_multi": {
+        "threads": 4,
+        "events_per_second": 48530.8,
+        "wall_seconds": 15.004062565000005,
+        "cpu_accounting": {
+          "wall_seconds": 15.004227575999991,
+          "steal_pct": 0.0,
+          "cpu_per_wall": 3.9930079503614184,
+          "nr_throttled": 0,
+          "throttled_ms": 0.0
+        }
+      },
+      "memory": {
+        "mib_per_second": 48032.74,
+        "wall_seconds": 15.003335899999996
+      },
+      "disk": {
+        "seq_write": {
+          "mb_per_second": 12280.173338,
+          "iops": 11710.219319,
+          "p99_latency_us": 1695.744,
+          "direct": true
+        },
+        "seq_read": {
+          "mb_per_second": 21506.328011,
+          "iops": 20509.032731,
+          "p99_latency_us": 1187.84,
+          "direct": true
+        },
+        "rand_read": {
+          "mb_per_second": 389.715245,
+          "iops": 95143.190454,
+          "p99_latency_us": 481.28,
+          "direct": true
+        },
+        "rand_write": {
+          "mb_per_second": 425.524732,
+          "iops": 103885.740951,
+          "p99_latency_us": 485.376,
+          "direct": true
+        },
+        "wall_seconds": 69.23531316
+      },
+      "fsync": {
+        "writes_per_second": 4376.762324,
+        "sync_mean_us": 225.907078909,
+        "sync_p99_us": 407.552,
+        "wall_seconds": 10.264641331000007
+      },
+      "download": {
+        "mb_per_second": 3.0240525440581845,
+        "bytes": 650000000,
+        "seconds": 214.94335516,
+        "streams": 4,
+        "requests": 13,
+        "errors": [],
+        "wall_seconds": 214.94357557900003
+      },
+      "compile_redis": {
+        "version": "8.10.3",
+        "jobs": 4,
+        "seconds": 19.13133567699998,
+        "github_download": {
+          "mb_per_second": 5.236759,
+          "bytes": 4780701,
+          "seconds": 0.912912,
+          "connect_seconds": 0.088179,
+          "ttfb_seconds": 0.51787
+        },
+        "cpu_accounting": {
+          "wall_seconds": 19.131336385999987,
+          "steal_pct": 0.0,
+          "cpu_per_wall": 3.657245818499198,
+          "nr_throttled": 0,
+          "throttled_ms": 0.0
+        },
+        "wall_seconds": 20.175789916000042
+      },
+      "cache": {
+        "size_mb": 1024,
+        "save_seconds": 3.5143613815307617,
+        "restore_seconds": 2.550861120223999
+      }
+    },
+    "cpu_accounting": {
+      "wall_seconds": 372.60434419800004,
+      "steal_pct": 0.0,
+      "cpu_per_wall": 0.7009365405069313,
+      "nr_throttled": 0,
+      "throttled_ms": 0.0
+    },
+    "timing": {
+      "queue_seconds": 19.0,
+      "job_seconds": 394.0
+    }
+  },
+  {
+    "schema_version": 1,
+    "benchmark_version": 4,
+    "spec": {
+      "provider": "avrea",
+      "name": "Avrea",
+      "label": "avrea-ubuntu-24.04-arm-4-vcpu",
+      "arch": "arm64",
+      "price_per_minute": 0.024,
+      "billing": {
+        "increment_seconds": 1
+      },
+      "enabled": true,
+      "notes": "Runs on Apple M5 Max hardware. Pinned to Ubuntu 24.04.",
+      "pricing_source": "https://avrea.com/pricing",
+      "rep": 3
+    },
+    "github": {
+      "repository": "lockyer-labs/runnersbench",
+      "run_id": "45926553981",
+      "run_attempt": "1",
+      "sha": "0b7af443198a30e733e6c4df94817d0afb867f24"
+    },
+    "started_at": "2026-11-27T02:09:05.227714+00:00",
+    "finished_at": "2026-11-27T02:15:17.067447+00:00",
+    "system": {
+      "cpu": {
+        "model": "-",
+        "vendor": "Apple",
+        "arch": "aarch64",
+        "logical_cpus": 4,
+        "available_cpus": 4,
+        "threads_per_core": "1",
+        "sockets": "-",
+        "max_mhz": null,
+        "l3_cache": null,
+        "hypervisor": null,
+        "flags": {
+          "avx2": false,
+          "avx512f": false,
+          "sha_ni": false,
+          "aes": true,
+          "vaes": false,
+          "asimd": true,
+          "sve": false,
+          "sve2": false,
+          "sha2": true
+        },
+        "cgroup_cpu_max": null,
+        "lscpu": {
+          "Architecture": "aarch64",
+          "CPU op-mode(s)": "64-bit",
+          "Byte Order": "Little Endian",
+          "CPU(s)": "4",
+          "On-line CPU(s) list": "0-3",
+          "Vendor ID": "Apple",
+          "Model name": "-",
+          "Model": "0",
+          "Thread(s) per core": "1",
+          "Core(s) per cluster": "4",
+          "Socket(s)": "-",
+          "Cluster(s)": "1",
+          "Stepping": "0x0",
+          "BogoMIPS": "48.00",
+          "Flags": "fp asimd evtstrm aes pmull sha1 sha2 crc32 atomics fphp asimdhp cpuid asimdrdm jscvt fcma lrcpc dcpop sha3 asimddp sha512 asimdfhm dit uscat ilrcpc flagm sb paca pacg dcpodp flagm2 frint i8mm bf16 bti afp rpres ebf16",
+          "NUMA node(s)": "1",
+          "NUMA node0 CPU(s)": "0-3",
+          "Vulnerability Gather data sampling": "Not affected",
+          "Vulnerability Ghostwrite": "Not affected",
+          "Vulnerability Indirect target selection": "Not affected",
+          "Vulnerability Itlb multihit": "Not affected",
+          "Vulnerability L1tf": "Not affected",
+          "Vulnerability Mds": "Not affected",
+          "Vulnerability Meltdown": "Not affected",
+          "Vulnerability Mmio stale data": "Not affected",
+          "Vulnerability Old microcode": "Not affected",
+          "Vulnerability Reg file data sampling": "Not affected",
+          "Vulnerability Retbleed": "Not affected",
+          "Vulnerability Spec rstack overflow": "Not affected",
+          "Vulnerability Spec store bypass": "Vulnerable",
+          "Vulnerability Spectre v1": "Mitigation; __user pointer sanitization",
+          "Vulnerability Spectre v2": "Mitigation; CSV2, but not BHB",
+          "Vulnerability Srbds": "Not affected",
+          "Vulnerability Tsa": "Not affected",
+          "Vulnerability Tsx async abort": "Not affected",
+          "Vulnerability Vmscape": "Not affected"
+        }
+      },
+      "memory": {
+        "total_bytes": 15758802944,
+        "cgroup_max": null
+      },
+      "disk": {
+        "workdir": "/home/runner/_work/_temp",
+        "total_bytes": 154894188544,
+        "free_bytes": 94087733248,
+        "mount": "/dev/vda1 ext4   rw,relatime,discard,nobarrier,errors=remount-ro,commit=30",
+        "devices": [
+          {
+            "name": "nullb0",
+            "size": "250G",
+            "type": "disk",
+            "rota": false,
+            "model": null
+          },
+          {
+            "name": "zram0",
+            "size": "0B",
+            "type": "disk",
+            "rota": false,
+            "model": null
+          },
+          {
+            "name": "vda",
+            "size": "150G",
+            "type": "disk",
+            "rota": true,
+            "model": null
+          },
+          {
+            "name": "vdb",
+            "size": "900K",
+            "type": "disk",
+            "rota": true,
+            "model": null
+          }
+        ]
+      },
+      "os": {
+        "pretty_name": "Ubuntu 24.04.5 LTS",
+        "kernel": "7.3.5-avrea",
+        "image_os": "ubuntu24",
+        "image_version": "dev"
+      },
+      "virtualization": "vm-other",
+      "virtualization_layers": {
+        "vm": "vm-other",
+        "container": null
+      },
+      "dmi": {
+        "sys_vendor": null,
+        "product_name": null,
+        "product_version": null,
+        "board_vendor": null,
+        "bios_vendor": null,
+        "chassis_vendor": null
+      },
+      "network": {
+        "ip": "85.208.3.50",
+        "city": "Helsinki",
+        "region": "Uusimaa",
+        "country": "FI",
+        "org": "AS209378 Inios Oy"
+      },
+      "runner": {
+        "name": "avrea-exe-01a21ac2ee3f71c7a3fae9d338b9be89",
+        "environment": "self-hosted"
+      },
+      "tools": {
+        "docker": "Docker version 29.9.3, build 5457199",
+        "gcc": "gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+        "python": "3.12.16"
+      },
+      "wall_seconds": 0.20890116699999695
+    },
+    "benchmarks": {
+      "apt_install": {
+        "manager": "apt",
+        "update_seconds": 4.2586604600000015,
+        "seconds": 7.859046171000003,
+        "wall_seconds": 7.859048754
+      },
+      "cpu_single": {
+        "threads": 1,
+        "events_per_second": 12048.34,
+        "wall_seconds": 15.003005856999998
+      },
+      "cpu_multi": {
+        "threads": 4,
+        "events_per_second": 46155.21,
+        "wall_seconds": 15.00319105700001,
+        "cpu_accounting": {
+          "wall_seconds": 15.003338305999996,
+          "steal_pct": 0.0,
+          "cpu_per_wall": 3.9897787265159077,
+          "nr_throttled": 0,
+          "throttled_ms": 0.0
+        }
+      },
+      "memory": {
+        "mib_per_second": 46206.78,
+        "wall_seconds": 15.003195629000004
+      },
+      "disk": {
+        "seq_write": {
+          "mb_per_second": 14463.163038,
+          "iops": 13792.080528,
+          "p99_latency_us": 1515.52,
+          "direct": true
+        },
+        "seq_read": {
+          "mb_per_second": 26396.001256,
+          "iops": 25172.188521,
+          "p99_latency_us": 913.408,
+          "direct": true
+        },
+        "rand_read": {
+          "mb_per_second": 500.319805,
+          "iops": 122146.323578,
+          "p99_latency_us": 423.936,
+          "direct": true
+        },
+        "rand_write": {
+          "mb_per_second": 425.015224,
+          "iops": 103761.349243,
+          "p99_latency_us": 485.376,
+          "direct": true
+        },
+        "wall_seconds": 69.23850446899999
+      },
+      "fsync": {
+        "writes_per_second": 4239.976002,
+        "sync_mean_us": 233.43520877699999,
+        "sync_p99_us": 403.456,
+        "wall_seconds": 10.269527866000004
+      },
+      "download": {
+        "mb_per_second": 3.036782118850624,
+        "bytes": 650000000,
+        "seconds": 214.04235620500003,
+        "streams": 4,
+        "requests": 13,
+        "errors": [],
+        "wall_seconds": 214.04250983000003
+      },
+      "compile_redis": {
+        "version": "8.10.3",
+        "jobs": 4,
+        "seconds": 19.111888340000007,
+        "github_download": {
+          "mb_per_second": 4.962569,
+          "bytes": 4780701,
+          "seconds": 0.963352,
+          "connect_seconds": 0.070401,
+          "ttfb_seconds": 0.525893
+        },
+        "cpu_accounting": {
+          "wall_seconds": 19.11188921500002,
+          "steal_pct": 0.0,
+          "cpu_per_wall": 3.6620136927682547,
+          "nr_throttled": 0,
+          "throttled_ms": 0.0
+        },
+        "wall_seconds": 20.20742544699999
+      },
+      "cache": {
+        "size_mb": 1024,
+        "save_seconds": 3.5617575645446777,
+        "restore_seconds": 2.893667697906494
+      }
+    },
+    "cpu_accounting": {
+      "wall_seconds": 371.83974109400003,
+      "steal_pct": 0.0,
+      "cpu_per_wall": 0.7093163286527898,
+      "nr_throttled": 0,
+      "throttled_ms": 0.0
+    },
+    "timing": {
+      "queue_seconds": 19.0,
+      "job_seconds": 394.0
+    }
+  }
+]
