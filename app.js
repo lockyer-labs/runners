@@ -216,12 +216,14 @@ function renderTables(data) {
   );
 
   document.getElementById("runners-caption").textContent = `${runners.length} runners · as reported by each machine`;
+  const runnersTable = document.getElementById("runners");
+  const headers = ["Provider", "CPU", "vCPU · RAM · Disk", "Price", "Compliance", "Location", "Measured"];
   table(
-    document.getElementById("runners"),
-    ["Provider", "CPU", "vCPU · RAM · Disk", "Price", "Compliance", "Location", "Measured"],
+    runnersTable,
+    headers,
     runners.map((r) => [
       stacked([swatch(r), r.provider_name], r.label, "provider"),
-      truncate(r.cpu_models.join(", ")),
+      truncate([...new Set(r.cpu_models.map(cpuName))].join(", "), 26),
       textCell([r.vcpus, r.memory_gib && `${r.memory_gib} GiB`, r.disk_gb && `${r.disk_gb} GB`].filter(Boolean).join(" · ") || null),
       stacked([r.price_per_minute === null ? "–" : `$${r.price_per_minute}/min`, caveat(r) ?? ""], r.billing),
       complianceCell(data.compliance?.[r.provider]),
@@ -229,18 +231,31 @@ function renderTables(data) {
       el("td", {}, el("a", { href: r.run_url, textContent: new Date(r.measured_at).toLocaleDateString() })),
     ]),
   );
+  // Labels and a single content box per cell, for the card layout on narrow screens.
+  for (const tr of runnersTable.tBodies[0].rows) {
+    [...tr.cells].forEach((td, i) => {
+      td.dataset.label = headers[i];
+      if (i) td.replaceChildren(el("span", {}, ...td.childNodes));
+    });
+  }
 }
 
-function complianceText(entry) {
-  if (!entry) return null;
+function complianceParts(entry) {
+  if (!entry) return [];
   const soc2 = entry.soc2 === "In progress" ? "SOC 2 in progress" : entry.soc2 && `SOC 2 ${entry.soc2}`;
-  return [soc2, entry.iso27001 === true && "ISO 27001"].filter(Boolean).join(" · ") || null;
+  return [soc2, entry.iso27001 === true && "ISO 27001"].filter(Boolean);
+}
+
+// "Intel(R) Xeon(R) Platinum 8375C CPU @ 2.90GHz" -> "Intel Xeon Platinum 8375C"
+function cpuName(model) {
+  return model.replace(/\((R|TM)\)/g, "").replace(/ CPU @.*$/, "").replace(/ \d+-Core Processor$| Processor$/, "").replace(/\s+/g, " ").trim();
 }
 
 function complianceCell(entry) {
-  const text = complianceText(entry);
-  if (!text) return el("td", { className: "muted", textContent: "–", title: entry?.note ?? "No claim found on the provider's site" });
-  const link = el("a", { href: entry.source, textContent: text, title: entry.note ?? "As stated by the provider" });
+  const parts = complianceParts(entry);
+  if (!parts.length) return el("td", { className: "muted", textContent: "–", title: entry?.note ?? "No claim found on the provider's site" });
+  const link = el("a", { href: entry.source, title: entry.note ?? "As stated by the provider" },
+    ...parts.flatMap((part, i) => (i ? [el("br"), part] : [part])));
   return el("td", { className: entry.soc2 === "In progress" ? "muted" : "" }, link);
 }
 

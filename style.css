@@ -135,7 +135,19 @@ td.caveated, .row.caveated .val { color: var(--muted); }
 .pricing-notes { max-width: 110ch; margin-top: 10px; line-height: 1.6; white-space: normal; }
 .pricing-notes strong { font-weight: 600; }
 #runners .sub { display: block; font-size: 12px; color: var(--muted); white-space: normal; max-width: 24ch; }
-#runners .provider .sub { font: 12px var(--mono); white-space: nowrap; max-width: none; }
+#runners .provider .sub { font: 12px var(--mono); max-width: 22ch; }
+@media (max-width: 1100px) {
+  #runners, #runners tbody, #runners tr, #runners td { display: block; }
+  #runners { border: 0; white-space: normal; }
+  #runners thead { display: none; }
+  #runners tbody { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 12px; }
+  #runners tr { border: 1px solid var(--line); padding: 4px 0; }
+  #runners td { position: static; display: grid; grid-template-columns: 9em 1fr; gap: 8px; border: 0; padding: 4px 12px; background: none; }
+  #runners td::before { content: attr(data-label); color: var(--muted); font-size: 12px; }
+  #runners td.provider { display: block; padding: 8px 12px; margin-bottom: 4px; background: var(--tint); border-bottom: 1px solid var(--line); }
+  #runners td.provider::before { content: none; }
+  #runners .sub, #runners .provider .sub { max-width: none; }
+}
 /* Lets a wide table use the window's width beyond the 1144px content column, up to 1600px. */
 .bleed { margin-inline: calc(-1 * clamp(24px, (100vw - 1192px) / 2, 228px)); }
 .bleed table { margin-inline: auto; }
