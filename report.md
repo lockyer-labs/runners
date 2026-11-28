@@ -1,6 +1,6 @@
 # Runner benchmark report
 
-Benchmark version 5. 87 samples from 3 workflow run(s). Benchmark values are medians across samples, with the lowest to highest sample in brackets; the best median in each column is bold.
+Benchmark version 5. 87 samples from 4 workflow run(s). Benchmark values are medians across samples, with the lowest to highest sample in brackets; the best median in each column is bold.
 
 ## Runners
 
@@ -22,7 +22,7 @@ Benchmark version 5. 87 samples from 3 workflow run(s). Benchmark values are med
 | warpbuild | `warp-macos-26-arm64-6x` | Apple M5 Pro (Virtual) | 6 | 22.0 | 424 | apple | Las Vegas, US | AS395337 MacStadium, Inc. | 3 |
 | avrea | `avrea-ubuntu-24.04-4-vcpu` | AMD EPYC 4585PX 16-Core Processor | 4 | 14.7 | 156 | kvm | Roubaix, FR | AS16276 OVH SAS | 3 |
 | blacksmith | `blacksmith-4vcpu-ubuntu-2404` | AMD EPYC | 4 | 15.4 | 161 | kvm | Phoenix, US | AS20454 SECURED SERVERS LLC | 3 |
-| boat | `boat` | AMD EPYC | 4 | 7.8 | 84 | kvm | Gravelines, FR | AS16276 OVH SAS | 3 |
+| boat | `boat` | AMD EPYC 4585PX 16-Core Processor | 4 | 7.8 | 84 | kvm | Strasbourg, FR | AS16276 OVH SAS | 3 |
 | buildkite | `buildkite-linux-amd64-4x16` | AMD EPYC | 4 | 15.7 | 101 | kvm + container | Ashburn, US | AS401483 Namespace Labs | 3 |
 | celesto | `celesto-large` | Intel(R) Xeon(R) Platinum 8375C CPU @ 2.90GHz | 4 | 15.6 | 63 | kvm | Ashburn, US | AS14618 Amazon.com, Inc. | 3 |
 | checklane | `checklane-4vcpu-ubuntu-2404` | AMD Ryzen 9 9950X | 4 | 15.6 | 169 | kvm | Solihull, GB | AS212027 PebbleHost Ltd | 3 |
@@ -56,7 +56,7 @@ Benchmark version 5. 87 samples from 3 workflow run(s). Benchmark values are med
 | warpbuild | `warp-macos-26-arm64-6x` | 27.0 | 4.1 (4.1 to 4.2) | – | – | 32,777 (32,677 to 33,066) | 8,070 (7,894 to 8,184) | 7,423 (6,622 to 8,663) | 16,240 (16,036 to 16,288) | 9,023 (8,771 to 9,054) | – | 218 (196 to 270) | 4.7 (4.3 to 5.3) | 26.6 (25.3 to 28.1) | – | – | 14.2 (14.1 to 14.4) | $0.0800 |
 | avrea | `avrea-ubuntu-24.04-4-vcpu` | 8.0 (8.0 to 9.0) | 3.2 (2.9 to 3.3) | 6,757 (6,718 to 6,764) | 26,913 (26,865 to 26,914) | 42,267 (42,257 to 42,281) | 18,264 (15,837 to 19,055) | 10,367 (10,188 to 10,994) | 80,800 (80,456 to 213,814) | 183,136 (95,240 to 197,068) | 27,973 (25,883 to 29,707) | 570 (518 to 609) | 8.0 (7.9 to 8.4) | 2.8 (2.4 to 2.9) | 10.6 (10.5 to 10.8) | 4.8 (4.7 to 4.9) | 22.4 (22.3 to 22.5) | $0.0031 |
 | blacksmith | `blacksmith-4vcpu-ubuntu-2404` | 7.0 (7.0 to 8.0) | 30.7 (11.6 to 37.6) | 6,639 (6,500 to 6,760) | 26,299 (25,071 to 26,377) | 41,155 (39,115 to 41,190) | 6,730 (6,548 to 12,774) | 1,963 (1,445 to 2,219) | 774,092 (745,618 to 816,420) | 396,957 (387,566 to 507,320) | 53,546 (45,874 to 59,848) | 468 (443 to 482) | 2.2 (2.1 to 2.2) | 2.1 (2.0 to 2.2) | 6.9 (6.6 to 7.3) | **3.5 (3.3 to 3.7)** | 25.3 (23.4 to 26.5) | $0.0080 |
-| boat | `boat` | 70.0 (69.0 to 75.0) | 14.1 (8.9 to 32.0) | 5,847 (5,379 to 6,167) | 21,676 (21,031 to 24,453) | 33,020 (32,873 to 36,252) | 1,543 (658 to 1,568) | 632 (375 to 850) | 12,211 (6,385 to 13,961) | 34,126 (8,502 to 38,930) | 2,513 (135 to 3,282) | 108 (50.1 to 457) | 27.9 (19.5 to 47.9) | 27.8 (19.1 to 34.6) | 28.3 (28.0 to 31.4) | – | 31.6 (28.2 to 62.8) | $0.0003 ($0.0003 to $0.0006)\* |
+| boat | `boat` | 7.0 | 5.4 (5.1 to 6.0) | 6,423 (6,312 to 6,460) | 25,529 (25,298 to 25,645) | 39,253 (38,751 to 39,320) | 17,345 (16,453 to 19,722) | 8,128 (7,241 to 8,904) | 688,022 (584,554 to 711,957) | 299,970 (264,376 to 311,764) | 49,659 (42,762 to 50,510) | 282 (252 to 431) | 12.5 (10.3 to 59.8) | 1.9 (1.6 to 2.0) | 40.3 (34.5 to 42.0) | – | 24.5 (24.3 to 27.4) | $0.0003 ($0.0003 to $0.0003)\* |
 | buildkite | `buildkite-linux-amd64-4x16` | 5.1 (4.7 to 5.2) | 5.5 (4.7 to 5.6) | 6,886 (6,753 to 6,944) | 27,234 (25,309 to 27,452) | 42,403 (40,747 to 42,656) | 5,884 (4,235 to 6,069) | 4,340 (2,894 to 4,520) | 634,128 (633,746 to 643,183) | 516,650 (364,324 to 542,609) | 67,053 (52,382 to 67,576) | **904 (829 to 990)** | – | – | – | – | 21.9 (21.9 to 25.0) | $0.0059 ($0.0059 to $0.0067)\* |
 | celesto | `celesto-large` | 25.0 (20.0 to 25.0) | 7.0 (6.9 to 10.1) | 2,976 (2,974 to 2,982) | 11,826 (11,796 to 11,846) | 25,574 (25,493 to 25,596) | 5,622 (4,256 to 5,931) | 6,114 (5,094 to 6,334) | 355,966 (305,973 to 370,475) | 273,714 (233,283 to 288,862) | 48,438 (34,597 to 50,277) | 704 (684 to 721) | 5.4 (5.2 to 5.8) | 3.4 (2.9 to 3.7) | 41.9 (32.3 to 43.2) | 10.0 (9.5 to 10.2) | 43.6 (43.5 to 43.9) | **$0.0010** |
 | checklane | `checklane-4vcpu-ubuntu-2404` | 6.0 | **2.7 (2.6 to 4.6)** | 6,993 (6,964 to 6,994) | 27,337 (27,193 to 27,789) | 43,650 (42,643 to 43,650) | 31,345 (30,850 to 31,931) | 18,159 (17,146 to 18,931) | **1,083,108 (1,062,706 to 1,091,424)** | **749,163 (747,682 to 763,083)** | **139,828 (110,636 to 152,211)** | 108 (105 to 375) | 2.2 (2.2 to 2.4) | 1.9 (1.9 to 2.1) | 8.8 (8.8 to 8.9) | 5.3 (4.1 to 6.0) | 22.9 (22.6 to 23.0) | $0.0015 |

@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-28T08:23:28.172111+00:00",
+ "generated_at": "2026-11-28T09:57:46.790614+00:00",
  "sample_count": 87,
  "benchmark_versions": [
   5
@@ -16,6 +16,10 @@
   {
    "run_id": "46123855991",
    "url": "https://github.com/lockyer-labs/runnersbench/actions/runs/46123855991"
+  },
+  {
+   "run_id": "46132549040",
+   "url": "https://github.com/lockyer-labs/runnersbench/actions/runs/46132549040"
   }
  ],
  "metrics": [
@@ -1849,107 +1853,107 @@
    "billing": "per second",
    "pricing_caveat": "Needs a plan from $20 a month, which comes back as VM time. Job starts above the plan's included number cost $0.03-0.07 each.",
    "cpu_models": [
-    "AMD EPYC"
+    "AMD EPYC 4585PX 16-Core Processor"
    ],
    "vcpus": 4,
    "memory_gib": 7.8,
    "disk_gb": 84,
    "virtualization": "kvm",
-   "location": "Gravelines, FR",
+   "location": "Strasbourg, FR",
    "coordinates": [
-    50.9865,
-    2.1281
+    48.5839,
+    7.7455
    ],
    "network": "AS16276 OVH SAS",
    "medians": {
-    "queue": 70.0,
-    "apt_install": 14.099857025000006,
-    "cpu_single": 5847.13,
-    "cpu_multi": 21676.02,
-    "memory": 33020.07,
-    "seq_read": 1543.104281,
-    "seq_write": 632.46666,
-    "rand_read": 12211.210344,
-    "rand_write": 34125.991601,
-    "fsync": 2512.748725,
-    "download": 107.84180544243688,
-    "cache_save": 27.943565845489502,
-    "cache_restore": 27.807639837265015,
-    "docker_cold": 28.279442724999996,
+    "queue": 7.0,
+    "apt_install": 5.356666200999825,
+    "cpu_single": 6422.61,
+    "cpu_multi": 25529.31,
+    "memory": 39252.72,
+    "seq_read": 17344.667501,
+    "seq_write": 8127.617279,
+    "rand_read": 688021.798547,
+    "rand_write": 299970.268649,
+    "fsync": 49658.834117,
+    "download": 281.5867717689155,
+    "cache_save": 12.46602725982666,
+    "cache_restore": 1.8970329761505127,
+    "docker_cold": 40.30917286999829,
     "docker_cached": null,
-    "redis_build": 31.64886584100003,
-    "redis_cost": 0.00031999999999999997
+    "redis_build": 24.453766460999987,
+    "redis_cost": 0.00025
    },
    "ranges": {
     "queue": [
-     69.0,
-     75.0
+     7.0,
+     7.0
     ],
     "apt_install": [
-     8.860266824999997,
-     32.02266959999997
+     5.068883075999793,
+     6.003613581000025
     ],
     "cpu_single": [
-     5379.36,
-     6166.77
+     6312.04,
+     6460.49
     ],
     "cpu_multi": [
-     21031.34,
-     24453.37
+     25298.29,
+     25644.82
     ],
     "memory": [
-     32873.15,
-     36251.83
+     38751.07,
+     39320.35
     ],
     "seq_read": [
-     657.628889,
-     1567.519469
+     16453.157714,
+     19722.050231
     ],
     "seq_write": [
-     375.019302,
-     850.030717
+     7241.415674,
+     8903.879448
     ],
     "rand_read": [
-     6384.523095,
-     13961.207758
+     584554.29638,
+     711957.269515
     ],
     "rand_write": [
-     8501.566353,
-     38929.938004
+     264376.374908,
+     311763.94907
     ],
     "fsync": [
-     134.684505,
-     3282.071793
+     42761.723828,
+     50510.448955
     ],
     "download": [
-     50.10416285903229,
-     457.10699425204047
+     252.46983118948015,
+     430.75510687919746
     ],
     "cache_save": [
-     19.533968448638916,
-     47.93029260635376
+     10.2514328956604,
+     59.82799792289734
     ],
     "cache_restore": [
-     19.133726358413696,
-     34.63163685798645
+     1.5713610649108887,
+     1.953918218612671
     ],
     "docker_cold": [
-     28.014737989000423,
-     31.41741345599985
+     34.51787338200006,
+     42.007382505999885
     ],
     "docker_cached": null,
     "redis_build": [
-     28.171602408000012,
-     62.84479198500003
+     24.305420384999934,
+     27.356395587000065
     ],
     "redis_cost": [
-     0.00029,
-     0.0006299999999999999
+     0.00025,
+     0.00028
     ]
    },
    "sample_count": 3,
-   "measured_at": "2026-11-28T04:54:51.391180+00:00",
-   "run_url": "https://github.com/lockyer-labs/runnersbench/actions/runs/46109503016"
+   "measured_at": "2026-11-28T09:54:39.575505+00:00",
+   "run_url": "https://github.com/lockyer-labs/runnersbench/actions/runs/46132549040"
   },
   {
    "provider": "buildkite",
@@ -3361,19 +3365,19 @@
   },
   {
    "label": "boat",
-   "run_id": "46109503016",
+   "run_id": "46132549040",
    "benchmark": "docker",
    "error": "the cached build didn't reuse the npm ci layer"
   },
   {
    "label": "boat",
-   "run_id": "46109503016",
+   "run_id": "46132549040",
    "benchmark": "docker",
    "error": "the cached build didn't reuse the npm ci layer"
   },
   {
    "label": "boat",
-   "run_id": "46109503016",
+   "run_id": "46132549040",
    "benchmark": "docker",
    "error": "the cached build didn't reuse the npm ci layer"
   },
