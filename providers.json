@@ -176,6 +176,18 @@
       "pricing_source": "https://homemade.dev/pricing"
     },
     {
+      "provider": "instabox",
+      "name": "Instabox",
+      "label": "instabox-medium",
+      "arch": "x64",
+      "price_per_minute": 0.000567,
+      "billing": {"increment_seconds": 1},
+      "pricing_caveat": "Pro is $20 a month and includes $20 of usage. The free plan runs one instabox-medium machine at a time.",
+      "enabled": true,
+      "notes": "instabox.sh. Ubuntu 24.04, 4 vCPU, 8 GiB, a fresh machine per job. $0.004 per vCPU-hour plus $0.00225 per GiB-hour, billed per second.",
+      "pricing_source": "https://instabox.sh/pricing"
+    },
+    {
       "provider": "github",
       "name": "GitHub",
       "label": "ubuntu-24.04-arm",

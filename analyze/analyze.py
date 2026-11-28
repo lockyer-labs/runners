@@ -140,7 +140,7 @@ def cost_per_build(r):
 COLORS = {
     "avrea": "#4269d0", "blacksmith": "#efb118", "boat": "#ff725c", "buildkite": "#6cc5b0", "celesto": "#3ca951",
     "checklane": "#ff8ab7", "depot": "#a463f2", "flamewill": "#97bbf5", "github": "#9c6b4e", "groundbox": "#9498a0",
-    "homemade": "#a9c934", "luxor": "#2f4b7c", "namespace": "#d6336c", "ubicloud": "#8c8c1a", "warpbuild": "#00a3a3",
+    "homemade": "#a9c934", "instabox": "#2e9fd8", "luxor": "#2f4b7c", "namespace": "#d6336c", "ubicloud": "#8c8c1a", "warpbuild": "#00a3a3",
 }
 DEFAULT_COLOR = "#64748b"
 
