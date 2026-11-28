@@ -36,6 +36,7 @@ spread.
 | ![](https://img.shields.io/badge/-%20-9c6b4e?style=flat-square) | GitHub | ✓ | ✓ | ✓ | [SOC 2 Type II · ISO 27001](https://docs.github.com/en/enterprise-cloud@latest/admin/overview/accessing-compliance-reports-for-your-enterprise) |
 | ![](https://img.shields.io/badge/-%20-9498a0?style=flat-square) | Groundbox | ✓ |  | ✓ | – |
 | ![](https://img.shields.io/badge/-%20-a9c934?style=flat-square) | Homemade | ✓ |  |  | – |
+| ![](https://img.shields.io/badge/-%20-2e9fd8?style=flat-square) | Instabox | ✓ |  |  | – |
 | ![](https://img.shields.io/badge/-%20-2f4b7c?style=flat-square) | Luxor | ✓ |  | ✓ | [SOC 2 in progress](https://luxor.ai/company/security) |
 | ![](https://img.shields.io/badge/-%20-d6336c?style=flat-square) | Namespace | ✓ |  |  | [SOC 2 Type II](https://trust.namespace.so/) |
 | ![](https://img.shields.io/badge/-%20-8c8c1a?style=flat-square) | Ubicloud | ✓ | ✓ |  | [SOC 2 Type II](https://www.ubicloud.com/docs/security/overview) |
