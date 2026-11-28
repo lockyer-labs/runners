@@ -1,6 +1,6 @@
 # Runner benchmark report
 
-Benchmark version 5. 84 samples from 2 workflow run(s). Benchmark values are medians across samples, with the lowest to highest sample in brackets; the best median in each column is bold.
+Benchmark version 5. 87 samples from 3 workflow run(s). Benchmark values are medians across samples, with the lowest to highest sample in brackets; the best median in each column is bold.
 
 ## Runners
 
@@ -30,6 +30,7 @@ Benchmark version 5. 84 samples from 2 workflow run(s). Benchmark values are med
 | github | `ubuntu-24.04` | AMD EPYC 7763 64-Core Processor<br>Intel(R) Xeon(R) 6975P-C<br>Intel(R) Xeon(R) Platinum 8370C CPU @ 2.80GHz | 4 | 15.6 | 155 | microsoft | Phoenix, US | AS8075 Microsoft Corporation | 3 |
 | groundbox | `groundbox-4vcpu` | AMD EPYC | 4 | 15.6 | 63 | kvm | Warrenton, US | AS16276 OVH SAS | 3 |
 | homemade | `homemade-small` | AMD EPYC | 4 | 7.8 | 32 | kvm | Gravelines, FR | AS16276 OVH SAS | 3 |
+| instabox | `instabox-medium` | AMD EPYC | 4 | 7.8 | 21 | kvm | Boardman, US | AS16509 Amazon.com, Inc. | 3 |
 | luxor | `luxor-ubuntu-medium-4c-8g` | AMD Ryzen 9 9950X 16-Core Processor | 4 | 7.8 | 156 | kvm | Seattle, US | AS19538 Luxor | 3 |
 | namespace | `nscloud-ubuntu-24.04-amd64-4x8` | AMD EPYC | 4 | 7.8 | 68 | kvm + container | Ashburn, US | AS401483 Namespace Labs | 3 |
 | ubicloud | `ubicloud-standard-4` | AMD Ryzen 9 7950X3D 16-Core Processor | 4 | 15.6 | 155 | kvm | Falkenstein, DE | AS24940 Hetzner Online GmbH | 3 |
@@ -63,6 +64,7 @@ Benchmark version 5. 84 samples from 2 workflow run(s). Benchmark values are med
 | github | `ubuntu-24.04` | 3.0 | 12.6 (11.9 to 24.2) | 3,311 (2,979 to 3,678) | 6,950 (6,211 to 8,213) | 27,300 (25,575 to 40,989) | 414 (414 to 472) | 414 (226 to 414) | 19,592 (19,579 to 68,882) | 19,573 (19,572 to 33,546) | 3,951 (3,523 to 6,126) | 554 (200 to 638) | 4.5 (4.4 to 4.6) | 6.2 (4.5 to 8.8) | 24.4 (15.5 to 29.6) | 13.9 (13.6 to 13.9) | 66.7 (56.9 to 67.8) | $0.0240 ($0.0120 to $0.0240)\* |
 | groundbox | `groundbox-4vcpu` | 5.0 (5.0 to 6.0) | 3.1 (2.8 to 3.6) | 6,889 (6,662 to 6,896) | 26,217 (26,174 to 26,263) | 42,057 (41,523 to 42,083) | 2,180 (1,731 to 5,059) | 1,898 (1,862 to 2,846) | 354,939 (325,023 to 362,484) | 359,945 (348,776 to 362,063) | 52,118 (51,404 to 59,302) | 56.0 (55.0 to 112) | 2.1 (1.8 to 2.7) | 1.5 (1.3 to 2.4) | **6.4 (5.5 to 7.3)** | – | 27.6 (24.2 to 27.9) | $0.0028 ($0.0025 to $0.0028) |
 | homemade | `homemade-small` | 6.0 | 13.4 (8.7 to 15.3) | 5,413 (5,392 to 5,506) | 20,600 (20,478 to 21,314) | 38,075 (37,866 to 38,381) | 5,560 (4,589 to 6,685) | 1,207 (1,189 to 1,357) | 279,048 (265,003 to 292,796) | 178,532 (166,666 to 237,437) | 29,679 (26,530 to 33,129) | 43.7 (43.0 to 51.4) | 5.4 (4.4 to 5.5) | 3.6 (3.0 to 3.9) | 16.0 (14.6 to 17.3) | 10.4 | 32.9 (29.8 to 33.0) | $0.0003 ($0.0003 to $0.0003)\* |
+| instabox | `instabox-medium` | 400 (87.0 to 755) | 10.3 (10.0 to 10.6) | 5,068 (5,060 to 5,085) | 19,588 (19,556 to 19,710) | 30,164 (30,113 to 31,190) | 1,690 (1,495 to 2,325) | 1,025 (754 to 1,085) | 171,382 (157,406 to 180,897) | 96,734 (91,221 to 139,349) | 1,552 (1,032 to 2,432) | 303 (268 to 406) | 71.2 (54.1 to 71.3) | 23.6 (20.6 to 24.2) | 28.8 (25.7 to 45.2) | 19.3 (19.2 to 22.9) | 40.5 (33.8 to 40.6) | $0.0004 ($0.0003 to $0.0004)\* |
 | luxor | `luxor-ubuntu-medium-4c-8g` | 9.0 (7.0 to 9.0) | 5.0 (5.0 to 5.1) | 6,876 (6,870 to 6,979) | 26,772 (26,743 to 27,159) | 42,663 (42,580 to 43,213) | 17,547 (17,056 to 19,457) | 14,139 (9,404 to 15,255) | 99,353 (81,196 to 126,150) | 127,463 (124,169 to 131,011) | 25,669 (23,708 to 26,710) | 115 (96.0 to 616) | 4.0 (3.9 to 4.4) | **1.5 (1.4 to 1.5)** | 10.7 (10.6 to 10.7) | 5.1 (5.0 to 5.1) | 23.6 (23.3 to 23.8) | $0.0032 |
 | namespace | `nscloud-ubuntu-24.04-amd64-4x8` | 7.0 (6.0 to 7.0) | 3.4 (3.4 to 5.2) | 6,749 (6,741 to 6,863) | 25,230 (25,149 to 27,067) | 40,996 (40,701 to 42,307) | 4,366 (4,233 to 5,924) | 2,580 (2,380 to 4,436) | 662,024 (642,840 to 684,483) | 392,385 (377,979 to 518,156) | 56,677 (54,249 to 70,029) | 806 (691 to 924) | 3.3 (2.9 to 3.5) | 4.0 (3.6 to 4.5) | 9.6 (9.6 to 9.7) | 5.6 (5.5 to 6.5) | 25.8 (22.8 to 25.8) | $0.0040 |
 | ubicloud | `ubicloud-standard-4` | 16.0 | 10.8 (8.4 to 11.1) | 5,855 (5,815 to 5,960) | 12,328 (12,327 to 12,558) | 41,536 (37,035 to 41,615) | 2,765 (2,520 to 3,296) | 1,214 (1,046 to 1,260) | 159,230 (157,819 to 160,755) | 123,405 (102,676 to 130,419) | 3,921 (2,282 to 5,266) | 205 (107 to 355) | 10.5 (9.3 to 10.6) | 14.8 (12.0 to 16.3) | 27.9 (26.4 to 28.6) | 10.1 (8.4 to 10.9) | 40.6 (38.3 to 43.8) | $0.0040 |
@@ -78,6 +80,7 @@ Benchmark version 5. 84 samples from 2 workflow run(s). Benchmark values are med
 - `depot-ubuntu-24.04-4`: Needs a plan: Developer is $20 a month with 2,000 minutes included.
 - `ubuntu-24.04`: Free on public repos. This is GitHub's 4-core larger runner rate, which needs a GitHub Team ($4 per user a month) or Enterprise Cloud plan.
 - `homemade-small`: Pro is $20 a month and includes $20 of running time. Hobby is free with lower limits.
+- `instabox-medium`: Pro is $20 a month and includes $20 of usage. The free plan runs one instabox-medium machine at a time.
 
 ## Errors
 

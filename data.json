@@ -1,6 +1,6 @@
 {
- "generated_at": "2026-11-28T05:16:43.449955+00:00",
- "sample_count": 84,
+ "generated_at": "2026-11-28T08:23:28.172111+00:00",
+ "sample_count": 87,
  "benchmark_versions": [
   5
  ],
@@ -12,6 +12,10 @@
   {
    "run_id": "46110496206",
    "url": "https://github.com/lockyer-labs/runnersbench/actions/runs/46110496206"
+  },
+  {
+   "run_id": "46123855991",
+   "url": "https://github.com/lockyer-labs/runnersbench/actions/runs/46123855991"
   }
  ],
  "metrics": [
@@ -2737,6 +2741,121 @@
    "run_url": "https://github.com/lockyer-labs/runnersbench/actions/runs/46110496206"
   },
   {
+   "provider": "instabox",
+   "provider_name": "Instabox",
+   "label": "instabox-medium",
+   "arch": "x64",
+   "platform": "x64",
+   "price_per_minute": 0.000567,
+   "billing": "per second",
+   "pricing_caveat": "Pro is $20 a month and includes $20 of usage. The free plan runs one instabox-medium machine at a time.",
+   "cpu_models": [
+    "AMD EPYC"
+   ],
+   "vcpus": 4,
+   "memory_gib": 7.8,
+   "disk_gb": 21,
+   "virtualization": "kvm",
+   "location": "Boardman, US",
+   "coordinates": [
+    45.8399,
+    -119.7006
+   ],
+   "network": "AS16509 Amazon.com, Inc.",
+   "medians": {
+    "queue": 400.0,
+    "apt_install": 10.300937265999991,
+    "cpu_single": 5068.11,
+    "cpu_multi": 19588.28,
+    "memory": 30164.34,
+    "seq_read": 1689.91223,
+    "seq_write": 1025.23082,
+    "rand_read": 171382.174522,
+    "rand_write": 96734.417705,
+    "fsync": 1552.289542,
+    "download": 302.8767766278503,
+    "cache_save": 71.18155145645142,
+    "cache_restore": 23.62471652030945,
+    "docker_cold": 28.773616080999997,
+    "docker_cached": 19.3223633,
+    "redis_build": 40.54833096300001,
+    "redis_cost": 0.00038745
+   },
+   "ranges": {
+    "queue": [
+     87.0,
+     755.0
+    ],
+    "apt_install": [
+     9.994967818999996,
+     10.596163259999983
+    ],
+    "cpu_single": [
+     5060.29,
+     5085.27
+    ],
+    "cpu_multi": [
+     19556.21,
+     19710.13
+    ],
+    "memory": [
+     30112.66,
+     31189.83
+    ],
+    "seq_read": [
+     1495.489407,
+     2325.167126
+    ],
+    "seq_write": [
+     754.303854,
+     1084.921788
+    ],
+    "rand_read": [
+     157405.5063,
+     180896.80688
+    ],
+    "rand_write": [
+     91221.185254,
+     139349.310046
+    ],
+    "fsync": [
+     1032.19678,
+     2431.556844
+    ],
+    "download": [
+     268.32750976951166,
+     406.49172107680783
+    ],
+    "cache_save": [
+     54.140660524368286,
+     71.30244755744934
+    ],
+    "cache_restore": [
+     20.5518159866333,
+     24.179850339889526
+    ],
+    "docker_cold": [
+     25.716567834000003,
+     45.22661252900001
+    ],
+    "docker_cached": [
+     19.235947462999995,
+     22.876534502
+    ],
+    "redis_build": [
+     33.82771545700001,
+     40.63685990800002
+    ],
+    "redis_cost": [
+     0.0003213,
+     0.00038745
+    ]
+   },
+   "sample_count": 3,
+   "measured_at": "2026-11-28T08:15:56.022480+00:00",
+   "run_url": "https://github.com/lockyer-labs/runnersbench/actions/runs/46123855991"
+  },
+  {
    "provider": "luxor",
    "provider_name": "Luxor",
    "label": "luxor-ubuntu-medium-4c-8g",
@@ -3209,6 +3328,7 @@
   "github": "#9c6b4e",
   "groundbox": "#9498a0",
   "homemade": "#a9c934",
+  "instabox": "#2e9fd8",
   "luxor": "#2f4b7c",
   "namespace": "#d6336c",
   "ubicloud": "#8c8c1a",
