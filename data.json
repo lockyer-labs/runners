@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-28T05:00:17.534821+00:00",
+ "generated_at": "2026-11-28T05:16:43.449955+00:00",
  "sample_count": 84,
  "benchmark_versions": [
   5
@@ -8,6 +8,10 @@
   {
    "run_id": "46109503016",
    "url": "https://github.com/lockyer-labs/runnersbench/actions/runs/46109503016"
+  },
+  {
+   "run_id": "46110496206",
+   "url": "https://github.com/lockyer-labs/runnersbench/actions/runs/46110496206"
   }
  ],
  "metrics": [
@@ -351,91 +355,97 @@
    ],
    "network": "AS14618 Amazon.com, Inc.",
    "medians": {
-    "queue": 2.0,
-    "apt_install": 4.209093970999998,
-    "cpu_single": 3334.83,
-    "cpu_multi": 13082.42,
-    "memory": 26573.65,
-    "seq_read": 6333.809999,
-    "seq_write": 10706.141291,
-    "rand_read": 293940.537298,
-    "rand_write": 295477.034864,
-    "fsync": 73088.891111,
-    "download": 505.00333467841955,
-    "cache_save": 3.7411649227142334,
-    "cache_restore": 2.6954100131988525,
-    "docker_cold": 16.003698207,
-    "docker_cached": 5.659880119,
-    "redis_build": 41.21601390699999,
-    "redis_cost": 0.0084
+    "queue": 1.0,
+    "apt_install": 4.7552029069999975,
+    "cpu_single": 3332.96,
+    "cpu_multi": 13158.86,
+    "memory": 26454.02,
+    "seq_read": 8191.71168,
+    "seq_write": 11752.355368,
+    "rand_read": 306224.318379,
+    "rand_write": 305570.961936,
+    "fsync": 73119.488051,
+    "download": 489.912586670644,
+    "cache_save": 3.8730642795562744,
+    "cache_restore": 2.6113295555114746,
+    "docker_cold": 13.470527801000001,
+    "docker_cached": 5.880365622000001,
+    "redis_build": 39.03686058699998,
+    "redis_cost": 0.008
    },
    "ranges": {
     "queue": [
-     2.0,
-     13.0
+     1.0,
+     2.0
     ],
     "apt_install": [
-     3.870984537000002,
-     4.580953415
+     4.616382912999999,
+     5.1934522770000004
     ],
     "cpu_single": [
-     3323.7,
-     3337.86
+     3283.57,
+     3342.58
     ],
     "cpu_multi": [
-     13055.37,
-     13140.52
+     13138.96,
+     13163.65
     ],
     "memory": [
-     25927.49,
-     26651.25
+     26310.66,
+     26682.43
     ],
     "seq_read": [
-     6259.517901,
-     6955.370062
+     7499.464199,
+     8221.906642
     ],
     "seq_write": [
-     10657.703538,
-     11004.840419
+     11544.052156,
+     11941.645669
     ],
     "rand_read": [
-     289430.571295,
-     295656.089594
+     292660.15599,
+     306485.967602
     ],
     "rand_write": [
-     294222.518499,
-     296401.039931
+     291572.095194,
+     308504.766349
     ],
     "fsync": [
-     72406.559344,
-     73548.845115
+     72476.252375,
+     73518.948105
     ],
     "download": [
-     494.0422762597689,
-     539.3919040231067
+     477.39555875216445,
+     501.0252878780959
     ],
     "cache_save": [
-     3.3988733291625977,
-     4.364869594573975
+     3.3357810974121094,
+     3.8760263919830322
     ],
     "cache_restore": [
-     2.6787631511688232,
-     2.810814619064331
+     2.5894999504089355,
+     2.7117671966552734
     ],
-    "docker_cold": null,
-    "docker_cached": null,
+    "docker_cold": [
+     12.987894883000001,
+     13.607763770999998
+    ],
+    "docker_cached": [
+     5.729699826999999,
+     6.090847328000001
+    ],
     "redis_build": [
-     40.58700433600001,
-     41.235563961
+     38.517440846,
+     39.05029545400001
     ],
     "redis_cost": [
-     0.0082,
-     0.0084
+     0.0078000000000000005,
+     0.008
     ]
    },
    "sample_count": 3,
-   "measured_at": "2026-11-28T04:52:47.688182+00:00",
-   "run_url": "https://github.com/lockyer-labs/runnersbench/actions/runs/46109503016"
+   "measured_at": "2026-11-28T05:05:51.693517+00:00",
+   "run_url": "https://github.com/lockyer-labs/runnersbench/actions/runs/46110496206"
   },
   {
    "provider": "flamewill",
@@ -2294,90 +2304,96 @@
    "network": "AS14618 Amazon.com, Inc.",
    "medians": {
     "queue": 2.0,
-    "apt_install": 3.236564873999999,
-    "cpu_single": 5597.5,
-    "cpu_multi": 21824.11,
-    "memory": 34501.7,
-    "seq_read": 7442.003098,
-    "seq_write": 15642.592599,
-    "rand_read": 330929.538031,
-    "rand_write": 284088.127458,
-    "fsync": 51939.006099,
-    "download": 649.794280783924,
-    "cache_save": 3.7594897747039795,
-    "cache_restore": 2.1704604625701904,
-    "docker_cold": 13.504337111000002,
-    "docker_cached": 5.241889921999999,
-    "redis_build": 26.509168822999982,
+    "apt_install": 3.2854399060000006,
+    "cpu_single": 5571.0,
+    "cpu_multi": 21703.42,
+    "memory": 34497.76,
+    "seq_read": 9775.876214,
+    "seq_write": 13730.466975,
+    "rand_read": 427390.707286,
+    "rand_write": 417780.14799,
+    "fsync": 69199.880012,
+    "download": 595.3791029820037,
+    "cache_save": 3.8997690677642822,
+    "cache_restore": 2.2893481254577637,
+    "docker_cold": 10.652976841000001,
+    "docker_cached": 4.973872379,
+    "redis_build": 26.342394259999992,
     "redis_cost": 0.0054
    },
    "ranges": {
     "queue": [
      1.0,
-     13.0
+     12.0
     ],
     "apt_install": [
-     3.228524361,
-     3.466282260999998
+     3.0380665800000006,
+     5.117583246999999
     ],
     "cpu_single": [
-     5562.7,
-     5603.74
+     4883.65,
+     5593.97
     ],
     "cpu_multi": [
-     21666.13,
-     21842.2
+     18650.03,
+     21969.83
     ],
     "memory": [
-     33862.36,
-     34838.32
+     29247.19,
+     34644.53
     ],
     "seq_read": [
-     7204.862634,
-     10867.625921
+     9096.070015,
+     10748.236026
     ],
     "seq_write": [
-     15112.258214,
-     20275.311949
+     12106.82033,
+     15260.128806
     ],
     "rand_read": [
-     130964.402373,
-     504886.874208
+     311810.212652,
+     473868.075462
     ],
     "rand_write": [
-     266607.026198,
-     482919.338711
+     268739.417372,
+     439832.077861
     ],
     "fsync": [
-     51610.538946,
-     95006.69933
+     51285.271473,
+     82282.371763
     ],
     "download": [
-     589.68813270459,
-     654.0874606978199
+     475.78491305243256,
+     713.3694365943235
     ],
     "cache_save": [
-     3.2734858989715576,
-     4.347485542297363
+     3.3318445682525635,
+     4.120109796524048
     ],
     "cache_restore": [
-     2.0100674629211426,
-     2.216859817504883
+     2.2667527198791504,
+     2.356337070465088
     ],
-    "docker_cold": null,
-    "docker_cached": null,
+    "docker_cold": [
+     9.721720530999999,
+     11.283627399
+    ],
+    "docker_cached": [
+     4.949119828000001,
+     4.99862493
+    ],
     "redis_build": [
-     26.246616332000002,
-     26.98984518399999
+     25.475647933000005,
+     30.007468060000008
     ],
     "redis_cost": [
-     0.0054,
-     0.0054
+     0.0052,
+     0.0062
     ]
    },
    "sample_count": 3,
-   "measured_at": "2026-11-28T04:52:44.119709+00:00",
-   "run_url": "https://github.com/lockyer-labs/runnersbench/actions/runs/46109503016"
+   "measured_at": "2026-11-28T05:05:59.456004+00:00",
+   "run_url": "https://github.com/lockyer-labs/runnersbench/actions/runs/46110496206"
   },
   {
    "provider": "github",
@@ -2519,94 +2535,94 @@
    ],
    "network": "AS16276 OVH SAS",
    "medians": {
-    "queue": 6.0,
-    "apt_install": 3.4520382990000016,
-    "cpu_single": 6256.03,
-    "cpu_multi": 22289.61,
-    "memory": 36939.85,
-    "seq_read": 2549.816715,
-    "seq_write": 877.47121,
-    "rand_read": 255933.204453,
-    "rand_write": 167409.506033,
-    "fsync": 15340.031994,
-    "download": 56.242705332812264,
-    "cache_save": 3.3921680450439453,
-    "cache_restore": 1.805903673171997,
-    "docker_cold": 10.600991074,
+    "queue": 5.0,
+    "apt_install": 3.1138320660000005,
+    "cpu_single": 6888.76,
+    "cpu_multi": 26217.1,
+    "memory": 42056.88,
+    "seq_read": 2179.815493,
+    "seq_write": 1897.599641,
+    "rand_read": 354938.670755,
+    "rand_write": 359944.603693,
+    "fsync": 52118.388161,
+    "download": 55.972523499781424,
+    "cache_save": 2.0907845497131348,
+    "cache_restore": 1.5436692237854004,
+    "docker_cold": 6.377031834499999,
     "docker_cached": null,
-    "redis_build": 40.90101317599999,
-    "redis_cost": 0.0041
+    "redis_build": 27.597390840000003,
+    "redis_cost": 0.0028
    },
    "ranges": {
     "queue": [
-     6.0,
+     5.0,
      6.0
     ],
     "apt_install": [
-     3.384681828999998,
-     3.5239827680000015
+     2.813727417999999,
+     3.559631481000002
     ],
     "cpu_single": [
-     6245.92,
-     6629.41
+     6661.88,
+     6895.69
     ],
     "cpu_multi": [
-     21335.88,
-     25711.12
+     26174.43,
+     26262.62
     ],
     "memory": [
-     36824.71,
-     40305.92
+     41522.76,
+     42082.54
     ],
     "seq_read": [
-     2415.107754,
-     2872.435628
+     1731.107447,
+     5058.97203
     ],
     "seq_write": [
-     715.567159,
-     1756.75971
+     1861.587629,
+     2846.414458
     ],
     "rand_read": [
-     217667.022199,
-     342275.381641
+     325023.265116,
+     362483.701087
     ],
     "rand_write": [
-     167060.462636,
-     271177.054863
+     348776.081595,
+     362063.329111
     ],
     "fsync": [
-     14037.69623,
-     15791.420858
+     51404.459554,
+     59302.069793
     ],
     "download": [
-     54.130234107438355,
-     103.78051005867185
+     55.016056640965374,
+     112.38759539614588
     ],
     "cache_save": [
-     2.2831099033355713,
-     3.580078601837158
+     1.8468973636627197,
+     2.672297954559326
     ],
     "cache_restore": [
-     1.622490644454956,
-     1.8837485313415527
+     1.2906184196472168,
+     2.3506438732147217
     ],
     "docker_cold": [
-     8.471060812,
-     11.342923480999998
+     5.457019614999999,
+     7.297044054
     ],
     "docker_cached": null,
     "redis_build": [
-     34.54300293,
-     41.70588475100001
+     24.152445246000013,
+     27.891015415000027
     ],
     "redis_cost": [
-     0.0035,
-     0.0042
+     0.0025,
+     0.0028
     ]
    },
    "sample_count": 3,
-   "measured_at": "2026-11-28T04:52:39.097732+00:00",
-   "run_url": "https://github.com/lockyer-labs/runnersbench/actions/runs/46109503016"
+   "measured_at": "2026-11-28T05:05:52.934212+00:00",
+   "run_url": "https://github.com/lockyer-labs/runnersbench/actions/runs/46110496206"
   },
   {
    "provider": "homemade",
@@ -2632,90 +2648,93 @@
    "network": "AS16276 OVH SAS",
    "medians": {
     "queue": 6.0,
-    "apt_install": 10.761672388999997,
-    "cpu_single": 5421.35,
-    "cpu_multi": 20596.63,
-    "memory": 37867.88,
-    "seq_read": 3964.681164,
-    "seq_write": 1387.780061,
-    "rand_read": 288531.764549,
-    "rand_write": 175006.199587,
-    "fsync": 27980.002,
-    "download": 51.34020680292318,
-    "cache_save": 5.121736526489258,
-    "cache_restore": 3.405144453048706,
-    "docker_cold": null,
-    "docker_cached": null,
-    "redis_build": 33.131754841,
-    "redis_cost": 0.000306
+    "apt_install": 13.408365517,
+    "cpu_single": 5412.62,
+    "cpu_multi": 20600.29,
+    "memory": 38074.87,
+    "seq_read": 5559.598742,
+    "seq_write": 1206.750075,
+    "rand_read": 279047.796814,
+    "rand_write": 178531.697887,
+    "fsync": 29678.932107,
+    "download": 43.745956117130206,
+    "cache_save": 5.351920127868652,
+    "cache_restore": 3.604973077774048,
+    "docker_cold": 16.022478801,
+    "docker_cached": 10.426356122999998,
+    "redis_build": 32.903883705,
+    "redis_cost": 0.000297
    },
    "ranges": {
     "queue": [
      6.0,
-     7.0
+     6.0
     ],
     "apt_install": [
-     6.588672436000003,
-     16.876171874
+     8.720672948,
+     15.316605125999999
     ],
     "cpu_single": [
-     5416.2,
-     5512.97
+     5391.54,
+     5505.55
     ],
     "cpu_multi": [
-     20479.75,
-     21158.84
+     20478.3,
+     21313.66
     ],
     "memory": [
-     37553.16,
-     38815.55
+     37866.06,
+     38381.18
     ],
     "seq_read": [
-     3199.830914,
-     4612.797734
+     4589.311197,
+     6684.925388
     ],
     "seq_write": [
-     1075.066488,
-     1769.480736
+     1188.856764,
+     1357.005317
     ],
     "rand_read": [
-     251391.907206,
-     292115.458969
+     265002.599827,
+     292795.74695
     ],
     "rand_write": [
-     169730.884608,
-     203275.381641
+     166665.622292,
+     237437.370842
     ],
     "fsync": [
-     21755.524448,
-     33131.886811
+     26530.046995,
+     33129.287071
     ],
     "download": [
-     48.62260404434733,
-     53.3057729117112
+     43.040037863715035,
+     51.37852271383274
     ],
     "cache_save": [
-     4.694600820541382,
-     5.260310173034668
+     4.422690391540527,
+     5.495123386383057
     ],
     "cache_restore": [
-     2.877943277359009,
-     3.4642374515533447
+     2.9952809810638428,
+     3.8697783946990967
     ],
-    "docker_cold": null,
+    "docker_cold": [
+     14.637418566999997,
+     17.275110047000002
+    ],
     "docker_cached": null,
     "redis_build": [
-     30.130061255999976,
-     33.14830897800002
+     29.806171291,
+     33.02746057900001
     ],
     "redis_cost": [
-     0.000279,
+     0.00027,
      0.000306
     ]
    },
    "sample_count": 3,
-   "measured_at": "2026-11-28T04:52:43.399049+00:00",
-   "run_url": "https://github.com/lockyer-labs/runnersbench/actions/runs/46109503016"
+   "measured_at": "2026-11-28T05:05:58.409240+00:00",
+   "run_url": "https://github.com/lockyer-labs/runnersbench/actions/runs/46110496206"
   },
   {
    "provider": "luxor",
@@ -2740,82 +2759,88 @@
    ],
    "network": "AS19538 Luxor",
    "medians": {
-    "queue": 8.0,
-    "apt_install": 5.02232704,
-    "cpu_single": 6931.41,
-    "cpu_multi": 26976.69,
-    "memory": 42902.95,
-    "seq_read": 17315.868533,
-    "seq_write": 16509.986745,
-    "rand_read": 95030.397973,
-    "rand_write": 115946.670222,
-    "fsync": 26370.162984,
-    "download": 291.3136288021855,
-    "cache_save": 4.099909067153931,
-    "cache_restore": 1.5608949661254883,
-    "docker_cold": 13.935887960999999,
-    "docker_cached": 5.027421133000001,
-    "redis_build": 23.393137703999997,
+    "queue": 9.0,
+    "apt_install": 5.018223168999999,
+    "cpu_single": 6875.64,
+    "cpu_multi": 26772.33,
+    "memory": 42663.06,
+    "seq_read": 17547.168979,
+    "seq_write": 14138.545549,
+    "rand_read": 99353.309779,
+    "rand_write": 127462.835811,
+    "fsync": 25668.633137,
+    "download": 115.24343820135239,
+    "cache_save": 3.9670615196228027,
+    "cache_restore": 1.452834129333496,
+    "docker_cold": 10.655013845999997,
+    "docker_cached": 5.118739571999999,
+    "redis_build": 23.553412410999982,
     "redis_cost": 0.0032
    },
    "ranges": {
     "queue": [
-     8.0,
-     8.0
+     7.0,
+     9.0
     ],
     "apt_install": [
-     4.929293495,
-     5.182558294
+     4.957345406000002,
+     5.107554545999999
     ],
     "cpu_single": [
-     6922.23,
-     6968.57
+     6870.11,
+     6978.71
     ],
     "cpu_multi": [
-     26950.77,
-     27058.41
+     26743.17,
+     27158.92
     ],
     "memory": [
-     42715.04,
-     42956.0
+     42579.54,
+     43213.05
     ],
     "seq_read": [
-     16695.222823,
-     17511.449871
+     17056.468124,
+     19457.12769
     ],
     "seq_write": [
-     15260.027673,
-     18013.544492
+     9404.053415,
+     15255.204545
     ],
     "rand_read": [
-     86551.363242,
-     112394.973668
+     81196.320245,
+     126150.189987
     ],
     "rand_write": [
-     111369.375375,
-     122881.874542
+     124169.45537,
+     131011.39924
     ],
     "fsync": [
-     26001.39986,
-     27521.047895
+     23707.629237,
+     26710.028997
     ],
     "download": [
-     97.22968612528972,
-     466.3599078042996
+     96.04262214860964,
+     615.5964070666486
     ],
     "cache_save": [
-     3.9413416385650635,
-     4.12858247756958
+     3.871608257293701,
+     4.3864147663116455
     ],
     "cache_restore": [
-     1.5040926933288574,
-     1.5960979461669922
+     1.404188632965088,
+     1.5490846633911133
     ],
-    "docker_cold": null,
-    "docker_cached": null,
+    "docker_cold": [
+     10.600783358000001,
+     10.744210485
+    ],
+    "docker_cached": [
+     5.012842751999999,
+     5.119862197999998
+    ],
     "redis_build": [
-     23.37272503599999,
-     23.397605062000025
+     23.30535659399999,
+     23.755940538999994
     ],
     "redis_cost": [
      0.0032,
@@ -2823,8 +2848,8 @@
     ]
    },
    "sample_count": 3,
-   "measured_at": "2026-11-28T04:52:37.197723+00:00",
-   "run_url": "https://github.com/lockyer-labs/runnersbench/actions/runs/46109503016"
+   "measured_at": "2026-11-28T05:05:52.247967+00:00",
+   "run_url": "https://github.com/lockyer-labs/runnersbench/actions/runs/46110496206"
   },
   {
    "provider": "namespace",
@@ -3191,44 +3216,26 @@
  },
  "errors": [
   {
-   "label": "luxor-ubuntu-medium-4c-8g",
-   "run_id": "46109503016",
-   "benchmark": "docker",
-   "error": "docker buildx build exited 1: ne"
-  },
-  {
-   "label": "luxor-ubuntu-medium-4c-8g",
-   "run_id": "46109503016",
-   "benchmark": "docker",
-   "error": "docker buildx build exited 1: ne"
-  },
-  {
    "label": "depot-ubuntu-24.04-4",
-   "run_id": "46109503016",
-   "benchmark": "docker",
-   "error": "docker buildx build exited 1: #16 writing layer sha256:0a2538e70241bba5e84b43c1f75b3486c473adcde07c6a597a9832f0cb5d8f28"
-  },
-  {
-   "label": "depot-ubuntu-24.04-4",
-   "run_id": "46109503016",
-   "benchmark": "docker",
-   "error": "docker buildx build exited 1: #16 writing layer sha256:9ef7ac29ea91ed642e7c38d283b1a160f3495aacefb05cbbbc1d0ec5020b26f1"
-  },
-  {
-   "label": "groundbox-4vcpu",
-   "run_id": "46109503016",
+   "run_id": "46110496206",
    "benchmark": "docker",
    "error": "the cached build didn't reuse the npm ci layer"
   },
   {
    "label": "groundbox-4vcpu",
-   "run_id": "46109503016",
+   "run_id": "46110496206",
+   "benchmark": "docker",
+   "error": "the cold build job didn't finish"
+  },
+  {
+   "label": "groundbox-4vcpu",
+   "run_id": "46110496206",
    "benchmark": "docker",
    "error": "the cached build didn't reuse the npm ci layer"
   },
   {
    "label": "groundbox-4vcpu",
-   "run_id": "46109503016",
+   "run_id": "46110496206",
    "benchmark": "docker",
    "error": "the cached build didn't reuse the npm ci layer"
   },
@@ -3252,33 +3259,15 @@
   },
   {
    "label": "homemade-small",
-   "run_id": "46109503016",
+   "run_id": "46110496206",
    "benchmark": "docker",
-   "error": "docker jobs didn't finish"
+   "error": "the cached build didn't reuse the npm ci layer"
   },
   {
    "label": "homemade-small",
-   "run_id": "46109503016",
+   "run_id": "46110496206",
    "benchmark": "docker",
-   "error": "docker jobs didn't finish"
-  },
-  {
-   "label": "homemade-small",
-   "run_id": "46109503016",
-   "benchmark": "docker",
-   "error": "docker jobs didn't finish"
-  },
-  {
-   "label": "depot-ubuntu-24.04-arm-4",
-   "run_id": "46109503016",
-   "benchmark": "docker",
-   "error": "docker buildx build exited 1: #16 writing layer sha256:035563a816bc72f9c25b0e21d5782e0f6c84a9207ce77ccd0d797b0946b6d89b"
-  },
-  {
-   "label": "depot-ubuntu-24.04-arm-4",
-   "run_id": "46109503016",
-   "benchmark": "docker",
-   "error": "docker buildx build exited 1: #16 writing layer sha256:3722e830560e975eadfac7540e68a2e9cf887dd49b0683e7a2738e88a3887ab4"
+   "error": "the cached build didn't reuse the npm ci layer"
   },
   {
    "label": "groundbox-macos",

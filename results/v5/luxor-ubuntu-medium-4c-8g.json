@@ -18,12 +18,12 @@
     },
     "github": {
       "repository": "lockyer-labs/runnersbench",
-      "run_id": "46109503016",
+      "run_id": "46110496206",
       "run_attempt": "1",
-      "sha": "48880f33d2a9d90468ffabe8020ae3565e44f747"
+      "sha": "2a1eb757a17b80a238b4449b24e738202f60d438"
     },
-    "started_at": "2026-11-28T04:52:37.197723+00:00",
-    "finished_at": "2026-11-28T04:55:18.915690+00:00",
+    "started_at": "2026-11-28T05:05:51.067517+00:00",
+    "finished_at": "2026-11-28T05:08:31.537301+00:00",
     "system": {
       "cpu": {
         "model": "AMD Ryzen 9 9950X 16-Core Processor",
@@ -102,7 +102,7 @@
       "disk": {
         "workdir": "/home/tenki/actions-runner/_work/_temp",
         "total_bytes": 155935379456,
-        "free_bytes": 86286966784,
+        "free_bytes": 86287011840,
         "mount": "/dev/vda ext4   rw,relatime,errors=remount-ro",
         "devices": [
           {
@@ -275,7 +275,7 @@
         "org": "AS19538 Luxor"
       },
       "runner": {
-        "name": "tenki-sandbox-e12cf33f-530c-4137-93d7-d2078b99b3d0",
+        "name": "tenki-sandbox-e23bc052-349d-4246-9b6c-281c6f788c36",
         "environment": "self-hosted"
       },
       "tools": {
@@ -283,118 +283,119 @@
         "gcc": "gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
         "python": "3.12.16"
       },
-      "wall_seconds": 0.11437825799999857
+      "wall_seconds": 0.10748896399999808
     },
     "benchmarks": {
       "apt_install": {
         "manager": "apt",
-        "update_seconds": 2.7982437749999995,
-        "seconds": 5.02232704,
-        "wall_seconds": 5.022330527000001
+        "update_seconds": 2.9178921409999994,
+        "seconds": 5.107554545999999,
+        "wall_seconds": 5.107558082000001
       },
       "cpu_single": {
         "threads": 1,
-        "events_per_second": 6968.57,
-        "wall_seconds": 15.003879424999997
+        "events_per_second": 6870.11,
+        "wall_seconds": 15.004033965999998
       },
       "cpu_multi": {
         "threads": 4,
-        "events_per_second": 26950.77,
-        "wall_seconds": 15.00397735,
+        "events_per_second": 26743.17,
+        "wall_seconds": 15.003853675999999,
         "cpu_accounting": {
-          "wall_seconds": 15.004131312000005,
+          "wall_seconds": 15.004024279,
           "steal_pct": 0.2664002664002664,
-          "cpu_per_wall": 3.932761768940721,
+          "cpu_per_wall": 3.9403550607917546,
           "nr_throttled": 0,
           "throttled_ms": 0.0
         }
       },
       "memory": {
-        "mib_per_second": 42956.0,
-        "wall_seconds": 15.004120189999995
+        "mib_per_second": 42663.06,
+        "wall_seconds": 15.004287507000008
       },
       "disk": {
         "seq_write": {
-          "mb_per_second": 16509.986745,
-          "iops": 15744.15039,
-          "p99_latency_us": 1794.048,
+          "mb_per_second": 9404.053415,
+          "iops": 8967.404346,
+          "p99_latency_us": 8847.36,
           "direct": true
         },
         "seq_read": {
-          "mb_per_second": 17315.868533,
-          "iops": 16512.699153,
+          "mb_per_second": 17547.168979,
+          "iops": 16733.284448,
           "p99_latency_us": 1335.296,
           "direct": true
         },
         "rand_read": {
-          "mb_per_second": 460.378276,
-          "iops": 112394.973668,
-          "p99_latency_us": 399.36,
+          "mb_per_second": 406.959894,
+          "iops": 99353.309779,
+          "p99_latency_us": 358.4,
           "direct": true
         },
         "rand_write": {
-          "mb_per_second": 456.177699,
-          "iops": 111369.375375,
-          "p99_latency_us": 370.688,
+          "mb_per_second": 508.606826,
+          "iops": 124169.45537,
+          "p99_latency_us": 354.304,
           "direct": true
         },
-        "wall_seconds": 69.23138966
+        "wall_seconds": 69.220035193
       },
       "fsync": {
-        "writes_per_second": 27521.047895,
-        "sync_mean_us": 30.897969732,
-        "sync_p99_us": 80.384,
-        "wall_seconds": 10.267410275000003
+        "writes_per_second": 23707.629237,
+        "sync_mean_us": 36.554854235,
+        "sync_p99_us": 112.128,
+        "wall_seconds": 10.273167755000003
       },
       "download": {
-        "mb_per_second": 291.3136288021855,
+        "mb_per_second": 615.5964070666486,
         "bytes": 1000000000,
-        "seconds": 3.4327264540000044,
+        "seconds": 1.6244409299999916,
         "streams": 4,
         "requests": 20,
         "errors": [],
-        "wall_seconds": 3.4327878800000065
+        "wall_seconds": 1.6245023059999824
       },
       "compile_redis": {
         "version": "8.10.3",
         "jobs": 4,
-        "seconds": 23.397605062000025,
+        "seconds": 23.755940538999994,
         "github_download": {
-          "mb_per_second": 33.581063,
+          "mb_per_second": 17.684489,
           "bytes": 4780701,
-          "seconds": 0.142363,
-          "connect_seconds": 0.013509,
-          "ttfb_seconds": 0.085453
+          "seconds": 0.270333,
+          "connect_seconds": 0.014519,
+          "ttfb_seconds": 0.206385
         },
         "cpu_accounting": {
-          "wall_seconds": 23.397606515000007,
-          "steal_pct": 0.07492240179813764,
-          "cpu_per_wall": 3.6347666991270446,
+          "wall_seconds": 23.755941259999986,
+          "steal_pct": 0.29479890503263845,
+          "cpu_per_wall": 3.6455215582562883,
           "nr_throttled": 0,
           "throttled_ms": 0.0
         },
-        "wall_seconds": 23.632354416
+        "wall_seconds": 24.119338770000013
       },
       "cache": {
         "size_mb": 1024,
-        "save_seconds": 3.9413416385650635,
-        "restore_seconds": 1.5608949661254883
+        "save_seconds": 4.3864147663116455,
+        "restore_seconds": 1.452834129333496
       },
       "docker": {
-        "error": "docker buildx build exited 1: ne\n#16 writing layer sha256:86781d25d3989ead8f09c45716da0159c1dd0be2c753a51f15b6c60f4b9a97db 0.4s done\n#16 ERROR: error writing layer blob: unknown error 400 Bad Request: {\"error\":\"incomplete upload\",\"ok\":false}\n\n------\n > exporting to GitHub Actions Cache:\n------\nWARNING: No output specified with docker-container driver. Build result will only remain in the build cache. To push result image into registry use --push or to load image into docker use --load\nERROR: failed to build: failed to solve: error writing layer blob: unknown error 400 Bad Request: {\"error\":\"incomplete upload\",\"ok\":false}\n\n",
-        "cache": "gha"
+        "cold_seconds": 10.600783358000001,
+        "cache": "gha",
+        "cached_seconds": 5.119862197999998
       }
     },
     "cpu_accounting": {
-      "wall_seconds": 161.717971024,
-      "steal_pct": 0.7398350075066941,
-      "cpu_per_wall": 1.6856814321492053,
+      "wall_seconds": 160.46981904199998,
+      "steal_pct": 0.4819615366618315,
+      "cpu_per_wall": 1.705401605322264,
       "nr_throttled": 0,
       "throttled_ms": 0.0
     },
     "timing": {
-      "queue_seconds": 8.0,
-      "job_seconds": 178.0
+      "queue_seconds": 7.0,
+      "job_seconds": 177.0
     }
   },
   {
@@ -416,12 +417,12 @@
     },
     "github": {
       "repository": "lockyer-labs/runnersbench",
-      "run_id": "46109503016",
+      "run_id": "46110496206",
       "run_attempt": "1",
-      "sha": "48880f33d2a9d90468ffabe8020ae3565e44f747"
+      "sha": "2a1eb757a17b80a238b4449b24e738202f60d438"
     },
-    "started_at": "2026-11-28T04:52:36.388499+00:00",
-    "finished_at": "2026-11-28T04:55:16.968099+00:00",
+    "started_at": "2026-11-28T05:05:52.013221+00:00",
+    "finished_at": "2026-11-28T05:08:38.817686+00:00",
     "system": {
       "cpu": {
         "model": "AMD Ryzen 9 9950X 16-Core Processor",
@@ -500,7 +501,7 @@
       "disk": {
         "workdir": "/home/tenki/actions-runner/_work/_temp",
         "total_bytes": 155935379456,
-        "free_bytes": 86286966784,
+        "free_bytes": 86287007744,
         "mount": "/dev/vda ext4   rw,relatime,errors=remount-ro",
         "devices": [
           {
@@ -673,7 +674,7 @@
         "org": "AS19538 Luxor"
       },
       "runner": {
-        "name": "tenki-sandbox-f1ce0bb7-d1b1-44ca-a652-d7e43df90304",
+        "name": "tenki-sandbox-7f4b1c8d-eecf-4858-b66c-de599e096285",
         "environment": "self-hosted"
       },
       "tools": {
@@ -681,118 +682,119 @@
         "gcc": "gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
         "python": "3.12.16"
       },
-      "wall_seconds": 0.10675861100000006
+      "wall_seconds": 0.11821466299999983
     },
     "benchmarks": {
       "apt_install": {
         "manager": "apt",
-        "update_seconds": 2.9779127109999983,
-        "seconds": 5.182558294,
-        "wall_seconds": 5.182561489999998
+        "update_seconds": 2.7843928300000016,
+        "seconds": 4.957345406000002,
+        "wall_seconds": 4.957348551999999
       },
       "cpu_single": {
         "threads": 1,
-        "events_per_second": 6931.41,
-        "wall_seconds": 15.006875536999999
+        "events_per_second": 6978.71,
+        "wall_seconds": 15.004087319
       },
       "cpu_multi": {
         "threads": 4,
-        "events_per_second": 27058.41,
-        "wall_seconds": 15.003695616999998,
+        "events_per_second": 27158.92,
+        "wall_seconds": 15.003799483999998,
         "cpu_accounting": {
-          "wall_seconds": 15.003882169,
-          "steal_pct": 0.0832778147901399,
-          "cpu_per_wall": 3.93587435137368,
+          "wall_seconds": 15.003982880000002,
+          "steal_pct": 0.21648626144879268,
+          "cpu_per_wall": 3.9354197796845254,
           "nr_throttled": 0,
           "throttled_ms": 0.0
         }
       },
       "memory": {
-        "mib_per_second": 42902.95,
-        "wall_seconds": 15.004150848000002
+        "mib_per_second": 43213.05,
+        "wall_seconds": 15.004038585999993
       },
       "disk": {
         "seq_write": {
-          "mb_per_second": 15260.027673,
-          "iops": 14552.096527,
-          "p99_latency_us": 4227.072,
+          "mb_per_second": 14138.545549,
+          "iops": 13482.501167,
+          "p99_latency_us": 3981.312,
           "direct": true
         },
         "seq_read": {
-          "mb_per_second": 16695.222823,
-          "iops": 15920.738617,
-          "p99_latency_us": 1449.984,
+          "mb_per_second": 19457.12769,
+          "iops": 18554.696354,
+          "p99_latency_us": 1204.224,
           "direct": true
         },
         "rand_read": {
-          "mb_per_second": 389.253247,
-          "iops": 95030.397973,
-          "p99_latency_us": 407.552,
+          "mb_per_second": 516.719915,
+          "iops": 126150.189987,
+          "p99_latency_us": 391.168,
           "direct": true
         },
         "rand_write": {
-          "mb_per_second": 503.332895,
-          "iops": 122881.874542,
+          "mb_per_second": 522.096513,
+          "iops": 127462.835811,
           "p99_latency_us": 350.208,
           "direct": true
         },
-        "wall_seconds": 69.213791891
+        "wall_seconds": 69.22016584999999
       },
       "fsync": {
-        "writes_per_second": 26001.39986,
-        "sync_mean_us": 32.850165798,
-        "sync_p99_us": 102.912,
-        "wall_seconds": 10.277027444000026
+        "writes_per_second": 26710.028997,
+        "sync_mean_us": 31.995605038,
+        "sync_p99_us": 86.528,
+        "wall_seconds": 10.265912951000018
       },
       "download": {
-        "mb_per_second": 466.3599078042996,
+        "mb_per_second": 115.24343820135239,
         "bytes": 1000000000,
-        "seconds": 2.1442666560000134,
+        "seconds": 8.677283632000012,
         "streams": 4,
         "requests": 20,
         "errors": [],
-        "wall_seconds": 2.144315938999995
+        "wall_seconds": 8.677338996999993
       },
       "compile_redis": {
         "version": "8.10.3",
         "jobs": 4,
-        "seconds": 23.393137703999997,
+        "seconds": 23.30535659399999,
         "github_download": {
-          "mb_per_second": 31.681462,
+          "mb_per_second": 31.60397,
           "bytes": 4780701,
-          "seconds": 0.150899,
-          "connect_seconds": 0.011775,
-          "ttfb_seconds": 0.093792
+          "seconds": 0.151269,
+          "connect_seconds": 0.01463,
+          "ttfb_seconds": 0.091025
         },
         "cpu_accounting": {
-          "wall_seconds": 23.393138193999988,
-          "steal_pct": 0.24627904486561727,
-          "cpu_per_wall": 3.6410522732621806,
+          "wall_seconds": 23.305357775999994,
+          "steal_pct": 0.3543053467897788,
+          "cpu_per_wall": 3.654769637894789,
           "nr_throttled": 0,
           "throttled_ms": 0.0
         },
-        "wall_seconds": 23.634924060000003
+        "wall_seconds": 23.54809052500002
       },
       "cache": {
         "size_mb": 1024,
-        "save_seconds": 4.099909067153931,
-        "restore_seconds": 1.5040926933288574
+        "save_seconds": 3.9670615196228027,
+        "restore_seconds": 1.404188632965088
       },
       "docker": {
-        "error": "docker buildx build exited 1: ne\n#16 writing layer sha256:86781d25d3989ead8f09c45716da0159c1dd0be2c753a51f15b6c60f4b9a97db 0.3s done\n#16 ERROR: error writing layer blob: unknown error 400 Bad Request: {\"error\":\"incomplete upload\",\"ok\":false}\n\n------\n > exporting to GitHub Actions Cache:\n------\nWARNING: No output specified with docker-container driver. Build result will only remain in the build cache. To push result image into registry use --push or to load image into docker use --load\nERROR: failed to build: failed to solve: error writing layer blob: unknown error 400 Bad Request: {\"error\":\"incomplete upload\",\"ok\":false}\n\n",
-        "cache": "gha"
+        "cold_seconds": 10.655013845999997,
+        "cache": "gha",
+        "cached_seconds": 5.012842751999999
       }
     },
     "cpu_accounting": {
-      "wall_seconds": 160.57960528499999,
-      "steal_pct": 1.6984510002335176,
-      "cpu_per_wall": 1.7122115321682336,
+      "wall_seconds": 166.804469092,
+      "steal_pct": 1.3152584931322582,
+      "cpu_per_wall": 1.6373047945697903,
       "nr_throttled": 0,
       "throttled_ms": 0.0
     },
     "timing": {
-      "queue_seconds": 8.0,
-      "job_seconds": 176.0
+      "queue_seconds": 9.0,
+      "job_seconds": 182.0
     }
   },
   {
@@ -814,12 +816,12 @@
     },
     "github": {
       "repository": "lockyer-labs/runnersbench",
-      "run_id": "46109503016",
+      "run_id": "46110496206",
       "run_attempt": "1",
-      "sha": "48880f33d2a9d90468ffabe8020ae3565e44f747"
+      "sha": "2a1eb757a17b80a238b4449b24e738202f60d438"
     },
-    "started_at": "2026-11-28T04:52:36.672715+00:00",
-    "finished_at": "2026-11-28T04:55:24.870673+00:00",
+    "started_at": "2026-11-28T05:05:52.247967+00:00",
+    "finished_at": "2026-11-28T05:08:40.746327+00:00",
     "system": {
       "cpu": {
         "model": "AMD Ryzen 9 9950X 16-Core Processor",
@@ -898,7 +900,7 @@
       "disk": {
         "workdir": "/home/tenki/actions-runner/_work/_temp",
         "total_bytes": 155935379456,
-        "free_bytes": 86286966784,
+        "free_bytes": 86287011840,
         "mount": "/dev/vda ext4   rw,relatime,errors=remount-ro",
         "devices": [
           {
@@ -1071,7 +1073,7 @@
         "org": "AS19538 Luxor"
       },
       "runner": {
-        "name": "tenki-sandbox-ef15052c-0a6c-4054-b7a1-d1b9698c2606",
+        "name": "tenki-sandbox-27b650f5-bd07-4e44-9190-e5e32d0de77b",
         "environment": "self-hosted"
       },
       "tools": {
@@ -1079,118 +1081,118 @@
         "gcc": "gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
         "python": "3.12.16"
       },
-      "wall_seconds": 0.11570638299999914
+      "wall_seconds": 0.10973243300000135
     },
     "benchmarks": {
       "apt_install": {
         "manager": "apt",
-        "update_seconds": 2.794511859,
-        "seconds": 4.929293495,
-        "wall_seconds": 4.929296511
+        "update_seconds": 2.816483086999998,
+        "seconds": 5.018223168999999,
+        "wall_seconds": 5.018226666999997
       },
       "cpu_single": {
         "threads": 1,
-        "events_per_second": 6922.23,
-        "wall_seconds": 15.003755179000002
+        "events_per_second": 6875.64,
+        "wall_seconds": 15.003716206
       },
       "cpu_multi": {
         "threads": 4,
-        "events_per_second": 26976.69,
-        "wall_seconds": 15.003933707000002,
+        "events_per_second": 26772.33,
+        "wall_seconds": 15.004050436999997,
         "cpu_accounting": {
-          "wall_seconds": 15.004090684000005,
-          "steal_pct": 0.0832778147901399,
-          "cpu_per_wall": 3.942249500203033,
+          "wall_seconds": 15.004217664000002,
+          "steal_pct": 0.18315018315018314,
+          "cpu_per_wall": 3.9433721454175776,
           "nr_throttled": 0,
           "throttled_ms": 0.0
         }
       },
       "memory": {
-        "mib_per_second": 42715.04,
-        "wall_seconds": 15.004357490000004
+        "mib_per_second": 42579.54,
+        "wall_seconds": 15.004068754000002
       },
       "disk": {
         "seq_write": {
-          "mb_per_second": 18013.544492,
-          "iops": 17178.054796,
-          "p99_latency_us": 1155.072,
+          "mb_per_second": 15255.204545,
+          "iops": 14547.430171,
+          "p99_latency_us": 2506.752,
           "direct": true
         },
         "seq_read": {
-          "mb_per_second": 17511.449871,
-          "iops": 16699.220052,
-          "p99_latency_us": 1679.36,
+          "mb_per_second": 17056.468124,
+          "iops": 16265.248983,
+          "p99_latency_us": 1892.352,
           "direct": true
         },
         "rand_read": {
-          "mb_per_second": 354.522848,
-          "iops": 86551.363242,
-          "p99_latency_us": 415.744,
+          "mb_per_second": 332.588865,
+          "iops": 81196.320245,
+          "p99_latency_us": 823.296,
           "direct": true
         },
         "rand_write": {
-          "mb_per_second": 474.926025,
-          "iops": 115946.670222,
-          "p99_latency_us": 354.304,
+          "mb_per_second": 536.631428,
+          "iops": 131011.39924,
+          "p99_latency_us": 374.784,
           "direct": true
         },
-        "wall_seconds": 69.23470688
+        "wall_seconds": 69.25637048700001
       },
       "fsync": {
-        "writes_per_second": 26370.162984,
-        "sync_mean_us": 32.507598169,
-        "sync_p99_us": 89.6,
-        "wall_seconds": 10.274492103
+        "writes_per_second": 25668.633137,
+        "sync_mean_us": 33.445744655000006,
+        "sync_p99_us": 92.672,
+        "wall_seconds": 10.283447198999994
       },
       "download": {
-        "mb_per_second": 97.22968612528972,
-        "bytes": 973202176,
-        "seconds": 10.009311093999997,
+        "mb_per_second": 96.04262214860964,
+        "bytes": 962483264,
+        "seconds": 10.021418017000002,
         "streams": 4,
         "requests": 20,
         "errors": [],
-        "wall_seconds": 10.009386056000011
+        "wall_seconds": 10.021508799000003
       },
       "compile_redis": {
         "version": "8.10.3",
         "jobs": 4,
-        "seconds": 23.37272503599999,
+        "seconds": 23.553412410999982,
         "github_download": {
-          "mb_per_second": 31.434815,
+          "mb_per_second": 32.796192,
           "bytes": 4780701,
-          "seconds": 0.152083,
-          "connect_seconds": 0.014081,
-          "ttfb_seconds": 0.091583
+          "seconds": 0.14577,
+          "connect_seconds": 0.013805,
+          "ttfb_seconds": 0.088387
         },
         "cpu_accounting": {
-          "wall_seconds": 23.372725978000005,
-          "steal_pct": 0.1177100053504548,
-          "cpu_per_wall": 3.651518230279745,
+          "wall_seconds": 23.55341370299999,
+          "steal_pct": 0.4361238166152537,
+          "cpu_per_wall": 3.6468009725936086,
           "nr_throttled": 0,
           "throttled_ms": 0.0
         },
-        "wall_seconds": 23.616801718000005
+        "wall_seconds": 23.791739054999994
       },
       "cache": {
         "size_mb": 1024,
-        "save_seconds": 4.12858247756958,
-        "restore_seconds": 1.5960979461669922
+        "save_seconds": 3.871608257293701,
+        "restore_seconds": 1.5490846633911133
       },
       "docker": {
-        "cold_seconds": 13.935887960999999,
+        "cold_seconds": 10.744210485,
         "cache": "gha",
-        "cached_seconds": 5.027421133000001
+        "cached_seconds": 5.118739571999999
       }
     },
     "cpu_accounting": {
-      "wall_seconds": 168.19796012400002,
-      "steal_pct": 0.5053808193114929,
-      "cpu_per_wall": 1.6495999998778201,
+      "wall_seconds": 168.498364194,
+      "steal_pct": 2.2043402597016257,
+      "cpu_per_wall": 1.6236183734402194,
       "nr_throttled": 0,
       "throttled_ms": 0.0
     },
     "timing": {
-      "queue_seconds": 8.0,
+      "queue_seconds": 9.0,
       "job_seconds": 184.0
     }
   }
