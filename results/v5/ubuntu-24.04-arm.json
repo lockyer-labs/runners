@@ -1,0 +1,788 @@
+[
+  {
+    "schema_version": 1,
+    "benchmark_version": 5,
+    "spec": {
+      "provider": "github",
+      "name": "GitHub",
+      "label": "ubuntu-24.04-arm",
+      "arch": "arm64",
+      "price_per_minute": 0.008,
+      "billing": {
+        "increment_seconds": 60
+      },
+      "pricing_caveat": "Free on public repos. This is GitHub's 4-core larger runner rate, which needs a GitHub Team ($4 per user a month) or Enterprise Cloud plan.",
+      "enabled": true,
+      "notes": "4 vCPU / 16 GB on public repos, where it is free; priced at the 4-core arm64 larger runner rate.",
+      "pricing_source": "https://docs.github.com/en/billing/reference/actions-runner-pricing",
+      "rep": 1
+    },
+    "github": {
+      "repository": "lockyer-labs/runnersbench",
+      "run_id": "46109503016",
+      "run_attempt": "1",
+      "sha": "48880f33d2a9d90468ffabe8020ae3565e44f747"
+    },
+    "started_at": "2026-11-28T04:52:49.984099+00:00",
+    "finished_at": "2026-11-28T04:56:25.190136+00:00",
+    "system": {
+      "cpu": {
+        "model": "Neoverse-N2",
+        "vendor": "ARM",
+        "arch": "aarch64",
+        "logical_cpus": 4,
+        "available_cpus": 4,
+        "threads_per_core": "1",
+        "sockets": "1",
+        "max_mhz": null,
+        "l3_cache": "128 MiB (1 instance)",
+        "hypervisor": null,
+        "flags": {
+          "avx2": false,
+          "avx512f": false,
+          "sha_ni": false,
+          "aes": true,
+          "vaes": false,
+          "asimd": true,
+          "sve": true,
+          "sve2": true,
+          "sha2": true
+        },
+        "cgroup_cpu_max": null,
+        "lscpu": {
+          "Architecture": "aarch64",
+          "CPU op-mode(s)": "32-bit, 64-bit",
+          "Byte Order": "Little Endian",
+          "CPU(s)": "4",
+          "On-line CPU(s) list": "0-3",
+          "Vendor ID": "ARM",
+          "Model name": "Neoverse-N2",
+          "Model": "0",
+          "Thread(s) per core": "1",
+          "Core(s) per socket": "4",
+          "Socket(s)": "1",
+          "Stepping": "r0p0",
+          "BogoMIPS": "2000.00",
+          "Flags": "fp asimd evtstrm aes pmull sha1 sha2 crc32 atomics fphp asimdhp cpuid asimdrdm jscvt fcma lrcpc dcpop sha3 sm3 sm4 asimddp sha512 sve asimdfhm uscat ilrcpc flagm sb paca pacg dcpodp sve2 sveaes svebitperm svesha3 svesm4 flagm2 frint svei8mm svebf16 i8mm bf16",
+          "L1d cache": "256 KiB (4 instances)",
+          "L1i cache": "256 KiB (4 instances)",
+          "L2 cache": "4 MiB (4 instances)",
+          "L3 cache": "128 MiB (1 instance)",
+          "NUMA node(s)": "1",
+          "NUMA node0 CPU(s)": "0-3",
+          "Vulnerability Gather data sampling": "Not affected",
+          "Vulnerability Ghostwrite": "Not affected",
+          "Vulnerability Indirect target selection": "Not affected",
+          "Vulnerability Itlb multihit": "Not affected",
+          "Vulnerability L1tf": "Not affected",
+          "Vulnerability Mds": "Not affected",
+          "Vulnerability Meltdown": "Not affected",
+          "Vulnerability Mmio stale data": "Not affected",
+          "Vulnerability Old microcode": "Not affected",
+          "Vulnerability Reg file data sampling": "Not affected",
+          "Vulnerability Retbleed": "Not affected",
+          "Vulnerability Spec rstack overflow": "Not affected",
+          "Vulnerability Spec store bypass": "Mitigation; Speculative Store Bypass disabled via prctl",
+          "Vulnerability Spectre v1": "Mitigation; __user pointer sanitization",
+          "Vulnerability Spectre v2": "Mitigation; CSV2, BHB",
+          "Vulnerability Srbds": "Not affected",
+          "Vulnerability Tsa": "Not affected",
+          "Vulnerability Tsx async abort": "Not affected",
+          "Vulnerability Vmscape": "Not affected"
+        }
+      },
+      "memory": {
+        "total_bytes": 16715808768,
+        "cgroup_max": null
+      },
+      "disk": {
+        "workdir": "/home/runner/work/_temp",
+        "total_bytes": 154894188544,
+        "free_bytes": 112144449536,
+        "mount": "/dev/sda1 ext4   rw,relatime,discard,journal_async_commit,nobarrier,errors=remount-ro,commit=30,data=writeback",
+        "devices": [
+          {
+            "name": "sda",
+            "size": "150G",
+            "type": "disk",
+            "rota": true,
+            "model": "Virtual Disk"
+          }
+        ]
+      },
+      "os": {
+        "pretty_name": "Ubuntu 24.04.5 LTS",
+        "kernel": "7.0.0-1020-azure",
+        "image_os": "ubuntu24-arm64",
+        "image_version": "20261122.193.1"
+      },
+      "virtualization": "microsoft",
+      "virtualization_layers": {
+        "vm": "microsoft",
+        "container": null
+      },
+      "dmi": {
+        "sys_vendor": "Microsoft Corporation",
+        "product_name": "Virtual Machine",
+        "product_version": "Hyper-V UEFI Release v4.1",
+        "board_vendor": "Microsoft Corporation",
+        "bios_vendor": "Microsoft Corporation",
+        "chassis_vendor": "Microsoft Corporation"
+      },
+      "network": {
+        "ip": "20.55.178.33",
+        "city": "Cheyenne",
+        "region": "Wyoming",
+        "country": "US",
+        "loc": "41.1400,-104.8203",
+        "org": "AS8075 Microsoft Corporation"
+      },
+      "runner": {
+        "name": "GitHub Actions 1000000442",
+        "environment": "github-hosted"
+      },
+      "tools": {
+        "docker": "Docker version 28.0.4, build b8034c0",
+        "gcc": "gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+        "python": "3.12.16"
+      },
+      "wall_seconds": 1.4566725930000075
+    },
+    "benchmarks": {
+      "apt_install": {
+        "manager": "apt",
+        "update_seconds": 12.045198693000003,
+        "seconds": 24.289147749999998,
+        "wall_seconds": 24.289152717999997
+      },
+      "cpu_single": {
+        "threads": 1,
+        "events_per_second": 3955.41,
+        "wall_seconds": 15.007371562000017
+      },
+      "cpu_multi": {
+        "threads": 4,
+        "events_per_second": 15738.93,
+        "wall_seconds": 15.007202959000011,
+        "cpu_accounting": {
+          "wall_seconds": 15.007431704999988,
+          "steal_pct": 0.0,
+          "cpu_per_wall": 3.99502067898966,
+          "nr_throttled": 0,
+          "throttled_ms": 0.0
+        }
+      },
+      "memory": {
+        "mib_per_second": 27663.29,
+        "wall_seconds": 15.007197964999989
+      },
+      "disk": {
+        "seq_write": {
+          "mb_per_second": 320.998342,
+          "iops": 305.130932,
+          "p99_latency_us": 89653.248,
+          "direct": true
+        },
+        "seq_read": {
+          "mb_per_second": 412.891613,
+          "iops": 392.766919,
+          "p99_latency_us": 61603.84,
+          "direct": true
+        },
+        "rand_read": {
+          "mb_per_second": 80.451545,
+          "iops": 19639.424038,
+          "p99_latency_us": 35389.44,
+          "direct": true
+        },
+        "rand_write": {
+          "mb_per_second": 80.169094,
+          "iops": 19570.467115,
+          "p99_latency_us": 17170.432,
+          "direct": true
+        },
+        "wall_seconds": 69.30114236900002
+      },
+      "fsync": {
+        "writes_per_second": 2247.175282,
+        "sync_mean_us": 431.660589081,
+        "sync_p99_us": 643.072,
+        "wall_seconds": 10.286122906999992
+      },
+      "download": {
+        "mb_per_second": 235.33767211608617,
+        "bytes": 1000000000,
+        "seconds": 4.249213443000002,
+        "streams": 4,
+        "requests": 20,
+        "errors": [],
+        "wall_seconds": 4.249337300000008
+      },
+      "compile_redis": {
+        "version": "8.10.3",
+        "jobs": 4,
+        "seconds": 54.09697479699997,
+        "github_download": {
+          "mb_per_second": 7.564903,
+          "bytes": 4780701,
+          "seconds": 0.631958,
+          "connect_seconds": 0.10007,
+          "ttfb_seconds": 0.278171
+        },
+        "cpu_accounting": {
+          "wall_seconds": 54.096975902,
+          "steal_pct": 0.0,
+          "cpu_per_wall": 3.164317360550858,
+          "nr_throttled": 0,
+          "throttled_ms": 0.0
+        },
+        "wall_seconds": 55.356884971
+      },
+      "cache": {
+        "size_mb": 1024,
+        "save_seconds": 5.32072639465332,
+        "restore_seconds": 7.879609823226929
+      },
+      "docker": {
+        "cold_seconds": 29.464983188999994,
+        "cache": "gha",
+        "cached_seconds": 11.906839826999999
+      }
+    },
+    "cpu_accounting": {
+      "wall_seconds": 215.20603845300002,
+      "steal_pct": 0.0,
+      "cpu_per_wall": 1.4296810731321323,
+      "nr_throttled": 0,
+      "throttled_ms": 0.0
+    },
+    "timing": {
+      "queue_seconds": 5.0,
+      "job_seconds": 247.0
+    }
+  },
+  {
+    "schema_version": 1,
+    "benchmark_version": 5,
+    "spec": {
+      "provider": "github",
+      "name": "GitHub",
+      "label": "ubuntu-24.04-arm",
+      "arch": "arm64",
+      "price_per_minute": 0.008,
+      "billing": {
+        "increment_seconds": 60
+      },
+      "pricing_caveat": "Free on public repos. This is GitHub's 4-core larger runner rate, which needs a GitHub Team ($4 per user a month) or Enterprise Cloud plan.",
+      "enabled": true,
+      "notes": "4 vCPU / 16 GB on public repos, where it is free; priced at the 4-core arm64 larger runner rate.",
+      "pricing_source": "https://docs.github.com/en/billing/reference/actions-runner-pricing",
+      "rep": 2
+    },
+    "github": {
+      "repository": "lockyer-labs/runnersbench",
+      "run_id": "46109503016",
+      "run_attempt": "1",
+      "sha": "48880f33d2a9d90468ffabe8020ae3565e44f747"
+    },
+    "started_at": "2026-11-28T04:52:50.911542+00:00",
+    "finished_at": "2026-11-28T04:56:06.606965+00:00",
+    "system": {
+      "cpu": {
+        "model": "Neoverse-N2",
+        "vendor": "ARM",
+        "arch": "aarch64",
+        "logical_cpus": 4,
+        "available_cpus": 4,
+        "threads_per_core": "1",
+        "sockets": "1",
+        "max_mhz": null,
+        "l3_cache": "128 MiB (1 instance)",
+        "hypervisor": null,
+        "flags": {
+          "avx2": false,
+          "avx512f": false,
+          "sha_ni": false,
+          "aes": true,
+          "vaes": false,
+          "asimd": true,
+          "sve": true,
+          "sve2": true,
+          "sha2": true
+        },
+        "cgroup_cpu_max": null,
+        "lscpu": {
+          "Architecture": "aarch64",
+          "CPU op-mode(s)": "32-bit, 64-bit",
+          "Byte Order": "Little Endian",
+          "CPU(s)": "4",
+          "On-line CPU(s) list": "0-3",
+          "Vendor ID": "ARM",
+          "Model name": "Neoverse-N2",
+          "Model": "0",
+          "Thread(s) per core": "1",
+          "Core(s) per socket": "4",
+          "Socket(s)": "1",
+          "Stepping": "r0p0",
+          "BogoMIPS": "2000.00",
+          "Flags": "fp asimd evtstrm aes pmull sha1 sha2 crc32 atomics fphp asimdhp cpuid asimdrdm jscvt fcma lrcpc dcpop sha3 sm3 sm4 asimddp sha512 sve asimdfhm uscat ilrcpc flagm sb paca pacg dcpodp sve2 sveaes svebitperm svesha3 svesm4 flagm2 frint svei8mm svebf16 i8mm bf16",
+          "L1d cache": "256 KiB (4 instances)",
+          "L1i cache": "256 KiB (4 instances)",
+          "L2 cache": "4 MiB (4 instances)",
+          "L3 cache": "128 MiB (1 instance)",
+          "NUMA node(s)": "1",
+          "NUMA node0 CPU(s)": "0-3",
+          "Vulnerability Gather data sampling": "Not affected",
+          "Vulnerability Ghostwrite": "Not affected",
+          "Vulnerability Indirect target selection": "Not affected",
+          "Vulnerability Itlb multihit": "Not affected",
+          "Vulnerability L1tf": "Not affected",
+          "Vulnerability Mds": "Not affected",
+          "Vulnerability Meltdown": "Not affected",
+          "Vulnerability Mmio stale data": "Not affected",
+          "Vulnerability Old microcode": "Not affected",
+          "Vulnerability Reg file data sampling": "Not affected",
+          "Vulnerability Retbleed": "Not affected",
+          "Vulnerability Spec rstack overflow": "Not affected",
+          "Vulnerability Spec store bypass": "Mitigation; Speculative Store Bypass disabled via prctl",
+          "Vulnerability Spectre v1": "Mitigation; __user pointer sanitization",
+          "Vulnerability Spectre v2": "Mitigation; CSV2, BHB",
+          "Vulnerability Srbds": "Not affected",
+          "Vulnerability Tsa": "Not affected",
+          "Vulnerability Tsx async abort": "Not affected",
+          "Vulnerability Vmscape": "Not affected"
+        }
+      },
+      "memory": {
+        "total_bytes": 16715862016,
+        "cgroup_max": null
+      },
+      "disk": {
+        "workdir": "/home/runner/work/_temp",
+        "total_bytes": 154894188544,
+        "free_bytes": 112129536000,
+        "mount": "/dev/sda1 ext4   rw,relatime,discard,journal_async_commit,nobarrier,errors=remount-ro,commit=30,data=writeback",
+        "devices": [
+          {
+            "name": "sda",
+            "size": "150G",
+            "type": "disk",
+            "rota": true,
+            "model": "Virtual Disk"
+          }
+        ]
+      },
+      "os": {
+        "pretty_name": "Ubuntu 24.04.5 LTS",
+        "kernel": "7.0.0-1020-azure",
+        "image_os": "ubuntu24-arm64",
+        "image_version": "20261122.193.1"
+      },
+      "virtualization": "microsoft",
+      "virtualization_layers": {
+        "vm": "microsoft",
+        "container": null
+      },
+      "dmi": {
+        "sys_vendor": "Microsoft Corporation",
+        "product_name": "Virtual Machine",
+        "product_version": "Hyper-V UEFI Release v4.1",
+        "board_vendor": "Microsoft Corporation",
+        "bios_vendor": "Microsoft Corporation",
+        "chassis_vendor": "Microsoft Corporation"
+      },
+      "network": {
+        "ip": "4.155.148.36",
+        "city": "Moses Lake",
+        "region": "Washington",
+        "country": "US",
+        "loc": "47.1301,-119.2781",
+        "org": "AS8075 Microsoft Corporation"
+      },
+      "runner": {
+        "name": "GitHub Actions 1000000444",
+        "environment": "github-hosted"
+      },
+      "tools": {
+        "docker": "Docker version 28.0.4, build b8034c0",
+        "gcc": "gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+        "python": "3.12.16"
+      },
+      "wall_seconds": 0.22184116100004303
+    },
+    "benchmarks": {
+      "apt_install": {
+        "manager": "apt",
+        "update_seconds": 7.60671698200008,
+        "seconds": 17.14635018900003,
+        "wall_seconds": 17.146355029000006
+      },
+      "cpu_single": {
+        "threads": 1,
+        "events_per_second": 3960.34,
+        "wall_seconds": 15.006897120000076
+      },
+      "cpu_multi": {
+        "threads": 4,
+        "events_per_second": 15748.95,
+        "wall_seconds": 15.006864726999993,
+        "cpu_accounting": {
+          "wall_seconds": 15.007098336000013,
+          "steal_pct": 0.0,
+          "cpu_per_wall": 3.9945763436623323,
+          "nr_throttled": 0,
+          "throttled_ms": 0.0
+        }
+      },
+      "memory": {
+        "mib_per_second": 27775.75,
+        "wall_seconds": 15.007356163000054
+      },
+      "disk": {
+        "seq_write": {
+          "mb_per_second": 352.754795,
+          "iops": 335.416113,
+          "p99_latency_us": 80216.064,
+          "direct": true
+        },
+        "seq_read": {
+          "mb_per_second": 413.873093,
+          "iops": 393.703925,
+          "p99_latency_us": 69730.304,
+          "direct": true
+        },
+        "rand_read": {
+          "mb_per_second": 80.105592,
+          "iops": 19554.963002,
+          "p99_latency_us": 40632.32,
+          "direct": true
+        },
+        "rand_write": {
+          "mb_per_second": 80.287716,
+          "iops": 19599.426705,
+          "p99_latency_us": 23461.888,
+          "direct": true
+        },
+        "wall_seconds": 69.34585913600006
+      },
+      "fsync": {
+        "writes_per_second": 3766.523348,
+        "sync_mean_us": 261.197010114,
+        "sync_p99_us": 493.568,
+        "wall_seconds": 10.288834132000034
+      },
+      "download": {
+        "mb_per_second": 339.45489326416356,
+        "bytes": 1000000000,
+        "seconds": 2.9458994990000065,
+        "streams": 4,
+        "requests": 20,
+        "errors": [],
+        "wall_seconds": 2.946028202000093
+      },
+      "compile_redis": {
+        "version": "8.10.3",
+        "jobs": 4,
+        "seconds": 45.11143397300009,
+        "github_download": {
+          "mb_per_second": 17.577851,
+          "bytes": 4780701,
+          "seconds": 0.271973,
+          "connect_seconds": 0.011724,
+          "ttfb_seconds": 0.217478
+        },
+        "cpu_accounting": {
+          "wall_seconds": 45.11143528499997,
+          "steal_pct": 0.0,
+          "cpu_per_wall": 3.6205897455519214,
+          "nr_throttled": 0,
+          "throttled_ms": 0.0
+        },
+        "wall_seconds": 45.665790515000026
+      },
+      "cache": {
+        "size_mb": 1024,
+        "save_seconds": 5.610528230667114,
+        "restore_seconds": 9.38667368888855
+      },
+      "docker": {
+        "cold_seconds": 21.693409208999995,
+        "cache": "gha",
+        "cached_seconds": 11.536308307999999
+      }
+    },
+    "cpu_accounting": {
+      "wall_seconds": 195.69542469500004,
+      "steal_pct": 0.0,
+      "cpu_per_wall": 1.5299437913105676,
+      "nr_throttled": 0,
+      "throttled_ms": 0.0
+    },
+    "timing": {
+      "queue_seconds": 6.0,
+      "job_seconds": 228.0
+    }
+  },
+  {
+    "schema_version": 1,
+    "benchmark_version": 5,
+    "spec": {
+      "provider": "github",
+      "name": "GitHub",
+      "label": "ubuntu-24.04-arm",
+      "arch": "arm64",
+      "price_per_minute": 0.008,
+      "billing": {
+        "increment_seconds": 60
+      },
+      "pricing_caveat": "Free on public repos. This is GitHub's 4-core larger runner rate, which needs a GitHub Team ($4 per user a month) or Enterprise Cloud plan.",
+      "enabled": true,
+      "notes": "4 vCPU / 16 GB on public repos, where it is free; priced at the 4-core arm64 larger runner rate.",
+      "pricing_source": "https://docs.github.com/en/billing/reference/actions-runner-pricing",
+      "rep": 3
+    },
+    "github": {
+      "repository": "lockyer-labs/runnersbench",
+      "run_id": "46109503016",
+      "run_attempt": "1",
+      "sha": "48880f33d2a9d90468ffabe8020ae3565e44f747"
+    },
+    "started_at": "2026-11-28T04:52:46.928208+00:00",
+    "finished_at": "2026-11-28T04:55:58.086863+00:00",
+    "system": {
+      "cpu": {
+        "model": "Neoverse-N2",
+        "vendor": "ARM",
+        "arch": "aarch64",
+        "logical_cpus": 4,
+        "available_cpus": 4,
+        "threads_per_core": "1",
+        "sockets": "1",
+        "max_mhz": null,
+        "l3_cache": "128 MiB (1 instance)",
+        "hypervisor": null,
+        "flags": {
+          "avx2": false,
+          "avx512f": false,
+          "sha_ni": false,
+          "aes": true,
+          "vaes": false,
+          "asimd": true,
+          "sve": true,
+          "sve2": true,
+          "sha2": true
+        },
+        "cgroup_cpu_max": null,
+        "lscpu": {
+          "Architecture": "aarch64",
+          "CPU op-mode(s)": "32-bit, 64-bit",
+          "Byte Order": "Little Endian",
+          "CPU(s)": "4",
+          "On-line CPU(s) list": "0-3",
+          "Vendor ID": "ARM",
+          "Model name": "Neoverse-N2",
+          "Model": "0",
+          "Thread(s) per core": "1",
+          "Core(s) per socket": "4",
+          "Socket(s)": "1",
+          "Stepping": "r0p0",
+          "BogoMIPS": "2000.00",
+          "Flags": "fp asimd evtstrm aes pmull sha1 sha2 crc32 atomics fphp asimdhp cpuid asimdrdm jscvt fcma lrcpc dcpop sha3 sm3 sm4 asimddp sha512 sve asimdfhm uscat ilrcpc flagm sb paca pacg dcpodp sve2 sveaes svebitperm svesha3 svesm4 flagm2 frint svei8mm svebf16 i8mm bf16",
+          "L1d cache": "256 KiB (4 instances)",
+          "L1i cache": "256 KiB (4 instances)",
+          "L2 cache": "4 MiB (4 instances)",
+          "L3 cache": "128 MiB (1 instance)",
+          "NUMA node(s)": "1",
+          "NUMA node0 CPU(s)": "0-3",
+          "Vulnerability Gather data sampling": "Not affected",
+          "Vulnerability Ghostwrite": "Not affected",
+          "Vulnerability Indirect target selection": "Not affected",
+          "Vulnerability Itlb multihit": "Not affected",
+          "Vulnerability L1tf": "Not affected",
+          "Vulnerability Mds": "Not affected",
+          "Vulnerability Meltdown": "Not affected",
+          "Vulnerability Mmio stale data": "Not affected",
+          "Vulnerability Old microcode": "Not affected",
+          "Vulnerability Reg file data sampling": "Not affected",
+          "Vulnerability Retbleed": "Not affected",
+          "Vulnerability Spec rstack overflow": "Not affected",
+          "Vulnerability Spec store bypass": "Mitigation; Speculative Store Bypass disabled via prctl",
+          "Vulnerability Spectre v1": "Mitigation; __user pointer sanitization",
+          "Vulnerability Spectre v2": "Mitigation; CSV2, BHB",
+          "Vulnerability Srbds": "Not affected",
+          "Vulnerability Tsa": "Not affected",
+          "Vulnerability Tsx async abort": "Not affected",
+          "Vulnerability Vmscape": "Not affected"
+        }
+      },
+      "memory": {
+        "total_bytes": 16715894784,
+        "cgroup_max": null
+      },
+      "disk": {
+        "workdir": "/home/runner/work/_temp",
+        "total_bytes": 154894188544,
+        "free_bytes": 112143745024,
+        "mount": "/dev/sda1 ext4   rw,relatime,discard,journal_async_commit,nobarrier,errors=remount-ro,commit=30,data=writeback",
+        "devices": [
+          {
+            "name": "sda",
+            "size": "150G",
+            "type": "disk",
+            "rota": true,
+            "model": "Virtual Disk"
+          }
+        ]
+      },
+      "os": {
+        "pretty_name": "Ubuntu 24.04.5 LTS",
+        "kernel": "7.0.0-1020-azure",
+        "image_os": "ubuntu24-arm64",
+        "image_version": "20261122.193.1"
+      },
+      "virtualization": "microsoft",
+      "virtualization_layers": {
+        "vm": "microsoft",
+        "container": null
+      },
+      "dmi": {
+        "sys_vendor": "Microsoft Corporation",
+        "product_name": "Virtual Machine",
+        "product_version": "Hyper-V UEFI Release v4.1",
+        "board_vendor": "Microsoft Corporation",
+        "bios_vendor": "Microsoft Corporation",
+        "chassis_vendor": "Microsoft Corporation"
+      },
+      "network": {
+        "ip": "4.150.183.19",
+        "city": "Des Moines",
+        "region": "Iowa",
+        "country": "US",
+        "loc": "41.6005,-93.6091",
+        "org": "AS8075 Microsoft Corporation"
+      },
+      "runner": {
+        "name": "GitHub Actions 1000000443",
+        "environment": "github-hosted"
+      },
+      "tools": {
+        "docker": "Docker version 28.0.4, build b8034c0",
+        "gcc": "gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+        "python": "3.12.16"
+      },
+      "wall_seconds": 0.22008702399989488
+    },
+    "benchmarks": {
+      "apt_install": {
+        "manager": "apt",
+        "update_seconds": 6.814835384999924,
+        "seconds": 14.922320347999857,
+        "wall_seconds": 14.922324732000106
+      },
+      "cpu_single": {
+        "threads": 1,
+        "events_per_second": 3960.29,
+        "wall_seconds": 15.006536779000044
+      },
+      "cpu_multi": {
+        "threads": 4,
+        "events_per_second": 15746.26,
+        "wall_seconds": 15.006773955999961,
+        "cpu_accounting": {
+          "wall_seconds": 15.00699772300004,
+          "steal_pct": 0.0,
+          "cpu_per_wall": 3.9907382612721305,
+          "nr_throttled": 0,
+          "throttled_ms": 0.0
+        }
+      },
+      "memory": {
+        "mib_per_second": 27893.78,
+        "wall_seconds": 15.00682509000012
+      },
+      "disk": {
+        "seq_write": {
+          "mb_per_second": 352.498238,
+          "iops": 335.171772,
+          "p99_latency_us": 80216.064,
+          "direct": true
+        },
+        "seq_read": {
+          "mb_per_second": 413.744297,
+          "iops": 393.578043,
+          "p99_latency_us": 69730.304,
+          "direct": true
+        },
+        "rand_read": {
+          "mb_per_second": 80.05071,
+          "iops": 19541.563896,
+          "p99_latency_us": 41156.608,
+          "direct": true
+        },
+        "rand_write": {
+          "mb_per_second": 80.107038,
+          "iops": 19555.318866,
+          "p99_latency_us": 23724.032,
+          "direct": true
+        },
+        "wall_seconds": 69.2845693669999
+      },
+      "fsync": {
+        "writes_per_second": 4661.133887,
+        "sync_mean_us": 210.709208302,
+        "sync_p99_us": 374.784,
+        "wall_seconds": 10.288947451000013
+      },
+      "download": {
+        "mb_per_second": 418.14343795884673,
+        "bytes": 1000000000,
+        "seconds": 2.3915238390000013,
+        "streams": 4,
+        "requests": 20,
+        "errors": [],
+        "wall_seconds": 2.391639538999925
+      },
+      "compile_redis": {
+        "version": "8.10.3",
+        "jobs": 4,
+        "seconds": 43.27112639400002,
+        "github_download": {
+          "mb_per_second": 12.926053,
+          "bytes": 4780701,
+          "seconds": 0.36985,
+          "connect_seconds": 0.054271,
+          "ttfb_seconds": 0.18611
+        },
+        "cpu_accounting": {
+          "wall_seconds": 43.271127434000164,
+          "steal_pct": 0.0,
+          "cpu_per_wall": 3.596370356593085,
+          "nr_throttled": 0,
+          "throttled_ms": 0.0
+        },
+        "wall_seconds": 43.87884383000005
+      },
+      "cache": {
+        "size_mb": 1024,
+        "save_seconds": 5.21478009223938,
+        "restore_seconds": 7.259551763534546
+      },
+      "docker": {
+        "cold_seconds": 21.803024107000006,
+        "cache": "gha",
+        "cached_seconds": 14.314460333
+      }
+    },
+    "cpu_accounting": {
+      "wall_seconds": 191.1586588319999,
+      "steal_pct": 0.0,
+      "cpu_per_wall": 1.5204385811025898,
+      "nr_throttled": 0,
+      "throttled_ms": 0.0
+    },
+    "timing": {
+      "queue_seconds": 5.0,
+      "job_seconds": 220.0
+    }
+  }
+]

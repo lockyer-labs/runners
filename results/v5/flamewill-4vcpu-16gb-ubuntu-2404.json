@@ -1,0 +1,1370 @@
+[
+  {
+    "schema_version": 1,
+    "benchmark_version": 5,
+    "spec": {
+      "provider": "flamewill",
+      "name": "FlameWill",
+      "label": "flamewill-4vcpu-16gb-ubuntu-2404",
+      "arch": "arm64",
+      "price_per_minute": 0.0022,
+      "billing": {
+        "increment_seconds": 60
+      },
+      "docker_cache": "flamewill",
+      "enabled": true,
+      "notes": "A fresh ARM64 machine per job, 190 GB local NVMe. Prepaid credit from $10, billed per minute, no subscription.",
+      "pricing_source": "https://flamewill.com/pricing/",
+      "rep": 1
+    },
+    "github": {
+      "repository": "lockyer-labs/runnersbench",
+      "run_id": "46109503016",
+      "run_attempt": "1",
+      "sha": "48880f33d2a9d90468ffabe8020ae3565e44f747"
+    },
+    "started_at": "2026-11-28T04:53:37.219373+00:00",
+    "finished_at": "2026-11-28T04:57:01.961047+00:00",
+    "system": {
+      "cpu": {
+        "model": "Neoverse-V1",
+        "vendor": "ARM",
+        "arch": "aarch64",
+        "logical_cpus": 4,
+        "available_cpus": 4,
+        "threads_per_core": "1",
+        "sockets": "1",
+        "max_mhz": null,
+        "l3_cache": "32 MiB (1 instance)",
+        "hypervisor": null,
+        "flags": {
+          "avx2": false,
+          "avx512f": false,
+          "sha_ni": false,
+          "aes": true,
+          "vaes": false,
+          "asimd": true,
+          "sve": true,
+          "sve2": false,
+          "sha2": true
+        },
+        "cgroup_cpu_max": null,
+        "lscpu": {
+          "Architecture": "aarch64",
+          "CPU op-mode(s)": "32-bit, 64-bit",
+          "Byte Order": "Little Endian",
+          "CPU(s)": "4",
+          "On-line CPU(s) list": "0-3",
+          "Vendor ID": "ARM",
+          "Model name": "Neoverse-V1",
+          "Model": "1",
+          "Thread(s) per core": "1",
+          "Core(s) per socket": "4",
+          "Socket(s)": "1",
+          "Stepping": "r1p1",
+          "BogoMIPS": "2100.00",
+          "Flags": "fp asimd evtstrm aes pmull sha1 sha2 crc32 atomics fphp asimdhp cpuid asimdrdm jscvt fcma lrcpc dcpop sha3 sm3 sm4 asimddp sha512 sve asimdfhm dit uscat ilrcpc flagm ssbs paca pacg dcpodp svei8mm svebf16 i8mm bf16 dgh rng",
+          "L1d cache": "256 KiB (4 instances)",
+          "L1i cache": "256 KiB (4 instances)",
+          "L2 cache": "4 MiB (4 instances)",
+          "L3 cache": "32 MiB (1 instance)",
+          "NUMA node(s)": "1",
+          "NUMA node0 CPU(s)": "0-3",
+          "Vulnerability Gather data sampling": "Not affected",
+          "Vulnerability Indirect target selection": "Not affected",
+          "Vulnerability Itlb multihit": "Not affected",
+          "Vulnerability L1tf": "Not affected",
+          "Vulnerability Mds": "Not affected",
+          "Vulnerability Meltdown": "Not affected",
+          "Vulnerability Mmio stale data": "Not affected",
+          "Vulnerability Reg file data sampling": "Not affected",
+          "Vulnerability Retbleed": "Not affected",
+          "Vulnerability Spec rstack overflow": "Not affected",
+          "Vulnerability Spec store bypass": "Mitigation; Speculative Store Bypass disabled via prctl",
+          "Vulnerability Spectre v1": "Mitigation; __user pointer sanitization",
+          "Vulnerability Spectre v2": "Mitigation; CSV2, BHB",
+          "Vulnerability Srbds": "Not affected",
+          "Vulnerability Tsa": "Not affected",
+          "Vulnerability Tsx async abort": "Not affected",
+          "Vulnerability Vmscape": "Not affected"
+        }
+      },
+      "memory": {
+        "total_bytes": 16433553408,
+        "cgroup_max": null
+      },
+      "disk": {
+        "workdir": "/opt/actions-runner/_work/_temp",
+        "total_bytes": 189868064768,
+        "free_bytes": 179215572992,
+        "mount": "/dev/nvme1n1p3[/_work] ext4   rw,noatime",
+        "devices": [
+          {
+            "name": "loop0",
+            "size": "125M",
+            "type": "loop",
+            "rota": false,
+            "model": null
+          },
+          {
+            "name": "loop1",
+            "size": "144.1M",
+            "type": "loop",
+            "rota": false,
+            "model": null
+          },
+          {
+            "name": "loop2",
+            "size": "113.3M",
+            "type": "loop",
+            "rota": false,
+            "model": null
+          },
+          {
+            "name": "loop3",
+            "size": "135M",
+            "type": "loop",
+            "rota": false,
+            "model": null
+          },
+          {
+            "name": "loop4",
+            "size": "115.9M",
+            "type": "loop",
+            "rota": false,
+            "model": null
+          },
+          {
+            "name": "loop5",
+            "size": "73.1M",
+            "type": "loop",
+            "rota": false,
+            "model": null
+          },
+          {
+            "name": "loop6",
+            "size": "96M",
+            "type": "loop",
+            "rota": false,
+            "model": null
+          },
+          {
+            "name": "loop7",
+            "size": "71.3M",
+            "type": "loop",
+            "rota": false,
+            "model": null
+          },
+          {
+            "name": "loop8",
+            "size": "41.1M",
+            "type": "loop",
+            "rota": false,
+            "model": null
+          },
+          {
+            "name": "loop9",
+            "size": "195.1M",
+            "type": "loop",
+            "rota": false,
+            "model": null
+          },
+          {
+            "name": "loop10",
+            "size": "38.3M",
+            "type": "loop",
+            "rota": false,
+            "model": null
+          },
+          {
+            "name": "loop11",
+            "size": "84.5M",
+            "type": "loop",
+            "rota": false,
+            "model": null
+          },
+          {
+            "name": "loop12",
+            "size": "106.7M",
+            "type": "loop",
+            "rota": false,
+            "model": null
+          },
+          {
+            "name": "loop13",
+            "size": "76.6M",
+            "type": "loop",
+            "rota": false,
+            "model": null
+          },
+          {
+            "name": "loop14",
+            "size": "45M",
+            "type": "loop",
+            "rota": false,
+            "model": null
+          },
+          {
+            "name": "loop15",
+            "size": "52.8M",
+            "type": "loop",
+            "rota": false,
+            "model": null
+          },
+          {
+            "name": "loop16",
+            "size": "196M",
+            "type": "loop",
+            "rota": false,
+            "model": null
+          },
+          {
+            "name": "loop17",
+            "size": "210.2M",
+            "type": "loop",
+            "rota": false,
+            "model": null
+          },
+          {
+            "name": "loop18",
+            "size": "148.1M",
+            "type": "loop",
+            "rota": false,
+            "model": null
+          },
+          {
+            "name": "loop19",
+            "size": "146.6M",
+            "type": "loop",
+            "rota": false,
+            "model": null
+          },
+          {
+            "name": "loop20",
+            "size": "9.2M",
+            "type": "loop",
+            "rota": false,
+            "model": null
+          },
+          {
+            "name": "loop21",
+            "size": "214.2M",
+            "type": "loop",
+            "rota": false,
+            "model": null
+          },
+          {
+            "name": "loop22",
+            "size": "81.3M",
+            "type": "loop",
+            "rota": false,
+            "model": null
+          },
+          {
+            "name": "loop23",
+            "size": "178.3M",
+            "type": "loop",
+            "rota": false,
+            "model": null
+          },
+          {
+            "name": "loop24",
+            "size": "2.6G",
+            "type": "loop",
+            "rota": false,
+            "model": null
+          },
+          {
+            "name": "loop25",
+            "size": "245.7M",
+            "type": "loop",
+            "rota": false,
+            "model": null
+          },
+          {
+            "name": "loop26",
+            "size": "241.9M",
+            "type": "loop",
+            "rota": false,
+            "model": null
+          },
+          {
+            "name": "nvme0n1",
+            "size": "20G",
+            "type": "disk",
+            "rota": false,
+            "model": null
+          },
+          {
+            "name": "nvme1n1",
+            "size": "220.7G",
+            "type": "disk",
+            "rota": false,
+            "model": null
+          }
+        ]
+      },
+      "os": {
+        "pretty_name": "Ubuntu 24.04.5 LTS",
+        "kernel": "6.8.0-151-generic",
+        "image_os": "ubuntu24",
+        "image_version": "20261120-node24.16.0-bun1.4.2-pw1.61.1"
+      },
+      "virtualization": null,
+      "virtualization_layers": {
+        "vm": null,
+        "container": null
+      },
+      "dmi": {
+        "sys_vendor": "Amazon EC2",
+        "product_name": "m7gd.xlarge",
+        "product_version": null,
+        "board_vendor": "Amazon EC2",
+        "bios_vendor": "Amazon EC2",
+        "chassis_vendor": "Amazon EC2"
+      },
+      "network": {
+        "ip": "13.48.132.193",
+        "city": "Stockholm",
+        "region": "Stockholm",
+        "country": "SE",
+        "loc": "59.3294,18.0687",
+        "org": "AS16509 Amazon.com, Inc."
+      },
+      "runner": {
+        "name": "flamewill-b08f30-52478ab20aaccc87",
+        "environment": "self-hosted"
+      },
+      "tools": {
+        "docker": "Docker version 29.1.3, build 29.1.3-0ubuntu3~24.04.2",
+        "gcc": "gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+        "python": "3.12.16"
+      },
+      "wall_seconds": 0.3406062859999963
+    },
+    "benchmarks": {
+      "apt_install": {
+        "manager": "apt",
+        "update_seconds": 12.019565812999993,
+        "seconds": 18.752485728000003,
+        "wall_seconds": 18.752489464999996
+      },
+      "cpu_single": {
+        "threads": 1,
+        "events_per_second": 3016.3,
+        "wall_seconds": 15.007953736999994
+      },
+      "cpu_multi": {
+        "threads": 4,
+        "events_per_second": 11991.05,
+        "wall_seconds": 15.008709022999994,
+        "cpu_accounting": {
+          "wall_seconds": 15.008974648000006,
+          "steal_pct": 0.0,
+          "cpu_per_wall": 3.9951429998577725,
+          "nr_throttled": 0,
+          "throttled_ms": 0.0
+        }
+      },
+      "memory": {
+        "mib_per_second": 20465.05,
+        "wall_seconds": 15.008516843999999
+      },
+      "disk": {
+        "seq_write": {
+          "mb_per_second": 150.619956,
+          "iops": 142.649007,
+          "p99_latency_us": 175112.192,
+          "direct": true
+        },
+        "seq_read": {
+          "mb_per_second": 314.809656,
+          "iops": 299.162902,
+          "p99_latency_us": 69730.304,
+          "direct": true
+        },
+        "rand_read": {
+          "mb_per_second": 285.540976,
+          "iops": 69710.019332,
+          "p99_latency_us": 501.76,
+          "direct": true
+        },
+        "rand_write": {
+          "mb_per_second": 137.384334,
+          "iops": 33539.030731,
+          "p99_latency_us": 962.56,
+          "direct": true
+        },
+        "wall_seconds": 69.373111292
+      },
+      "fsync": {
+        "writes_per_second": 8261.673833,
+        "sync_mean_us": 117.010709616,
+        "sync_p99_us": 191.488,
+        "wall_seconds": 10.29089350800001
+      },
+      "download": {
+        "mb_per_second": 737.2155545289638,
+        "bytes": 1000000000,
+        "seconds": 1.356455373000017,
+        "streams": 4,
+        "requests": 20,
+        "errors": [],
+        "wall_seconds": 1.356557286000026
+      },
+      "compile_redis": {
+        "version": "8.10.3",
+        "jobs": 4,
+        "seconds": 54.034233598999975,
+        "github_download": {
+          "mb_per_second": 13.462895,
+          "bytes": 4780701,
+          "seconds": 0.355102,
+          "connect_seconds": 0.014975,
+          "ttfb_seconds": 0.212925
+        },
+        "cpu_accounting": {
+          "wall_seconds": 54.034234306,
+          "steal_pct": 0.0,
+          "cpu_per_wall": 3.633788884433165,
+          "nr_throttled": 0,
+          "throttled_ms": 0.0
+        },
+        "wall_seconds": 54.59043690699997
+      },
+      "cache": {
+        "size_mb": 1024,
+        "save_seconds": 9.208247184753418,
+        "restore_seconds": 4.8629937171936035
+      },
+      "docker": {
+        "cold_seconds": 9.286582416999998,
+        "cache": "flamewill",
+        "cached_seconds": 5.088259829000002
+      }
+    },
+    "cpu_accounting": {
+      "wall_seconds": 204.74167457800002,
+      "steal_pct": 0.0,
+      "cpu_per_wall": 1.6327110769656643,
+      "nr_throttled": 0,
+      "throttled_ms": 0.0
+    },
+    "timing": {
+      "queue_seconds": 43.0,
+      "job_seconds": 250.0
+    }
+  },
+  {
+    "schema_version": 1,
+    "benchmark_version": 5,
+    "spec": {
+      "provider": "flamewill",
+      "name": "FlameWill",
+      "label": "flamewill-4vcpu-16gb-ubuntu-2404",
+      "arch": "arm64",
+      "price_per_minute": 0.0022,
+      "billing": {
+        "increment_seconds": 60
+      },
+      "docker_cache": "flamewill",
+      "enabled": true,
+      "notes": "A fresh ARM64 machine per job, 190 GB local NVMe. Prepaid credit from $10, billed per minute, no subscription.",
+      "pricing_source": "https://flamewill.com/pricing/",
+      "rep": 2
+    },
+    "github": {
+      "repository": "lockyer-labs/runnersbench",
+      "run_id": "46109503016",
+      "run_attempt": "1",
+      "sha": "48880f33d2a9d90468ffabe8020ae3565e44f747"
+    },
+    "started_at": "2026-11-28T04:53:32.326400+00:00",
+    "finished_at": "2026-11-28T04:56:54.534395+00:00",
+    "system": {
+      "cpu": {
+        "model": "Neoverse-V1",
+        "vendor": "ARM",
+        "arch": "aarch64",
+        "logical_cpus": 4,
+        "available_cpus": 4,
+        "threads_per_core": "1",
+        "sockets": "1",
+        "max_mhz": null,
+        "l3_cache": "32 MiB (1 instance)",
+        "hypervisor": null,
+        "flags": {
+          "avx2": false,
+          "avx512f": false,
+          "sha_ni": false,
+          "aes": true,
+          "vaes": false,
+          "asimd": true,
+          "sve": true,
+          "sve2": false,
+          "sha2": true
+        },
+        "cgroup_cpu_max": null,
+        "lscpu": {
+          "Architecture": "aarch64",
+          "CPU op-mode(s)": "32-bit, 64-bit",
+          "Byte Order": "Little Endian",
+          "CPU(s)": "4",
+          "On-line CPU(s) list": "0-3",
+          "Vendor ID": "ARM",
+          "Model name": "Neoverse-V1",
+          "Model": "1",
+          "Thread(s) per core": "1",
+          "Core(s) per socket": "4",
+          "Socket(s)": "1",
+          "Stepping": "r1p1",
+          "BogoMIPS": "2100.00",
+          "Flags": "fp asimd evtstrm aes pmull sha1 sha2 crc32 atomics fphp asimdhp cpuid asimdrdm jscvt fcma lrcpc dcpop sha3 sm3 sm4 asimddp sha512 sve asimdfhm dit uscat ilrcpc flagm ssbs paca pacg dcpodp svei8mm svebf16 i8mm bf16 dgh rng",
+          "L1d cache": "256 KiB (4 instances)",
+          "L1i cache": "256 KiB (4 instances)",
+          "L2 cache": "4 MiB (4 instances)",
+          "L3 cache": "32 MiB (1 instance)",
+          "NUMA node(s)": "1",
+          "NUMA node0 CPU(s)": "0-3",
+          "Vulnerability Gather data sampling": "Not affected",
+          "Vulnerability Indirect target selection": "Not affected",
+          "Vulnerability Itlb multihit": "Not affected",
+          "Vulnerability L1tf": "Not affected",
+          "Vulnerability Mds": "Not affected",
+          "Vulnerability Meltdown": "Not affected",
+          "Vulnerability Mmio stale data": "Not affected",
+          "Vulnerability Reg file data sampling": "Not affected",
+          "Vulnerability Retbleed": "Not affected",
+          "Vulnerability Spec rstack overflow": "Not affected",
+          "Vulnerability Spec store bypass": "Mitigation; Speculative Store Bypass disabled via prctl",
+          "Vulnerability Spectre v1": "Mitigation; __user pointer sanitization",
+          "Vulnerability Spectre v2": "Mitigation; CSV2, BHB",
+          "Vulnerability Srbds": "Not affected",
+          "Vulnerability Tsa": "Not affected",
+          "Vulnerability Tsx async abort": "Not affected",
+          "Vulnerability Vmscape": "Not affected"
+        }
+      },
+      "memory": {
+        "total_bytes": 16433541120,
+        "cgroup_max": null
+      },
+      "disk": {
+        "workdir": "/opt/actions-runner/_work/_temp",
+        "total_bytes": 189868064768,
+        "free_bytes": 179190312960,
+        "mount": "/dev/nvme1n1p3[/_work] ext4   rw,noatime",
+        "devices": [
+          {
+            "name": "loop0",
+            "size": "125M",
+            "type": "loop",
+            "rota": false,
+            "model": null
+          },
+          {
+            "name": "loop1",
+            "size": "113.3M",
+            "type": "loop",
+            "rota": false,
+            "model": null
+          },
+          {
+            "name": "loop2",
+            "size": "115.9M",
+            "type": "loop",
+            "rota": false,
+            "model": null
+          },
+          {
+            "name": "loop3",
+            "size": "71.3M",
+            "type": "loop",
+            "rota": false,
+            "model": null
+          },
+          {
+            "name": "loop4",
+            "size": "96M",
+            "type": "loop",
+            "rota": false,
+            "model": null
+          },
+          {
+            "name": "loop5",
+            "size": "135M",
+            "type": "loop",
+            "rota": false,
+            "model": null
+          },
+          {
+            "name": "loop6",
+            "size": "84.5M",
+            "type": "loop",
+            "rota": false,
+            "model": null
+          },
+          {
+            "name": "loop7",
+            "size": "38.3M",
+            "type": "loop",
+            "rota": false,
+            "model": null
+          },
+          {
+            "name": "loop8",
+            "size": "73.1M",
+            "type": "loop",
+            "rota": false,
+            "model": null
+          },
+          {
+            "name": "loop9",
+            "size": "144.1M",
+            "type": "loop",
+            "rota": false,
+            "model": null
+          },
+          {
+            "name": "loop10",
+            "size": "210.2M",
+            "type": "loop",
+            "rota": false,
+            "model": null
+          },
+          {
+            "name": "loop11",
+            "size": "195.1M",
+            "type": "loop",
+            "rota": false,
+            "model": null
+          },
+          {
+            "name": "loop12",
+            "size": "196M",
+            "type": "loop",
+            "rota": false,
+            "model": null
+          },
+          {
+            "name": "loop13",
+            "size": "41.1M",
+            "type": "loop",
+            "rota": false,
+            "model": null
+          },
+          {
+            "name": "loop14",
+            "size": "214.2M",
+            "type": "loop",
+            "rota": false,
+            "model": null
+          },
+          {
+            "name": "loop15",
+            "size": "52.8M",
+            "type": "loop",
+            "rota": false,
+            "model": null
+          },
+          {
+            "name": "loop16",
+            "size": "146.6M",
+            "type": "loop",
+            "rota": false,
+            "model": null
+          },
+          {
+            "name": "loop17",
+            "size": "148.1M",
+            "type": "loop",
+            "rota": false,
+            "model": null
+          },
+          {
+            "name": "loop18",
+            "size": "9.2M",
+            "type": "loop",
+            "rota": false,
+            "model": null
+          },
+          {
+            "name": "loop19",
+            "size": "81.3M",
+            "type": "loop",
+            "rota": false,
+            "model": null
+          },
+          {
+            "name": "loop20",
+            "size": "45M",
+            "type": "loop",
+            "rota": false,
+            "model": null
+          },
+          {
+            "name": "loop21",
+            "size": "76.6M",
+            "type": "loop",
+            "rota": false,
+            "model": null
+          },
+          {
+            "name": "loop22",
+            "size": "245.7M",
+            "type": "loop",
+            "rota": false,
+            "model": null
+          },
+          {
+            "name": "loop23",
+            "size": "178.3M",
+            "type": "loop",
+            "rota": false,
+            "model": null
+          },
+          {
+            "name": "loop24",
+            "size": "106.7M",
+            "type": "loop",
+            "rota": false,
+            "model": null
+          },
+          {
+            "name": "loop25",
+            "size": "241.9M",
+            "type": "loop",
+            "rota": false,
+            "model": null
+          },
+          {
+            "name": "loop26",
+            "size": "2.6G",
+            "type": "loop",
+            "rota": false,
+            "model": null
+          },
+          {
+            "name": "nvme0n1",
+            "size": "20G",
+            "type": "disk",
+            "rota": false,
+            "model": null
+          },
+          {
+            "name": "nvme1n1",
+            "size": "220.7G",
+            "type": "disk",
+            "rota": false,
+            "model": null
+          }
+        ]
+      },
+      "os": {
+        "pretty_name": "Ubuntu 24.04.5 LTS",
+        "kernel": "6.8.0-151-generic",
+        "image_os": "ubuntu24",
+        "image_version": "20261120-node24.16.0-bun1.4.2-pw1.61.1"
+      },
+      "virtualization": null,
+      "virtualization_layers": {
+        "vm": null,
+        "container": null
+      },
+      "dmi": {
+        "sys_vendor": "Amazon EC2",
+        "product_name": "m7gd.xlarge",
+        "product_version": null,
+        "board_vendor": "Amazon EC2",
+        "bios_vendor": "Amazon EC2",
+        "chassis_vendor": "Amazon EC2"
+      },
+      "network": {
+        "ip": "16.16.196.46",
+        "city": "Stockholm",
+        "region": "Stockholm",
+        "country": "SE",
+        "loc": "59.3294,18.0687",
+        "org": "AS16509 Amazon.com, Inc."
+      },
+      "runner": {
+        "name": "flamewill-b08f30-664530a3dcb8b269",
+        "environment": "self-hosted"
+      },
+      "tools": {
+        "docker": "Docker version 29.1.3, build 29.1.3-0ubuntu3~24.04.2",
+        "gcc": "gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+        "python": "3.12.16"
+      },
+      "wall_seconds": 0.3062878229999981
+    },
+    "benchmarks": {
+      "apt_install": {
+        "manager": "apt",
+        "update_seconds": 7.528612434000003,
+        "seconds": 13.983697791000004,
+        "wall_seconds": 13.983702129000001
+      },
+      "cpu_single": {
+        "threads": 1,
+        "events_per_second": 3014.49,
+        "wall_seconds": 15.008553910000003
+      },
+      "cpu_multi": {
+        "threads": 4,
+        "events_per_second": 11992.29,
+        "wall_seconds": 15.008850949999996,
+        "cpu_accounting": {
+          "wall_seconds": 15.00909494999999,
+          "steal_pct": 0.0,
+          "cpu_per_wall": 3.9933786946960472,
+          "nr_throttled": 0,
+          "throttled_ms": 0.0
+        }
+      },
+      "memory": {
+        "mib_per_second": 20427.42,
+        "wall_seconds": 15.009858139000002
+      },
+      "disk": {
+        "seq_write": {
+          "mb_per_second": 150.560485,
+          "iops": 142.592225,
+          "p99_latency_us": 170917.888,
+          "direct": true
+        },
+        "seq_read": {
+          "mb_per_second": 314.809656,
+          "iops": 299.162902,
+          "p99_latency_us": 63700.992,
+          "direct": true
+        },
+        "rand_read": {
+          "mb_per_second": 285.488824,
+          "iops": 69697.35351,
+          "p99_latency_us": 501.76,
+          "direct": true
+        },
+        "rand_write": {
+          "mb_per_second": 137.385153,
+          "iops": 33539.230718,
+          "p99_latency_us": 962.56,
+          "direct": true
+        },
+        "wall_seconds": 69.37560140299999
+      },
+      "fsync": {
+        "writes_per_second": 8075.492451,
+        "sync_mean_us": 119.70698683799999,
+        "sync_p99_us": 191.488,
+        "wall_seconds": 10.292051969999989
+      },
+      "download": {
+        "mb_per_second": 688.7930918058995,
+        "bytes": 1000000000,
+        "seconds": 1.4518147929999827,
+        "streams": 4,
+        "requests": 20,
+        "errors": [],
+        "wall_seconds": 1.4519086560000005
+      },
+      "compile_redis": {
+        "version": "8.10.3",
+        "jobs": 4,
+        "seconds": 56.03086432200001,
+        "github_download": {
+          "mb_per_second": 9.143944,
+          "bytes": 4780701,
+          "seconds": 0.522827,
+          "connect_seconds": 0.02092,
+          "ttfb_seconds": 0.382047
+        },
+        "cpu_accounting": {
+          "wall_seconds": 56.030865387999995,
+          "steal_pct": 0.0,
+          "cpu_per_wall": 3.63963680710303,
+          "nr_throttled": 0,
+          "throttled_ms": 0.0
+        },
+        "wall_seconds": 56.75980869700004
+      },
+      "cache": {
+        "size_mb": 1024,
+        "save_seconds": 9.278056859970093,
+        "restore_seconds": 4.997586965560913
+      },
+      "docker": {
+        "cold_seconds": 9.611707214000035,
+        "cache": "flamewill",
+        "cached_seconds": 4.840435017999994
+      }
+    },
+    "cpu_accounting": {
+      "wall_seconds": 202.20799531199998,
+      "steal_pct": 0.0,
+      "cpu_per_wall": 1.694403821527166,
+      "nr_throttled": 0,
+      "throttled_ms": 0.0
+    },
+    "timing": {
+      "queue_seconds": 39.0,
+      "job_seconds": 247.0
+    }
+  },
+  {
+    "schema_version": 1,
+    "benchmark_version": 5,
+    "spec": {
+      "provider": "flamewill",
+      "name": "FlameWill",
+      "label": "flamewill-4vcpu-16gb-ubuntu-2404",
+      "arch": "arm64",
+      "price_per_minute": 0.0022,
+      "billing": {
+        "increment_seconds": 60
+      },
+      "docker_cache": "flamewill",
+      "enabled": true,
+      "notes": "A fresh ARM64 machine per job, 190 GB local NVMe. Prepaid credit from $10, billed per minute, no subscription.",
+      "pricing_source": "https://flamewill.com/pricing/",
+      "rep": 3
+    },
+    "github": {
+      "repository": "lockyer-labs/runnersbench",
+      "run_id": "46109503016",
+      "run_attempt": "1",
+      "sha": "48880f33d2a9d90468ffabe8020ae3565e44f747"
+    },
+    "started_at": "2026-11-28T04:53:23.478014+00:00",
+    "finished_at": "2026-11-28T04:56:33.912422+00:00",
+    "system": {
+      "cpu": {
+        "model": "Neoverse-V2",
+        "vendor": "ARM",
+        "arch": "aarch64",
+        "logical_cpus": 4,
+        "available_cpus": 4,
+        "threads_per_core": "1",
+        "sockets": "1",
+        "max_mhz": null,
+        "l3_cache": "36 MiB (1 instance)",
+        "hypervisor": null,
+        "flags": {
+          "avx2": false,
+          "avx512f": false,
+          "sha_ni": false,
+          "aes": true,
+          "vaes": false,
+          "asimd": true,
+          "sve": true,
+          "sve2": true,
+          "sha2": true
+        },
+        "cgroup_cpu_max": null,
+        "lscpu": {
+          "Architecture": "aarch64",
+          "CPU op-mode(s)": "64-bit",
+          "Byte Order": "Little Endian",
+          "CPU(s)": "4",
+          "On-line CPU(s) list": "0-3",
+          "Vendor ID": "ARM",
+          "Model name": "Neoverse-V2",
+          "Model": "1",
+          "Thread(s) per core": "1",
+          "Core(s) per socket": "4",
+          "Socket(s)": "1",
+          "Stepping": "r0p1",
+          "BogoMIPS": "2000.00",
+          "Flags": "fp asimd evtstrm aes pmull sha1 sha2 crc32 atomics fphp asimdhp cpuid asimdrdm jscvt fcma lrcpc dcpop sha3 asimddp sha512 sve asimdfhm dit uscat ilrcpc flagm ssbs sb paca pacg dcpodp sve2 sveaes svepmull svebitperm svesha3 flagm2 frint svei8mm svebf16 i8mm bf16 dgh rng bti",
+          "L1d cache": "256 KiB (4 instances)",
+          "L1i cache": "256 KiB (4 instances)",
+          "L2 cache": "8 MiB (4 instances)",
+          "L3 cache": "36 MiB (1 instance)",
+          "NUMA node(s)": "1",
+          "NUMA node0 CPU(s)": "0-3",
+          "Vulnerability Gather data sampling": "Not affected",
+          "Vulnerability Indirect target selection": "Not affected",
+          "Vulnerability Itlb multihit": "Not affected",
+          "Vulnerability L1tf": "Not affected",
+          "Vulnerability Mds": "Not affected",
+          "Vulnerability Meltdown": "Not affected",
+          "Vulnerability Mmio stale data": "Not affected",
+          "Vulnerability Reg file data sampling": "Not affected",
+          "Vulnerability Retbleed": "Not affected",
+          "Vulnerability Spec rstack overflow": "Not affected",
+          "Vulnerability Spec store bypass": "Mitigation; Speculative Store Bypass disabled via prctl",
+          "Vulnerability Spectre v1": "Mitigation; __user pointer sanitization",
+          "Vulnerability Spectre v2": "Mitigation; CSV2, BHB",
+          "Vulnerability Srbds": "Not affected",
+          "Vulnerability Tsa": "Not affected",
+          "Vulnerability Tsx async abort": "Not affected",
+          "Vulnerability Vmscape": "Not affected"
+        }
+      },
+      "memory": {
+        "total_bytes": 33022402560,
+        "cgroup_max": null
+      },
+      "disk": {
+        "workdir": "/opt/actions-runner/_work/_temp",
+        "total_bytes": 189868064768,
+        "free_bytes": 179215765504,
+        "mount": "/dev/nvme0n1p3[/_work] ext4   rw,noatime",
+        "devices": [
+          {
+            "name": "loop0",
+            "size": "113.3M",
+            "type": "loop",
+            "rota": false,
+            "model": null
+          },
+          {
+            "name": "loop1",
+            "size": "71.3M",
+            "type": "loop",
+            "rota": false,
+            "model": null
+          },
+          {
+            "name": "loop2",
+            "size": "144.1M",
+            "type": "loop",
+            "rota": false,
+            "model": null
+          },
+          {
+            "name": "loop3",
+            "size": "115.9M",
+            "type": "loop",
+            "rota": false,
+            "model": null
+          },
+          {
+            "name": "loop4",
+            "size": "125M",
+            "type": "loop",
+            "rota": false,
+            "model": null
+          },
+          {
+            "name": "loop5",
+            "size": "73.1M",
+            "type": "loop",
+            "rota": false,
+            "model": null
+          },
+          {
+            "name": "loop6",
+            "size": "41.1M",
+            "type": "loop",
+            "rota": false,
+            "model": null
+          },
+          {
+            "name": "loop7",
+            "size": "135M",
+            "type": "loop",
+            "rota": false,
+            "model": null
+          },
+          {
+            "name": "loop8",
+            "size": "96M",
+            "type": "loop",
+            "rota": false,
+            "model": null
+          },
+          {
+            "name": "loop9",
+            "size": "38.3M",
+            "type": "loop",
+            "rota": false,
+            "model": null
+          },
+          {
+            "name": "loop10",
+            "size": "84.5M",
+            "type": "loop",
+            "rota": false,
+            "model": null
+          },
+          {
+            "name": "loop11",
+            "size": "76.6M",
+            "type": "loop",
+            "rota": false,
+            "model": null
+          },
+          {
+            "name": "loop12",
+            "size": "52.8M",
+            "type": "loop",
+            "rota": false,
+            "model": null
+          },
+          {
+            "name": "loop13",
+            "size": "106.7M",
+            "type": "loop",
+            "rota": false,
+            "model": null
+          },
+          {
+            "name": "loop14",
+            "size": "45M",
+            "type": "loop",
+            "rota": false,
+            "model": null
+          },
+          {
+            "name": "loop15",
+            "size": "81.3M",
+            "type": "loop",
+            "rota": false,
+            "model": null
+          },
+          {
+            "name": "loop16",
+            "size": "9.2M",
+            "type": "loop",
+            "rota": false,
+            "model": null
+          },
+          {
+            "name": "loop17",
+            "size": "210.2M",
+            "type": "loop",
+            "rota": false,
+            "model": null
+          },
+          {
+            "name": "loop18",
+            "size": "146.6M",
+            "type": "loop",
+            "rota": false,
+            "model": null
+          },
+          {
+            "name": "loop19",
+            "size": "196M",
+            "type": "loop",
+            "rota": false,
+            "model": null
+          },
+          {
+            "name": "loop20",
+            "size": "195.1M",
+            "type": "loop",
+            "rota": false,
+            "model": null
+          },
+          {
+            "name": "loop21",
+            "size": "148.1M",
+            "type": "loop",
+            "rota": false,
+            "model": null
+          },
+          {
+            "name": "loop22",
+            "size": "214.2M",
+            "type": "loop",
+            "rota": false,
+            "model": null
+          },
+          {
+            "name": "loop23",
+            "size": "245.7M",
+            "type": "loop",
+            "rota": false,
+            "model": null
+          },
+          {
+            "name": "loop24",
+            "size": "2.6G",
+            "type": "loop",
+            "rota": false,
+            "model": null
+          },
+          {
+            "name": "loop25",
+            "size": "241.9M",
+            "type": "loop",
+            "rota": false,
+            "model": null
+          },
+          {
+            "name": "loop26",
+            "size": "178.3M",
+            "type": "loop",
+            "rota": false,
+            "model": null
+          },
+          {
+            "name": "nvme1n1",
+            "size": "20G",
+            "type": "disk",
+            "rota": false,
+            "model": null
+          },
+          {
+            "name": "nvme0n1",
+            "size": "220.7G",
+            "type": "disk",
+            "rota": false,
+            "model": null
+          }
+        ]
+      },
+      "os": {
+        "pretty_name": "Ubuntu 24.04.5 LTS",
+        "kernel": "6.8.0-151-generic",
+        "image_os": "ubuntu24",
+        "image_version": "20261120-node24.16.0-bun1.4.2-pw1.61.1"
+      },
+      "virtualization": null,
+      "virtualization_layers": {
+        "vm": null,
+        "container": null
+      },
+      "dmi": {
+        "sys_vendor": "Amazon EC2",
+        "product_name": "r8gd.xlarge",
+        "product_version": null,
+        "board_vendor": "Amazon EC2",
+        "bios_vendor": "Amazon EC2",
+        "chassis_vendor": "Amazon EC2"
+      },
+      "network": {
+        "ip": "13.50.237.100",
+        "city": "Stockholm",
+        "region": "Stockholm",
+        "country": "SE",
+        "loc": "59.3294,18.0687",
+        "org": "AS16509 Amazon.com, Inc."
+      },
+      "runner": {
+        "name": "flamewill-b08f30-f49426778633512f",
+        "environment": "self-hosted"
+      },
+      "tools": {
+        "docker": "Docker version 29.1.3, build 29.1.3-0ubuntu3~24.04.2",
+        "gcc": "gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+        "python": "3.12.16"
+      },
+      "wall_seconds": 0.2987064470000007
+    },
+    "benchmarks": {
+      "apt_install": {
+        "manager": "apt",
+        "update_seconds": 8.678954176000005,
+        "seconds": 16.195926632000003,
+        "wall_seconds": 16.195930451000002
+      },
+      "cpu_single": {
+        "threads": 1,
+        "events_per_second": 3331.91,
+        "wall_seconds": 15.005878749000004
+      },
+      "cpu_multi": {
+        "threads": 4,
+        "events_per_second": 13295.53,
+        "wall_seconds": 15.006083400999998,
+        "cpu_accounting": {
+          "wall_seconds": 15.00629170500001,
+          "steal_pct": 0.0,
+          "cpu_per_wall": 3.994391231247891,
+          "nr_throttled": 0,
+          "throttled_ms": 0.0
+        }
+      },
+      "memory": {
+        "mib_per_second": 26417.11,
+        "wall_seconds": 15.006300234999998
+      },
+      "disk": {
+        "seq_write": {
+          "mb_per_second": 225.77861,
+          "iops": 214.323643,
+          "p99_latency_us": 115867.648,
+          "direct": true
+        },
+        "seq_read": {
+          "mb_per_second": 472.364831,
+          "iops": 449.418025,
+          "p99_latency_us": 46923.776,
+          "direct": true
+        },
+        "rand_read": {
+          "mb_per_second": 274.816725,
+          "iops": 67091.860543,
+          "p99_latency_us": 505.856,
+          "direct": true
+        },
+        "rand_write": {
+          "mb_per_second": 137.409727,
+          "iops": 33545.230318,
+          "p99_latency_us": 954.368,
+          "direct": true
+        },
+        "wall_seconds": 69.215094018
+      },
+      "fsync": {
+        "writes_per_second": 20550.544946,
+        "sync_mean_us": 46.002921887999996,
+        "sync_p99_us": 125.44,
+        "wall_seconds": 10.271438726000014
+      },
+      "download": {
+        "mb_per_second": 223.8659608254708,
+        "bytes": 1000000000,
+        "seconds": 4.466958693999999,
+        "streams": 4,
+        "requests": 20,
+        "errors": [],
+        "wall_seconds": 4.46702804200001
+      },
+      "compile_redis": {
+        "version": "8.10.3",
+        "jobs": 4,
+        "seconds": 39.236824098,
+        "github_download": {
+          "mb_per_second": 8.66796,
+          "bytes": 4780701,
+          "seconds": 0.551537,
+          "connect_seconds": 0.024399,
+          "ttfb_seconds": 0.405764
+        },
+        "cpu_accounting": {
+          "wall_seconds": 39.236825280000005,
+          "steal_pct": 0.0,
+          "cpu_per_wall": 3.6331175874380013,
+          "nr_throttled": 0,
+          "throttled_ms": 0.0
+        },
+        "wall_seconds": 39.959792797000006
+      },
+      "cache": {
+        "size_mb": 1024,
+        "save_seconds": 4.033153295516968,
+        "restore_seconds": 3.9545340538024902
+      },
+      "docker": {
+        "cold_seconds": 9.237954052,
+        "cache": "flamewill",
+        "cached_seconds": 4.846181240999982
+      }
+    },
+    "cpu_accounting": {
+      "wall_seconds": 190.434410001,
+      "steal_pct": 0.0,
+      "cpu_per_wall": 1.4374082919077629,
+      "nr_throttled": 0,
+      "throttled_ms": 0.0
+    },
+    "timing": {
+      "queue_seconds": 39.0,
+      "job_seconds": 225.0
+    }
+  }
+]
